@@ -21,6 +21,7 @@ public:
     ~Renderer();
 
     void Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader);
+    void Draw(const VertexArray& va, const Shader& shader);
     void Clear();
 };
  

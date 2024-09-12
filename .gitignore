@@ -5,6 +5,7 @@ src/OPENGL/.vs
 MMR/.vs
 MMR/src/OpenGL/.vs
 MMR/src/OpenGL/Debug
+data
 
 src/OpenGL/.vs/OpenGL/v17/ipch/AutoPCH/51ac32add5d00ce3/SHADER.ipch
 src/OpenGL/.vs/OpenGL/v17/ipch/AutoPCH/51ac32add5d00ce3/SHADER.ipch
