@@ -24,8 +24,8 @@
 namespace test {
 
 	TestCubes::TestCubes()
-		: m_cubecolor(glm::vec3(0.3f, 0.1f, 0.9f)), m_lightcolor(glm::vec3(1.0f, 1.0f, 1.0f)),
-		m_translationLight(0.0f, 0.0f, 0.0f), m_translationCube(0.0f, 0.0f, 0.0f),
+		: m_cubecolor(glm::vec3(0.3f, 0.1f, 0.9f)), m_lightcolor(glm::vec3(1.0f, 1.0f, 1.0f)), m_ambientlightcolor(glm::vec3(0.2f, 0.2f, 0.2f)),
+		m_translationLight(3.0f, 3.0f, 3.0f), m_translationCube(0.0f, 0.0f, -0.0f),
 		m_projection(glm::perspective(glm::radians(45.0f), (float)800 / (float)800, 0.1f, 100.0f))
 	{
 
@@ -113,6 +113,38 @@ namespace test {
 								0, 0, 0,   0, 0, 1,   1, 0, 1,   1, 0, 0,   // v7,v4,v3,v2 (bottom)
 								0, 0, 1,   0, 0, 0,   0, 1, 0,   0, 1, 1 }; // v4,v7,v6,v5 (back)
 
+		float pos_nor_col[] = {
+			1, 1, 1,   0, 0, 1,   1, 1, 1,
+			-1, 1, 1,  0, 0, 1,   1, 1, 0,
+			-1,-1, 1,  0, 0, 1,    1, 0, 0,
+			1,-1, 1,   0, 0, 1,   1, 0, 1,
+
+			1, 1, 1,   1, 0, 0,   1, 1, 1,
+			1,-1, 1,    1, 0, 0,    1, 0, 1,
+			1,-1,-1,   1, 0, 0,    0, 0, 1,
+			1, 1,-1,   1, 0, 0,   0, 1, 1,
+
+			1, 1, 1,   0, 1, 0,   1, 1, 1,
+			1, 1,-1,   0, 1, 0,   0, 1, 1,
+			-1, 1,-1,  0, 1, 0,   0, 1, 0,
+			-1, 1, 1,  0, 1, 0,   1, 1, 0,
+
+			-1, 1, 1,  -1, 0, 0,   1, 1, 0,
+			-1, 1,-1,   -1, 0, 0,  0, 1, 0,
+			-1,-1,-1,   -1, 0, 0,   0, 0, 0,
+			 -1,-1, 1,  -1, 0, 0,  1, 0, 0,
+
+			 -1,-1,-1,    0,-1, 0,   0, 0, 0,
+			 1,-1,-1,     0,-1, 0,   0, 0, 1,
+			 1,-1, 1,     0,-1, 0,   1, 0, 1,
+			  -1,-1, 1,   0,-1, 0,   1, 0, 0,
+
+			  1,-1,-1,   0, 0,-1,   0, 0, 1,
+			 -1,-1,-1,   0, 0,-1,   0, 0, 0,
+			 -1, 1,-1,   0, 0,-1,   0, 1, 0,
+			  1, 1,-1,    0, 0,-1,  0, 1, 1
+		};
+
 
 		unsigned int indices[] = { 0, 1, 2,   2, 3, 0,      // front
 								   4, 5, 6,   6, 7, 4,      // right
@@ -143,9 +175,11 @@ namespace test {
 		m_renderer = std::make_unique<Renderer>();
 
 		m_va = std::make_unique<VertexArray>();
-		m_vb = std::make_unique<VertexBuffer>(positions, 36 * 3 * sizeof(float));
+		m_vb = std::make_unique<VertexBuffer>(pos_nor_col, 36 * 9 * sizeof(float));
 		VertexBufferLayout layout;
-		layout.Push<float>(3);
+		layout.Push<float>(3); 
+		layout.Push<float>(3); 
+		layout.Push<float>(3); 
 		m_va->AddBuffer(*m_vb, layout);
 
 		m_ib = std::make_unique<IndexBuffer>(indices, 36);
@@ -168,39 +202,19 @@ namespace test {
 	}
 
 	void TestCubes::InitializeCamera(GLFWwindow* window) {
-		m_camera = std::make_unique<Camera>(window);
+		m_camera = std::make_unique<Camera>(window, glm::vec3(0.0f, 0.0f, 5.0f));
 	}
 
 	void TestCubes::OnUpdate(GLFWwindow *window, float deltaTime) {
 		m_camera->ProcessKeyboard(deltaTime);
 		m_view = m_camera->GetViewMatrix();
-		//if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-		//	glfwSetWindowShouldClose(window, true);
-
-		/*Camera_Movement direction;
-		if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) 
-			direction = FORWARD;
-		if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) 
-			direction = BACKWARD;
-		if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) 
-			direction = LEFT;
-		if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) 
-			direction = RIGHT;
-
-		m_camera->ProcessKeyboard(direction, deltaTime);*/
-
-
-
-		//m_camera->ProcessMouseMovement();
 	}
 
 	void TestCubes::OnRender() {
 
-		//m_view = glm::translate(glm::mat4(1.0f), -m_translationCamera
-
 		{ // Draw light source cube
 
-		    glm::mat4 modelA = glm::translate(glm::mat4(1.0f), m_translationLight);
+		    glm::mat4 modelA = glm::scale(glm::translate(glm::mat4(1.0f), m_translationLight), glm::vec3(0.2f, 0.2, 0.2f));
 		    m_mvp = m_projection * m_view * modelA;
 			m_shaderLight->Bind();
 		    m_shaderLight->SetUniformMat4f("u_MVP", m_mvp);
@@ -212,8 +226,12 @@ namespace test {
 		    m_mvp = m_projection * m_view * modelB; 
 			m_shaderCube->Bind();
 		    m_shaderCube->SetUniformMat4f("u_MVP", m_mvp); 
+			m_shaderCube->SetUniformMat4f("u_model", modelB);
 			m_shaderCube->SetUniform3f("u_objectcolor", m_cubecolor.x, m_cubecolor.y, m_cubecolor.z);
 			m_shaderCube->SetUniform3f("u_lightcolor", m_lightcolor.x, m_lightcolor.y, m_lightcolor.z);
+			m_shaderCube->SetUniform3f("u_ambientlightcolor", m_ambientlightcolor.x, m_ambientlightcolor.y, m_ambientlightcolor.z);
+			m_shaderCube->SetUniform3f("u_lightpos", m_translationLight.x, m_translationLight.y, m_translationLight.z);
+			m_shaderCube->SetUniform3f("u_viewpos", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
 			m_renderer->Draw(*m_va, *m_ib, *m_shaderCube);
 			//m_renderer->Draw(*m_va, *m_shaderLight);
 		}
@@ -229,7 +247,7 @@ namespace test {
 		ImGui::Text("Camera:");
 		ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
 		if (ImGui::Button("RESET CAMERA")) {
-			m_camera->Position = glm::vec3(0.0f, 0.0f, 0.0f);
+			m_camera->Position = glm::vec3(0.0f, 0.0f, 5.0f);
 			m_camera->Up = glm::vec3(0.0f, 1.0f, 0.0f);
 			m_camera->Yaw = -90.0f;
 			m_camera->Pitch = 0.0f;

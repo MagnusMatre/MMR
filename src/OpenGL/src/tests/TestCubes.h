@@ -50,6 +50,8 @@ namespace test {
 		glm::vec3 m_cubecolor;
 		glm::vec3 m_lightcolor;
 
+		glm::vec3 m_ambientlightcolor;
+
 		//static void on_mouse_callback(GLFWwindow* window, double xpos, double ypos)
 		//{
 

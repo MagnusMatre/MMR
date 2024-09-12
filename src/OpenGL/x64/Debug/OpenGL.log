@@ -5,5 +5,5 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.3253
           [
               _Ty=unsigned __int64
           ]
-C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\TestCubes.cpp(146,15): message : see reference to function template instantiation 'std::unique_ptr<VertexBuffer,std::default_delete<VertexBuffer>> std::make_unique<VertexBuffer,float(&)[72],unsigned __int64,0>(float (&)[72],unsigned __int64 &&)' being compiled
+C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\TestCubes.cpp(178,15): message : see reference to function template instantiation 'std::unique_ptr<VertexBuffer,std::default_delete<VertexBuffer>> std::make_unique<VertexBuffer,float(&)[216],unsigned __int64,0>(float (&)[216],unsigned __int64 &&)' being compiled
   OpenGL.vcxproj -> C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\x64\Debug\OpenGL.exe

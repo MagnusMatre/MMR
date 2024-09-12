@@ -70,6 +70,7 @@ int main(void)
         Renderer renderer;
 
         GLCall(glEnable(GL_BLEND));
+        GLCall(glEnable(GL_DEPTH_TEST));
         GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
         // Init ImGui context
@@ -97,7 +98,7 @@ int main(void)
         {
             /* Render here */
             GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
-            GLCall(glClear(GL_DEPTH_BUFFER_BIT));
+            GLCall(glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT));
             renderer.Clear();
 
             float currentFrame = static_cast<float>(glfwGetTime());
