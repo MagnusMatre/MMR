@@ -34,6 +34,9 @@ namespace test {
 		GLCall(glEnable(GL_DEPTH_TEST));
 		GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
+		GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));
+
+
 		// LOAD MESHES
 
 		std::string modelDirectory = "../../data/Meshes/AircraftBuoyant";
