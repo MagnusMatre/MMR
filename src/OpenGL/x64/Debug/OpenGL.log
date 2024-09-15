@@ -1,9 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1116,5): warning MSB8027: Two or more files with the name of imgui_impl_opengl3.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are ..\..\..\..\..\Downloads\imgui-1.91.1\imgui-1.91.1\backends\imgui_impl_opengl3.cpp, src\vendor\imgui\imgui_impl_opengl3.cpp.
-  TestCubes.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,56): warning C4244: 'argument': conversion from '_Ty' to 'unsigned int', possible loss of data
-          with
-          [
-              _Ty=unsigned __int64
-          ]
-C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\TestCubes.cpp(178,15): message : see reference to function template instantiation 'std::unique_ptr<VertexBuffer,std::default_delete<VertexBuffer>> std::make_unique<VertexBuffer,float(&)[216],unsigned __int64,0>(float (&)[216],unsigned __int64 &&)' being compiled
-  OpenGL.vcxproj -> C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\x64\Debug\OpenGL.exe

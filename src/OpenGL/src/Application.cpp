@@ -25,6 +25,7 @@
 #include "tests/TestClearColor.h"
 #include "tests/TestDice.h"
 #include "tests/TestCubes.h"
+#include "tests/TestMesh.h"
 
 //void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 //{
@@ -87,6 +88,7 @@ int main(void)
         testMenu->RegisterTest<test::TestClearColor>("Clear Color");
         testMenu->RegisterTest<test::TestDice>("Dice texture");
         testMenu->RegisterTest<test::TestCubes>("Cubes");
+        testMenu->RegisterTest<test::TestMesh>("Mesh");
 
         float deltaTime = 0.0f;	// time between current frame and last frame
         float lastFrame = 0.0f;
