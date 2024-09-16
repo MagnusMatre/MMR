@@ -28,6 +28,11 @@ glm::mat4 Camera::GetViewMatrix()
     return glm::lookAt(Position, Position + Front, Up);
 }
 
+glm::mat4 Camera::GetProjectionMatrix(float aspectRatio)
+{
+    return glm::perspective(glm::radians(Zoom), aspectRatio, 0.1f, 100.0f);
+}
+
 void Camera::ProcessKeyboard(float deltaTime)
 {
 
@@ -53,7 +58,17 @@ void Camera::ProcessKeyboard(float deltaTime)
         Position -= Up * velocity;
     }
 
-
+    // ZOOM
+    if (glfwGetKey(m_window, GLFW_KEY_X) == GLFW_PRESS) {
+        Zoom -= 1.0f;
+        if (Zoom < 1.0f)
+            Zoom = 1.0f;
+    }
+    else if (glfwGetKey(m_window, GLFW_KEY_Z) == GLFW_PRESS) {
+        Zoom += 1.0f;
+        if (Zoom > 45.0f)
+            Zoom = 45.0f;
+    }
 
     float xoffset = 0;
     float yoffset = 0;
@@ -64,16 +79,16 @@ void Camera::ProcessKeyboard(float deltaTime)
     yoffset *= MouseSensitivity;*/
 
     if (glfwGetKey(m_window, GLFW_KEY_UP) == GLFW_PRESS) {
-        Pitch += 1;
+        Pitch += 0.01 * Zoom;
     }
     else if (glfwGetKey(m_window, GLFW_KEY_DOWN) == GLFW_PRESS) {
-        Pitch -= 1;
+        Pitch -= 0.01 * Zoom;
     }
     else if (glfwGetKey(m_window, GLFW_KEY_LEFT) == GLFW_PRESS) {
-        Yaw -= 1;
+        Yaw -= 0.01 * Zoom;
     }
     else if (glfwGetKey(m_window, GLFW_KEY_RIGHT) == GLFW_PRESS) {
-        Yaw += 1;
+        Yaw += 0.01 * Zoom;
     }
 
     //Yaw += xoffset;

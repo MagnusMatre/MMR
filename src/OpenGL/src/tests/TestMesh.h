@@ -15,6 +15,12 @@
 #include "Texture.h"
 //#include "Camera.h"
 
+enum class RenderMode {
+	OnlyWireframe,
+	OnlySolid,
+	WireframeAndSolid
+};
+
 namespace test {
 
 	class TestMesh : public Test
@@ -32,10 +38,15 @@ namespace test {
 
 		std::vector<Model> m_models;
 
-		std::unique_ptr<Shader> m_shaderMesh;
+		std::unique_ptr<Shader> m_shaderMeshSolid;
+		std::unique_ptr<Shader> m_shaderMeshWireframe;
+		std::unique_ptr<Shader> m_shaderMeshWireframeSolid;
+
 		std::vector<std::string> m_files;
 		std::string m_curModelName;
 		Model* m_curModel;
+		RenderMode m_renderMode;
+		bool m_keyPressed = false;
 
 		std::unique_ptr<Camera> m_camera;
 
@@ -51,6 +62,8 @@ namespace test {
 		glm::mat4 m_mvp;
 
 		glm::vec3 m_lightcolor;
+		glm::vec3 m_wireFrameColor;
+		float m_wireFrameWidth;
 
 		glm::vec3 m_ambientlightcolor;
 
