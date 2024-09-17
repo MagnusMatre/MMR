@@ -11,6 +11,10 @@ Global
 		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
+		RunScript|x64 = RunScript|x64
+		RunScript|x86 = RunScript|x86
+		ScriptRunner|x64 = ScriptRunner|x64
+		ScriptRunner|x86 = ScriptRunner|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78A2F481-C2FD-4E92-B923-49FC864863B4}.Debug|x64.ActiveCfg = Debug|x64
@@ -21,6 +25,14 @@ Global
 		{78A2F481-C2FD-4E92-B923-49FC864863B4}.Release|x64.Build.0 = Release|x64
 		{78A2F481-C2FD-4E92-B923-49FC864863B4}.Release|x86.ActiveCfg = Release|Win32
 		{78A2F481-C2FD-4E92-B923-49FC864863B4}.Release|x86.Build.0 = Release|Win32
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.RunScript|x64.ActiveCfg = RunScript|x64
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.RunScript|x64.Build.0 = RunScript|x64
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.RunScript|x86.ActiveCfg = RunScript|Win32
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.RunScript|x86.Build.0 = RunScript|Win32
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.ScriptRunner|x64.ActiveCfg = Release|x64
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.ScriptRunner|x64.Build.0 = Release|x64
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.ScriptRunner|x86.ActiveCfg = ScriptRunner|Win32
+		{78A2F481-C2FD-4E92-B923-49FC864863B4}.ScriptRunner|x86.Build.0 = ScriptRunner|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

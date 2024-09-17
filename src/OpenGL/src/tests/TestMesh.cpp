@@ -31,7 +31,7 @@ namespace test {
 
 		// LOAD MESHES
 
-		std::string modelDirectory = "../../data/Meshes/AircraftBuoyant";
+		std::string modelDirectory = "../../data/Meshes/Bird";
 
 		for (const auto& entry : std::filesystem::directory_iterator(modelDirectory)) {
 			if (m_curModelName == "") {
@@ -60,22 +60,18 @@ namespace test {
 		m_view = m_camera->GetViewMatrix();
 		m_projection = m_camera->GetProjectionMatrix(800.0f / 800.0f);
 
-		// For easily changing wireframe mode (but I will change this to binding the different shaders)
-		// 
+		// Change the rendering mode (might change this to different shaders)
 		if (glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS && !m_keyPressed) {
 			m_keyPressed = true;
 			// Change the rendering mode
 			if (m_renderMode == RenderMode::WireframeAndSolid) {
 				m_renderMode = RenderMode::OnlyWireframe;
-				GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));
 			}
 			else if (m_renderMode == RenderMode::OnlyWireframe) {
 				m_renderMode = RenderMode::OnlySolid;
-				GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_FILL));
 			}
 			else if (m_renderMode == RenderMode::OnlySolid) {
 				m_renderMode = RenderMode::WireframeAndSolid;
-				GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_FILL));
 			}
 		}
 		else if (glfwGetKey(window, GLFW_KEY_M) == GLFW_RELEASE) {
