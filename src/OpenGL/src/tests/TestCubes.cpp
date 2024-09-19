@@ -201,11 +201,19 @@ namespace test {
 
 	}
 
-	void TestCubes::InitializeCamera(GLFWwindow* window) {
-		m_camera = std::make_unique<Camera>(window, glm::vec3(0.0f, 0.0f, 5.0f));
+	void TestCubes::SetWindow(GLFWwindow* window) {
+		m_window = window;
+	}
+
+	void TestCubes::InitializeCamera() {
+		m_camera = std::make_unique<Camera>(m_window, glm::vec3(0.0f, 0.0f, 5.0f));
 	}
 
 	void TestCubes::OnUpdate(GLFWwindow *window, float deltaTime) {
+		if (m_camera == nullptr) {
+			InitializeCamera();
+		}
+
 		m_camera->ProcessKeyboard(deltaTime);
 		m_view = m_camera->GetViewMatrix();
 	}

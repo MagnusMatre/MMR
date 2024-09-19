@@ -51,11 +51,19 @@ namespace test {
 
 	}
 
-	void TestMesh::InitializeCamera(GLFWwindow* window) {
-		m_camera = std::make_unique<Camera>(window, glm::vec3(0.0f, 0.0f, 5.0f));
+	void TestMesh::SetWindow(GLFWwindow* window) {
+		m_window = window;
+	}
+
+	void TestMesh::InitializeCamera() {
+		m_camera = std::make_unique<Camera>(m_window, glm::vec3(0.0f, 0.0f, 5.0f));
 	}
 
 	void TestMesh::OnUpdate(GLFWwindow* window, float deltaTime) {
+		if (m_camera == nullptr) {
+			InitializeCamera();
+		}
+
 		m_camera->ProcessKeyboard(deltaTime);
 		m_view = m_camera->GetViewMatrix();
 		m_projection = m_camera->GetProjectionMatrix(800.0f / 800.0f);

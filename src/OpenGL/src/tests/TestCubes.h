@@ -21,11 +21,14 @@ namespace test {
 		TestCubes();
 		~TestCubes();
 
-		void InitializeCamera(GLFWwindow* window) override;
+		void SetWindow(GLFWwindow* window) override;
 		void OnUpdate(GLFWwindow* window, float deltaTime) override;
 		void OnRender() override;
 		void OnImGuiRender() override;
 	private:
+		void InitializeCamera();
+
+		GLFWwindow* m_window;
 		std::unique_ptr<Renderer> m_renderer;
 
 		std::unique_ptr<IndexBuffer> m_ib;

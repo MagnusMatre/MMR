@@ -26,11 +26,7 @@
 #include "tests/TestDice.h"
 #include "tests/TestCubes.h"
 #include "tests/TestMesh.h"
-
-//void mouse_callback(GLFWwindow* window, double xpos, double ypos)
-//{
-//    //std::cout << "X, Y: " << xpos << ", " << ypos << std::endl;
-//}
+#include "tests/TestRefineMesh.h"
 
 int main(void)
 {
@@ -89,6 +85,7 @@ int main(void)
         testMenu->RegisterTest<test::TestDice>("Dice texture");
         testMenu->RegisterTest<test::TestCubes>("Cubes");
         testMenu->RegisterTest<test::TestMesh>("Mesh");
+        testMenu->RegisterTest<test::TestRefineMesh>("RefineMeshes");
 
         float deltaTime = 0.0f;	// time between current frame and last frame
         float lastFrame = 0.0f;
@@ -99,7 +96,7 @@ int main(void)
         while (!glfwWindowShouldClose(window))
         {
             /* Render here */
-            GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
+            GLCall(glClearColor(1.0f, 1.0f, 1.0f, 1.0f));
             GLCall(glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT));
             renderer.Clear();
 
@@ -111,7 +108,7 @@ int main(void)
             //test.OnRender();
 
             if (currentTest != testMenu && initCallbacks) {
-                currentTest->InitializeCamera(window); // Preferable don't set callbacks every time but only on initialization...
+                currentTest->SetWindow(window); // Preferable don't set callbacks every time but only on initialization...
                 initCallbacks = false;
             }
 
@@ -153,80 +150,3 @@ int main(void)
 
     return 0;
 };
-
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-//void processInput(GLFWwindow* window)
-//{
-//    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-//        glfwSetWindowShouldClose(window, true);
-//
-//    float cameraSpeed = static_cast<float>(2.5 * deltaTime);
-//    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-//        cameraPos += cameraSpeed * cameraFront;
-//    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-//        cameraPos -= cameraSpeed * cameraFront;
-//    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-//        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-//    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-//        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-//}
-//
-//// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-//// ---------------------------------------------------------------------------------------------
-//void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-//{
-//    // make sure the viewport matches the new window dimensions; note that width and 
-//    // height will be significantly larger than specified on retina displays.
-//    glViewport(0, 0, width, height);
-//}
-//
-//// glfw: whenever the mouse moves, this callback is called
-//// -------------------------------------------------------
-//void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
-//{
-//    float xpos = static_cast<float>(xposIn);
-//    float ypos = static_cast<float>(yposIn);
-//
-//    if (firstMouse)
-//    {
-//        lastX = xpos;
-//        lastY = ypos;
-//        firstMouse = false;
-//    }
-//
-//    float xoffset = xpos - lastX;
-//    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
-//    lastX = xpos;
-//    lastY = ypos;
-//
-//    float sensitivity = 0.1f; // change this value to your liking
-//    xoffset *= sensitivity;
-//    yoffset *= sensitivity;
-//
-//    yaw += xoffset;
-//    pitch += yoffset;
-//
-//    // make sure that when pitch is out of bounds, screen doesn't get flipped
-//    if (pitch > 89.0f)
-//        pitch = 89.0f;
-//    if (pitch < -89.0f)
-//        pitch = -89.0f;
-//
-//    glm::vec3 front;
-//    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-//    front.y = sin(glm::radians(pitch));
-//    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-//    cameraFront = glm::normalize(front);
-//}
-//
-//// glfw: whenever the mouse scroll wheel scrolls, this callback is called
-//// ----------------------------------------------------------------------
-//void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-//{
-//    fov -= (float)yoffset;
-//    if (fov < 1.0f)
-//        fov = 1.0f;
-//    if (fov > 45.0f)
-//        fov = 45.0f;
-//}

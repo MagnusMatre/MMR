@@ -6,6 +6,7 @@ C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\Mesh.cpp;C:\Users\timgr\Docum
 C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\Model.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\Model.obj
 C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\Renderer.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\Renderer.obj
 C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\Shader.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\Shader.obj
+C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\TestRefineMesh.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\TestRefineMesh.obj
 C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\Test.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\Test.obj
 C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\TestClearColor.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\TestClearColor.obj
 C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\src\tests\TestCubes.cpp;C:\Users\timgr\Documents\GitHub\MMR\src\OpenGL\OpenGL\x64\Debug\TestCubes.obj

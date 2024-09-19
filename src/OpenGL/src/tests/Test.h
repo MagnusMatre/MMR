@@ -12,6 +12,12 @@
 
 namespace test {
 
+	enum class RenderMode {
+		OnlyWireframe,
+		OnlySolid,
+		WireframeAndSolid
+	};
+
 	class Test
 	{
 	public:
@@ -19,7 +25,7 @@ namespace test {
 		Test(GLFWwindow* window) {};
 		virtual ~Test() {};
 
-		virtual void InitializeCamera(GLFWwindow* window) {}
+		virtual void SetWindow(GLFWwindow* window) {}
 		virtual void OnUpdate(GLFWwindow *window, float deltaTime) {}
 		virtual void OnRender() {}
 		virtual void OnImGuiRender() {}

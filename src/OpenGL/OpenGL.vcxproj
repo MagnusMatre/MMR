@@ -212,6 +212,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RunScript|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\tests\TestRefineMesh.cpp" />
     <ClCompile Include="src\tests\Test.cpp" />
     <ClCompile Include="src\tests\TestClearColor.cpp" />
     <ClCompile Include="src\tests\TestCubes.cpp" />
@@ -239,6 +240,7 @@
     <ClInclude Include="src\scripts\Script1.h" />
     <ClInclude Include="src\scripts\Script2.h" />
     <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\tests\TestRefineMesh.h" />
     <ClInclude Include="src\tests\Test.h" />
     <ClInclude Include="src\tests\TestClearColor.h" />
     <ClInclude Include="src\tests\TestCubes.h" />
