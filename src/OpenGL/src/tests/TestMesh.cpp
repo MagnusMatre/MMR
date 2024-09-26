@@ -31,7 +31,7 @@ namespace test {
 
 		// LOAD MESHES
 
-		std::string modelDirectory = "../../data/Meshes/AircraftBuoyant";
+		std::string modelDirectory = "C:/Users/Magnus/Documents/Master/MMR/MMR/src/OpenGL/output/AircraftBuoyant";
 
 		for (const auto& entry : std::filesystem::directory_iterator(modelDirectory)) {
 			if (m_curModelName == "") {

@@ -26,14 +26,98 @@
 #include "tests/TestDice.h"
 #include "tests/TestCubes.h"
 #include "tests/TestMesh.h"
+#include <tests/ShapeAnalyzer.cpp>
 
 //void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 //{
 //    //std::cout << "X, Y: " << xpos << ", " << ypos << std::endl;
 //}
 
+
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <normalization.cpp>
+
+
+void analyzeFilesInDirectories(const std::string& basePath) {
+    std::ofstream myfile;
+    myfile.open("shapesDB.csv", std::ios::out | std::ios::app);
+    myfile << "class; vertices;faces;triangles;quads;bmin; bmax\n";
+
+    // Iterate through each directory inside the base path (e.g., Bus, Car, etc.)
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {
+                    ShapeAnalyzer analyzer;
+                    std::cout << "Analyzing file: " << file.path() << std::endl;
+
+                    // Call the analyze function for each OBJ file
+                    analyzer.analyze(file.path().string(), myfile);
+
+                }
+            }
+
+
+        }
+    }
+    myfile.close();
+}
+
+
+void normalizeFilesInDirectories(const std::string& basePath) {
+    std::ofstream myfile;
+    myfile.open("shapes_normalized_tightfit.csv", std::ios::out | std::ios::app);
+    myfile << "class; tight_fit\n";
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {
+                    normalization normal;
+                    auto tightfit = normal.normalizeShapeFile(file.path().string(), "output/" + entry.path().filename().string() + "/" + file.path().filename().string());
+                    myfile << entry.path().filename().string() << ";" << tightfit << std::endl;
+                }
+            }
+            break;
+            
+        }
+    }
+    myfile.close();
+};
+
+void verifyOriginInDirectories(const std::string& basePath) {
+    std::ofstream myfile;
+    myfile.open("shapes_normalized_dist.csv", std::ios::out | std::ios::app);
+    myfile << "class; dist_from_bary\n";
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {
+                    normalization normal;
+                    float dist = normal.verify_origin(file.path().string());
+                    myfile << entry.path().filename().string() << ";"  << dist <<  std::endl;
+                }
+            }
+            
+        }
+    }
+    myfile.close();
+}
+
 int main(void)
-{
+{ 
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -70,6 +154,9 @@ int main(void)
     {
         Renderer renderer;
 
+        std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/data";  
+        normalizeFilesInDirectories(basePath);
+
         GLCall(glEnable(GL_BLEND));
         GLCall(glEnable(GL_DEPTH_TEST));
         GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -95,7 +182,13 @@ int main(void)
 
         bool initCallbacks = true;
 
-        /* Loop until the user closes the window */
+
+        //std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/data";
+        //std::string outPath = "C:/Users/Magnus/Documents/Master/MMR/MMR/src/OpenGL/output";
+        //normalizeFilesInDirectories(basePath);
+        //verifyOriginInDirectories(outPath);
+
+
         while (!glfwWindowShouldClose(window))
         {
             /* Render here */
@@ -118,6 +211,8 @@ int main(void)
             ImGui_ImplOpenGL3_NewFrame();
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
+
+
 
             if (currentTest){
                 currentTest->OnUpdate(window, deltaTime);
@@ -153,80 +248,3 @@ int main(void)
 
     return 0;
 };
-
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-//void processInput(GLFWwindow* window)
-//{
-//    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-//        glfwSetWindowShouldClose(window, true);
-//
-//    float cameraSpeed = static_cast<float>(2.5 * deltaTime);
-//    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-//        cameraPos += cameraSpeed * cameraFront;
-//    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-//        cameraPos -= cameraSpeed * cameraFront;
-//    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-//        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-//    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-//        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-//}
-//
-//// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-//// ---------------------------------------------------------------------------------------------
-//void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-//{
-//    // make sure the viewport matches the new window dimensions; note that width and 
-//    // height will be significantly larger than specified on retina displays.
-//    glViewport(0, 0, width, height);
-//}
-//
-//// glfw: whenever the mouse moves, this callback is called
-//// -------------------------------------------------------
-//void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
-//{
-//    float xpos = static_cast<float>(xposIn);
-//    float ypos = static_cast<float>(yposIn);
-//
-//    if (firstMouse)
-//    {
-//        lastX = xpos;
-//        lastY = ypos;
-//        firstMouse = false;
-//    }
-//
-//    float xoffset = xpos - lastX;
-//    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
-//    lastX = xpos;
-//    lastY = ypos;
-//
-//    float sensitivity = 0.1f; // change this value to your liking
-//    xoffset *= sensitivity;
-//    yoffset *= sensitivity;
-//
-//    yaw += xoffset;
-//    pitch += yoffset;
-//
-//    // make sure that when pitch is out of bounds, screen doesn't get flipped
-//    if (pitch > 89.0f)
-//        pitch = 89.0f;
-//    if (pitch < -89.0f)
-//        pitch = -89.0f;
-//
-//    glm::vec3 front;
-//    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-//    front.y = sin(glm::radians(pitch));
-//    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-//    cameraFront = glm::normalize(front);
-//}
-//
-//// glfw: whenever the mouse scroll wheel scrolls, this callback is called
-//// ----------------------------------------------------------------------
-//void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-//{
-//    fov -= (float)yoffset;
-//    if (fov < 1.0f)
-//        fov = 1.0f;
-//    if (fov > 45.0f)
-//        fov = 45.0f;
-//}
