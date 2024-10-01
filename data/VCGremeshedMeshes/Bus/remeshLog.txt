@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Bus\D00084.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00084.obj
+Read mesh ../../data/Meshes/Bus\D00114.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00114.obj
+Read mesh ../../data/Meshes/Bus\D00151.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00151.obj
+Read mesh ../../data/Meshes/Bus\D00179.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00179.obj
+Read mesh ../../data/Meshes/Bus\D00182.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00182.obj
+Read mesh ../../data/Meshes/Bus\D00264.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00264.obj
+Read mesh ../../data/Meshes/Bus\D00411.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00411.obj
+Read mesh ../../data/Meshes/Bus\D00436.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00436.obj
+Read mesh ../../data/Meshes/Bus\D00446.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00446.obj
+Read mesh ../../data/Meshes/Bus\D00448.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00448.obj
+Read mesh ../../data/Meshes/Bus\D00483.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00483.obj
+Read mesh ../../data/Meshes/Bus\D00516.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00516.obj
+Read mesh ../../data/Meshes/Bus\D00677.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00677.obj
+Read mesh ../../data/Meshes/Bus\D00754.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00754.obj
+Read mesh ../../data/Meshes/Bus\D00769.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00769.obj
+Read mesh ../../data/Meshes/Bus\D00775.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00775.obj
+Read mesh ../../data/Meshes/Bus\D00815.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00815.obj
+Read mesh ../../data/Meshes/Bus\D00823.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00823.obj
+Read mesh ../../data/Meshes/Bus\D00832.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00832.obj
+Read mesh ../../data/Meshes/Bus\D00857.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00857.obj

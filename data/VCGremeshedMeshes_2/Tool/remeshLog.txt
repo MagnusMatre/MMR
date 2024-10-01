@@ -1,0 +1,76 @@
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01003.obj successfully
+Saving mesh to file:  Tool/D01003.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01012.obj successfully
+Saving mesh to file:  Tool/D01012.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01040.obj successfully
+Saving mesh to file:  Tool/D01040.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01044.obj successfully
+Saving mesh to file:  Tool/D01044.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01069.obj successfully
+Saving mesh to file:  Tool/D01069.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01084.obj successfully
+Saving mesh to file:  Tool/D01084.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01086.obj successfully
+Saving mesh to file:  Tool/D01086.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01111.obj successfully
+Saving mesh to file:  Tool/D01111.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01113.obj successfully
+Saving mesh to file:  Tool/D01113.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01127.obj successfully
+Saving mesh to file:  Tool/D01127.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01131.obj successfully
+Saving mesh to file:  Tool/D01131.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01140.obj successfully
+Saving mesh to file:  Tool/D01140.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01142.obj successfully
+Saving mesh to file:  Tool/D01142.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01148.obj successfully
+Saving mesh to file:  Tool/D01148.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01152.obj successfully
+Saving mesh to file:  Tool/D01152.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01154.obj successfully
+Saving mesh to file:  Tool/D01154.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01156.obj successfully
+Saving mesh to file:  Tool/D01156.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01159.obj successfully
+Saving mesh to file:  Tool/D01159.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01165.obj successfully
+Saving mesh to file:  Tool/D01165.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\D01176.obj successfully
+Saving mesh to file:  Tool/D01176.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1099.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1100.obj successfully
+Saving mesh to file:  Tool/m1100.obj with resulting number of vertices: 2818
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1101.obj successfully
+Saving mesh to file:  Tool/m1101.obj with resulting number of vertices: 2056
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1102.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1103.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1104.obj successfully
+Saving mesh to file:  Tool/m1104.obj with resulting number of vertices: 2773
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1105.obj successfully
+Saving mesh to file:  Tool/m1105.obj with resulting number of vertices: 2594
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1106.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1107.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1108.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1109.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1110.obj successfully
+Saving mesh to file:  Tool/m1110.obj with resulting number of vertices: 2383
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1111.obj successfully
+Saving mesh to file:  Tool/m1111.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1112.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1113.obj successfully
+Saving mesh to file:  Tool/m1113.obj with resulting number of vertices: 2042
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1114.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1115.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m1116.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Tool\m1117.obj successfully
+Saving mesh to file:  Tool/m1117.obj with resulting number of vertices: 2325
+Read mesh ../../data/VCGremeshedMeshes/Tool\m587.obj successfully
+Saving mesh to file:  Tool/m587.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\m588.obj successfully
+Saving mesh to file:  Tool/m588.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Tool\m589.obj successfully
+Saving mesh to file:  Tool/m589.obj with resulting number of vertices: 2354
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m590.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Tool\m591.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/Tool/remeshLog.txt already exists, skipping...

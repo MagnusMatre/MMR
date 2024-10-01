@@ -1,0 +1,44 @@
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m53.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m54.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m55.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m56.obj successfully
+Saving mesh to file:  AquaticAnimal/m56.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m57.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m58.obj successfully
+Saving mesh to file:  AquaticAnimal/m58.obj with resulting number of vertices: 2671
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m59.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m60.obj successfully
+Saving mesh to file:  AquaticAnimal/m60.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m61.obj successfully
+Saving mesh to file:  AquaticAnimal/m61.obj with resulting number of vertices: 2606
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m62.obj successfully
+Saving mesh to file:  AquaticAnimal/m62.obj with resulting number of vertices: 2486
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m63.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m64.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m65.obj successfully
+Saving mesh to file:  AquaticAnimal/m65.obj with resulting number of vertices: 2766
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m66.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m67.obj successfully
+Saving mesh to file:  AquaticAnimal/m67.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m68.obj successfully
+Saving mesh to file:  AquaticAnimal/m68.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m69.obj successfully
+Saving mesh to file:  AquaticAnimal/m69.obj with resulting number of vertices: 2982
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m70.obj successfully
+Saving mesh to file:  AquaticAnimal/m70.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m71.obj successfully
+Saving mesh to file:  AquaticAnimal/m71.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m72.obj successfully
+Saving mesh to file:  AquaticAnimal/m72.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m73.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m74.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m75.obj successfully
+Saving mesh to file:  AquaticAnimal/m75.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m76.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m77.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m78.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/AquaticAnimal\m79.obj successfully
+Saving mesh to file:  AquaticAnimal/m79.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m80.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/AquaticAnimal\m81.obj because: SurfaceMesh::add_face: Complex vertex.
+File: ../../data/VCGremeshedMeshes_2/AquaticAnimal/remeshLog.txt already exists, skipping...

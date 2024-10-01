@@ -1,0 +1,56 @@
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00035.obj successfully
+Saving mesh to file:  Cup/D00035.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00067.obj successfully
+Saving mesh to file:  Cup/D00067.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00174.obj successfully
+Saving mesh to file:  Cup/D00174.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00206.obj successfully
+Saving mesh to file:  Cup/D00206.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00214.obj successfully
+Saving mesh to file:  Cup/D00214.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00270.obj successfully
+Saving mesh to file:  Cup/D00270.obj with resulting number of vertices: 2490
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00328.obj successfully
+Saving mesh to file:  Cup/D00328.obj with resulting number of vertices: 2570
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00355.obj successfully
+Saving mesh to file:  Cup/D00355.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00363.obj successfully
+Saving mesh to file:  Cup/D00363.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00457.obj successfully
+Saving mesh to file:  Cup/D00457.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00463.obj successfully
+Saving mesh to file:  Cup/D00463.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00519.obj successfully
+Saving mesh to file:  Cup/D00519.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00550.obj successfully
+Saving mesh to file:  Cup/D00550.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00587.obj successfully
+Saving mesh to file:  Cup/D00587.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00638.obj successfully
+Saving mesh to file:  Cup/D00638.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00642.obj successfully
+Saving mesh to file:  Cup/D00642.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00738.obj successfully
+Saving mesh to file:  Cup/D00738.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Cup\D00843.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00874.obj successfully
+Saving mesh to file:  Cup/D00874.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\D00882.obj successfully
+Saving mesh to file:  Cup/D00882.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\m494.obj successfully
+Saving mesh to file:  Cup/m494.obj with resulting number of vertices: 2624
+Read mesh ../../data/VCGremeshedMeshes/Cup\m495.obj successfully
+Saving mesh to file:  Cup/m495.obj with resulting number of vertices: 2648
+Error reading file: ../../data/VCGremeshedMeshes/Cup\m496.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cup\m497.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Cup\m498.obj successfully
+Saving mesh to file:  Cup/m498.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Cup\m499.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Cup\m500.obj successfully
+Saving mesh to file:  Cup/m500.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\m501.obj successfully
+Saving mesh to file:  Cup/m501.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Cup\m502.obj successfully
+Saving mesh to file:  Cup/m502.obj with resulting number of vertices: 2978
+Error reading file: ../../data/VCGremeshedMeshes/Cup\m526.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/Cup/remeshLog.txt already exists, skipping...

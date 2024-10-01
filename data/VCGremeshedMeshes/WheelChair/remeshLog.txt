@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/WheelChair\D00004.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00004.obj
+Read mesh ../../data/Meshes/WheelChair\D00070.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00070.obj
+Read mesh ../../data/Meshes/WheelChair\D00088.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00088.obj
+Read mesh ../../data/Meshes/WheelChair\D00183.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00183.obj
+Read mesh ../../data/Meshes/WheelChair\D00203.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00203.obj
+Read mesh ../../data/Meshes/WheelChair\D00274.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00274.obj
+Read mesh ../../data/Meshes/WheelChair\D00290.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00290.obj
+Read mesh ../../data/Meshes/WheelChair\D00365.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00365.obj
+Read mesh ../../data/Meshes/WheelChair\D00394.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00394.obj
+Read mesh ../../data/Meshes/WheelChair\D00449.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00449.obj
+Read mesh ../../data/Meshes/WheelChair\D00453.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00453.obj
+Read mesh ../../data/Meshes/WheelChair\D00499.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00499.obj
+Read mesh ../../data/Meshes/WheelChair\D00526.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00526.obj
+Read mesh ../../data/Meshes/WheelChair\D00604.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00604.obj
+Read mesh ../../data/Meshes/WheelChair\D00628.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00628.obj
+Read mesh ../../data/Meshes/WheelChair\D00687.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00687.obj
+Read mesh ../../data/Meshes/WheelChair\D00720.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00720.obj
+Read mesh ../../data/Meshes/WheelChair\D00782.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00782.obj
+Read mesh ../../data/Meshes/WheelChair\D00821.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00821.obj
+Read mesh ../../data/Meshes/WheelChair\D00846.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00846.obj

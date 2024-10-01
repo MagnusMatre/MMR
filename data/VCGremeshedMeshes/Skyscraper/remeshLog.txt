@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Skyscraper\D00006.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00006.obj
+Read mesh ../../data/Meshes/Skyscraper\D00058.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00058.obj
+Read mesh ../../data/Meshes/Skyscraper\D00059.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00059.obj
+Read mesh ../../data/Meshes/Skyscraper\D00105.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00105.obj
+Read mesh ../../data/Meshes/Skyscraper\D00125.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00125.obj
+Read mesh ../../data/Meshes/Skyscraper\D00126.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00126.obj
+Read mesh ../../data/Meshes/Skyscraper\D00130.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00130.obj
+Read mesh ../../data/Meshes/Skyscraper\D00259.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00259.obj
+Read mesh ../../data/Meshes/Skyscraper\D00300.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00300.obj
+Read mesh ../../data/Meshes/Skyscraper\D00520.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00520.obj
+Read mesh ../../data/Meshes/Skyscraper\D00532.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00532.obj
+Read mesh ../../data/Meshes/Skyscraper\D00584.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00584.obj
+Read mesh ../../data/Meshes/Skyscraper\D00589.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00589.obj
+Read mesh ../../data/Meshes/Skyscraper\D00641.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00641.obj
+Read mesh ../../data/Meshes/Skyscraper\D00664.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00664.obj
+Read mesh ../../data/Meshes/Skyscraper\D00729.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00729.obj
+Read mesh ../../data/Meshes/Skyscraper\D00822.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00822.obj
+Read mesh ../../data/Meshes/Skyscraper\D00870.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00870.obj
+Read mesh ../../data/Meshes/Skyscraper\D00872.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00872.obj
+Read mesh ../../data/Meshes/Skyscraper\D00998.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00998.obj

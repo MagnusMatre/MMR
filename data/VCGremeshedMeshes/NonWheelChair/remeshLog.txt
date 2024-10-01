@@ -1,0 +1,120 @@
+Read mesh ../../data/Meshes/NonWheelChair\D00037.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00037.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00101.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00101.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00170.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00170.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00185.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00185.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00240.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00240.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00306.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00306.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00357.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00357.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00419.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00419.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00443.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00443.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00445.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00445.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00480.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00480.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00481.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00481.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00512.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00512.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00694.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00694.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00707.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00707.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00741.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00741.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00853.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00853.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00914.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00914.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00928.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00928.obj
+Read mesh ../../data/Meshes/NonWheelChair\D00936.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00936.obj
+Read mesh ../../data/Meshes/NonWheelChair\m785.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m785.obj
+Read mesh ../../data/Meshes/NonWheelChair\m786.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m786.obj
+Read mesh ../../data/Meshes/NonWheelChair\m787.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m787.obj
+Read mesh ../../data/Meshes/NonWheelChair\m788.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m788.obj
+Read mesh ../../data/Meshes/NonWheelChair\m789.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m789.obj
+Read mesh ../../data/Meshes/NonWheelChair\m790.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m790.obj
+Read mesh ../../data/Meshes/NonWheelChair\m791.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m791.obj
+Read mesh ../../data/Meshes/NonWheelChair\m793.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m793.obj
+Read mesh ../../data/Meshes/NonWheelChair\m794.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m794.obj
+Read mesh ../../data/Meshes/NonWheelChair\m795.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m795.obj
+Read mesh ../../data/Meshes/NonWheelChair\m796.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m796.obj
+Read mesh ../../data/Meshes/NonWheelChair\m797.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m797.obj
+Read mesh ../../data/Meshes/NonWheelChair\m798.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m798.obj
+Read mesh ../../data/Meshes/NonWheelChair\m799.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m799.obj
+Read mesh ../../data/Meshes/NonWheelChair\m800.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m800.obj
+Read mesh ../../data/Meshes/NonWheelChair\m801.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m801.obj
+Read mesh ../../data/Meshes/NonWheelChair\m804.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m804.obj
+Read mesh ../../data/Meshes/NonWheelChair\m805.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m805.obj
+Read mesh ../../data/Meshes/NonWheelChair\m806.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m806.obj
+Read mesh ../../data/Meshes/NonWheelChair\m807.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m807.obj
+Read mesh ../../data/Meshes/NonWheelChair\m808.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m808.obj
+Read mesh ../../data/Meshes/NonWheelChair\m809.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m809.obj
+Read mesh ../../data/Meshes/NonWheelChair\m810.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m810.obj
+Read mesh ../../data/Meshes/NonWheelChair\m811.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m811.obj
+Read mesh ../../data/Meshes/NonWheelChair\m812.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m812.obj
+Read mesh ../../data/Meshes/NonWheelChair\m813.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m813.obj
+Read mesh ../../data/Meshes/NonWheelChair\m814.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m814.obj
+Read mesh ../../data/Meshes/NonWheelChair\m815.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m815.obj
+Read mesh ../../data/Meshes/NonWheelChair\m816.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m816.obj
+Read mesh ../../data/Meshes/NonWheelChair\m817.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m817.obj
+Read mesh ../../data/Meshes/NonWheelChair\m818.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m818.obj
+Read mesh ../../data/Meshes/NonWheelChair\m819.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m819.obj
+Read mesh ../../data/Meshes/NonWheelChair\m820.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m820.obj
+Read mesh ../../data/Meshes/NonWheelChair\m821.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m821.obj
+Read mesh ../../data/Meshes/NonWheelChair\m822.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m822.obj
+Read mesh ../../data/Meshes/NonWheelChair\m823.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m823.obj
+Read mesh ../../data/Meshes/NonWheelChair\m824.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m824.obj
+Read mesh ../../data/Meshes/NonWheelChair\m826.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m826.obj
+Read mesh ../../data/Meshes/NonWheelChair\m827.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m827.obj
+Read mesh ../../data/Meshes/NonWheelChair\m828.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m828.obj

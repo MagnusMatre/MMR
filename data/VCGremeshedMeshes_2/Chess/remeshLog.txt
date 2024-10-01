@@ -1,0 +1,67 @@
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01017.obj successfully
+Saving mesh to file:  Chess/D01017.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01019.obj successfully
+Saving mesh to file:  Chess/D01019.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01021.obj successfully
+Saving mesh to file:  Chess/D01021.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\D01043.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\D01045.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01049.obj successfully
+Saving mesh to file:  Chess/D01049.obj with resulting number of vertices: 2839
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01053.obj successfully
+Saving mesh to file:  Chess/D01053.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01080.obj successfully
+Saving mesh to file:  Chess/D01080.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01081.obj successfully
+Saving mesh to file:  Chess/D01081.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\D01099.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01105.obj successfully
+Saving mesh to file:  Chess/D01105.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\D01112.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01123.obj successfully
+Saving mesh to file:  Chess/D01123.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\D01126.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\D01130.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01138.obj successfully
+Saving mesh to file:  Chess/D01138.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01145.obj successfully
+Saving mesh to file:  Chess/D01145.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01171.obj successfully
+Saving mesh to file:  Chess/D01171.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01186.obj successfully
+Saving mesh to file:  Chess/D01186.obj with resulting number of vertices: 2362
+Read mesh ../../data/VCGremeshedMeshes/Chess\D01188.obj successfully
+Saving mesh to file:  Chess/D01188.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1589.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1591.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1593.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1595.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1596.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1598.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1599.obj successfully
+Saving mesh to file:  Chess/m1599.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1600.obj successfully
+Saving mesh to file:  Chess/m1600.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1601.obj successfully
+Saving mesh to file:  Chess/m1601.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1602.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1603.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1604.obj successfully
+Saving mesh to file:  Chess/m1604.obj with resulting number of vertices: 2839
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1605.obj successfully
+Saving mesh to file:  Chess/m1605.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1606.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1607.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1608.obj successfully
+Saving mesh to file:  Chess/m1608.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1609.obj successfully
+Saving mesh to file:  Chess/m1609.obj with resulting number of vertices: 2362
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1610.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1611.obj successfully
+Saving mesh to file:  Chess/m1611.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Chess\m1612.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1613.obj successfully
+Saving mesh to file:  Chess/m1613.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Chess\m1614.obj successfully
+Saving mesh to file:  Chess/m1614.obj with resulting number of vertices: 2500
+File: ../../data/VCGremeshedMeshes_2/Chess/remeshLog.txt already exists, skipping...

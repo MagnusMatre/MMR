@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Bookset\D01009.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01009.obj
+Read mesh ../../data/Meshes/Bookset\D01013.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01013.obj
+Read mesh ../../data/Meshes/Bookset\D01030.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01030.obj
+Read mesh ../../data/Meshes/Bookset\D01038.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01038.obj
+Read mesh ../../data/Meshes/Bookset\D01042.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01042.obj
+Read mesh ../../data/Meshes/Bookset\D01050.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01050.obj
+Read mesh ../../data/Meshes/Bookset\D01065.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01065.obj
+Read mesh ../../data/Meshes/Bookset\D01078.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01078.obj
+Read mesh ../../data/Meshes/Bookset\D01096.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01096.obj
+Read mesh ../../data/Meshes/Bookset\D01108.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01108.obj
+Read mesh ../../data/Meshes/Bookset\D01109.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01109.obj
+Read mesh ../../data/Meshes/Bookset\D01110.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01110.obj
+Read mesh ../../data/Meshes/Bookset\D01122.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01122.obj
+Read mesh ../../data/Meshes/Bookset\D01135.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01135.obj
+Read mesh ../../data/Meshes/Bookset\D01146.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01146.obj
+Read mesh ../../data/Meshes/Bookset\D01182.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01182.obj
+Read mesh ../../data/Meshes/Bookset\D01183.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01183.obj
+Read mesh ../../data/Meshes/Bookset\D01184.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01184.obj
+Read mesh ../../data/Meshes/Bookset\D01190.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01190.obj
+Read mesh ../../data/Meshes/Bookset\D01199.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01199.obj

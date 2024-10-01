@@ -1,0 +1,38 @@
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01015.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01025.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01032.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01051.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01054.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01057.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01063.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01075.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Knife\D01077.obj successfully
+Saving mesh to file:  Knife/D01077.obj with resulting number of vertices: 2201
+Read mesh ../../data/VCGremeshedMeshes/Knife\D01107.obj successfully
+Saving mesh to file:  Knife/D01107.obj with resulting number of vertices: 2237
+Read mesh ../../data/VCGremeshedMeshes/Knife\D01119.obj successfully
+Saving mesh to file:  Knife/D01119.obj with resulting number of vertices: 2581
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01120.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01132.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01150.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01160.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01168.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Knife\D01174.obj successfully
+Saving mesh to file:  Knife/D01174.obj with resulting number of vertices: 2650
+Read mesh ../../data/VCGremeshedMeshes/Knife\D01175.obj successfully
+Saving mesh to file:  Knife/D01175.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01187.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\D01189.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Knife\m722.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Knife\m723.obj successfully
+Saving mesh to file:  Knife/m723.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Knife\m724.obj successfully
+Saving mesh to file:  Knife/m724.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Knife\m725.obj successfully
+Saving mesh to file:  Knife/m725.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Knife\m726.obj successfully
+Saving mesh to file:  Knife/m726.obj with resulting number of vertices: 2512
+Read mesh ../../data/VCGremeshedMeshes/Knife\m727.obj successfully
+Saving mesh to file:  Knife/m727.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Knife\m728.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/Knife/remeshLog.txt already exists, skipping...

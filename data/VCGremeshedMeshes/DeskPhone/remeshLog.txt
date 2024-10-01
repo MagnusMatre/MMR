@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/DeskPhone\D00118.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00118.obj
+Read mesh ../../data/Meshes/DeskPhone\D00135.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00135.obj
+Read mesh ../../data/Meshes/DeskPhone\D00154.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00154.obj
+Read mesh ../../data/Meshes/DeskPhone\D00220.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00220.obj
+Read mesh ../../data/Meshes/DeskPhone\D00316.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00316.obj
+Read mesh ../../data/Meshes/DeskPhone\D00318.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00318.obj
+Read mesh ../../data/Meshes/DeskPhone\D00403.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00403.obj
+Read mesh ../../data/Meshes/DeskPhone\D00486.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00486.obj
+Read mesh ../../data/Meshes/DeskPhone\D00511.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00511.obj
+Read mesh ../../data/Meshes/DeskPhone\D00556.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00556.obj
+Read mesh ../../data/Meshes/DeskPhone\D00576.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00576.obj
+Read mesh ../../data/Meshes/DeskPhone\D00680.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00680.obj
+Read mesh ../../data/Meshes/DeskPhone\D00706.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00706.obj
+Read mesh ../../data/Meshes/DeskPhone\D00773.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00773.obj
+Read mesh ../../data/Meshes/DeskPhone\D00829.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00829.obj
+Read mesh ../../data/Meshes/DeskPhone\D00894.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00894.obj
+Read mesh ../../data/Meshes/DeskPhone\D00897.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00897.obj
+Read mesh ../../data/Meshes/DeskPhone\D00899.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00899.obj
+Read mesh ../../data/Meshes/DeskPhone\D00957.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00957.obj
+Read mesh ../../data/Meshes/DeskPhone\D00958.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00958.obj

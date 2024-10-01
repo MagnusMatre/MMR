@@ -1,0 +1,192 @@
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m118.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m119.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m120.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m121.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m122.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m123.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m124.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m125.obj successfully
+Saving mesh to file:  Humanoid/m125.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m126.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m128.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m129.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m130.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m131.obj successfully
+Saving mesh to file:  Humanoid/m131.obj with resulting number of vertices: 2012
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m132.obj successfully
+Saving mesh to file:  Humanoid/m132.obj with resulting number of vertices: 2537
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m133.obj successfully
+Saving mesh to file:  Humanoid/m133.obj with resulting number of vertices: 2344
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m134.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m135.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m136.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m137.obj successfully
+Saving mesh to file:  Humanoid/m137.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m138.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m139.obj successfully
+Saving mesh to file:  Humanoid/m139.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m140.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m141.obj successfully
+Saving mesh to file:  Humanoid/m141.obj with resulting number of vertices: 2012
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m143.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m144.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m145.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m146.obj successfully
+Saving mesh to file:  Humanoid/m146.obj with resulting number of vertices: 2244
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m147.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m148.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m149.obj successfully
+Saving mesh to file:  Humanoid/m149.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m150.obj successfully
+Saving mesh to file:  Humanoid/m150.obj with resulting number of vertices: 2001
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m151.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m152.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m153.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m154.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m155.obj successfully
+Saving mesh to file:  Humanoid/m155.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m156.obj successfully
+Saving mesh to file:  Humanoid/m156.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m157.obj successfully
+Saving mesh to file:  Humanoid/m157.obj with resulting number of vertices: 2640
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m158.obj successfully
+Saving mesh to file:  Humanoid/m158.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m159.obj successfully
+Saving mesh to file:  Humanoid/m159.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m160.obj successfully
+Saving mesh to file:  Humanoid/m160.obj with resulting number of vertices: 2799
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m161.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m162.obj successfully
+Saving mesh to file:  Humanoid/m162.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m163.obj successfully
+Saving mesh to file:  Humanoid/m163.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m164.obj successfully
+Saving mesh to file:  Humanoid/m164.obj with resulting number of vertices: 2504
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m165.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m166.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m167.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m168.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m169.obj successfully
+Saving mesh to file:  Humanoid/m169.obj with resulting number of vertices: 2540
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m170.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m171.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m172.obj successfully
+Saving mesh to file:  Humanoid/m172.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m173.obj successfully
+Saving mesh to file:  Humanoid/m173.obj with resulting number of vertices: 2724
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m174.obj successfully
+Saving mesh to file:  Humanoid/m174.obj with resulting number of vertices: 2652
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m175.obj successfully
+Saving mesh to file:  Humanoid/m175.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m176.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m177.obj successfully
+Saving mesh to file:  Humanoid/m177.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m178.obj successfully
+Saving mesh to file:  Humanoid/m178.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m179.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m180.obj successfully
+Saving mesh to file:  Humanoid/m180.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m181.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m182.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m183.obj successfully
+Saving mesh to file:  Humanoid/m183.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m184.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m185.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m186.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m187.obj successfully
+Saving mesh to file:  Humanoid/m187.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m188.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m189.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m190.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m191.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m192.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m193.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m194.obj successfully
+Saving mesh to file:  Humanoid/m194.obj with resulting number of vertices: 2244
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m195.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m196.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m197.obj successfully
+Saving mesh to file:  Humanoid/m197.obj with resulting number of vertices: 2010
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m198.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m199.obj successfully
+Saving mesh to file:  Humanoid/m199.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m202.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m203.obj successfully
+Saving mesh to file:  Humanoid/m203.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m204.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m205.obj successfully
+Saving mesh to file:  Humanoid/m205.obj with resulting number of vertices: 2792
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m206.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m207.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m208.obj successfully
+Saving mesh to file:  Humanoid/m208.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m210.obj successfully
+Saving mesh to file:  Humanoid/m210.obj with resulting number of vertices: 2916
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m211.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m212.obj successfully
+Saving mesh to file:  Humanoid/m212.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m213.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m214.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m215.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m216.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m217.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m218.obj successfully
+Saving mesh to file:  Humanoid/m218.obj with resulting number of vertices: 2303
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m219.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m220.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m221.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m222.obj successfully
+Saving mesh to file:  Humanoid/m222.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m223.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m224.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m226.obj successfully
+Saving mesh to file:  Humanoid/m226.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m227.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m228.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m229.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m230.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m231.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m232.obj successfully
+Saving mesh to file:  Humanoid/m232.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m233.obj successfully
+Saving mesh to file:  Humanoid/m233.obj with resulting number of vertices: 2434
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m234.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m235.obj successfully
+Saving mesh to file:  Humanoid/m235.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m236.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m237.obj successfully
+Saving mesh to file:  Humanoid/m237.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m238.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m239.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m240.obj successfully
+Saving mesh to file:  Humanoid/m240.obj with resulting number of vertices: 2377
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m241.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m242.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m243.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m244.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m245.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m246.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m248.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m249.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m250.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m251.obj successfully
+Saving mesh to file:  Humanoid/m251.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m252.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m253.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m254.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m255.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m256.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m257.obj successfully
+Saving mesh to file:  Humanoid/m257.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m258.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m259.obj successfully
+Saving mesh to file:  Humanoid/m259.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m260.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m261.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m262.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m263.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m264.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Humanoid\m265.obj successfully
+Saving mesh to file:  Humanoid/m265.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Humanoid\m266.obj because: SurfaceMesh::add_face: Complex vertex.
+File: ../../data/VCGremeshedMeshes_2/Humanoid/remeshLog.txt already exists, skipping...

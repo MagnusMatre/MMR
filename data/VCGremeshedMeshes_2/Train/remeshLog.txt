@@ -1,0 +1,36 @@
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01008.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01014.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01016.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01027.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01031.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01035.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01047.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01055.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01059.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01061.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01064.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01089.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01094.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01095.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01134.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01137.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01147.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01149.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01163.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\D01180.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Train\m1578.obj successfully
+Saving mesh to file:  Train/m1578.obj with resulting number of vertices: 2640
+Error reading file: ../../data/VCGremeshedMeshes/Train\m1580.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\m1581.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\m1582.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Train\m1583.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Train\m1584.obj successfully
+Saving mesh to file:  Train/m1584.obj with resulting number of vertices: 2375
+Read mesh ../../data/VCGremeshedMeshes/Train\m1585.obj successfully
+Saving mesh to file:  Train/m1585.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Train\m1586.obj successfully
+Saving mesh to file:  Train/m1586.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Train\m1587.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Train\m1588.obj successfully
+Saving mesh to file:  Train/m1588.obj with resulting number of vertices: 2500
+File: ../../data/VCGremeshedMeshes_2/Train/remeshLog.txt already exists, skipping...

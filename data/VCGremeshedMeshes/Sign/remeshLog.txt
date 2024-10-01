@@ -1,0 +1,30 @@
+Read mesh ../../data/Meshes/Sign\m1670.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1670.obj
+Read mesh ../../data/Meshes/Sign\m1671.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1671.obj
+Read mesh ../../data/Meshes/Sign\m1672.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1672.obj
+Read mesh ../../data/Meshes/Sign\m1673.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1673.obj
+Read mesh ../../data/Meshes/Sign\m1674.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1674.obj
+Read mesh ../../data/Meshes/Sign\m1675.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1675.obj
+Read mesh ../../data/Meshes/Sign\m1676.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1676.obj
+Read mesh ../../data/Meshes/Sign\m1678.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1678.obj
+Read mesh ../../data/Meshes/Sign\m1679.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1679.obj
+Read mesh ../../data/Meshes/Sign\m1680.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1680.obj
+Read mesh ../../data/Meshes/Sign\m1681.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1681.obj
+Read mesh ../../data/Meshes/Sign\m1682.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1682.obj
+Read mesh ../../data/Meshes/Sign\m1683.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1683.obj
+Read mesh ../../data/Meshes/Sign\m1684.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1684.obj
+Read mesh ../../data/Meshes/Sign\m1685.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1685.obj

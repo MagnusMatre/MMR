@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Glasses\D00050.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00050.obj
+Read mesh ../../data/Meshes/Glasses\D00201.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00201.obj
+Read mesh ../../data/Meshes/Glasses\D00225.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00225.obj
+Read mesh ../../data/Meshes/Glasses\D00432.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00432.obj
+Read mesh ../../data/Meshes/Glasses\D00475.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00475.obj
+Read mesh ../../data/Meshes/Glasses\D00507.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00507.obj
+Read mesh ../../data/Meshes/Glasses\D00560.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00560.obj
+Read mesh ../../data/Meshes/Glasses\D00575.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00575.obj
+Read mesh ../../data/Meshes/Glasses\D00630.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00630.obj
+Read mesh ../../data/Meshes/Glasses\D00640.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00640.obj
+Read mesh ../../data/Meshes/Glasses\D00656.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00656.obj
+Read mesh ../../data/Meshes/Glasses\D00660.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00660.obj
+Read mesh ../../data/Meshes/Glasses\D00717.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00717.obj
+Read mesh ../../data/Meshes/Glasses\D00730.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00730.obj
+Read mesh ../../data/Meshes/Glasses\D00813.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00813.obj
+Read mesh ../../data/Meshes/Glasses\D00816.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00816.obj
+Read mesh ../../data/Meshes/Glasses\D00877.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00877.obj
+Read mesh ../../data/Meshes/Glasses\D00883.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00883.obj
+Read mesh ../../data/Meshes/Glasses\D00937.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00937.obj
+Read mesh ../../data/Meshes/Glasses\D00994.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00994.obj

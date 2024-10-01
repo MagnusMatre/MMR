@@ -1,0 +1,100 @@
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00081.obj successfully
+Saving mesh to file:  Insect/D00081.obj with resulting number of vertices: 2391
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00082.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00102.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00109.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00117.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00136.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00160.obj successfully
+Saving mesh to file:  Insect/D00160.obj with resulting number of vertices: 2715
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00180.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00231.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00291.obj successfully
+Saving mesh to file:  Insect/D00291.obj with resulting number of vertices: 2816
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00294.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00309.obj successfully
+Saving mesh to file:  Insect/D00309.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00315.obj successfully
+Saving mesh to file:  Insect/D00315.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00333.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00399.obj successfully
+Saving mesh to file:  Insect/D00399.obj with resulting number of vertices: 2762
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00430.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00510.obj successfully
+Saving mesh to file:  Insect/D00510.obj with resulting number of vertices: 2043
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00590.obj successfully
+Saving mesh to file:  Insect/D00590.obj with resulting number of vertices: 2274
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00615.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00662.obj successfully
+Saving mesh to file:  Insect/D00662.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00668.obj successfully
+Saving mesh to file:  Insect/D00668.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00672.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00695.obj successfully
+Saving mesh to file:  Insect/D00695.obj with resulting number of vertices: 2040
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00713.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00732.obj successfully
+Saving mesh to file:  Insect/D00732.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00734.obj successfully
+Saving mesh to file:  Insect/D00734.obj with resulting number of vertices: 2907
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00746.obj successfully
+Saving mesh to file:  Insect/D00746.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00752.obj successfully
+Saving mesh to file:  Insect/D00752.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00753.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00774.obj successfully
+Saving mesh to file:  Insect/D00774.obj with resulting number of vertices: 2294
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00786.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00787.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00788.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00806.obj successfully
+Saving mesh to file:  Insect/D00806.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00814.obj successfully
+Saving mesh to file:  Insect/D00814.obj with resulting number of vertices: 2285
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00855.obj successfully
+Saving mesh to file:  Insect/D00855.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00884.obj successfully
+Saving mesh to file:  Insect/D00884.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00895.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\D00973.obj successfully
+Saving mesh to file:  Insect/D00973.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\D00989.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Insect\m0.obj successfully
+Saving mesh to file:  Insect/m0.obj with resulting number of vertices: 2079
+Read mesh ../../data/VCGremeshedMeshes/Insect\m1.obj successfully
+Saving mesh to file:  Insect/m1.obj with resulting number of vertices: 2625
+Read mesh ../../data/VCGremeshedMeshes/Insect\m10.obj successfully
+Saving mesh to file:  Insect/m10.obj with resulting number of vertices: 2286
+Read mesh ../../data/VCGremeshedMeshes/Insect\m11.obj successfully
+Saving mesh to file:  Insect/m11.obj with resulting number of vertices: 2265
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m12.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m13.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m14.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Insect\m15.obj successfully
+Saving mesh to file:  Insect/m15.obj with resulting number of vertices: 2263
+Read mesh ../../data/VCGremeshedMeshes/Insect\m16.obj successfully
+Saving mesh to file:  Insect/m16.obj with resulting number of vertices: 2666
+Read mesh ../../data/VCGremeshedMeshes/Insect\m17.obj successfully
+Saving mesh to file:  Insect/m17.obj with resulting number of vertices: 2453
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m18.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m19.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\m2.obj successfully
+Saving mesh to file:  Insect/m2.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m20.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m21.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m22.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Insect\m23.obj successfully
+Saving mesh to file:  Insect/m23.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m24.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m25.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\m26.obj successfully
+Saving mesh to file:  Insect/m26.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Insect\m3.obj successfully
+Saving mesh to file:  Insect/m3.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m4.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m6.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m7.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Insect\m8.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Insect\m9.obj successfully
+Saving mesh to file:  Insect/m9.obj with resulting number of vertices: 2789
+File: ../../data/VCGremeshedMeshes_2/Insect/remeshLog.txt already exists, skipping...

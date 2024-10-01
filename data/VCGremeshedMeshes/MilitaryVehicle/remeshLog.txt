@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/MilitaryVehicle\D00017.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00017.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00051.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00051.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00100.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00100.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00173.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00173.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00272.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00272.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00334.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00334.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00458.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00458.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00529.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00529.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00577.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00577.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00611.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00611.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00723.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00723.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00761.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00761.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00778.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00778.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00799.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00799.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00801.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00801.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00918.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00918.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00932.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00932.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00933.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00933.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00952.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00952.obj
+Read mesh ../../data/Meshes/MilitaryVehicle\D00971.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00971.obj

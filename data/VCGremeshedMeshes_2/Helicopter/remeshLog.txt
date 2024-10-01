@@ -1,0 +1,69 @@
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00038.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00191.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00361.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00397.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\D00423.obj successfully
+Saving mesh to file:  Helicopter/D00423.obj with resulting number of vertices: 2335
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\D00470.obj successfully
+Saving mesh to file:  Helicopter/D00470.obj with resulting number of vertices: 2656
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00471.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00473.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00498.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00500.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00502.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00644.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00658.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00751.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\D00796.obj successfully
+Saving mesh to file:  Helicopter/D00796.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00820.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\D00868.obj successfully
+Saving mesh to file:  Helicopter/D00868.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00977.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\D00986.obj successfully
+Saving mesh to file:  Helicopter/D00986.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\D00991.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1302.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1304.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1305.obj successfully
+Saving mesh to file:  Helicopter/m1305.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1306.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1307.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1308.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1309.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1310.obj successfully
+Saving mesh to file:  Helicopter/m1310.obj with resulting number of vertices: 2313
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1311.obj successfully
+Saving mesh to file:  Helicopter/m1311.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1312.obj successfully
+Saving mesh to file:  Helicopter/m1312.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1313.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1314.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1315.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1316.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1317.obj successfully
+Saving mesh to file:  Helicopter/m1317.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1318.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1319.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1320.obj successfully
+Saving mesh to file:  Helicopter/m1320.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1321.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1322.obj successfully
+Saving mesh to file:  Helicopter/m1322.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1323.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1325.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1326.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1327.obj successfully
+Saving mesh to file:  Helicopter/m1327.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1328.obj successfully
+Saving mesh to file:  Helicopter/m1328.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1329.obj successfully
+Saving mesh to file:  Helicopter/m1329.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1330.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1332.obj successfully
+Saving mesh to file:  Helicopter/m1332.obj with resulting number of vertices: 2623
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1333.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Helicopter\m1334.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Helicopter\m1336.obj successfully
+Saving mesh to file:  Helicopter/m1336.obj with resulting number of vertices: 2940
+File: ../../data/VCGremeshedMeshes_2/Helicopter/remeshLog.txt already exists, skipping...

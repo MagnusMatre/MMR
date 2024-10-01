@@ -1,0 +1,52 @@
+Read mesh ../../data/Meshes/Bicycle\D00016.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00016.obj
+Read mesh ../../data/Meshes/Bicycle\D00033.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00033.obj
+Read mesh ../../data/Meshes/Bicycle\D00040.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00040.obj
+Read mesh ../../data/Meshes/Bicycle\D00077.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00077.obj
+Read mesh ../../data/Meshes/Bicycle\D00078.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00078.obj
+Read mesh ../../data/Meshes/Bicycle\D00462.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00462.obj
+Read mesh ../../data/Meshes/Bicycle\D00514.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00514.obj
+Read mesh ../../data/Meshes/Bicycle\D00536.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00536.obj
+Read mesh ../../data/Meshes/Bicycle\D00555.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00555.obj
+Read mesh ../../data/Meshes/Bicycle\D00558.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00558.obj
+Read mesh ../../data/Meshes/Bicycle\D00567.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00567.obj
+Read mesh ../../data/Meshes/Bicycle\D00621.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00621.obj
+Read mesh ../../data/Meshes/Bicycle\D00708.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00708.obj
+Read mesh ../../data/Meshes/Bicycle\D00750.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00750.obj
+Read mesh ../../data/Meshes/Bicycle\D00838.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00838.obj
+Read mesh ../../data/Meshes/Bicycle\D00847.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00847.obj
+Read mesh ../../data/Meshes/Bicycle\D00904.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00904.obj
+Read mesh ../../data/Meshes/Bicycle\D00930.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00930.obj
+Read mesh ../../data/Meshes/Bicycle\D00931.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00931.obj
+Read mesh ../../data/Meshes/Bicycle\D00974.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00974.obj
+Read mesh ../../data/Meshes/Bicycle\m1472.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1472.obj
+Read mesh ../../data/Meshes/Bicycle\m1473.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1473.obj
+Read mesh ../../data/Meshes/Bicycle\m1475.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1475.obj
+Read mesh ../../data/Meshes/Bicycle\m1476.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1476.obj
+Read mesh ../../data/Meshes/Bicycle\m1477.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1477.obj
+Read mesh ../../data/Meshes/Bicycle\m1478.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1478.obj

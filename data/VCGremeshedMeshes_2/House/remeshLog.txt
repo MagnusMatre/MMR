@@ -1,0 +1,59 @@
+Error reading file: ../../data/VCGremeshedMeshes/House\D00001.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00044.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00091.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/House\D00095.obj successfully
+Saving mesh to file:  House/D00095.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/House\D00286.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00325.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00359.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00389.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00415.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00454.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/House\D00568.obj successfully
+Saving mesh to file:  House/D00568.obj with resulting number of vertices: 2852
+Error reading file: ../../data/VCGremeshedMeshes/House\D00574.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00665.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00873.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/House\D00889.obj successfully
+Saving mesh to file:  House/D00889.obj with resulting number of vertices: 2041
+Error reading file: ../../data/VCGremeshedMeshes/House\D00901.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00903.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00941.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00946.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\D00965.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/House\m423.obj successfully
+Saving mesh to file:  House/m423.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/House\m429.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m430.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m431.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/House\m432.obj successfully
+Saving mesh to file:  House/m432.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/House\m433.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/House\m434.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m435.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/House\m436.obj successfully
+Saving mesh to file:  House/m436.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/House\m439.obj successfully
+Saving mesh to file:  House/m439.obj with resulting number of vertices: 2321
+Read mesh ../../data/VCGremeshedMeshes/House\m440.obj successfully
+Saving mesh to file:  House/m440.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/House\m441.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m443.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/House\m446.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/House\m447.obj successfully
+Saving mesh to file:  House/m447.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/House\m448.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/House\m449.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m451.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m452.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m453.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/House\m454.obj successfully
+Saving mesh to file:  House/m454.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/House\m456.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/House\m457.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/House\m460.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/House\m461.obj successfully
+Saving mesh to file:  House/m461.obj with resulting number of vertices: 2340
+Read mesh ../../data/VCGremeshedMeshes/House\m462.obj successfully
+Saving mesh to file:  House/m462.obj with resulting number of vertices: 2985
+File: ../../data/VCGremeshedMeshes_2/House/remeshLog.txt already exists, skipping...

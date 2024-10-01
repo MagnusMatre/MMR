@@ -1,0 +1,25 @@
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1627.obj successfully
+Saving mesh to file:  Hat/m1627.obj with resulting number of vertices: 2611
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1628.obj successfully
+Saving mesh to file:  Hat/m1628.obj with resulting number of vertices: 2937
+Error reading file: ../../data/VCGremeshedMeshes/Hat\m1629.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1630.obj successfully
+Saving mesh to file:  Hat/m1630.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Hat\m1631.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Hat\m1632.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1633.obj successfully
+Saving mesh to file:  Hat/m1633.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1634.obj successfully
+Saving mesh to file:  Hat/m1634.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Hat\m1635.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1636.obj successfully
+Saving mesh to file:  Hat/m1636.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1637.obj successfully
+Saving mesh to file:  Hat/m1637.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Hat\m1638.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Hat\m1639.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1640.obj successfully
+Saving mesh to file:  Hat/m1640.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Hat\m1641.obj successfully
+Saving mesh to file:  Hat/m1641.obj with resulting number of vertices: 2500
+File: ../../data/VCGremeshedMeshes_2/Hat/remeshLog.txt already exists, skipping...

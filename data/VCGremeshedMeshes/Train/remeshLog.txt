@@ -1,0 +1,60 @@
+Read mesh ../../data/Meshes/Train\D01008.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01008.obj
+Read mesh ../../data/Meshes/Train\D01014.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01014.obj
+Read mesh ../../data/Meshes/Train\D01016.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01016.obj
+Read mesh ../../data/Meshes/Train\D01027.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01027.obj
+Read mesh ../../data/Meshes/Train\D01031.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01031.obj
+Read mesh ../../data/Meshes/Train\D01035.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01035.obj
+Read mesh ../../data/Meshes/Train\D01047.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01047.obj
+Read mesh ../../data/Meshes/Train\D01055.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01055.obj
+Read mesh ../../data/Meshes/Train\D01059.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01059.obj
+Read mesh ../../data/Meshes/Train\D01061.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01061.obj
+Read mesh ../../data/Meshes/Train\D01064.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01064.obj
+Read mesh ../../data/Meshes/Train\D01089.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01089.obj
+Read mesh ../../data/Meshes/Train\D01094.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01094.obj
+Read mesh ../../data/Meshes/Train\D01095.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01095.obj
+Read mesh ../../data/Meshes/Train\D01134.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01134.obj
+Read mesh ../../data/Meshes/Train\D01137.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01137.obj
+Read mesh ../../data/Meshes/Train\D01147.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01147.obj
+Read mesh ../../data/Meshes/Train\D01149.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01149.obj
+Read mesh ../../data/Meshes/Train\D01163.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01163.obj
+Read mesh ../../data/Meshes/Train\D01180.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01180.obj
+Read mesh ../../data/Meshes/Train\m1578.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1578.obj
+Read mesh ../../data/Meshes/Train\m1580.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1580.obj
+Read mesh ../../data/Meshes/Train\m1581.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1581.obj
+Read mesh ../../data/Meshes/Train\m1582.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1582.obj
+Read mesh ../../data/Meshes/Train\m1583.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1583.obj
+Read mesh ../../data/Meshes/Train\m1584.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1584.obj
+Read mesh ../../data/Meshes/Train\m1585.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1585.obj
+Read mesh ../../data/Meshes/Train\m1586.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1586.obj
+Read mesh ../../data/Meshes/Train\m1587.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1587.obj
+Read mesh ../../data/Meshes/Train\m1588.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1588.obj

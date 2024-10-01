@@ -1,0 +1,25 @@
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00017.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00051.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00100.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00173.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00272.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00334.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00458.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00529.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00577.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00611.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00723.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/MilitaryVehicle\D00761.obj successfully
+Saving mesh to file:  MilitaryVehicle/D00761.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00778.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/MilitaryVehicle\D00799.obj successfully
+Saving mesh to file:  MilitaryVehicle/D00799.obj with resulting number of vertices: 2079
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00801.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/MilitaryVehicle\D00918.obj successfully
+Saving mesh to file:  MilitaryVehicle/D00918.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00932.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00933.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/MilitaryVehicle\D00952.obj successfully
+Saving mesh to file:  MilitaryVehicle/D00952.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/MilitaryVehicle\D00971.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/MilitaryVehicle/remeshLog.txt already exists, skipping...

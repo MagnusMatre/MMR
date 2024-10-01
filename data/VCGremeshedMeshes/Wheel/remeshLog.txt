@@ -1,0 +1,34 @@
+Read mesh ../../data/Meshes/Wheel\m733.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m733.obj
+Read mesh ../../data/Meshes/Wheel\m734.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m734.obj
+Read mesh ../../data/Meshes/Wheel\m735.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m735.obj
+Read mesh ../../data/Meshes/Wheel\m736.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m736.obj
+Read mesh ../../data/Meshes/Wheel\m737.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m737.obj
+Read mesh ../../data/Meshes/Wheel\m738.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m738.obj
+Read mesh ../../data/Meshes/Wheel\m739.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m739.obj
+Read mesh ../../data/Meshes/Wheel\m740.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m740.obj
+Read mesh ../../data/Meshes/Wheel\m741.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m741.obj
+Read mesh ../../data/Meshes/Wheel\m742.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m742.obj
+Read mesh ../../data/Meshes/Wheel\m743.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m743.obj
+Read mesh ../../data/Meshes/Wheel\m744.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m744.obj
+Read mesh ../../data/Meshes/Wheel\m745.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m745.obj
+Read mesh ../../data/Meshes/Wheel\m746.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m746.obj
+Read mesh ../../data/Meshes/Wheel\m747.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m747.obj
+Read mesh ../../data/Meshes/Wheel\m748.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m748.obj
+Read mesh ../../data/Meshes/Wheel\m749.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m749.obj

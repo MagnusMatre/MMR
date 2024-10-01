@@ -1,0 +1,42 @@
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m1052.obj successfully
+Saving mesh to file:  PlantWildNonTree/m1052.obj with resulting number of vertices: 2151
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m961.obj successfully
+Saving mesh to file:  PlantWildNonTree/m961.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m962.obj successfully
+Saving mesh to file:  PlantWildNonTree/m962.obj with resulting number of vertices: 3716
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m963.obj successfully
+Saving mesh to file:  PlantWildNonTree/m963.obj with resulting number of vertices: 2993
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m964.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m965.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m966.obj successfully
+Saving mesh to file:  PlantWildNonTree/m966.obj with resulting number of vertices: 3960
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m967.obj successfully
+Saving mesh to file:  PlantWildNonTree/m967.obj with resulting number of vertices: 3397
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m968.obj successfully
+Saving mesh to file:  PlantWildNonTree/m968.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m971.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m972.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m973.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m974.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m975.obj successfully
+Saving mesh to file:  PlantWildNonTree/m975.obj with resulting number of vertices: 2404
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m976.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m977.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m978.obj successfully
+Saving mesh to file:  PlantWildNonTree/m978.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m979.obj successfully
+Saving mesh to file:  PlantWildNonTree/m979.obj with resulting number of vertices: 2397
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m980.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m981.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m982.obj successfully
+Saving mesh to file:  PlantWildNonTree/m982.obj with resulting number of vertices: 2534
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m983.obj successfully
+Saving mesh to file:  PlantWildNonTree/m983.obj with resulting number of vertices: 2119
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m984.obj successfully
+Saving mesh to file:  PlantWildNonTree/m984.obj with resulting number of vertices: 2360
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m985.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m986.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/PlantWildNonTree\m987.obj successfully
+Saving mesh to file:  PlantWildNonTree/m987.obj with resulting number of vertices: 2342
+Error reading file: ../../data/VCGremeshedMeshes/PlantWildNonTree\m988.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/PlantWildNonTree/remeshLog.txt already exists, skipping...

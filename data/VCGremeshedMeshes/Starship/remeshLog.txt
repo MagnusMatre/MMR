@@ -1,0 +1,62 @@
+Read mesh ../../data/Meshes/Starship\m1353.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1353.obj
+Read mesh ../../data/Meshes/Starship\m1354.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1354.obj
+Read mesh ../../data/Meshes/Starship\m1355.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1355.obj
+Read mesh ../../data/Meshes/Starship\m1356.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1356.obj
+Read mesh ../../data/Meshes/Starship\m1357.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1357.obj
+Read mesh ../../data/Meshes/Starship\m1358.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1358.obj
+Read mesh ../../data/Meshes/Starship\m1359.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1359.obj
+Read mesh ../../data/Meshes/Starship\m1360.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1360.obj
+Read mesh ../../data/Meshes/Starship\m1361.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1361.obj
+Read mesh ../../data/Meshes/Starship\m1362.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1362.obj
+Read mesh ../../data/Meshes/Starship\m1364.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1364.obj
+Read mesh ../../data/Meshes/Starship\m1365.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1365.obj
+Read mesh ../../data/Meshes/Starship\m1366.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1366.obj
+Read mesh ../../data/Meshes/Starship\m1368.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1368.obj
+Read mesh ../../data/Meshes/Starship\m1369.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1369.obj
+Read mesh ../../data/Meshes/Starship\m1370.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1370.obj
+Read mesh ../../data/Meshes/Starship\m1371.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1371.obj
+Read mesh ../../data/Meshes/Starship\m1372.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1372.obj
+Read mesh ../../data/Meshes/Starship\m1373.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1373.obj
+Read mesh ../../data/Meshes/Starship\m1374.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1374.obj
+Read mesh ../../data/Meshes/Starship\m1375.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1375.obj
+Read mesh ../../data/Meshes/Starship\m1376.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1376.obj
+Read mesh ../../data/Meshes/Starship\m1378.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1378.obj
+Read mesh ../../data/Meshes/Starship\m1379.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1379.obj
+Read mesh ../../data/Meshes/Starship\m1380.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1380.obj
+Read mesh ../../data/Meshes/Starship\m1381.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1381.obj
+Read mesh ../../data/Meshes/Starship\m1382.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1382.obj
+Read mesh ../../data/Meshes/Starship\m1383.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1383.obj
+Read mesh ../../data/Meshes/Starship\m1384.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1384.obj
+Read mesh ../../data/Meshes/Starship\m1385.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1385.obj
+Read mesh ../../data/Meshes/Starship\m1386.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1386.obj

@@ -1,0 +1,52 @@
+Read mesh ../../data/Meshes/Motorcycle\D00021.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00021.obj
+Read mesh ../../data/Meshes/Motorcycle\D00039.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00039.obj
+Read mesh ../../data/Meshes/Motorcycle\D00054.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00054.obj
+Read mesh ../../data/Meshes/Motorcycle\D00224.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00224.obj
+Read mesh ../../data/Meshes/Motorcycle\D00269.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00269.obj
+Read mesh ../../data/Meshes/Motorcycle\D00288.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00288.obj
+Read mesh ../../data/Meshes/Motorcycle\D00342.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00342.obj
+Read mesh ../../data/Meshes/Motorcycle\D00345.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00345.obj
+Read mesh ../../data/Meshes/Motorcycle\D00395.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00395.obj
+Read mesh ../../data/Meshes/Motorcycle\D00396.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00396.obj
+Read mesh ../../data/Meshes/Motorcycle\D00476.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00476.obj
+Read mesh ../../data/Meshes/Motorcycle\D00521.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00521.obj
+Read mesh ../../data/Meshes/Motorcycle\D00544.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00544.obj
+Read mesh ../../data/Meshes/Motorcycle\D00594.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00594.obj
+Read mesh ../../data/Meshes/Motorcycle\D00703.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00703.obj
+Read mesh ../../data/Meshes/Motorcycle\D00768.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00768.obj
+Read mesh ../../data/Meshes/Motorcycle\D00858.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00858.obj
+Read mesh ../../data/Meshes/Motorcycle\D00880.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00880.obj
+Read mesh ../../data/Meshes/Motorcycle\D00886.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00886.obj
+Read mesh ../../data/Meshes/Motorcycle\D00945.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00945.obj
+Read mesh ../../data/Meshes/Motorcycle\m1479.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1479.obj
+Read mesh ../../data/Meshes/Motorcycle\m1480.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1480.obj
+Read mesh ../../data/Meshes/Motorcycle\m1481.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1481.obj
+Read mesh ../../data/Meshes/Motorcycle\m1482.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1482.obj
+Read mesh ../../data/Meshes/Motorcycle\m1483.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1483.obj
+Read mesh ../../data/Meshes/Motorcycle\m1484.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1484.obj

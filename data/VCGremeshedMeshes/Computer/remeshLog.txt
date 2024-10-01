@@ -1,0 +1,65 @@
+Read mesh ../../data/Meshes/Computer\D01002.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01002.obj
+Read mesh ../../data/Meshes/Computer\D01023.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01023.obj
+Read mesh ../../data/Meshes/Computer\D01026.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01026.obj
+Read mesh ../../data/Meshes/Computer\D01028.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01028.obj
+Read mesh ../../data/Meshes/Computer\D01033.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01033.obj
+Read mesh ../../data/Meshes/Computer\D01037.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01037.obj
+Read mesh ../../data/Meshes/Computer\D01067.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01067.obj
+Read mesh ../../data/Meshes/Computer\D01070.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01070.obj
+Read mesh ../../data/Meshes/Computer\D01071.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01071.obj
+Read mesh ../../data/Meshes/Computer\D01072.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01072.obj
+Read mesh ../../data/Meshes/Computer\D01073.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01073.obj
+Read mesh ../../data/Meshes/Computer\D01082.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01082.obj
+Read mesh ../../data/Meshes/Computer\D01085.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01085.obj
+Read mesh ../../data/Meshes/Computer\D01098.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01098.obj
+Read mesh ../../data/Meshes/Computer\D01100.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01100.obj
+Read mesh ../../data/Meshes/Computer\D01102.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01102.obj
+Error reading file: ../../data/Meshes/Computer\D01115.obj
+Read mesh ../../data/Meshes/Computer\D01128.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01128.obj
+Read mesh ../../data/Meshes/Computer\D01164.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01164.obj
+Read mesh ../../data/Meshes/Computer\D01185.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01185.obj
+Read mesh ../../data/Meshes/Computer\m1764.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1764.obj
+Read mesh ../../data/Meshes/Computer\m1765.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1765.obj
+Read mesh ../../data/Meshes/Computer\m1766.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1766.obj
+Read mesh ../../data/Meshes/Computer\m1767.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1767.obj
+Read mesh ../../data/Meshes/Computer\m1769.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1769.obj
+Read mesh ../../data/Meshes/Computer\m1770.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1770.obj
+Read mesh ../../data/Meshes/Computer\m1772.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1772.obj
+Read mesh ../../data/Meshes/Computer\m1773.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1773.obj
+Read mesh ../../data/Meshes/Computer\m1774.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1774.obj
+Read mesh ../../data/Meshes/Computer\m1775.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1775.obj
+Read mesh ../../data/Meshes/Computer\m1776.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1776.obj
+Read mesh ../../data/Meshes/Computer\m1777.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1777.obj
+Read mesh ../../data/Meshes/Computer\m1778.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1778.obj

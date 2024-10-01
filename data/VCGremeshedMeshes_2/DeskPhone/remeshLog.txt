@@ -1,0 +1,32 @@
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00118.obj successfully
+Saving mesh to file:  DeskPhone/D00118.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00135.obj successfully
+Saving mesh to file:  DeskPhone/D00135.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00154.obj successfully
+Saving mesh to file:  DeskPhone/D00154.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00220.obj successfully
+Saving mesh to file:  DeskPhone/D00220.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00316.obj successfully
+Saving mesh to file:  DeskPhone/D00316.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00318.obj successfully
+Saving mesh to file:  DeskPhone/D00318.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00403.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00486.obj successfully
+Saving mesh to file:  DeskPhone/D00486.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00511.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00556.obj successfully
+Saving mesh to file:  DeskPhone/D00556.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00576.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00680.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00706.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00773.obj successfully
+Saving mesh to file:  DeskPhone/D00773.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00829.obj successfully
+Saving mesh to file:  DeskPhone/D00829.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/DeskPhone\D00894.obj successfully
+Saving mesh to file:  DeskPhone/D00894.obj with resulting number of vertices: 2352
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00897.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00899.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00957.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/DeskPhone\D00958.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/DeskPhone/remeshLog.txt already exists, skipping...

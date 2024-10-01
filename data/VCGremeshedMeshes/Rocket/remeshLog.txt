@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Rocket\D00015.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00015.obj
+Read mesh ../../data/Meshes/Rocket\D00343.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00343.obj
+Read mesh ../../data/Meshes/Rocket\D00346.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00346.obj
+Read mesh ../../data/Meshes/Rocket\D00354.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00354.obj
+Read mesh ../../data/Meshes/Rocket\D00426.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00426.obj
+Read mesh ../../data/Meshes/Rocket\D00428.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00428.obj
+Read mesh ../../data/Meshes/Rocket\D00433.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00433.obj
+Read mesh ../../data/Meshes/Rocket\D00437.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00437.obj
+Read mesh ../../data/Meshes/Rocket\D00472.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00472.obj
+Read mesh ../../data/Meshes/Rocket\D00485.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00485.obj
+Read mesh ../../data/Meshes/Rocket\D00528.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00528.obj
+Read mesh ../../data/Meshes/Rocket\D00564.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00564.obj
+Read mesh ../../data/Meshes/Rocket\D00585.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00585.obj
+Read mesh ../../data/Meshes/Rocket\D00614.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00614.obj
+Read mesh ../../data/Meshes/Rocket\D00697.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00697.obj
+Read mesh ../../data/Meshes/Rocket\D00719.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00719.obj
+Read mesh ../../data/Meshes/Rocket\D00764.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00764.obj
+Read mesh ../../data/Meshes/Rocket\D00851.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00851.obj
+Read mesh ../../data/Meshes/Rocket\D00942.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00942.obj
+Read mesh ../../data/Meshes/Rocket\D00975.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00975.obj

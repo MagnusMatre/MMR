@@ -1,0 +1,30 @@
+Read mesh ../../data/Meshes/Hat\m1627.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1627.obj
+Read mesh ../../data/Meshes/Hat\m1628.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1628.obj
+Read mesh ../../data/Meshes/Hat\m1629.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1629.obj
+Read mesh ../../data/Meshes/Hat\m1630.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1630.obj
+Read mesh ../../data/Meshes/Hat\m1631.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1631.obj
+Read mesh ../../data/Meshes/Hat\m1632.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1632.obj
+Read mesh ../../data/Meshes/Hat\m1633.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1633.obj
+Read mesh ../../data/Meshes/Hat\m1634.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1634.obj
+Read mesh ../../data/Meshes/Hat\m1635.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1635.obj
+Read mesh ../../data/Meshes/Hat\m1636.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1636.obj
+Read mesh ../../data/Meshes/Hat\m1637.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1637.obj
+Read mesh ../../data/Meshes/Hat\m1638.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1638.obj
+Read mesh ../../data/Meshes/Hat\m1639.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1639.obj
+Read mesh ../../data/Meshes/Hat\m1640.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1640.obj
+Read mesh ../../data/Meshes/Hat\m1641.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1641.obj
