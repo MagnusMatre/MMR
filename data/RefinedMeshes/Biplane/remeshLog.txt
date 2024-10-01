@@ -1,0 +1,45 @@
+Error reading file: ../../data/Meshes/Biplane\D00069.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\D00132.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\D00178.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\D00199.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\D00246.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/RefinedMeshes/Biplane/D00276.obj already exists, skipping...
+Error reading file: ../../data/Meshes/Biplane\D00277.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\D00320.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\D00373.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/RefinedMeshes/Biplane/D00410.obj already exists, skipping...
+Error reading file: ../../data/Meshes/Biplane\D00490.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\D00515.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\D00601.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\D00616.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/RefinedMeshes/Biplane/D00632.obj already exists, skipping...
+File: ../../data/RefinedMeshes/Biplane/D00634.obj already exists, skipping...
+File: ../../data/RefinedMeshes/Biplane/D00666.obj already exists, skipping...
+File: ../../data/RefinedMeshes/Biplane/D00854.obj already exists, skipping...
+Error reading file: ../../data/Meshes/Biplane\D00890.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\D00900.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1118.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/RefinedMeshes/Biplane/m1119.obj already exists, skipping...
+Error reading file: ../../data/Meshes/Biplane\m1120.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\m1121.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1122.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1123.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1124.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1125.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1126.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1127.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1128.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1129.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1131.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1132.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/Meshes/Biplane\m1133.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1134.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1135.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/RefinedMeshes/Biplane/m1136.obj already exists, skipping...
+File: ../../data/RefinedMeshes/Biplane/m1137.obj already exists, skipping...
+Error reading file: ../../data/Meshes/Biplane\m1138.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/RefinedMeshes/Biplane/m1139.obj already exists, skipping...
+Error reading file: ../../data/Meshes/Biplane\m1141.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1143.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1144.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/Biplane\m1146.obj because: SurfaceMesh::add_face: Complex edge.

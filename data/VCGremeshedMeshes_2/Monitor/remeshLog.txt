@@ -1,0 +1,29 @@
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00007.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00141.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00229.obj successfully
+Saving mesh to file:  Monitor/D00229.obj with resulting number of vertices: 2767
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00336.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00339.obj successfully
+Saving mesh to file:  Monitor/D00339.obj with resulting number of vertices: 2706
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00364.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00387.obj successfully
+Saving mesh to file:  Monitor/D00387.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00391.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00412.obj successfully
+Saving mesh to file:  Monitor/D00412.obj with resulting number of vertices: 2930
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00444.obj successfully
+Saving mesh to file:  Monitor/D00444.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00469.obj successfully
+Saving mesh to file:  Monitor/D00469.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00548.obj successfully
+Saving mesh to file:  Monitor/D00548.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Monitor\D00659.obj successfully
+Saving mesh to file:  Monitor/D00659.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00852.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00863.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00915.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00919.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00920.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D00978.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Monitor\D01000.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/Monitor/remeshLog.txt already exists, skipping...

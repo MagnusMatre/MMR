@@ -1,0 +1,54 @@
+Read mesh ../../data/Meshes/PlantWildNonTree\m1052.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1052.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m961.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m961.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m962.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m962.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m963.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m963.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m964.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m964.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m965.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m965.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m966.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m966.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m967.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m967.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m968.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m968.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m971.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m971.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m972.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m972.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m973.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m973.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m974.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m974.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m975.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m975.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m976.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m976.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m977.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m977.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m978.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m978.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m979.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m979.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m980.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m980.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m981.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m981.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m982.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m982.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m983.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m983.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m984.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m984.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m985.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m985.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m986.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m986.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m987.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m987.obj
+Read mesh ../../data/Meshes/PlantWildNonTree\m988.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m988.obj

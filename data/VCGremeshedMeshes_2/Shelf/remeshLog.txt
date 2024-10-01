@@ -1,0 +1,59 @@
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00057.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Shelf\D00074.obj successfully
+Saving mesh to file:  Shelf/D00074.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\D00129.obj successfully
+Saving mesh to file:  Shelf/D00129.obj with resulting number of vertices: 2464
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00171.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00198.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00242.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00337.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Shelf\D00352.obj successfully
+Saving mesh to file:  Shelf/D00352.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00468.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00592.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00631.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00691.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Shelf\D00725.obj successfully
+Saving mesh to file:  Shelf/D00725.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00772.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00781.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00818.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00881.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00887.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00917.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\D00956.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m844.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m845.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m846.obj successfully
+Saving mesh to file:  Shelf/m846.obj with resulting number of vertices: 2099
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m847.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m849.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m850.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m851.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m852.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m853.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m854.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m855.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m856.obj successfully
+Saving mesh to file:  Shelf/m856.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m857.obj successfully
+Saving mesh to file:  Shelf/m857.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m858.obj successfully
+Saving mesh to file:  Shelf/m858.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m859.obj successfully
+Saving mesh to file:  Shelf/m859.obj with resulting number of vertices: 2556
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m860.obj successfully
+Saving mesh to file:  Shelf/m860.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m861.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m862.obj successfully
+Saving mesh to file:  Shelf/m862.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m863.obj successfully
+Saving mesh to file:  Shelf/m863.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m864.obj successfully
+Saving mesh to file:  Shelf/m864.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m865.obj successfully
+Saving mesh to file:  Shelf/m865.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Shelf\m866.obj successfully
+Saving mesh to file:  Shelf/m866.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Shelf\m868.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+File: ../../data/VCGremeshedMeshes_2/Shelf/remeshLog.txt already exists, skipping...

@@ -1,0 +1,116 @@
+Read mesh ../../data/Meshes/Gun\D00103.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00103.obj
+Read mesh ../../data/Meshes/Gun\D00137.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00137.obj
+Read mesh ../../data/Meshes/Gun\D00140.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00140.obj
+Read mesh ../../data/Meshes/Gun\D00153.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00153.obj
+Read mesh ../../data/Meshes/Gun\D00161.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00161.obj
+Read mesh ../../data/Meshes/Gun\D00204.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00204.obj
+Read mesh ../../data/Meshes/Gun\D00207.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00207.obj
+Read mesh ../../data/Meshes/Gun\D00209.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00209.obj
+Read mesh ../../data/Meshes/Gun\D00239.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00239.obj
+Read mesh ../../data/Meshes/Gun\D00244.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00244.obj
+Read mesh ../../data/Meshes/Gun\D00282.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00282.obj
+Read mesh ../../data/Meshes/Gun\D00368.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00368.obj
+Read mesh ../../data/Meshes/Gun\D00425.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00425.obj
+Read mesh ../../data/Meshes/Gun\D00477.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00477.obj
+Read mesh ../../data/Meshes/Gun\D00606.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00606.obj
+Read mesh ../../data/Meshes/Gun\D00802.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00802.obj
+Read mesh ../../data/Meshes/Gun\D00819.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00819.obj
+Read mesh ../../data/Meshes/Gun\D00826.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00826.obj
+Read mesh ../../data/Meshes/Gun\D00929.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00929.obj
+Read mesh ../../data/Meshes/Gun\D00972.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00972.obj
+Read mesh ../../data/Meshes/Gun\m648.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m648.obj
+Read mesh ../../data/Meshes/Gun\m649.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m649.obj
+Read mesh ../../data/Meshes/Gun\m650.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m650.obj
+Read mesh ../../data/Meshes/Gun\m651.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m651.obj
+Read mesh ../../data/Meshes/Gun\m652.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m652.obj
+Read mesh ../../data/Meshes/Gun\m653.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m653.obj
+Read mesh ../../data/Meshes/Gun\m654.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m654.obj
+Read mesh ../../data/Meshes/Gun\m655.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m655.obj
+Read mesh ../../data/Meshes/Gun\m656.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m656.obj
+Read mesh ../../data/Meshes/Gun\m657.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m657.obj
+Read mesh ../../data/Meshes/Gun\m658.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m658.obj
+Read mesh ../../data/Meshes/Gun\m659.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m659.obj
+Read mesh ../../data/Meshes/Gun\m660.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m660.obj
+Read mesh ../../data/Meshes/Gun\m661.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m661.obj
+Read mesh ../../data/Meshes/Gun\m662.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m662.obj
+Read mesh ../../data/Meshes/Gun\m663.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m663.obj
+Read mesh ../../data/Meshes/Gun\m664.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m664.obj
+Read mesh ../../data/Meshes/Gun\m665.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m665.obj
+Read mesh ../../data/Meshes/Gun\m666.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m666.obj
+Read mesh ../../data/Meshes/Gun\m667.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m667.obj
+Read mesh ../../data/Meshes/Gun\m668.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m668.obj
+Read mesh ../../data/Meshes/Gun\m669.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m669.obj
+Read mesh ../../data/Meshes/Gun\m670.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m670.obj
+Read mesh ../../data/Meshes/Gun\m671.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m671.obj
+Read mesh ../../data/Meshes/Gun\m672.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m672.obj
+Read mesh ../../data/Meshes/Gun\m674.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m674.obj
+Read mesh ../../data/Meshes/Gun\m675.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m675.obj
+Read mesh ../../data/Meshes/Gun\m676.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m676.obj
+Read mesh ../../data/Meshes/Gun\m677.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m677.obj
+Read mesh ../../data/Meshes/Gun\m678.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m678.obj
+Read mesh ../../data/Meshes/Gun\m679.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m679.obj
+Read mesh ../../data/Meshes/Gun\m680.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m680.obj
+Read mesh ../../data/Meshes/Gun\m681.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m681.obj
+Read mesh ../../data/Meshes/Gun\m682.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m682.obj
+Read mesh ../../data/Meshes/Gun\m683.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m683.obj
+Read mesh ../../data/Meshes/Gun\m684.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m684.obj
+Read mesh ../../data/Meshes/Gun\m685.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m685.obj
+Read mesh ../../data/Meshes/Gun\m686.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m686.obj

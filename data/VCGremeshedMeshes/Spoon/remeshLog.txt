@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Spoon\D00014.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00014.obj
+Read mesh ../../data/Meshes/Spoon\D00085.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00085.obj
+Read mesh ../../data/Meshes/Spoon\D00144.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00144.obj
+Read mesh ../../data/Meshes/Spoon\D00157.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00157.obj
+Read mesh ../../data/Meshes/Spoon\D00196.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00196.obj
+Read mesh ../../data/Meshes/Spoon\D00338.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00338.obj
+Read mesh ../../data/Meshes/Spoon\D00422.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00422.obj
+Read mesh ../../data/Meshes/Spoon\D00474.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00474.obj
+Read mesh ../../data/Meshes/Spoon\D00497.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00497.obj
+Read mesh ../../data/Meshes/Spoon\D00517.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00517.obj
+Read mesh ../../data/Meshes/Spoon\D00562.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00562.obj
+Read mesh ../../data/Meshes/Spoon\D00593.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00593.obj
+Read mesh ../../data/Meshes/Spoon\D00661.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00661.obj
+Read mesh ../../data/Meshes/Spoon\D00669.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00669.obj
+Read mesh ../../data/Meshes/Spoon\D00674.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00674.obj
+Read mesh ../../data/Meshes/Spoon\D00683.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00683.obj
+Read mesh ../../data/Meshes/Spoon\D00790.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00790.obj
+Read mesh ../../data/Meshes/Spoon\D00842.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00842.obj
+Read mesh ../../data/Meshes/Spoon\D00927.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00927.obj
+Read mesh ../../data/Meshes/Spoon\D00964.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00964.obj

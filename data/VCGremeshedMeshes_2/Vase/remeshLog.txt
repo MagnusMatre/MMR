@@ -1,0 +1,35 @@
+Read mesh ../../data/VCGremeshedMeshes/Vase\m527.obj successfully
+Saving mesh to file:  Vase/m527.obj with resulting number of vertices: 2777
+Read mesh ../../data/VCGremeshedMeshes/Vase\m528.obj successfully
+Saving mesh to file:  Vase/m528.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Vase\m529.obj successfully
+Saving mesh to file:  Vase/m529.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Vase\m531.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Vase\m532.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Vase\m533.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Vase\m534.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Vase\m535.obj successfully
+Saving mesh to file:  Vase/m535.obj with resulting number of vertices: 2624
+Read mesh ../../data/VCGremeshedMeshes/Vase\m536.obj successfully
+Saving mesh to file:  Vase/m536.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Vase\m537.obj successfully
+Saving mesh to file:  Vase/m537.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Vase\m538.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Vase\m539.obj successfully
+Saving mesh to file:  Vase/m539.obj with resulting number of vertices: 2526
+Read mesh ../../data/VCGremeshedMeshes/Vase\m540.obj successfully
+Saving mesh to file:  Vase/m540.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Vase\m541.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Vase\m542.obj successfully
+Saving mesh to file:  Vase/m542.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Vase\m543.obj successfully
+Saving mesh to file:  Vase/m543.obj with resulting number of vertices: 2330
+Read mesh ../../data/VCGremeshedMeshes/Vase\m544.obj successfully
+Saving mesh to file:  Vase/m544.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Vase\m545.obj successfully
+Saving mesh to file:  Vase/m545.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Vase\m546.obj successfully
+Saving mesh to file:  Vase/m546.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Vase\m547.obj successfully
+Saving mesh to file:  Vase/m547.obj with resulting number of vertices: 2500
+File: ../../data/VCGremeshedMeshes_2/Vase/remeshLog.txt already exists, skipping...

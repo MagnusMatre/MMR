@@ -1,0 +1,25 @@
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00023.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00041.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00076.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Guitar\D00097.obj successfully
+Saving mesh to file:  Guitar/D00097.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00124.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Guitar\D00222.obj successfully
+Saving mesh to file:  Guitar/D00222.obj with resulting number of vertices: 2345
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00232.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/Guitar\D00335.obj successfully
+Saving mesh to file:  Guitar/D00335.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00374.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00414.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00416.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00461.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00464.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00494.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Guitar\D00534.obj successfully
+Saving mesh to file:  Guitar/D00534.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00549.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00645.obj because: Failed to open file: ../../data/VCGremeshedMeshes/Guitar\D00645.obj
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00655.obj because: Failed to open file: ../../data/VCGremeshedMeshes/Guitar\D00655.obj
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00844.obj because: Failed to open file: ../../data/VCGremeshedMeshes/Guitar\D00844.obj
+Error reading file: ../../data/VCGremeshedMeshes/Guitar\D00849.obj because: Failed to open file: ../../data/VCGremeshedMeshes/Guitar\D00849.obj
+File: ../../data/VCGremeshedMeshes_2/Guitar/remeshLog.txt already exists, skipping...

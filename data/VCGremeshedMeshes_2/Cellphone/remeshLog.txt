@@ -1,0 +1,25 @@
+Read mesh ../../data/VCGremeshedMeshes/Cellphone\D00018.obj successfully
+Saving mesh to file:  Cellphone/D00018.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00032.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00079.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00152.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Cellphone\D00192.obj successfully
+Saving mesh to file:  Cellphone/D00192.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00248.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Cellphone\D00312.obj successfully
+Saving mesh to file:  Cellphone/D00312.obj with resulting number of vertices: 2546
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00327.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00362.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00369.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00440.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00527.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00542.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00554.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00559.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00817.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00848.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00902.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Cellphone\D00979.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Cellphone\D00997.obj successfully
+Saving mesh to file:  Cellphone/D00997.obj with resulting number of vertices: 2500
+File: ../../data/VCGremeshedMeshes_2/Cellphone/remeshLog.txt already exists, skipping...

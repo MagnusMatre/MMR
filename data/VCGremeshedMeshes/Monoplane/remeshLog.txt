@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/Monoplane\D00011.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00011.obj
+Read mesh ../../data/Meshes/Monoplane\D00019.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00019.obj
+Read mesh ../../data/Meshes/Monoplane\D00043.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00043.obj
+Read mesh ../../data/Meshes/Monoplane\D00098.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00098.obj
+Read mesh ../../data/Meshes/Monoplane\D00167.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00167.obj
+Read mesh ../../data/Meshes/Monoplane\D00169.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00169.obj
+Read mesh ../../data/Meshes/Monoplane\D00262.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00262.obj
+Read mesh ../../data/Meshes/Monoplane\D00301.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00301.obj
+Read mesh ../../data/Meshes/Monoplane\D00304.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00304.obj
+Read mesh ../../data/Meshes/Monoplane\D00319.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00319.obj
+Read mesh ../../data/Meshes/Monoplane\D00402.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00402.obj
+Read mesh ../../data/Meshes/Monoplane\D00482.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00482.obj
+Read mesh ../../data/Meshes/Monoplane\D00617.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00617.obj
+Read mesh ../../data/Meshes/Monoplane\D00688.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00688.obj
+Read mesh ../../data/Meshes/Monoplane\D00798.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00798.obj
+Read mesh ../../data/Meshes/Monoplane\D00840.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00840.obj
+Read mesh ../../data/Meshes/Monoplane\D00864.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00864.obj
+Read mesh ../../data/Meshes/Monoplane\D00925.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00925.obj
+Read mesh ../../data/Meshes/Monoplane\D00963.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00963.obj
+Read mesh ../../data/Meshes/Monoplane\D00995.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00995.obj

@@ -1,0 +1,33 @@
+Read mesh ../../data/Meshes/DeskPhone\D00118.obj successfully
+Saving mesh to file:  DeskPhone/D00118.obj with resulting number of vertices: 3000
+Read mesh ../../data/Meshes/DeskPhone\D00135.obj successfully
+Saving mesh to file:  DeskPhone/D00135.obj with resulting number of vertices: 3000
+Read mesh ../../data/Meshes/DeskPhone\D00154.obj successfully
+Saving mesh to file:  DeskPhone/D00154.obj with resulting number of vertices: 5410
+Read mesh ../../data/Meshes/DeskPhone\D00220.obj successfully
+Saving mesh to file:  DeskPhone/D00220.obj with resulting number of vertices: 3000
+Read mesh ../../data/Meshes/DeskPhone\D00316.obj successfully
+Saving mesh to file:  DeskPhone/D00316.obj with resulting number of vertices: 3000
+Read mesh ../../data/Meshes/DeskPhone\D00318.obj successfully
+Saving mesh to file:  DeskPhone/D00318.obj with resulting number of vertices: 3000
+Error reading file: ../../data/Meshes/DeskPhone\D00403.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/Meshes/DeskPhone\D00486.obj successfully
+Saving mesh to file:  DeskPhone/D00486.obj with resulting number of vertices: 3000
+Error reading file: ../../data/Meshes/DeskPhone\D00511.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/Meshes/DeskPhone\D00556.obj successfully
+Saving mesh to file:  DeskPhone/D00556.obj with resulting number of vertices: 3000
+Error reading file: ../../data/Meshes/DeskPhone\D00576.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/Meshes/DeskPhone\D00680.obj successfully
+Saving mesh to file:  DeskPhone/D00680.obj with resulting number of vertices: 3000
+Error reading file: ../../data/Meshes/DeskPhone\D00706.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/Meshes/DeskPhone\D00773.obj successfully
+Saving mesh to file:  DeskPhone/D00773.obj with resulting number of vertices: 3000
+Read mesh ../../data/Meshes/DeskPhone\D00829.obj successfully
+Saving mesh to file:  DeskPhone/D00829.obj with resulting number of vertices: 3000
+Read mesh ../../data/Meshes/DeskPhone\D00894.obj successfully
+Saving mesh to file:  DeskPhone/D00894.obj with resulting number of vertices: 3000
+Error reading file: ../../data/Meshes/DeskPhone\D00897.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/Meshes/DeskPhone\D00899.obj successfully
+Saving mesh to file:  DeskPhone/D00899.obj with resulting number of vertices: 3000
+Error reading file: ../../data/Meshes/DeskPhone\D00957.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/Meshes/DeskPhone\D00958.obj because: SurfaceMesh::add_face: Complex edge.

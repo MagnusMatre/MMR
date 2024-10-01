@@ -1,0 +1,82 @@
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00103.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00137.obj successfully
+Saving mesh to file:  Gun/D00137.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00140.obj successfully
+Saving mesh to file:  Gun/D00140.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00153.obj successfully
+Saving mesh to file:  Gun/D00153.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00161.obj successfully
+Saving mesh to file:  Gun/D00161.obj with resulting number of vertices: 2717
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00204.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00207.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00209.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00239.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00244.obj successfully
+Saving mesh to file:  Gun/D00244.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00282.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00368.obj successfully
+Saving mesh to file:  Gun/D00368.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00425.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00477.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00606.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00802.obj successfully
+Saving mesh to file:  Gun/D00802.obj with resulting number of vertices: 2249
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00819.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00826.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\D00929.obj successfully
+Saving mesh to file:  Gun/D00929.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\D00972.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m648.obj successfully
+Saving mesh to file:  Gun/m648.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m649.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m650.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m651.obj successfully
+Saving mesh to file:  Gun/m651.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m652.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m653.obj successfully
+Saving mesh to file:  Gun/m653.obj with resulting number of vertices: 2162
+Read mesh ../../data/VCGremeshedMeshes/Gun\m654.obj successfully
+Saving mesh to file:  Gun/m654.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m655.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m656.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m657.obj successfully
+Saving mesh to file:  Gun/m657.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\m658.obj successfully
+Saving mesh to file:  Gun/m658.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m659.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m660.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m661.obj successfully
+Saving mesh to file:  Gun/m661.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m662.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m663.obj successfully
+Saving mesh to file:  Gun/m663.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\m664.obj successfully
+Saving mesh to file:  Gun/m664.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\m665.obj successfully
+Saving mesh to file:  Gun/m665.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m666.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m667.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m668.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m669.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m670.obj successfully
+Saving mesh to file:  Gun/m670.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m671.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Gun\m672.obj successfully
+Saving mesh to file:  Gun/m672.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\m674.obj successfully
+Saving mesh to file:  Gun/m674.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\m675.obj successfully
+Saving mesh to file:  Gun/m675.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Gun\m676.obj successfully
+Saving mesh to file:  Gun/m676.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m677.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m678.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m679.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m680.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m681.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m682.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m683.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m684.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m685.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Gun\m686.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/Gun/remeshLog.txt already exists, skipping...

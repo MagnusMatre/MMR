@@ -1,0 +1,61 @@
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00083.obj successfully
+Saving mesh to file:  RoundTable/D00083.obj with resulting number of vertices: 2962
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00094.obj successfully
+Saving mesh to file:  RoundTable/D00094.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\D00107.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\D00194.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00344.obj successfully
+Saving mesh to file:  RoundTable/D00344.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00401.obj successfully
+Saving mesh to file:  RoundTable/D00401.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\D00407.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00492.obj successfully
+Saving mesh to file:  RoundTable/D00492.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00501.obj successfully
+Saving mesh to file:  RoundTable/D00501.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00503.obj successfully
+Saving mesh to file:  RoundTable/D00503.obj with resulting number of vertices: 2540
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00524.obj successfully
+Saving mesh to file:  RoundTable/D00524.obj with resulting number of vertices: 2635
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\D00581.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00646.obj successfully
+Saving mesh to file:  RoundTable/D00646.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\D00649.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00702.obj successfully
+Saving mesh to file:  RoundTable/D00702.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00756.obj successfully
+Saving mesh to file:  RoundTable/D00756.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00827.obj successfully
+Saving mesh to file:  RoundTable/D00827.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\D00866.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00909.obj successfully
+Saving mesh to file:  RoundTable/D00909.obj with resulting number of vertices: 2981
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\D00948.obj successfully
+Saving mesh to file:  RoundTable/D00948.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m921.obj successfully
+Saving mesh to file:  RoundTable/m921.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m922.obj successfully
+Saving mesh to file:  RoundTable/m922.obj with resulting number of vertices: 2570
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m923.obj successfully
+Saving mesh to file:  RoundTable/m923.obj with resulting number of vertices: 2016
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m924.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m925.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m926.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m927.obj successfully
+Saving mesh to file:  RoundTable/m927.obj with resulting number of vertices: 2360
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m928.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m929.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m930.obj successfully
+Saving mesh to file:  RoundTable/m930.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m931.obj successfully
+Saving mesh to file:  RoundTable/m931.obj with resulting number of vertices: 2570
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m932.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m933.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m934.obj successfully
+Saving mesh to file:  RoundTable/m934.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m935.obj successfully
+Saving mesh to file:  RoundTable/m935.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/RoundTable\m937.obj successfully
+Saving mesh to file:  RoundTable/m937.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/RoundTable\m938.obj because: SurfaceMesh::add_face: Complex edge.
+File: ../../data/VCGremeshedMeshes_2/RoundTable/remeshLog.txt already exists, skipping...

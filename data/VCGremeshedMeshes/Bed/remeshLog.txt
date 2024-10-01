@@ -1,0 +1,54 @@
+Read mesh ../../data/Meshes/Bed\D00031.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00031.obj
+Read mesh ../../data/Meshes/Bed\D00110.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00110.obj
+Read mesh ../../data/Meshes/Bed\D00121.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00121.obj
+Read mesh ../../data/Meshes/Bed\D00184.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00184.obj
+Read mesh ../../data/Meshes/Bed\D00210.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00210.obj
+Read mesh ../../data/Meshes/Bed\D00213.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00213.obj
+Read mesh ../../data/Meshes/Bed\D00217.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00217.obj
+Read mesh ../../data/Meshes/Bed\D00307.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00307.obj
+Read mesh ../../data/Meshes/Bed\D00322.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00322.obj
+Read mesh ../../data/Meshes/Bed\D00417.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00417.obj
+Read mesh ../../data/Meshes/Bed\D00538.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00538.obj
+Read mesh ../../data/Meshes/Bed\D00545.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00545.obj
+Read mesh ../../data/Meshes/Bed\D00552.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00552.obj
+Read mesh ../../data/Meshes/Bed\D00565.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00565.obj
+Read mesh ../../data/Meshes/Bed\D00650.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00650.obj
+Read mesh ../../data/Meshes/Bed\D00735.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00735.obj
+Read mesh ../../data/Meshes/Bed\D00836.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00836.obj
+Read mesh ../../data/Meshes/Bed\D00839.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00839.obj
+Read mesh ../../data/Meshes/Bed\D00969.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00969.obj
+Read mesh ../../data/Meshes/Bed\D00988.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00988.obj
+Read mesh ../../data/Meshes/Bed\m945.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m945.obj
+Read mesh ../../data/Meshes/Bed\m946.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m946.obj
+Read mesh ../../data/Meshes/Bed\m947.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m947.obj
+Read mesh ../../data/Meshes/Bed\m948.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m948.obj
+Read mesh ../../data/Meshes/Bed\m949.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m949.obj
+Read mesh ../../data/Meshes/Bed\m950.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m950.obj
+Read mesh ../../data/Meshes/Bed\m951.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m951.obj

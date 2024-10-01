@@ -1,0 +1,42 @@
+Read mesh ../../data/Meshes/Musical_Instrument\m625.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m625.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m626.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m626.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m627.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m627.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m628.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m628.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m629.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m629.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m630.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m630.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m631.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m631.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m632.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m632.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m633.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m633.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m634.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m634.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m635.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m635.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m637.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m637.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m638.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m638.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m639.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m639.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m640.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m640.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m641.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m641.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m643.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m643.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m644.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m644.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m645.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m645.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m646.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m646.obj
+Read mesh ../../data/Meshes/Musical_Instrument\m647.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m647.obj

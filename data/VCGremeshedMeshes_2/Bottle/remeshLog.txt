@@ -1,0 +1,52 @@
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00020.obj successfully
+Saving mesh to file:  Bottle/D00020.obj with resulting number of vertices: 2357
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00123.obj successfully
+Saving mesh to file:  Bottle/D00123.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\D00139.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00166.obj successfully
+Saving mesh to file:  Bottle/D00166.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00176.obj successfully
+Saving mesh to file:  Bottle/D00176.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00208.obj successfully
+Saving mesh to file:  Bottle/D00208.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00281.obj successfully
+Saving mesh to file:  Bottle/D00281.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00311.obj successfully
+Saving mesh to file:  Bottle/D00311.obj with resulting number of vertices: 2033
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00347.obj successfully
+Saving mesh to file:  Bottle/D00347.obj with resulting number of vertices: 2165
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00350.obj successfully
+Saving mesh to file:  Bottle/D00350.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00390.obj successfully
+Saving mesh to file:  Bottle/D00390.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00451.obj successfully
+Saving mesh to file:  Bottle/D00451.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\D00679.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00696.obj successfully
+Saving mesh to file:  Bottle/D00696.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00711.obj successfully
+Saving mesh to file:  Bottle/D00711.obj with resulting number of vertices: 2621
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\D00716.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00726.obj successfully
+Saving mesh to file:  Bottle/D00726.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\D00892.obj successfully
+Saving mesh to file:  Bottle/D00892.obj with resulting number of vertices: 2474
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\D00940.obj because: SurfaceMesh::add_face: Patch re-linking failed.
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\D00959.obj because: SurfaceMesh::add_face: Complex vertex.
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\m482.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\m483.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\m484.obj because: SurfaceMesh::add_face: Complex edge.
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\m485.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Bottle\m486.obj successfully
+Saving mesh to file:  Bottle/m486.obj with resulting number of vertices: 2101
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\m487.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Bottle\m488.obj successfully
+Saving mesh to file:  Bottle/m488.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\m489.obj successfully
+Saving mesh to file:  Bottle/m489.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Bottle\m490.obj successfully
+Saving mesh to file:  Bottle/m490.obj with resulting number of vertices: 2130
+Read mesh ../../data/VCGremeshedMeshes/Bottle\m491.obj successfully
+Saving mesh to file:  Bottle/m491.obj with resulting number of vertices: 2065
+Error reading file: ../../data/VCGremeshedMeshes/Bottle\m492.obj because: SurfaceMesh::add_face: Complex vertex.
+File: ../../data/VCGremeshedMeshes_2/Bottle/remeshLog.txt already exists, skipping...

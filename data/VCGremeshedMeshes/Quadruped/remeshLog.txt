@@ -1,0 +1,114 @@
+Read mesh ../../data/Meshes/Quadruped\D00111.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00111.obj
+Read mesh ../../data/Meshes/Quadruped\D00150.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00150.obj
+Read mesh ../../data/Meshes/Quadruped\D00218.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00218.obj
+Read mesh ../../data/Meshes/Quadruped\D00226.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00226.obj
+Read mesh ../../data/Meshes/Quadruped\D00261.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00261.obj
+Read mesh ../../data/Meshes/Quadruped\D00326.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00326.obj
+Read mesh ../../data/Meshes/Quadruped\D00380.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00380.obj
+Read mesh ../../data/Meshes/Quadruped\D00409.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00409.obj
+Read mesh ../../data/Meshes/Quadruped\D00508.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00508.obj
+Read mesh ../../data/Meshes/Quadruped\D00509.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00509.obj
+Read mesh ../../data/Meshes/Quadruped\D00583.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00583.obj
+Read mesh ../../data/Meshes/Quadruped\D00663.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00663.obj
+Read mesh ../../data/Meshes/Quadruped\D00700.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00700.obj
+Read mesh ../../data/Meshes/Quadruped\D00757.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00757.obj
+Read mesh ../../data/Meshes/Quadruped\D00794.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00794.obj
+Read mesh ../../data/Meshes/Quadruped\D00795.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00795.obj
+Read mesh ../../data/Meshes/Quadruped\D00831.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00831.obj
+Read mesh ../../data/Meshes/Quadruped\D00841.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00841.obj
+Read mesh ../../data/Meshes/Quadruped\D00867.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00867.obj
+Read mesh ../../data/Meshes/Quadruped\D00934.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00934.obj
+Read mesh ../../data/Meshes/Quadruped\m100.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m100.obj
+Read mesh ../../data/Meshes/Quadruped\m101.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m101.obj
+Read mesh ../../data/Meshes/Quadruped\m102.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m102.obj
+Read mesh ../../data/Meshes/Quadruped\m103.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m103.obj
+Read mesh ../../data/Meshes/Quadruped\m104.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m104.obj
+Read mesh ../../data/Meshes/Quadruped\m105.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m105.obj
+Read mesh ../../data/Meshes/Quadruped\m106.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m106.obj
+Read mesh ../../data/Meshes/Quadruped\m107.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m107.obj
+Read mesh ../../data/Meshes/Quadruped\m108.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m108.obj
+Read mesh ../../data/Meshes/Quadruped\m109.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m109.obj
+Read mesh ../../data/Meshes/Quadruped\m110.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m110.obj
+Read mesh ../../data/Meshes/Quadruped\m111.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m111.obj
+Read mesh ../../data/Meshes/Quadruped\m112.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m112.obj
+Read mesh ../../data/Meshes/Quadruped\m273.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m273.obj
+Read mesh ../../data/Meshes/Quadruped\m274.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m274.obj
+Read mesh ../../data/Meshes/Quadruped\m275.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m275.obj
+Read mesh ../../data/Meshes/Quadruped\m276.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m276.obj
+Read mesh ../../data/Meshes/Quadruped\m277.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m277.obj
+Read mesh ../../data/Meshes/Quadruped\m278.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m278.obj
+Read mesh ../../data/Meshes/Quadruped\m279.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m279.obj
+Read mesh ../../data/Meshes/Quadruped\m280.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m280.obj
+Read mesh ../../data/Meshes/Quadruped\m281.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m281.obj
+Read mesh ../../data/Meshes/Quadruped\m282.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m282.obj
+Read mesh ../../data/Meshes/Quadruped\m86.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m86.obj
+Read mesh ../../data/Meshes/Quadruped\m87.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m87.obj
+Read mesh ../../data/Meshes/Quadruped\m88.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m88.obj
+Read mesh ../../data/Meshes/Quadruped\m89.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m89.obj
+Read mesh ../../data/Meshes/Quadruped\m90.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m90.obj
+Read mesh ../../data/Meshes/Quadruped\m91.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m91.obj
+Read mesh ../../data/Meshes/Quadruped\m92.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m92.obj
+Read mesh ../../data/Meshes/Quadruped\m93.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m93.obj
+Read mesh ../../data/Meshes/Quadruped\m94.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m94.obj
+Read mesh ../../data/Meshes/Quadruped\m95.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m95.obj
+Read mesh ../../data/Meshes/Quadruped\m96.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m96.obj
+Read mesh ../../data/Meshes/Quadruped\m97.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m97.obj
+Read mesh ../../data/Meshes/Quadruped\m98.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m98.obj
+Read mesh ../../data/Meshes/Quadruped\m99.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m99.obj

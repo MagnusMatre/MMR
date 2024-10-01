@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/PianoBoard\D00008.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00008.obj
+Read mesh ../../data/Meshes/PianoBoard\D00065.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00065.obj
+Read mesh ../../data/Meshes/PianoBoard\D00075.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00075.obj
+Read mesh ../../data/Meshes/PianoBoard\D00104.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00104.obj
+Read mesh ../../data/Meshes/PianoBoard\D00122.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00122.obj
+Read mesh ../../data/Meshes/PianoBoard\D00181.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00181.obj
+Read mesh ../../data/Meshes/PianoBoard\D00212.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00212.obj
+Read mesh ../../data/Meshes/PianoBoard\D00235.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00235.obj
+Read mesh ../../data/Meshes/PianoBoard\D00253.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00253.obj
+Read mesh ../../data/Meshes/PianoBoard\D00332.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00332.obj
+Read mesh ../../data/Meshes/PianoBoard\D00381.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00381.obj
+Read mesh ../../data/Meshes/PianoBoard\D00441.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00441.obj
+Read mesh ../../data/Meshes/PianoBoard\D00460.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00460.obj
+Read mesh ../../data/Meshes/PianoBoard\D00623.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00623.obj
+Read mesh ../../data/Meshes/PianoBoard\D00718.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00718.obj
+Read mesh ../../data/Meshes/PianoBoard\D00721.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00721.obj
+Read mesh ../../data/Meshes/PianoBoard\D00755.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00755.obj
+Read mesh ../../data/Meshes/PianoBoard\D00885.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00885.obj
+Read mesh ../../data/Meshes/PianoBoard\D00962.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00962.obj
+Read mesh ../../data/Meshes/PianoBoard\D00966.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00966.obj

@@ -1,0 +1,88 @@
+Read mesh ../../data/Meshes/Tool\D01003.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01003.obj
+Read mesh ../../data/Meshes/Tool\D01012.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01012.obj
+Read mesh ../../data/Meshes/Tool\D01040.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01040.obj
+Read mesh ../../data/Meshes/Tool\D01044.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01044.obj
+Read mesh ../../data/Meshes/Tool\D01069.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01069.obj
+Read mesh ../../data/Meshes/Tool\D01084.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01084.obj
+Read mesh ../../data/Meshes/Tool\D01086.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01086.obj
+Read mesh ../../data/Meshes/Tool\D01111.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01111.obj
+Read mesh ../../data/Meshes/Tool\D01113.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01113.obj
+Read mesh ../../data/Meshes/Tool\D01127.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01127.obj
+Read mesh ../../data/Meshes/Tool\D01131.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01131.obj
+Read mesh ../../data/Meshes/Tool\D01140.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01140.obj
+Read mesh ../../data/Meshes/Tool\D01142.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01142.obj
+Read mesh ../../data/Meshes/Tool\D01148.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01148.obj
+Read mesh ../../data/Meshes/Tool\D01152.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01152.obj
+Read mesh ../../data/Meshes/Tool\D01154.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01154.obj
+Read mesh ../../data/Meshes/Tool\D01156.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01156.obj
+Read mesh ../../data/Meshes/Tool\D01159.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01159.obj
+Read mesh ../../data/Meshes/Tool\D01165.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01165.obj
+Read mesh ../../data/Meshes/Tool\D01176.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D01176.obj
+Read mesh ../../data/Meshes/Tool\m1099.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1099.obj
+Read mesh ../../data/Meshes/Tool\m1100.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1100.obj
+Read mesh ../../data/Meshes/Tool\m1101.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1101.obj
+Read mesh ../../data/Meshes/Tool\m1102.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1102.obj
+Read mesh ../../data/Meshes/Tool\m1103.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1103.obj
+Read mesh ../../data/Meshes/Tool\m1104.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1104.obj
+Read mesh ../../data/Meshes/Tool\m1105.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1105.obj
+Read mesh ../../data/Meshes/Tool\m1106.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1106.obj
+Read mesh ../../data/Meshes/Tool\m1107.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1107.obj
+Read mesh ../../data/Meshes/Tool\m1108.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1108.obj
+Read mesh ../../data/Meshes/Tool\m1109.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1109.obj
+Read mesh ../../data/Meshes/Tool\m1110.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1110.obj
+Read mesh ../../data/Meshes/Tool\m1111.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1111.obj
+Read mesh ../../data/Meshes/Tool\m1112.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1112.obj
+Read mesh ../../data/Meshes/Tool\m1113.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1113.obj
+Read mesh ../../data/Meshes/Tool\m1114.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1114.obj
+Read mesh ../../data/Meshes/Tool\m1115.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1115.obj
+Read mesh ../../data/Meshes/Tool\m1116.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1116.obj
+Read mesh ../../data/Meshes/Tool\m1117.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1117.obj
+Read mesh ../../data/Meshes/Tool\m587.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m587.obj
+Read mesh ../../data/Meshes/Tool\m588.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m588.obj
+Read mesh ../../data/Meshes/Tool\m589.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m589.obj
+Read mesh ../../data/Meshes/Tool\m590.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m590.obj
+Read mesh ../../data/Meshes/Tool\m591.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m591.obj

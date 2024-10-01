@@ -1,0 +1,52 @@
+Read mesh ../../data/Meshes/Mug\D00172.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00172.obj
+Read mesh ../../data/Meshes/Mug\D00202.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00202.obj
+Read mesh ../../data/Meshes/Mug\D00227.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00227.obj
+Read mesh ../../data/Meshes/Mug\D00321.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00321.obj
+Read mesh ../../data/Meshes/Mug\D00341.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00341.obj
+Read mesh ../../data/Meshes/Mug\D00372.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00372.obj
+Read mesh ../../data/Meshes/Mug\D00427.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00427.obj
+Read mesh ../../data/Meshes/Mug\D00684.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00684.obj
+Read mesh ../../data/Meshes/Mug\D00685.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00685.obj
+Read mesh ../../data/Meshes/Mug\D00705.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00705.obj
+Read mesh ../../data/Meshes/Mug\D00728.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00728.obj
+Read mesh ../../data/Meshes/Mug\D00745.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00745.obj
+Read mesh ../../data/Meshes/Mug\D00747.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00747.obj
+Read mesh ../../data/Meshes/Mug\D00760.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00760.obj
+Read mesh ../../data/Meshes/Mug\D00770.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00770.obj
+Read mesh ../../data/Meshes/Mug\D00825.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00825.obj
+Read mesh ../../data/Meshes/Mug\D00833.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00833.obj
+Read mesh ../../data/Meshes/Mug\D00908.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00908.obj
+Read mesh ../../data/Meshes/Mug\D00913.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00913.obj
+Read mesh ../../data/Meshes/Mug\D00923.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00923.obj
+Read mesh ../../data/Meshes/Mug\m503.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m503.obj
+Read mesh ../../data/Meshes/Mug\m504.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m504.obj
+Read mesh ../../data/Meshes/Mug\m506.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m506.obj
+Read mesh ../../data/Meshes/Mug\m507.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m507.obj
+Read mesh ../../data/Meshes/Mug\m508.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m508.obj
+Read mesh ../../data/Meshes/Mug\m509.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m509.obj

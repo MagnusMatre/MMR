@@ -1,0 +1,130 @@
+Read mesh ../../data/Meshes/PlantIndoors\D00049.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00049.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00073.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00073.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00080.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00080.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00087.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00087.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00128.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00128.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00159.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00159.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00238.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00238.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00280.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00280.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00370.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00370.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00379.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00379.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00466.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00466.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00491.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00491.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00595.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00595.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00609.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00609.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00622.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00622.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00624.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00624.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00657.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00657.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00667.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00667.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00800.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00800.obj
+Read mesh ../../data/Meshes/PlantIndoors\D00968.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00968.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1000.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1000.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1001.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1001.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1002.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1002.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1003.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1003.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1004.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1004.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1005.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1005.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1006.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1006.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1007.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1007.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1008.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1008.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1009.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1009.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1010.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1010.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1011.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1011.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1012.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1012.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1013.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1013.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1014.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1014.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1015.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1015.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1016.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1016.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1017.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1017.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1018.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1018.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1020.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1020.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1021.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1021.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1022.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1022.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1023.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1023.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1025.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1025.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1026.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1026.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1027.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1027.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1029.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1029.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1030.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1030.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1031.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1031.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1032.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1032.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1033.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1033.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1034.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1034.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1035.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1035.obj
+Read mesh ../../data/Meshes/PlantIndoors\m1036.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m1036.obj
+Read mesh ../../data/Meshes/PlantIndoors\m989.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m989.obj
+Read mesh ../../data/Meshes/PlantIndoors\m990.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m990.obj
+Read mesh ../../data/Meshes/PlantIndoors\m991.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m991.obj
+Read mesh ../../data/Meshes/PlantIndoors\m992.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m992.obj
+Read mesh ../../data/Meshes/PlantIndoors\m993.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m993.obj
+Read mesh ../../data/Meshes/PlantIndoors\m994.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m994.obj
+Read mesh ../../data/Meshes/PlantIndoors\m995.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m995.obj
+Read mesh ../../data/Meshes/PlantIndoors\m996.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m996.obj
+Read mesh ../../data/Meshes/PlantIndoors\m997.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m997.obj
+Read mesh ../../data/Meshes/PlantIndoors\m998.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m998.obj
+Read mesh ../../data/Meshes/PlantIndoors\m999.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m999.obj

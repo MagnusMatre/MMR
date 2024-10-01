@@ -1,0 +1,48 @@
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00172.obj successfully
+Saving mesh to file:  Mug/D00172.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00202.obj successfully
+Saving mesh to file:  Mug/D00202.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Mug\D00227.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00321.obj successfully
+Saving mesh to file:  Mug/D00321.obj with resulting number of vertices: 2120
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00341.obj successfully
+Saving mesh to file:  Mug/D00341.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00372.obj successfully
+Saving mesh to file:  Mug/D00372.obj with resulting number of vertices: 2319
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00427.obj successfully
+Saving mesh to file:  Mug/D00427.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00684.obj successfully
+Saving mesh to file:  Mug/D00684.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00685.obj successfully
+Saving mesh to file:  Mug/D00685.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00705.obj successfully
+Saving mesh to file:  Mug/D00705.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00728.obj successfully
+Saving mesh to file:  Mug/D00728.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Mug\D00745.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00747.obj successfully
+Saving mesh to file:  Mug/D00747.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Mug\D00760.obj because: SurfaceMesh::add_face: Complex vertex.
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00770.obj successfully
+Saving mesh to file:  Mug/D00770.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00825.obj successfully
+Saving mesh to file:  Mug/D00825.obj with resulting number of vertices: 2684
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00833.obj successfully
+Saving mesh to file:  Mug/D00833.obj with resulting number of vertices: 2021
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00908.obj successfully
+Saving mesh to file:  Mug/D00908.obj with resulting number of vertices: 2709
+Read mesh ../../data/VCGremeshedMeshes/Mug\D00913.obj successfully
+Saving mesh to file:  Mug/D00913.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Mug\D00923.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Mug\m503.obj successfully
+Saving mesh to file:  Mug/m503.obj with resulting number of vertices: 2977
+Read mesh ../../data/VCGremeshedMeshes/Mug\m504.obj successfully
+Saving mesh to file:  Mug/m504.obj with resulting number of vertices: 2500
+Error reading file: ../../data/VCGremeshedMeshes/Mug\m506.obj because: SurfaceMesh::add_face: Complex edge.
+Read mesh ../../data/VCGremeshedMeshes/Mug\m507.obj successfully
+Saving mesh to file:  Mug/m507.obj with resulting number of vertices: 2500
+Read mesh ../../data/VCGremeshedMeshes/Mug\m508.obj successfully
+Saving mesh to file:  Mug/m508.obj with resulting number of vertices: 2942
+Read mesh ../../data/VCGremeshedMeshes/Mug\m509.obj successfully
+Saving mesh to file:  Mug/m509.obj with resulting number of vertices: 2500
+File: ../../data/VCGremeshedMeshes_2/Mug/remeshLog.txt already exists, skipping...

@@ -1,0 +1,40 @@
+Read mesh ../../data/Meshes/SubmachineGun\D00052.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00052.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00060.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00060.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00062.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00062.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00064.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00064.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00068.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00068.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00119.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00119.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00219.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00219.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00256.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00256.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00371.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00371.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00384.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00384.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00431.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00431.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00459.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00459.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00489.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00489.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00537.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00537.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00613.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00613.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00733.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00733.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00878.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00878.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00893.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00893.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00960.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00960.obj
+Read mesh ../../data/Meshes/SubmachineGun\D00970.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00970.obj

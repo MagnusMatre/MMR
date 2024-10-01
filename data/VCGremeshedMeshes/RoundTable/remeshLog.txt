@@ -1,0 +1,74 @@
+Read mesh ../../data/Meshes/RoundTable\D00083.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00083.obj
+Read mesh ../../data/Meshes/RoundTable\D00094.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00094.obj
+Read mesh ../../data/Meshes/RoundTable\D00107.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00107.obj
+Read mesh ../../data/Meshes/RoundTable\D00194.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00194.obj
+Read mesh ../../data/Meshes/RoundTable\D00344.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00344.obj
+Read mesh ../../data/Meshes/RoundTable\D00401.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00401.obj
+Read mesh ../../data/Meshes/RoundTable\D00407.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00407.obj
+Read mesh ../../data/Meshes/RoundTable\D00492.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00492.obj
+Read mesh ../../data/Meshes/RoundTable\D00501.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00501.obj
+Read mesh ../../data/Meshes/RoundTable\D00503.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00503.obj
+Read mesh ../../data/Meshes/RoundTable\D00524.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00524.obj
+Read mesh ../../data/Meshes/RoundTable\D00581.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00581.obj
+Read mesh ../../data/Meshes/RoundTable\D00646.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00646.obj
+Read mesh ../../data/Meshes/RoundTable\D00649.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00649.obj
+Read mesh ../../data/Meshes/RoundTable\D00702.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00702.obj
+Read mesh ../../data/Meshes/RoundTable\D00756.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00756.obj
+Read mesh ../../data/Meshes/RoundTable\D00827.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00827.obj
+Read mesh ../../data/Meshes/RoundTable\D00866.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00866.obj
+Read mesh ../../data/Meshes/RoundTable\D00909.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00909.obj
+Read mesh ../../data/Meshes/RoundTable\D00948.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/D00948.obj
+Read mesh ../../data/Meshes/RoundTable\m921.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m921.obj
+Read mesh ../../data/Meshes/RoundTable\m922.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m922.obj
+Read mesh ../../data/Meshes/RoundTable\m923.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m923.obj
+Read mesh ../../data/Meshes/RoundTable\m924.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m924.obj
+Read mesh ../../data/Meshes/RoundTable\m925.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m925.obj
+Read mesh ../../data/Meshes/RoundTable\m926.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m926.obj
+Read mesh ../../data/Meshes/RoundTable\m927.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m927.obj
+Read mesh ../../data/Meshes/RoundTable\m928.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m928.obj
+Read mesh ../../data/Meshes/RoundTable\m929.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m929.obj
+Read mesh ../../data/Meshes/RoundTable\m930.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m930.obj
+Read mesh ../../data/Meshes/RoundTable\m931.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m931.obj
+Read mesh ../../data/Meshes/RoundTable\m932.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m932.obj
+Read mesh ../../data/Meshes/RoundTable\m933.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m933.obj
+Read mesh ../../data/Meshes/RoundTable\m934.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m934.obj
+Read mesh ../../data/Meshes/RoundTable\m935.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m935.obj
+Read mesh ../../data/Meshes/RoundTable\m937.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m937.obj
+Read mesh ../../data/Meshes/RoundTable\m938.obj successfully
+Saving mesh to file: ../../data/VCGremeshedMeshes/m938.obj
