@@ -110,6 +110,7 @@ void verifyOriginInDirectories(const std::string& basePath) {
                     myfile << entry.path().filename().string() << ";"  << dist <<  std::endl;
                 }
             }
+            break;
             
         }
     }
@@ -154,7 +155,7 @@ int main(void)
     {
         Renderer renderer;
 
-        std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/data";  
+        std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/VCGremeshedMeshes_2/VCGremeshedMeshes_2";
         normalizeFilesInDirectories(basePath);
 
         GLCall(glEnable(GL_BLEND));
@@ -183,7 +184,7 @@ int main(void)
         bool initCallbacks = true;
 
 
-        //std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/data";
+
         //std::string outPath = "C:/Users/Magnus/Documents/Master/MMR/MMR/src/OpenGL/output";
         //normalizeFilesInDirectories(basePath);
         //verifyOriginInDirectories(outPath);

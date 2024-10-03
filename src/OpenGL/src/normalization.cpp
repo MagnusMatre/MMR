@@ -7,6 +7,7 @@
 #include <string>
 #include <Eigen/Dense> 
 #include <array>
+
 class normalization {
 public:
 
@@ -54,6 +55,17 @@ std::pair<std::array<float, 3>, std::array<float, 3>> computeBoundingBox(const s
     return { min, max };
 }
 
+Eigen::Vector3f computeCentroid(const std::vector<std::array<float, 3>>& vertices) {
+    Eigen::Vector3f centroid(0.0f, 0.0f, 0.0f);
+    for (const auto& vertex : vertices) {
+        centroid[0] += vertex[0];
+        centroid[1] += vertex[1];
+        centroid[2] += vertex[2];
+    }
+    centroid /= vertices.size();
+    return centroid;
+}
+
 void normalizeShape(std::vector<std::array<float, 3>>& vertices) {
     auto barycenter = computeBarycenter(vertices);
 
@@ -91,13 +103,10 @@ void alignMesh(std::vector<std::array<float, 3>>& vertices) {
     Eigen::SelfAdjointEigenSolver<Eigen::Matrix3f> eigenSolver(covarianceMatrix);
     Eigen::Matrix3f eigenvectors = eigenSolver.eigenvectors();
 
-    Eigen::Vector3f xAxis(1.0f, 0.0f, 0.0f);
-    Eigen::Vector3f yAxis(0.0f, 1.0f, 0.0f);
-
     Eigen::Matrix3f alignmentMatrix;
     alignmentMatrix.col(0) = eigenvectors.col(2);  
     alignmentMatrix.col(1) = eigenvectors.col(1); 
-    alignmentMatrix.col(2) = eigenvectors.col(0);
+    alignmentMatrix.col(2) = eigenvectors.col(2).cross(eigenvectors.col(1));
 
     for (auto& vertex : vertices) {
         Eigen::Vector3f v(vertex[0], vertex[1], vertex[2]);
@@ -106,56 +115,59 @@ void alignMesh(std::vector<std::array<float, 3>>& vertices) {
         vertex[1] = alignedV[1];
         vertex[2] = alignedV[2];
     }
-}
 
-Eigen::Vector3f computeCentroid(const std::vector<std::array<float, 3>>& vertices) {
-    Eigen::Vector3f centroid(0.0f, 0.0f, 0.0f);
-    for (const auto& vertex : vertices) {
-        centroid[0] += vertex[0];
-        centroid[1] += vertex[1];
-        centroid[2] += vertex[2];
-    }
-    centroid /= vertices.size();
-    return centroid;
 }
-
 
 void flipMesh(std::vector<std::array<float, 3>>& vertices) {
+    Eigen::Matrix3f covarianceMatrix = Eigen::Matrix3f::Zero();
+    Eigen::Vector3f centroid = computeCentroid(vertices);
 
-    if (flipAlongAxis(vertices, 0)) {
+    for (const auto& vertex : vertices) {
+        Eigen::Vector3f centeredVertex(vertex[0] - centroid[0], vertex[1] - centroid[1], vertex[2] - centroid[2]);
+        covarianceMatrix += centeredVertex * centeredVertex.transpose();
+    }
+    covarianceMatrix /= vertices.size();
+
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3f> eigenSolver(covarianceMatrix);
+    Eigen::Matrix3f eigenvectors = eigenSolver.eigenvectors();
+
+    Eigen::Vector3f alignedX = eigenvectors.col(2);
+    Eigen::Vector3f alignedY = eigenvectors.col(1);
+    Eigen::Vector3f alignedZ = alignedX.cross(alignedY);
+
+    Eigen::Vector3f xAxis(1.0f, 0.0f, 0.0f);
+    Eigen::Vector3f yAxis(0.0f, 1.0f, 0.0f);
+    Eigen::Vector3f zAxis(0.0f, 0.0f, 1.0f);
+
+    if (alignedX.dot(xAxis) < 0.0f) {
         for (auto& vertex : vertices) {
             vertex[0] = -vertex[0];
         }
     }
 
-    if (flipAlongAxis(vertices, 1)) {
+    if (alignedY.dot(yAxis) < 0.0f) {
         for (auto& vertex : vertices) {
             vertex[1] = -vertex[1];
         }
     }
 
-    if (flipAlongAxis(vertices, 2)) {
+    alignedZ = alignedX.cross(alignedY);
+    if (alignedZ.dot(zAxis) < 0.0f) {
         for (auto& vertex : vertices) {
             vertex[2] = -vertex[2];
         }
     }
 }
 
-bool flipAlongAxis(const std::vector<std::array<float, 3>>& vertices, int axis) {
-    float n = 0.0f;
-    for (const auto& vertex : vertices) {
-        n += vertex[axis];
-    }
-    return n < 0.0f;
-}
+
 
 float normalizeShapeFile(const std::string& inputFile, const std::string& outputFile) {
     std::ifstream inFile(inputFile);
-    std::ofstream outFile(outputFile);
+    std::ofstream outFile(outputFile); 
     std::vector<std::array<float, 3>> vertices;
     std::vector<std::vector<int>> faces;
 
-
+    std::cout << "reading file: " << inputFile << std::endl;
     std::string line;
     while (std::getline(inFile, line)) {
         std::istringstream iss(line);
@@ -180,9 +192,13 @@ float normalizeShapeFile(const std::string& inputFile, const std::string& output
         }
     }
 
-    normalizeShape(vertices);
     alignMesh(vertices);
     flipMesh(vertices);
+    poseOrientationCheck(vertices);
+
+    normalizeShape(vertices);
+
+    
 
     float tightfit = findMaxAbsoluteValue(computeBoundingBox(vertices));
 
@@ -203,6 +219,38 @@ float normalizeShapeFile(const std::string& inputFile, const std::string& output
     return tightfit;
 }
 
+
+void poseOrientationCheck(const std::vector<std::array<float, 3>>& vertices) {
+    Eigen::Vector3f xAxis(1.0f, 0.0f, 0.0f);
+    Eigen::Vector3f yAxis(0.0f, 1.0f, 0.0f);
+    Eigen::Vector3f zAxis(0.0f, 0.0f, 1.0f);
+
+    Eigen::Matrix3f covarianceMatrix = Eigen::Matrix3f::Zero();
+    Eigen::Vector3f centroid = computeCentroid(vertices);
+
+    for (const auto& vertex : vertices) {
+        Eigen::Vector3f centeredVertex(vertex[0] - centroid[0], vertex[1] - centroid[1], vertex[2] - centroid[2]);
+        covarianceMatrix += centeredVertex * centeredVertex.transpose();
+    }
+    covarianceMatrix /= vertices.size();
+
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3f> eigenSolver(covarianceMatrix);
+    Eigen::Matrix3f eigenvectors = eigenSolver.eigenvectors();
+
+    Eigen::Vector3f alignedX = eigenvectors.col(2);
+    Eigen::Vector3f alignedY = eigenvectors.col(1);
+    Eigen::Vector3f alignedZ = eigenvectors.col(2).cross(eigenvectors.col(1));
+
+    if (alignedX.dot(xAxis) < 0.0f) {
+        std::cout << "Warning: X-axis is misaligned after flip. Consider adjusting." << std::endl;
+    }
+    if (alignedY.dot(yAxis) < 0.0f) {
+        std::cout << "Warning: Y-axis is misaligned after flip. Consider adjusting." << alignedY.dot(yAxis) << std::endl;
+    }
+    if (alignedZ.dot(zAxis) < 0.0f) {
+        std::cout << "Warning: Z-axis is misaligned after flip. Consider adjusting." << alignedZ.dot(zAxis) << std::endl;
+    }
+}
 
 
 float verify_origin(const std::string& inputFile) {
