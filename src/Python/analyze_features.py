@@ -31,15 +31,21 @@ def stitch_together_feature_files(feature_list):
     return pd.concat(feature_list)
 
 
-feature_list = []
-for class_name in tqdm(os.listdir(feature_dir)):
-    feature_path = os.path.join(feature_dir, class_name, "features.txt")
+# feature_list = []
+# for class_name in tqdm(os.listdir(feature_dir)):
+#     feature_path = os.path.join(feature_dir, class_name, "features.txt")
     
-    feature_list.append(load_feauture_file(feature_path))
+#     feature_list.append(load_feauture_file(feature_path))
 
-features = stitch_together_feature_files(feature_list)
+# features = stitch_together_feature_files(feature_list)
 
+features = pd.read_csv("C:/Users/timgr/Documents/computing science/multimedia retrieval/features_clean.txt", sep='\t')
+
+print(features.shape)
+print(features.iloc[2284, :])
 print(features)
+
+quit()
 
 features = features[features['Volume'] < 8]
 features = features[features['BB_Volume'] < 8]

@@ -17,6 +17,7 @@
 //#include "Camera.h"
 
 #include "FeatureExtraction.h"
+#include "QueryEngine.h"
 
 namespace test {
 
@@ -38,6 +39,9 @@ namespace test {
 		void loadCGALmesh(std::string& filename);
 		void updateSampleVerticesBuffer();
 		void loadSampleVertices();
+
+		std::string m_featureFile;
+		QueryEngine m_queryEngine;
 
 		CGALMesh m_CGALmesh;
 		FeatureExtraction m_featureExtractor;

@@ -215,6 +215,7 @@
     <ClCompile Include="src\IndexBuffer.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\QueryEngine.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
     <ClCompile Include="src\scripts\CGALclean.cpp" />
     <ClCompile Include="src\scripts\FeatureScript.cpp" />
@@ -255,6 +256,7 @@
     <ClInclude Include="src\IndexBuffer.h" />
     <ClInclude Include="src\Mesh.h" />
     <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\QueryEngine.h" />
     <ClInclude Include="src\Renderer.h" />
     <ClInclude Include="src\scripts\CGALclean.h" />
     <ClInclude Include="src\scripts\CGALtest.h" />
@@ -275,6 +277,7 @@
     <ClInclude Include="src\tests\TestMesh.h" />
     <ClInclude Include="src\Texture.h" />
     <ClInclude Include="src\VCGclasses.h" />
+    <ClInclude Include="src\vendor\emd\WassersteinEMD.h" />
     <ClInclude Include="src\vendor\imgui\imconfig.h" />
     <ClInclude Include="src\vendor\imgui\imgui.h" />
     <ClInclude Include="src\vendor\imgui\imgui_impl_glfw.h" />

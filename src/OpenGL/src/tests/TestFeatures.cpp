@@ -32,8 +32,11 @@ namespace test {
 		GLCall(glCullFace(GL_BACK));    // Cull back faces
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
+		m_featureFile = "../../res/features_okaymeshes/features_clean.txt";
+		m_queryEngine.LoadFeatures(m_featureFile);
+
 		m_dataRoot = "../../data";
-		m_curDirectory = m_dataRoot + "/NormalizedMeshes_3";
+		m_curDirectory = m_dataRoot + "/OkayMeshes";
 		m_samplePointsDirectory = "../../res/sample_points";
 		loadCurrentDirectory(); 
 
@@ -95,7 +98,7 @@ namespace test {
 		m_mvp = m_projection * m_view * modelMesh;
 
 		// If the random points vector is not empty from FeatureExtraction, draw the points
-		if (!m_featureExtractor.m_random_vertices.empty()) {
+		/*if (!m_featureExtractor.m_random_vertices.empty()) {
 			glEnable(GL_POLYGON_OFFSET_POINT);
 			glPolygonOffset(-1.0f, -1.0f);
 			m_shaderDot->Bind();
@@ -103,7 +106,7 @@ namespace test {
 			m_shaderDot->SetUniform4f("u_color", 1.0f, 0.0f, 0.0f, 1.0f);
 			m_renderer->Draw(*m_sampledVerticesVAO, *m_sampledVerticesIBO, *m_shaderDot, GL_POINTS);
 			m_shaderDot->Unbind();
-		}
+		}*/
 
 		if (m_renderMode == RenderMode::OnlySolid) {
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -163,13 +166,37 @@ namespace test {
 		m_curGeomMesh = std::make_unique<GeomMesh>(m_curModelName, false);
 		m_curGeomMesh->PrintStats();
 
-		loadCGALmesh(m_curModelName);
-		try {
+		//loadCGALmesh(m_curModelName);
+
+		//Compute the distance from the current model to all other models in the same directory
+		/*std::string class_name = std::filesystem::path(m_curModelName).parent_path().filename().string();
+		std::string feature_file = m_dataRoot + "/features_okaymeshes/features_clean.txt";
+		m_queryEngine.LoadFeatures(feature_file);*/
+		for (auto& file : m_curFiles) {
+			if (file != m_curModelName) {
+				// Extract directory and filename from the path
+				std::filesystem::path p(file);
+				std::string class_name_other = p.parent_path().filename().string();
+				std::string file_name_other = p.filename().string();
+				std::string other_obj = class_name_other + "/" + file_name_other;
+
+				std::filesystem::path p2(m_curModelName);
+				std::string class_name_query = p2.parent_path().filename().string();
+				std::string file_name_query = p2.filename().string();
+				std::string query_obj = class_name_query + "/" + file_name_query;
+
+				std::cout << query_obj << " " << other_obj << std::endl;
+
+				m_queryEngine.ComputeDistance(query_obj, other_obj);
+			}
+		}
+
+		/*try {
 			loadSampleVertices();
 		}
 		catch (const std::exception& e) {
 			std::cerr << "Error: " << e.what() << std::endl;
-		}
+		}*/
 	}
 
 	void TestFeatures::loadCurrentDirectory() {
@@ -292,6 +319,8 @@ namespace test {
 			std::cerr << "Warning: empty file?" << std::endl;
 			return;
 		}
+
+		std::cout << "Mesh successfully loaded CGAL mesh" << std::endl;
 
 		//m_featureExtractor.get_N_random_vertices(m_CGALmesh, 10000);
 		//updateSampleVerticesBuffer();

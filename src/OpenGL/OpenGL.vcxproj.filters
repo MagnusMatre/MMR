@@ -126,6 +126,9 @@
     <ClCompile Include="src\tests\TestFeatures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\QueryEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer.h">
@@ -246,6 +249,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\tests\TestFeatures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vendor\emd\WassersteinEMD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QueryEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

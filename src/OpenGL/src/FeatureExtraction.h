@@ -17,7 +17,6 @@
 
 #include <iostream>
 
-#include <iostream>
 #include <CGAL/Simple_cartesian.h>
 #include <CGAL/Surface_mesh.h>
 #include <CGAL/Polygon_mesh_processing/IO/polygon_mesh_io.h>
