@@ -33,7 +33,13 @@ namespace test {
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
 		m_featureFile = "../../res/features_okaymeshes/features_clean.txt";
+		std::string saveDistanceMatrix = "../../res/features_okaymeshes/distance_matrix.txt";
+
 		m_queryEngine.LoadFeatures(m_featureFile);
+		std::cout << "Features loaded" << std::endl;
+		//m_queryEngine.ComputeFullDistanceMatrix();
+		//std::cout << "Distances computed" << std::endl;
+		//m_queryEngine.SaveDistanceMatrix(saveDistanceMatrix);
 
 		m_dataRoot = "../../data";
 		m_curDirectory = m_dataRoot + "/OkayMeshes";
@@ -168,28 +174,54 @@ namespace test {
 
 		//loadCGALmesh(m_curModelName);
 
+		std::filesystem::path p(m_curModelName);
+		std::string class_name = p.parent_path().filename().string();
+		std::string obj_name = p.filename().string();
+		std::string file_name = class_name + "/" + obj_name;
+
+		// Retrieve the distances to all other objects
+		int modelIndex = m_queryEngine.getIndex(file_name);
+		std::vector<std::pair<float, int>> distances;
+		for (int i = 0; i < NUM_SHAPES; i++) {
+			if (i != modelIndex) {
+				float distance = m_queryEngine.ComputeDistance(file_name, m_queryEngine.m_name_map[i]);
+				distances.push_back(std::make_pair(distance, i));
+			}
+		}
+
+		// Sort the distances
+		std::sort(distances.begin(), distances.end());
+
+		// Print the 20 closest
+		for (int i = 0; i < 20; i++) {
+			std::cout << "Distance to " << m_queryEngine.m_name_map[distances[i].second] << " is: " << distances[i].first << std::endl;
+		}
+		
+
 		//Compute the distance from the current model to all other models in the same directory
 		/*std::string class_name = std::filesystem::path(m_curModelName).parent_path().filename().string();
 		std::string feature_file = m_dataRoot + "/features_okaymeshes/features_clean.txt";
 		m_queryEngine.LoadFeatures(feature_file);*/
-		for (auto& file : m_curFiles) {
-			if (file != m_curModelName) {
-				// Extract directory and filename from the path
-				std::filesystem::path p(file);
-				std::string class_name_other = p.parent_path().filename().string();
-				std::string file_name_other = p.filename().string();
-				std::string other_obj = class_name_other + "/" + file_name_other;
+		//for (auto& file : m_curFiles) {
+		//	if (file != m_curModelName) {
+		//		// Extract directory and filename from the path
+		//		std::filesystem::path p(file);
+		//		std::string class_name_other = p.parent_path().filename().string();
+		//		std::string file_name_other = p.filename().string();
+		//		std::string other_obj = class_name_other + "/" + file_name_other;
 
-				std::filesystem::path p2(m_curModelName);
-				std::string class_name_query = p2.parent_path().filename().string();
-				std::string file_name_query = p2.filename().string();
-				std::string query_obj = class_name_query + "/" + file_name_query;
+		//		std::filesystem::path p2(m_curModelName);
+		//		std::string class_name_query = p2.parent_path().filename().string();
+		//		std::string file_name_query = p2.filename().string();
+		//		std::string query_obj = class_name_query + "/" + file_name_query;
 
-				std::cout << query_obj << " " << other_obj << std::endl;
+		//		std::cout << query_obj << " " << other_obj << std::endl;
 
-				m_queryEngine.ComputeDistance(query_obj, other_obj);
-			}
-		}
+		//		m_queryEngine.ComputeDistance(query_obj, other_obj);
+
+
+		//	}
+		//}
 
 		/*try {
 			loadSampleVertices();

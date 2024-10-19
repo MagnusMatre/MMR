@@ -20,14 +20,25 @@ public:
 	~QueryEngine();
 
 	void LoadFeatures(std::string& feature_file);
-	void ComputeDistance(std::string& query_obj, std::string& other_obj);
+	float ComputeDistance(std::string& query_obj, std::string& other_obj);
+
+	void ComputeFullDistanceMatrix();
+	void SaveDistanceMatrix(std::string& save_path);
+	void LoadDistanceMatrix(std::string& load_path);
+
+	int getIndex(std::string file_name);
+
+	//float m_distances[NUM_SHAPES][NUM_SHAPES]; // Store the distances as 2D array of floats ( I think this is too large to store in memory)
+	std::vector<std::string> m_name_map;
 
 private:
 	float m_features[NUM_SHAPES][NUM_FEATURES]; // Store the features as 2D array of floats
-	std::vector<std::string> m_name_map;
 	//std::unordered_map<std::string, int> m_name_map; // Map the shape index to the shape name (e.g. AircraftBuoyant/m1339.obj)
 	std::vector<std::string> m_class_map; // Map the shape index to the shape name
 
 	void parseFeatures();
-	int getIndex(std::string file_name);
+
+
 };
+
+
