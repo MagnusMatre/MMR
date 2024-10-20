@@ -40,6 +40,8 @@ namespace test {
 		void updateSampleVerticesBuffer();
 		void loadSampleVertices();
 
+		void computeDistances();
+
 		std::string m_featureFile;
 		QueryEngine m_queryEngine;
 

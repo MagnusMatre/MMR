@@ -174,28 +174,7 @@ namespace test {
 
 		//loadCGALmesh(m_curModelName);
 
-		std::filesystem::path p(m_curModelName);
-		std::string class_name = p.parent_path().filename().string();
-		std::string obj_name = p.filename().string();
-		std::string file_name = class_name + "/" + obj_name;
-
-		// Retrieve the distances to all other objects
-		int modelIndex = m_queryEngine.getIndex(file_name);
-		std::vector<std::pair<float, int>> distances;
-		for (int i = 0; i < NUM_SHAPES; i++) {
-			if (i != modelIndex) {
-				float distance = m_queryEngine.ComputeDistance(file_name, m_queryEngine.m_name_map[i]);
-				distances.push_back(std::make_pair(distance, i));
-			}
-		}
-
-		// Sort the distances
-		std::sort(distances.begin(), distances.end());
-
-		// Print the 20 closest
-		for (int i = 0; i < 20; i++) {
-			std::cout << "Distance to " << m_queryEngine.m_name_map[distances[i].second] << " is: " << distances[i].first << std::endl;
-		}
+		computeDistances();
 		
 
 		//Compute the distance from the current model to all other models in the same directory
@@ -241,11 +220,11 @@ namespace test {
 		if (std::filesystem::exists(m_curDirectory)) {
 			for (const auto& entry : std::filesystem::directory_iterator(m_curDirectory)) {
 				if (entry.is_directory()) {
-					std::cout << "Path directory: " << entry.path().string() << std::endl;
+					//std::cout << "Path directory: " << entry.path().string() << std::endl;
 					m_curDirectories.push_back(entry.path().string());
 				}
 				else if (entry.is_regular_file() && entry.path().extension() == ".obj") {
-					std::cout << "Path file: " << entry.path().string() << std::endl;
+					//std::cout << "Path file: " << entry.path().string() << std::endl;
 					if (m_curModelName.empty()) {
 						InitializeCamera();
 						loadNewMesh(entry.path().string());
@@ -260,21 +239,42 @@ namespace test {
 	}
 
     void TestFeatures::OnImGuiRender() {
-        ImGui::SliderFloat3("Translation light source", &m_translationLight.x, -5.0f, 5.0f);
-        ImGui::SliderFloat3("Translation mesh", &m_translationMesh.x, -5.0f, 5.0f);
-        ImGui::SliderFloat3("Translation camera", &m_translationCamera.x, -5.0, 5.0f);
+        //ImGui::SliderFloat3("Translation light source", &m_translationLight.x, -5.0f, 5.0f);
+        //ImGui::SliderFloat3("Translation mesh", &m_translationMesh.x, -5.0f, 5.0f);
+        //ImGui::SliderFloat3("Translation camera", &m_translationCamera.x, -5.0, 5.0f);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-        ImGui::Text("Camera:");
-        ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
-		ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);
+        //ImGui::Text("Camera:");
+        //ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
+		//ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);
 
-        if (ImGui::Button("RESET CAMERA")) {
+        /*if (ImGui::Button("RESET CAMERA")) {
             m_camera->Position = glm::vec3(0.0f, 0.0f, 5.0f);
             m_camera->Up = glm::vec3(0.0f, 1.0f, 0.0f);
             m_camera->Yaw = -90.0f;
             m_camera->Pitch = 0.0f;
-        }
+        }*/
+
+		// Button for recomputing the distances
+		if (ImGui::Button("Recompute distances")) {
+			computeDistances();
+		}
+
+		// Create sliders for each of the SCALAR_FEATURES to change the weights
+		for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
+			std::string label = "Scalar weight " + m_queryEngine.m_scalar_feature_names[i];
+			ImGui::SliderFloat(label.c_str(), &m_queryEngine.m_scalar_weights[i], 0.0f, 5.0f);
+		}
+
+		for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) {
+			// Change color of button to red
+			ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.4f, 0.6f, 1.0f)); // Set button color
+
+			std::string label = "Histogram weight " + m_queryEngine.m_histogram_feature_names[i];
+			ImGui::SliderFloat(label.c_str(), &m_queryEngine.m_histogram_weights[i], 0.0f, 5.0f);
+
+			ImGui::PopStyleColor(); // Reset button colors
+		}
 
         // Button for going up one directory
         std::string textToDisplay;
@@ -389,4 +389,30 @@ namespace test {
 
 		updateSampleVerticesBuffer();
 	}
+
+	void TestFeatures::computeDistances() {
+		std::filesystem::path p(m_curModelName);
+		std::string class_name = p.parent_path().filename().string();
+		std::string obj_name = p.filename().string();
+		std::string file_name = class_name + "/" + obj_name;
+
+		// Retrieve the distances to all other objects
+		int modelIndex = m_queryEngine.getIndex(file_name);
+		std::vector<std::pair<float, int>> distances;
+		for (int i = 0; i < NUM_SHAPES; i++) {
+			if (i != modelIndex) {
+				float distance = m_queryEngine.ComputeDistance(file_name, m_queryEngine.m_name_map[i]);
+				distances.push_back(std::make_pair(distance, i));
+			}
+		}
+
+		// Sort the distances
+		std::sort(distances.begin(), distances.end());
+
+		// Print the 20 closest
+		for (int i = 0; i < 20; i++) {
+			std::cout << i + 1 << " - Distance to " << m_queryEngine.m_name_map[distances[i].second] << " is: " << distances[i].first << std::endl;
+		}
+	}
 }
+
