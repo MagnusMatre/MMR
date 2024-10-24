@@ -17,7 +17,7 @@ namespace test {
 		m_translationLight(3.0f, 3.0f, 3.0f), m_translationMesh(0.0f, 0.0f, 0.0f),
 		m_projection(glm::perspective(glm::radians(45.0f), (float)800 / (float)800, 0.1f, 100.0f)),
 		m_keyPressed(false), m_renderMode(RenderMode::WireframeAndSolid), m_translationCamera(0.0f, 0.0f, 0.0f),
-		m_curModelName(""), m_mvp(glm::mat4(1.0f)), m_view(glm::mat4(1.0f)), m_wireFrameColor(glm::vec3(1.0f, 0.0f, 0.0f)), m_wireFrameWidth(1.0f)	
+		m_curModelName(""), m_mvp(glm::mat4(1.0f)), m_view(glm::mat4(1.0f)), m_wireFrameColor(glm::vec3(0.0f, 0.0f, 0.0f)), m_wireFrameWidth(1.0f)
 	{
 
 		GLCall(glEnable(GL_BLEND));
@@ -31,7 +31,8 @@ namespace test {
 
 		// LOAD MESHES
 
-		std::string modelDirectory = "../../data/Meshes/Bird";
+		//std::string modelDirectory = "output/Cellphone";
+		std::string modelDirectory = "C:/Users/Magnus/Documents/Master/MMR/VCGdecimatedCleaned/VCGdecimatedCleaned/Bed";
 
 		for (const auto& entry : std::filesystem::directory_iterator(modelDirectory)) {
 			if (m_curModelName == "") {

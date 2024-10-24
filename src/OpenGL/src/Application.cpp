@@ -29,6 +29,103 @@
 #include "tests/TestRefineMesh.h"
 #include "tests/TestClassMeshes.h"
 
+
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <normalization.cpp>
+
+#include <tests/ShapeAnalyzer.cpp>
+
+void analyzeFilesInDirectories(const std::string& basePath) {
+    std::ofstream myfile;
+    myfile.open("shapesDB.csv", std::ios::out | std::ios::app);
+    myfile << "class; vertices;faces;triangles;quads;bmin; bmax\n";
+
+    // Iterate through each directory inside the base path (e.g., Bus, Car, etc.)
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {
+                    ShapeAnalyzer analyzer;
+                    std::cout << "Analyzing file: " << file.path() << std::endl;
+
+                    // Call the analyze function for each OBJ file
+                    analyzer.analyze(file.path().string(), myfile);
+
+                }
+            }
+
+
+        }
+    }
+    myfile.close();
+}
+
+
+void normalizeFilesInDirectories(const std::string& basePath) {
+    std::ofstream myfile;
+    myfile.open("shapes_normalized_tightfit.csv", std::ios::out | std::ios::app);
+    myfile << "class; scale_check ; X ; Y ; Z\n";
+
+    std::ofstream myfile1;
+    myfile1.open("shapes_normalized_dist.csv", std::ios::out | std::ios::app);
+    myfile1 << "class; aligned_on_x ; aligned_on_y ; aligned_on_z ; flipped_on_x ; flipped_on_y ; flipped_on_z\n";
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {
+                    normalization normal;
+                    std::cout << "NORMALIZING STEP!" << std::endl; 
+                    auto [scale, box, flippedOn, alignedOn] = normal.normalizeShapeFile(file.path().string(), "output/" + entry.path().filename().string() + "/" + file.path().filename().string());
+                    myfile << entry.path().filename().string() << ";" << scale << ";" << box[0] << ";" << box[1] << ";" << box[2] << std::endl;
+                    //std::cout << "VERIFICATION STEP!" << std::endl;
+                    //auto alignment = normal.alignmentAndFlipCheck("output/" + entry.path().filename().string() + "/" + file.path().filename().string());
+                    //auto flippedOn = alignment[0];
+                    //auto alignedOn = alignment[1];
+                    myfile1 << entry.path().filename().string() << ";" << alignedOn[0] << ";" << alignedOn[1] << ";" << alignedOn[2] <<
+                        ";" << flippedOn[0] << ";" << flippedOn[1] << ";" << flippedOn[2] << std::endl;
+                }
+            }
+            
+
+        }
+    }
+};
+
+void verify(const std::string& basePath) {
+    std::ofstream myfile;
+    myfile.open("shapes_normalized_dist.csv", std::ios::out | std::ios::app);
+    myfile << "class; obj_name ; aligned_on_x ; aligned_on_y ; aligned_on_z ; flipped_on_x ; flipped_on_y ; flipped_on_z\n";
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {
+                    normalization normal;
+                    auto alignment = normal.alignmentAndFlipCheck(file.path().string());
+                    auto flippedOn = alignment[0];
+                    auto alignedOn = alignment[1];
+                    myfile << entry.path().filename().string() << ";" << file.path().filename().string() << ";" << alignedOn[0] << ";" << alignedOn[1] << ";" << alignedOn[2] <<
+                        ";" << flippedOn[0] << ";" << flippedOn[1] << ";" << flippedOn[2] << std::endl;
+                }
+            }
+
+
+
+        }
+    };
+}
 int main(void)
 {
     GLFWwindow* window;
@@ -66,6 +163,15 @@ int main(void)
 
     {
         Renderer renderer;
+
+        //std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/MMR/src/OpenGL/test_output";
+        std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/VCGdecimatedCleaned/VCGdecimatedCleaned";
+        
+        //std::string outputPath = "output";
+        normalizeFilesInDirectories(basePath);
+        //add_bounding_box(outputPath);
+
+        //verify(basePath);
 
         GLCall(glEnable(GL_BLEND));
         GLCall(glEnable(GL_DEPTH_TEST));
@@ -152,3 +258,29 @@ int main(void)
 
     return 0;
 };
+
+
+
+//void verifyOriginInDirectories(const std::string& basePath) {
+//    std::ofstream myfile;
+//    myfile.open("shapes_normalized_dist.csv", std::ios::out | std::ios::app);
+//    myfile << "class; dist_from_bary\n";
+//    for (const auto& entry : fs::directory_iterator(basePath)) {
+//        if (fs::is_directory(entry.path())) {
+//            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+//
+//            // Iterate through each file in the directory
+//            for (const auto& file : fs::directory_iterator(entry.path())) {
+//                if (file.path().extension() == ".obj") {
+//                    normalization normal;
+//                    float dist = normal.verify_origin(file.path().string());
+//                    myfile << entry.path().filename().string() << ";" << dist << std::endl;
+//                }
+//            }
+//            break;
+//
+//        }
+//    }
+//    myfile.close();
+//}
+
