@@ -11,9 +11,11 @@ class QueryBenchmark {
 		QueryBenchmark(std::string& feature_file, std::string& save_directory);
 		~QueryBenchmark();
 
-		void RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram);
+		void RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma);
 
 		void ComputeDistanceStats(DISTANCE_TYPE hist_dist_type);
+
+		void WeightOptimizer(int max_iterations);
 
 	private:
 		std::unique_ptr<QueryEngine> m_queryEngine;
@@ -22,6 +24,11 @@ class QueryBenchmark {
 		std::string m_save_directory;
 
 		int m_queryIndices[16] = {2182,911,730,1317,2221,1660,1284,1963,1758,55,1360,1707,1119,1918,786,2118};
+
+		float m_frequencies[16] = { 0.0f };
+
+		double computeScore();
+		void getFrequencies();
 
 };
 

@@ -101,7 +101,7 @@ void RunScriptFeatureScript() {
 
 void RunScriptQueryBenchmark() {
 	std::string feature_file = "../../res/features_final.txt";
-	std::string save_file = "../../res/query_results_histogramfeatures"; // Change this according to the tests you are performing
+	std::string save_file = "../../res/query_results_weightoptimizer"; // Change this according to the tests you are performing
 
 
 	QueryBenchmark script(feature_file, save_file);
@@ -110,7 +110,7 @@ void RunScriptQueryBenchmark() {
 	//script.ComputeDistanceStats(DISTANCE_TYPE::ABSOLUTE);
 	//script.ComputeDistanceStats(DISTANCE_TYPE::EUCLIDEAN);
 	//script.ComputeDistanceStats(DISTANCE_TYPE::COSINE);
-	script.ComputeDistanceStats(DISTANCE_TYPE::EMD);
+	//script.ComputeDistanceStats(DISTANCE_TYPE::EMD);
 
 	// Run the benchmark with different standardization and distance types (NOTE: SET HISTOGRAM WEIGHTS TO ZERO)
 	//script.RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN);
@@ -135,11 +135,18 @@ void RunScriptQueryBenchmark() {
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);*/
-	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD); // TODO: compute distance stats
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD);
 	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);*/
-	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD); // TODO: compute distance stats
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD);
+
+	// Run the benchmark tests for optimizing gamma
+	/*for (int i = 0; i < 11; i++) {
+		script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, float(i)/10);
+	}*/
+
+	script.WeightOptimizer(1000);
 	
 }
 

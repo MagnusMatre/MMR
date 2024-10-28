@@ -8,14 +8,15 @@ QueryEngine::~QueryEngine() {
 
 }
 
-void QueryEngine::Initialize(STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram) {
+void QueryEngine::Initialize(STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma) {
 	standardizeFeatures(s_type);
 	m_histogram_distance_standardization = s_type_histogram;
 	m_distance_type_scalar = d_type_scalar;
 	m_distance_type_histogram = d_type_histogram;
+	m_gamma = gamma;
 
-	std::cout << "Finished initializing QueryEngine with (scalar_norm, histogram_norm, scalar_distance, histogram_distsance) = (" <<
-		s_type << "," << s_type_histogram << "," << d_type_scalar << "," << d_type_histogram << ")" << std::endl;
+	std::cout << "Finished initializing QueryEngine with (scalar_norm, histogram_norm, scalar_distance, histogram_distsance, gamma) = (" <<
+		s_type << "," << s_type_histogram << "," << d_type_scalar << "," << d_type_histogram << "," << gamma << ")" << std::endl;
 }
 
 void QueryEngine::LoadFeatures(std::string& feature_file) {
@@ -171,9 +172,8 @@ double QueryEngine::ComputeDistance(std::string& query_obj, std::string& other_o
 	for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) { // Only histograms
 		hist_distance += m_histogram_weights[i] * computeHistogramDistance(query_index, other_index, (HISTOGRAM_FEATURES)i);
 	}
-	hist_distance = sqrt(hist_distance);
 
-	double distance = scalar_distance + hist_distance;
+	double distance = m_gamma * scalar_distance + (1-m_gamma) * hist_distance;
 
 	//std::cout << "Distance between " << query_obj << " and " << other_obj << " is: " << distance << std::endl;
 	return distance;
@@ -188,9 +188,8 @@ double QueryEngine::ComputeDistance(int query_obj, int other_obj) {
 	for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) { // Only histograms
 		hist_distance += m_histogram_weights[i] * computeHistogramDistance(query_obj, other_obj, (HISTOGRAM_FEATURES)i);
 	}
-	hist_distance = sqrt(hist_distance); 
 
-	double distance = scalar_distance + hist_distance;
+	double distance = m_gamma * scalar_distance + (1-m_gamma) * hist_distance;
 
 	//std::cout << "Distance between " << query_obj << " and " << other_obj << " is: " << distance << std::endl;
 	return distance;
@@ -200,25 +199,25 @@ double QueryEngine::computeScalarDistance(int i, int j) {
 	if (m_distance_type_scalar == DISTANCE_TYPE::ABSOLUTE) {
 		float distance = 0.0f;
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar features
-			distance += abs(m_features[i][k] - m_features[j][k]);
+			distance += m_scalar_weights[k] * abs(m_features[i][k] - m_features[j][k]);
 		}
 		return distance;
 	}
 	else if (m_distance_type_scalar == DISTANCE_TYPE::EUCLIDEAN) {
 		float distance = 0.0f;
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar features
-			distance += (m_features[i][k] - m_features[j][k]) * (m_features[i][k] - m_features[j][k]);
+			distance += m_scalar_weights[k] * (m_features[i][k] - m_features[j][k]) * (m_features[i][k] - m_features[j][k]);
 		}
 		return sqrt(distance);
 	}
 	else if (m_distance_type_scalar == DISTANCE_TYPE::ONEPOINTFIVE) { // 1.5 norm
 		float distance = 0.0f;
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar features
-			distance += pow(abs(m_features[i][k] - m_features[j][k]), 1.5);
+			distance += m_scalar_weights[k] * pow(abs(m_features[i][k] - m_features[j][k]), 1.5);
 		}
 		return distance;
 	}
-	else if (m_distance_type_scalar == DISTANCE_TYPE::COSINE) {
+	else if (m_distance_type_scalar == DISTANCE_TYPE::COSINE) { // scaling does not make sense?
 		double dot_product = 0.0f;
 		double norm_i = 0.0f;
 		double norm_j = 0.0f;
@@ -410,6 +409,14 @@ void QueryEngine::TuneScalarWeights(SCALAR_FEATURES i, float weight) {
 
 void QueryEngine::TuneHistogramWeights(HISTOGRAM_FEATURES i, float weight) {
 	m_histogram_weights[i] = weight;
+}
+
+void QueryEngine::TuneGamma(float gamma) {
+	m_gamma = gamma;
+}
+
+float QueryEngine::getGamma() {
+	return m_gamma;
 }
 
 void QueryEngine::SaveDistanceMatrix(std::string& save_path) {

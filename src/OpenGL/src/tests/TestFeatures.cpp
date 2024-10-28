@@ -40,7 +40,7 @@ namespace test {
 		std::cout << "Loading features..." << std::endl;
 		
 		m_queryEngine->LoadFeatures(m_featureFile);
-		m_queryEngine->Initialize(STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EMD);
+		m_queryEngine->Initialize(STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EMD, 0.5f);
 		std::cout << "Features loaded" << std::endl;
 		//m_queryEngine->ComputeFullDistanceMatrix();
 		//std::cout << "Distances computed" << std::endl;

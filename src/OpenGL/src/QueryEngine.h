@@ -87,7 +87,7 @@ public:
 
 	void ComputeHistogramDistanceStatistics();
 
-	void Initialize(STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_hist, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram);
+	void Initialize(STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_hist, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma);
 
 	std::vector<std::pair<float, std::string>> DoBenchmark(int query_obj, int K); // computes the K most similar shapes to the query_obj
 	
@@ -97,18 +97,21 @@ public:
 
 	void TuneScalarWeights(SCALAR_FEATURES i, float weight);
 	void TuneHistogramWeights(HISTOGRAM_FEATURES i, float weight);
+	void TuneGamma(float gamma);
 
 	int getIndex(std::string file_name);
 	std::string getClassName(int index);
 	std::string getObjectName(int index);
 	int getFrequency(int index);
 
+	float getGamma();
+
 	//float m_distances[NUM_SHAPES][NUM_SHAPES]; // STORE THE DISTANCES AS 2D ARRAY OF FLOATS ( I THINK THIS IS TOO LARGE TO STORE IN MEMORY
 
 	std::unordered_map<int, float> m_scalar_weights = {
 		{SCALAR_FEATURES::DIAMETER,					1.0f},
 		{SCALAR_FEATURES::BB_DIAMETER,				1.0f},
-		{SCALAR_FEATURES::BB_VOLUME,				0.0f},
+		{SCALAR_FEATURES::BB_VOLUME,				1.0f},
 		{SCALAR_FEATURES::SURFACEAREA,				1.0f},
 		{SCALAR_FEATURES::VOLUME,					1.0f},
 		{SCALAR_FEATURES::VOLUMECOMPS,				0.0f}, // Don't use this now
@@ -173,6 +176,8 @@ private:
 	std::vector<std::string> m_class_map = {}; // MAP THE SHAPE INDEX TO THE SHAPE CLASS
 	std::vector<std::string> m_name_map = {};  // MAP THE SHAPE INDEX TO THE SHAPE NAME
 
+	float m_gamma = 0.5f; // Weight of all scalar distances. gamma\in[0,1].
+
 	DISTANCE_TYPE m_distance_type_scalar;
 	DISTANCE_TYPE m_distance_type_histogram;
 
@@ -194,7 +199,7 @@ private:
 		{HISTOGRAM_FEATURES::D4, {D4_START, D4_START + D4_LEN}}
 	};
 
-	double hist_euclidean_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of euclidean distances for features_clean2.txt
+	double hist_euclidean_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of euclidean distances for features_final.txt
 		{0.00159033, 0.316422, 0.0508091, 0.00512234},
 		{0.00308516, 0.664294, 0.153664, 0.00652756},
 		{0.0024246, 0.325589, 0.075518, 0.0048404},
@@ -202,7 +207,7 @@ private:
 		{0.000517109, 0.591847, 0.173969, 0.00829209}
 	};
 
-	double hist_cosine_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of cosine distances for features_clean2.txt
+	double hist_cosine_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of cosine distances for features_final.txt
 		{4.42293e-05, 0.908133, 0.105763, 0.00933547},
 		{6.91977e-05, 0.999506, 0.26695, 0.0108622},
 		{9.88159e-05, 0.876027, 0.127158, 0.00854967},
@@ -210,7 +215,7 @@ private:
 		{8.14638e-07, 0.9946, 0.287745, 0.0126892}
 	};
 
-	double hist_absolute_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of absolute distances for features_clean2.txt
+	double hist_absolute_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of absolute distances for features_final.txt
 		{0.01176, 1.62198, 0.35835, 0.0127493},
 		{0.01258, 1.99862, 0.712815, 0.0140199},
 		{0.01264, 1.66654, 0.4587, 0.0121265},
@@ -218,12 +223,12 @@ private:
 		{0.00143402, 1.98573, 0.814319, 0.017334}
 	};
 
-	double hist_emd_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of EMD for features_clean2.txt
-		{0.0829508, 25.4031, 2.43789, 1}, // Note, incorrect std computation, so just ignore it
-		{0.0363493, 25.7725, 7.37656, 1},
-		{0.0424836, 29.9961, 2.77808, 1},
-		{0.0592506, 48.6218, 5.04969, 1},
-		{0.0217999, 28.2317, 3.15134, 1}
+	double hist_emd_min_max_mu_std[5][4] = { // Stores the min, max average and standard deivation of EMD for features_final.txt
+		{0.02242, 25.4366, 4.73597, 0.0484536},
+		{0.01451, 27.2882, 4.8187, 0.0442757},
+		{0.02409, 31.7407, 5.55295, 0.0487042},
+		{0.00646797, 35.1219, 7.20831, 0.0572482},
+		{0.00110802, 29.7176, 6.12986, 0.0533872}
 	};
 
 	void parseFeatures();
