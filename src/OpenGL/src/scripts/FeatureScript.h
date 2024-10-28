@@ -28,8 +28,8 @@ private:
 	std::string m_input_dir;
 	std::string m_output_dir;
 
-	std::string m_samplepoints_root = "../../res/sample_points";
-	std::string m_convexhull_root = "../../res/convex_hulls_okaymeshes";
+	std::string m_samplepoints_root = "../../res/sample_points3";
+	std::string m_convexhull_root = "../../res/convex_hulls_okaymeshes3";
 	
 	//utility functions
 	void load_mesh(std::string& filename, CGALMesh& mesh);

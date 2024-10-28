@@ -32,18 +32,23 @@ namespace test {
 		GLCall(glCullFace(GL_BACK));    // Cull back faces
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
-		m_featureFile = "../../res/features_okaymeshes/features_clean.txt";
+		m_queryEngine = std::make_unique<QueryEngine>();
+
+		m_featureFile = "../../res/features_clean2.txt";
 		std::string saveDistanceMatrix = "../../res/features_okaymeshes/distance_matrix.txt";
 
-		m_queryEngine.LoadFeatures(m_featureFile);
+		std::cout << "Loading features..." << std::endl;
+		
+		m_queryEngine->LoadFeatures(m_featureFile);
+		m_queryEngine->Initialize(STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EMD);
 		std::cout << "Features loaded" << std::endl;
-		//m_queryEngine.ComputeFullDistanceMatrix();
+		//m_queryEngine->ComputeFullDistanceMatrix();
 		//std::cout << "Distances computed" << std::endl;
-		//m_queryEngine.SaveDistanceMatrix(saveDistanceMatrix);
+		//m_queryEngine->SaveDistanceMatrix(saveDistanceMatrix);
 
 		m_dataRoot = "../../data";
-		m_curDirectory = m_dataRoot + "/OkayMeshes";
-		m_samplePointsDirectory = "../../res/sample_points";
+		m_curDirectory = m_dataRoot + "/OkayMeshes3";
+		m_samplePointsDirectory = "../../res/sample_points3";
 		loadCurrentDirectory(); 
 
 		m_renderer = std::make_unique<Renderer>();
@@ -180,7 +185,7 @@ namespace test {
 		//Compute the distance from the current model to all other models in the same directory
 		/*std::string class_name = std::filesystem::path(m_curModelName).parent_path().filename().string();
 		std::string feature_file = m_dataRoot + "/features_okaymeshes/features_clean.txt";
-		m_queryEngine.LoadFeatures(feature_file);*/
+		m_queryEngine->LoadFeatures(feature_file);*/
 		//for (auto& file : m_curFiles) {
 		//	if (file != m_curModelName) {
 		//		// Extract directory and filename from the path
@@ -196,7 +201,7 @@ namespace test {
 
 		//		std::cout << query_obj << " " << other_obj << std::endl;
 
-		//		m_queryEngine.ComputeDistance(query_obj, other_obj);
+		//		m_queryEngine->ComputeDistance(query_obj, other_obj);
 
 
 		//	}
@@ -262,16 +267,16 @@ namespace test {
 
 		// Create sliders for each of the SCALAR_FEATURES to change the weights
 		for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
-			std::string label = "Scalar weight " + m_queryEngine.m_scalar_feature_names[i];
-			ImGui::SliderFloat(label.c_str(), &m_queryEngine.m_scalar_weights[i], 0.0f, 5.0f);
+			std::string label = "Scalar weight " + m_queryEngine->m_scalar_feature_names[i];
+			ImGui::SliderFloat(label.c_str(), &m_queryEngine->m_scalar_weights[i], 0.0f, 5.0f);
 		}
 
 		for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) {
 			// Change color of button to red
 			ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.4f, 0.6f, 1.0f)); // Set button color
 
-			std::string label = "Histogram weight " + m_queryEngine.m_histogram_feature_names[i];
-			ImGui::SliderFloat(label.c_str(), &m_queryEngine.m_histogram_weights[i], 0.0f, 5.0f);
+			std::string label = "Histogram weight " + m_queryEngine->m_histogram_feature_names[i];
+			ImGui::SliderFloat(label.c_str(), &m_queryEngine->m_histogram_weights[i], 0.0f, 5.0f);
 
 			ImGui::PopStyleColor(); // Reset button colors
 		}
@@ -359,6 +364,7 @@ namespace test {
 	}
 
 	void TestFeatures::loadSampleVertices() {
+
 		// Get class name and file name from m_curModelName
 		std::filesystem::path p(m_curModelName);
 		std::string class_name = p.parent_path().filename().string();
@@ -377,6 +383,8 @@ namespace test {
 
 		std::vector<Point_3> sample_points;
 		std::string line;
+		m_featureExtractor.m_random_vertices.clear();
+
 		while (std::getline(file, line)) {
 			std::istringstream iss(line);
 			double x, y, z;
@@ -397,11 +405,12 @@ namespace test {
 		std::string file_name = class_name + "/" + obj_name;
 
 		// Retrieve the distances to all other objects
-		int modelIndex = m_queryEngine.getIndex(file_name);
-		std::vector<std::pair<float, int>> distances;
+		int modelIndex = m_queryEngine->getIndex(file_name);
+		std::vector<std::pair<double, int>> distances;
 		for (int i = 0; i < NUM_SHAPES; i++) {
 			if (i != modelIndex) {
-				float distance = m_queryEngine.ComputeDistance(file_name, m_queryEngine.m_name_map[i]);
+
+				double distance = m_queryEngine->ComputeDistance(modelIndex, i);
 				distances.push_back(std::make_pair(distance, i));
 			}
 		}
@@ -409,9 +418,20 @@ namespace test {
 		// Sort the distances
 		std::sort(distances.begin(), distances.end());
 
+		/*std::cout << "Features for " << file_name << std::endl;
+		for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
+			std::cout << m_queryEngine->m_scalar_feature_names[i] << ": " << m_queryEngine->m_features[modelIndex][i] << std::endl;
+		}*/
+
 		// Print the 20 closest
 		for (int i = 0; i < 20; i++) {
-			std::cout << i + 1 << " - Distance to " << m_queryEngine.m_name_map[distances[i].second] << " is: " << distances[i].first << std::endl;
+			std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second)<<"/"<<m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
+
+			// Also print the features values
+			/*std::cout << "Features for " << m_queryEngine->m_name_map[distances[i].second] << std::endl;
+			for (int j = 0; j < NUM_SCALAR_FEATURES; j++) {
+				std::cout << m_queryEngine->m_scalar_feature_names[j] << ": " << m_queryEngine->m_features[distances[i].second][j] << " --- " << m_queryEngine->m_features[modelIndex][j] << std::endl;
+			*/
 		}
 	}
 }

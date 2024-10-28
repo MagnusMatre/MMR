@@ -3,6 +3,8 @@
 import os
 import sys
 
+from tqdm import tqdm
+
 to_flip_directory = "../../data/NormalflipMeshes"
 to_flip_list = []
 
@@ -13,10 +15,10 @@ for classname in os.listdir(to_flip_directory):
         to_flip_list.append(f"/{classname}/{meshname}")
 
 
-meshes_to_use_directory = "../../data/NormalizedMeshes_3"
-output_directory = "../../data/OkayMeshes"
+meshes_to_use_directory = "../../data/shapes_normalized_5"
+output_directory = "../../data/OkayMeshes3"
 
-for classname in os.listdir(meshes_to_use_directory):
+for classname in tqdm(os.listdir(meshes_to_use_directory)):
     class_directory = os.path.join(meshes_to_use_directory, classname)
     for meshname in os.listdir(class_directory):
         mesh_path = os.path.join(class_directory, meshname)
@@ -33,6 +35,7 @@ for classname in os.listdir(meshes_to_use_directory):
                     elif line.startswith("f"):
                         indcs = line.split(" ")[1:]
                         new_indcs = [indcs[0], indcs[2][:-1], indcs[1]]
+                        #new_indcs = [indcs[0], indcs[1], indcs[2][:-1]]
                         new_file_lines.append(f"f {new_indcs[0]} {new_indcs[1]} {new_indcs[2]}\n")
             
             # Open a .obj file to write the flipped mesh

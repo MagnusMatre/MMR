@@ -33,8 +33,8 @@ def write_mesh(outputfilename, ConvexHull):
             new_indices = [index_mapping[vertex] for vertex in simplex]
             f.write(f"f {str(new_indices[0]+1)} {str(new_indices[1]+1)} {str(new_indices[2]+1)} \n")
 
-input_dir = "../../data/OkayMeshes"
-output_dir = "../../res/convex_hulls_okaymeshes"
+input_dir = "../../data/OkayMeshes3"
+output_dir = "../../res/convex_hulls_okaymeshes3"
 
 if __name__ == "__main__":
     # Iterate through all directories in input_dir

@@ -9,25 +9,12 @@
 // Include any necessary headers for your scripts
 #include "CGALtest.h"
 #include "CGALclean.h"
-#include "Script1.h"
-#include "Script2.h"
 #include "PMPremesh.h"
 #include "VCGrepair.h"
 #include "VCGremesh.h"
 #include "check_meshes.h"
 #include "FeatureScript.h"
-
-void RunScript1() {
-    // Code to run Script1
-    Script1 script;
-    script.Execute();
-}
-
-void RunScript2() {
-    // Code to run Script2
-    Script2 script;
-    script.Execute();
-}
+#include "QueryBenchmark.h"
 
 void RunScriptPMPremesh() {
 	// Code to run PMPtest
@@ -91,8 +78,8 @@ void RunScriptCGALclean() {
 	std::string output_dir = "../../data/VCGdecimatedCleaned";*/
 
 
-	std::string input_dir = "../../res/convex_hulls_okaymeshes";
-	std::string output_dir = "../../res/convex_hulls_okaymeshes";
+	std::string input_dir = "../../res/convex_hulls_okaymeshes3";
+	std::string output_dir = "../../res/convex_hulls_okaymeshes3";
 	std::string start_dir = "AircraftBuoyant";
 
 
@@ -101,15 +88,59 @@ void RunScriptCGALclean() {
 }
 
 void RunScriptFeatureScript() {
-	std::string mesh_dir = "../../data/OkayMeshes/Bed";
-	std::string input_directory = "../../data/OkayMeshes"; // unused...
-	std::string output_directory = "../../res/features_okaymeshes"; // unused, features are just saved to /features.txt file inside of the mest_dir directory (for now)
-	std::string start_dir = "Musical_Instrument";
+	std::string mesh_dir = "../../data/OkayMeshes3/Bed";
+	std::string input_directory = "../../data/OkayMeshes3";
+	std::string output_directory = "../../res/sample_points3"; 
+	std::string start_dir = "AircraftBuoyant";
 
-	FeatureScript script(input_directory, output_directory, false);
+	FeatureScript script(input_directory, output_directory, true);
 	//script.test_mesh(mesh_dir);
-	script.test_directory(mesh_dir);
-	//script.handle_all_directories(start_dir);
+	//script.test_directory(mesh_dir);
+	script.handle_all_directories(start_dir);
+}
+
+void RunScriptQueryBenchmark() {
+	std::string feature_file = "../../res/features_final.txt";
+	std::string save_file = "../../res/query_results_histogramfeatures"; // Change this according to the tests you are performing
+
+
+	QueryBenchmark script(feature_file, save_file);
+
+	// Compute statistics required to normalize histogram distances
+	//script.ComputeDistanceStats(DISTANCE_TYPE::ABSOLUTE);
+	//script.ComputeDistanceStats(DISTANCE_TYPE::EUCLIDEAN);
+	//script.ComputeDistanceStats(DISTANCE_TYPE::COSINE);
+	script.ComputeDistanceStats(DISTANCE_TYPE::EMD);
+
+	// Run the benchmark with different standardization and distance types (NOTE: SET HISTOGRAM WEIGHTS TO ZERO)
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN); // WINNER
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ONEPOINTFIVE, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ONEPOINTFIVE, DISTANCE_TYPE::EUCLIDEAN); 
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ONEPOINTFIVE, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::COSINE, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::COSINE, DISTANCE_TYPE::EUCLIDEAN);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::COSINE, DISTANCE_TYPE::EUCLIDEAN);
+
+
+	// Run the benchmark tests with different standardization and histogram distance function
+	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);*/
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD); // TODO: compute distance stats
+	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);*/
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD); // TODO: compute distance stats
+	
 }
 
 int main(int argc, char** argv) {
@@ -121,12 +152,8 @@ int main(int argc, char** argv) {
     std::string scriptName = argv[1];
 
 
-    if (scriptName == "Script1") {
-        RunScript1();
-    } else if (scriptName == "Script2") {
-        RunScript2();
-	}
-	else if (scriptName == "PMPremesh") {
+
+	if (scriptName == "PMPremesh") {
         RunScriptPMPremesh();
     }
     else if (scriptName == "VCGrepair") {
@@ -146,6 +173,9 @@ int main(int argc, char** argv) {
 	}
 	else if (scriptName == "FeatureScript") {
 		RunScriptFeatureScript();
+	}
+	else if (scriptName == "QueryBenchmark") {
+		RunScriptQueryBenchmark();
 	}
     else {
         std::cerr << "Unknown script: " << scriptName << std::endl;

@@ -19,6 +19,8 @@
 #include "FeatureExtraction.h"
 #include "QueryEngine.h"
 
+#include <memory> 
+
 namespace test {
 
 	class TestFeatures : public Test
@@ -43,7 +45,7 @@ namespace test {
 		void computeDistances();
 
 		std::string m_featureFile;
-		QueryEngine m_queryEngine;
+		std::unique_ptr<QueryEngine> m_queryEngine;
 
 		CGALMesh m_CGALmesh;
 		FeatureExtraction m_featureExtractor;

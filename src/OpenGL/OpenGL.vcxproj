@@ -220,6 +220,7 @@
     <ClCompile Include="src\scripts\CGALclean.cpp" />
     <ClCompile Include="src\scripts\FeatureScript.cpp" />
     <ClCompile Include="src\scripts\PMPremesh.cpp" />
+    <ClCompile Include="src\scripts\QueryBenchmark.cpp" />
     <ClCompile Include="src\scripts\ScriptRunner.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RunScript|x64'">false</ExcludedFromBuild>
@@ -262,8 +263,7 @@
     <ClInclude Include="src\scripts\CGALtest.h" />
     <ClInclude Include="src\scripts\FeatureScript.h" />
     <ClInclude Include="src\scripts\PMPremesh.h" />
-    <ClInclude Include="src\scripts\Script1.h" />
-    <ClInclude Include="src\scripts\Script2.h" />
+    <ClInclude Include="src\scripts\QueryBenchmark.h" />
     <ClInclude Include="src\scripts\VCGremesh.h" />
     <ClInclude Include="src\scripts\VCGrepair.h" />
     <ClInclude Include="src\Shader.h" />

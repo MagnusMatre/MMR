@@ -13,13 +13,14 @@ void FeatureExtraction::Load(std::string& mesh_path, std::string& convex_hull_pa
 	load_samplepoints(samplepoints_file_name);
 }
 
-void FeatureExtraction::load_mesh(std::string& filename, CGALMesh& m_mesh) {
-	if (!CGALPMP::IO::read_polygon_mesh(filename, m_mesh)) {
+void FeatureExtraction::load_mesh(std::string& filename, CGALMesh& mesh) {
+	mesh.clear();
+	if (!CGALPMP::IO::read_polygon_mesh(filename, mesh)) {
 		std::cerr << "Error: cannot read file " << filename << std::endl;
 		return;
 	}
 
-	if (is_empty(m_mesh))
+	if (is_empty(mesh))
 	{
 		std::cerr << "Warning: empty file?" << std::endl;
 		return;
@@ -56,24 +57,24 @@ void FeatureExtraction::compute_convex_hull() {
 void FeatureExtraction::compute_all_features() {
 	compute_convex_hull();
 	get_diameter();
-	//get_bounding_box_statistics();
+	get_bounding_box_statistics();
 	get_volume();
-	//get_concomp_volume();
-	//get_surface_area();
+	get_concomp_volume();
+	get_surface_area();
 
-	//get_compactness(); // Needs to be done after volume and surface area
-	//get_sphericity(); // Needs to be done after compactness
+	get_compactness(); // Needs to be done after volume and surface area
+	get_sphericity(); // Needs to be done after compactness
 
-	//get_rectangularity(); // Needs to be done after bounding box statistics
+	get_rectangularity(); // Needs to be done after bounding box statistics
 
-	//get_eccentricities();
+	get_eccentricities();
 	get_convexity();
 
-	//get_A3_histogram();
-	//get_D1_histogram();
-	//get_D2_histogram();
-	//get_D3_histogram();
-	//get_D4_histogram();
+	get_A3_histogram();
+	get_D1_histogram();
+	get_D2_histogram();
+	get_D3_histogram();
+	get_D4_histogram();
 }
 
 void FeatureExtraction::print_all_features() {
@@ -185,12 +186,10 @@ void FeatureExtraction::get_volume() {
 	// where v1=x1-o, v2=x2-o and v3=x3-o are the vectors of the triangle t, and o is the origin (aka barycenter)
 
 	double V = 0.0;
-	double V_CGAL = 0.0;
-
 
 	// If the mesh is closed, compute area with CGAL
 	if (CGAL::is_closed(m_mesh)) {
-		m_volume = CGAL::Polygon_mesh_processing::volume(m_mesh);
+		m_volume = std::abs(CGAL::Polygon_mesh_processing::volume(m_mesh));
 		return;
 	}
 
@@ -409,6 +408,11 @@ void FeatureExtraction::get_rectangularity() {
 
 
 void FeatureExtraction::get_N_random_vertices(int N) {
+	// If the mesh has no faces, then skip it
+	if (num_faces(m_mesh) == 0) {
+		return;
+	}
+
 	// Reserve space for the random vertices
 	m_random_vertices.clear();
 	m_random_vertices.reserve(N);
@@ -437,6 +441,26 @@ void FeatureExtraction::get_N_random_vertices(int N) {
 	for (int i = 0; i < N; i++) {
 		double random_area = dis_triangle(gen);
 
+		// At 25%, 50%, 75% and 100% print the progession
+		if (i == 0) {
+			std::cout << "0% done" << std::endl;
+		}
+		else if (i == N / 4) {
+			std::cout << "25% done" << std::endl;
+		}
+		else if (i == N / 2) {
+			std::cout << "50% done" << std::endl;
+		}
+		else if (i == 3 * N / 4) {
+			std::cout << "75% done" << std::endl;
+		}
+		else if (i == N-1) {
+			std::cout << "100% done" << std::endl;
+		}
+
+		Point_3 v1, v2, v3, random_point;
+		double r1, r2, c1, c2, c3, w_x, w_y, w_z;
+
 		// Find the triangle that corresponds to the random area
 		double sum = 0.0;
 		for (int j = 0; j < triangle_areas.size(); j++) {
@@ -444,23 +468,23 @@ void FeatureExtraction::get_N_random_vertices(int N) {
 			if (sum >= random_area) {
 				auto f = m_mesh.faces_begin() + j;
 				auto h = m_mesh.halfedge(*f);
-				Point_3 v1 = m_mesh.point(m_mesh.target(h));
-				Point_3 v2 = m_mesh.point(m_mesh.target(m_mesh.next(h)));
-				Point_3 v3 = m_mesh.point(m_mesh.target(m_mesh.next(m_mesh.next(h))));
+				v1 = m_mesh.point(m_mesh.target(h));
+				v2 = m_mesh.point(m_mesh.target(m_mesh.next(h)));
+				v3 = m_mesh.point(m_mesh.target(m_mesh.next(m_mesh.next(h))));
 
 				// Compute three random numbers between 0 and 1 to sample random point on a triangle: https://stackoverflow.com/questions/4778147/sample-random-point-in-triangle
-				double r1 = dis_point(gen);
-				double r2 = dis_point(gen);
+				r1 = dis_point(gen);
+				r2 = dis_point(gen);
 
-				double c1 = 1 - std::sqrt(r1);
-				double c2 = std::sqrt(r1) * (1 - r2);
-				double c3 = r2 * std::sqrt(r1);
+				c1 = 1 - std::sqrt(r1);
+				c2 = std::sqrt(r1) * (1 - r2);
+				c3 = r2 * std::sqrt(r1);
 
-				double w_x = c1 * v1[0] + c2 * v2[0] + c3 * v3[0];
-				double w_y = c1 * v1[1] + c2 * v2[1] + c3 * v3[1];
-				double w_z = c1 * v1[2] + c2 * v2[2] + c3 * v3[2];
+				w_x = c1 * v1[0] + c2 * v2[0] + c3 * v3[0];
+				w_y = c1 * v1[1] + c2 * v2[1] + c3 * v3[1];
+				w_z = c1 * v1[2] + c2 * v2[2] + c3 * v3[2];
 
-				Point_3 random_point = Point_3(w_x, w_y, w_z);
+				random_point = Point_3(w_x, w_y, w_z);
 				m_random_vertices.push_back(random_point);
 				break;
 			}
@@ -489,119 +513,174 @@ void FeatureExtraction::load_samplepoints(std::string& filename) {
 void FeatureExtraction::get_A3_histogram() {
 	// Assume points are loaded into m_random_vertices
 
-	unsigned int iterations = m_random_vertices.size() / 3;
+	//unsigned int iterations = m_random_vertices.size() / 3; // OLD WAY
 
 	Point_3 p1;
 	Point_3 p2;
 	Point_3 p3;
 	Vector_3 v1;
 	Vector_3 v2;
-	float dot_product = 0.0f;
+	double dot_product = 0.0;
 
-	for (unsigned int i = 0; i < iterations; i++) {
+	//for (unsigned int i = 0; i < iterations; i++) { // OLD WAY
+	for (unsigned int i = 0; i < NUM_A3_SAMPLES; i++) {
 		// Compute the angle between the points m_random_vertices[3*i], m_random_vertices[3*i+1], m_random_vertices[3*i+2]
 
-		p1 = m_random_vertices[3 * i];
+		// Old way...
+		/*p1 = m_random_vertices[3 * i];
 		p2 = m_random_vertices[3 * i + 1];
-		p3 = m_random_vertices[3 * i + 2];
+		p3 = m_random_vertices[3 * i + 2];*/
+
+		// New way, sample 3 random indices from the N=100000 random vertices
+		int index1 = -1;
+		int index2 = -1; 
+		int index3 = -1;
+		index1 = rand() % m_random_vertices.size();
+		while ((index2 == index1) || (index2 == -1)) {
+			index2 = rand() % m_random_vertices.size();
+		}
+		while ((index3 == index1) || (index3 == index2) || (index3 == -1)) {
+			index3 = rand() % m_random_vertices.size();
+		}
+		
+		p1 = m_random_vertices[index1];
+		p2 = m_random_vertices[index2];
+		p3 = m_random_vertices[index3];
 
 		Vector_3 v1 = p1 - p2;
 		Vector_3 v2 = p3 - p2;
 		v1 /= std::sqrt(v1.squared_length());
 		v2 /= std::sqrt(v2.squared_length());
-		dot_product = v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2]; // Could take arccos, but also could leave it like this...
+		dot_product = v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2];
 		double angle = std::acos(dot_product);
+		
+		//if (angle > RBOUND_A3) angle = RBOUND_A3;
 
-		if (angle < 0.0f) angle = 0.0f;
-		if (angle > RBOUND_A3) angle = RBOUND_A3;
-
-		assert(angle >= 0.0f && angle <= RBOUND_A3);
+		assert(angle >= 0 && angle <= RBOUND_A3);
 
 		// Increment counter of bins at the correct position
 		int bin = get_bin(angle, NUM_A3_BINS, 0, RBOUND_A3); // Assume angle is between 0 and pi radians
 		
-		A3_bins[bin] += 1.0f / iterations;
+		A3_bins[bin] += 1.0f / NUM_A3_SAMPLES;
 	}
 }
 
 void FeatureExtraction::get_D1_histogram() {
 	// Assume points are loaded into m_random_vertices
 
-	unsigned int iterations = m_random_vertices.size();
+	//unsigned int iterations = m_random_vertices.size();
 
 	Point_3 p1;
-	float distance = 0.0f;
+	double distance = 0.0;
 
-	for (unsigned int i = 0; i < iterations; i++) {
+	//for (unsigned int i = 0; i < iterations; i++) {
+	for (unsigned int i = 0; i < NUM_D1_SAMPLES; i++) {
+		
+		// Do it the old way to prevent duplicates
+		
+		//int index1 = -1;
+		//index1 = rand() % m_random_vertices.size();
+
+		// Assumes NUM_D1_SAMPLES <= m_random_vertices.size()
 		p1 = m_random_vertices[i];
-		distance = std::sqrt(p1[0] * p1[0] + p1[1] * p1[1] + p1[2] * p1[2]);
 
-		assert(distance >= 0.0f && distance <= RBOUND_D1);
+		distance = (double)std::sqrt(p1[0] * p1[0] + p1[1] * p1[1] + p1[2] * p1[2]);
+
+		assert(distance >= 0 && distance <= RBOUND_D1);
 
 		// Increment counter of bins at the correct position
 		int bin = get_bin(distance, NUM_D1_BINS, 0, RBOUND_D1); // Assume angle is between 0 and pi radians
-		D1_bins[bin] += 1.0f / iterations;
+		D1_bins[bin] += 1.0f / NUM_D1_SAMPLES;
 	}
 }
 
 void FeatureExtraction::get_D2_histogram() {
 	// Assume points are loaded into m_random_vertices
 
-	unsigned int iterations = m_random_vertices.size()/2;
+	//unsigned int iterations = m_random_vertices.size()/2;
 
 	Point_3 p1;
 	Point_3 p2;
-	float distance = 0.0f;
+	double distance = 0.0;
 
-	for (unsigned int i = 0; i < iterations; i++) {
-		p1 = m_random_vertices[2*i];
-		p2 = m_random_vertices[2 * i + 1];
-		distance = std::sqrt((p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]) + (p1[2] - p2[2]) * (p1[2] - p2[2]));
+	//for (unsigned int i = 0; i < iterations; i++) {
+	for (unsigned int i = 0; i < NUM_D2_SAMPLES; i++) {
 
-		assert(distance >= 0.0f && distance <= RBOUND_D2);
+		// Expected number of duplicate pairs doing it this way is approximately 3, so not significant
+		int index1 = -1;
+		int index2 = -1;
+		index1 = rand() % m_random_vertices.size();
+		while ((index2 == index1) || (index2 == -1)) {
+			index2 = rand() % m_random_vertices.size();
+		}
+
+		p1 = m_random_vertices[index1];
+		p2 = m_random_vertices[index2];
+		distance = (double)std::sqrt((p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]) + (p1[2] - p2[2]) * (p1[2] - p2[2]));
+
+		assert(distance >= 0 && distance <= RBOUND_D2);
 
 		// Increment counter of bins at the correct position
 		int bin = get_bin(distance, NUM_D2_BINS, 0, RBOUND_D2); // Assume angle is between 0 and pi radians
-		D2_bins[bin] += 1.0f / iterations;
+		D2_bins[bin] += 1.0f / NUM_D2_SAMPLES;
 	}
 }
 
 void FeatureExtraction::get_D3_histogram() {
 	// Assume points are loaded into m_random_vertices
 
-	unsigned int iterations = m_random_vertices.size() / 3;
+	//unsigned int iterations = m_random_vertices.size() / 3;
 
 	Point_3 p1;
 	Point_3 p2;
 	Point_3 p3;
 	Vector_3 v1;
 	Vector_3 v2;
-	float area = 0.0f;
+	double area = 0.0;
 
-	for (unsigned int i = 0; i < iterations; i++) {
-		p1 = m_random_vertices[3 * i];
+	//for (unsigned int i = 0; i < iterations; i++) {
+	for (unsigned int i = 0; i < NUM_D3_SAMPLES; i++) {
+
+
+		/*p1 = m_random_vertices[3 * i];
 		p2 = m_random_vertices[3 * i + 1];
-		p3 = m_random_vertices[3 * i + 2];
+		p3 = m_random_vertices[3 * i + 2];*/
+
+		int index1 = -1;
+		int index2 = -1;
+		int index3 = -1;
+		index1 = rand() % m_random_vertices.size();
+		while (index2 == index1 || index2 == -1) {
+			index2 = rand() % m_random_vertices.size();
+		}
+		while (index3 == index1 || index3 == index2 || index3 == -1) {
+			index3 = rand() % m_random_vertices.size();
+		}
+
+		p1 = m_random_vertices[index1];
+		p2 = m_random_vertices[index2];
+		p3 = m_random_vertices[index3];
 		
 		// Compute area of triangle defined bu p1, p2 and p3
 		v1 = p1 - p2;
 		v2 = p3 - p2;
 
 		Vector_3 cross_prod = CGAL::cross_product(v1, v2);
-		area = std::sqrt(cross_prod.squared_length());
+		//area = std::sqrt(cross_prod.squared_length()); // SOULD HAVE MULTIPLIED BY 0.5
+		area = 0.5 * (double)std::sqrt(cross_prod.squared_length());
 
-		assert(area >= 0.0f && std::sqrt(area) <= RBOUND_D3);
+		assert(area >= 0 && std::sqrt(area) <= RBOUND_D3);
 
 		// Increment counter of bins at the correct position
 		int bin = get_bin(std::sqrt(area), NUM_D3_BINS, 0, RBOUND_D3); // Assume angle is between 0 and pi radians
-		D3_bins[bin] += 1.0f / iterations;
+		D3_bins[bin] += 1.0f / NUM_D3_SAMPLES;
 	}
 }
 
 void FeatureExtraction::get_D4_histogram() {
 	// Assume points are loaded into m_random_vertices
 
-	unsigned int iterations = m_random_vertices.size() / 4;
+	//unsigned int iterations = m_random_vertices.size() / 4;
 
 	Point_3 p1;
 	Point_3 p2;
@@ -610,13 +689,34 @@ void FeatureExtraction::get_D4_histogram() {
 	Vector_3 v1;
 	Vector_3 v2;
 	Vector_3 v3;
-	float volume = 0.0f;
+	double volume = 0.0;
 
-	for (unsigned int i = 0; i < iterations; i++) {
-		p1 = m_random_vertices[4 * i];
+	//for (unsigned int i = 0; i < iterations; i++) {
+	for (unsigned int i = 0; i < NUM_D4_SAMPLES; i++) {
+		/*p1 = m_random_vertices[4 * i];
 		p2 = m_random_vertices[4 * i + 1];
 		p3 = m_random_vertices[4 * i + 2];
-		p4 = m_random_vertices[4 * i + 3];
+		p4 = m_random_vertices[4 * i + 3];*/
+
+		int index1 = -1;
+		int index2 = -1;
+		int index3 = -1;
+		int index4 = -1;
+		index1 = rand() % m_random_vertices.size();
+		while (index2 == index1 || index2 == -1) {
+			index2 = rand() % m_random_vertices.size();
+		}
+		while (index3 == index1 || index3 == index2 || index3 == -1) {
+			index3 = rand() % m_random_vertices.size();
+		}
+		while (index4 == index1 || index4 == index2 || index4 == index3 || index4 == -1) {
+			index4 = rand() % m_random_vertices.size();
+		}
+
+		p1 = m_random_vertices[index1];
+		p2 = m_random_vertices[index2];
+		p3 = m_random_vertices[index3];
+		p4 = m_random_vertices[index4];
 
 		// Compute volume of tetrahedron defined by p1, p2, p3 and p4
 		v1 = p1 - p2;
@@ -624,13 +724,13 @@ void FeatureExtraction::get_D4_histogram() {
 		v3 = p4 - p2;
 
 		Vector_3 cross_prod = CGAL::cross_product(v2, v3);
-		volume = std::abs(cross_prod * v1) / 6.0;
+		volume = (double)std::abs(cross_prod * v1) / 6.0;
 
-		assert(volume >= 0.0f && std::cbrt(volume) <= RBOUND_D4);
+		assert(volume >= 0 && std::cbrt(volume) <= RBOUND_D4);
 
 		// Increment counter of bins at the correct position
 		int bin = get_bin(std::cbrt(volume), NUM_D4_BINS, 0, RBOUND_D4); // Assume angle is between 0 and pi radians
-		D4_bins[bin] += 1.0f / iterations;
+		D4_bins[bin] += 1.0f / NUM_D4_SAMPLES;
 	}
 }
 

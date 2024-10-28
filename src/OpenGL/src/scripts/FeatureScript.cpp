@@ -40,8 +40,8 @@ void FeatureScript::test_directory(std::string& directory_name, std::string star
 	std::string class_name = directory_path.filename().string();
 
 	// Check if the output file already exists, if so skip
-	/*std::string outputFile = directory_path.string() + "/features.txt";
-	if (std::filesystem::exists(outputFile)) {
+	std::string outputFile = directory_path.string() + "/features_large.txt";
+	/*if (std::filesystem::exists(outputFile)) {
 		std::cout << "File: " << outputFile << " already exists, skipping..." << std::endl;
 		return;
 	}*/
@@ -49,26 +49,26 @@ void FeatureScript::test_directory(std::string& directory_name, std::string star
 	// Open a file to save the features to
 	std::ofstream feature_file;
 	if (m_save_to_file) {
-		feature_file.open(directory_name + "/features.txt");
+		feature_file.open(directory_name + "/features_large.txt");
 		feature_file << "ClassName\t\tFilename\t\tDiameter\tBB_Diameter\tBB_Volume\tSurfaceArea\tVolume\tVolumeComps\tConvexity\tEccentricity02\tEccentricity01\tEccentricity12\tCompactness\tSphericity\tRectangularity";
-		feature_file << "\tA3_histogram(60)";
-		for (int i = 0; i < 60 - 1; i++) {
+		feature_file << "\tA3_histogram(100)";
+		for (int i = 0; i < 100 - 1; i++) {
 			feature_file << "\t ________";
 		}
-		feature_file << "\tD1_histogram(104)";
-		for (int i = 0; i < 104 - 1; i++) {
+		feature_file << "\tD1_histogram(100)";
+		for (int i = 0; i < 100 - 1; i++) {
 			feature_file << "\t ________";
 		}
-		feature_file << "\tD2_histogram(74)";
-		for (int i = 0; i < 74 - 1; i++) {
+		feature_file << "\tD2_histogram(100)";
+		for (int i = 0; i < 100 - 1; i++) {
 			feature_file << "\t ________";
 		}
-		feature_file << "\tD3_histogram(60)";
-		for (int i = 0; i < 60 - 1; i++) {
+		feature_file << "\tD3_histogram(100)";
+		for (int i = 0; i < 100 - 1; i++) {
 			feature_file << "\t ________";
 		}
-		feature_file << "\tD4_histogram(52)";
-		for (int i = 0; i < 52 - 1; i++) {
+		feature_file << "\tD4_histogram(100)";
+		for (int i = 0; i < 100 - 1; i++) {
 			feature_file << "\t ________";
 		}
 		feature_file << std::endl;
@@ -141,7 +141,6 @@ void FeatureScript::handle_all_directories(std::string& start_dir) {
 			continue;
 		}
 
-		//Open a log file names "remeshLog.txt" to write the output log to
 		std::filesystem::path class_folder_path(class_folder);
 		std::string directoryName = class_folder_path.filename().string();
 
@@ -153,7 +152,7 @@ void FeatureScript::handle_all_directories(std::string& start_dir) {
 		std::cout << "Handling class folder: " << class_folder << std::endl;
 		std::string class_path = class_folder.path().string();
 		test_directory(class_path);
-
+		// FOR COMPUTING SAMPLE POINTS
 		//for (const auto& entry : std::filesystem::directory_iterator(m_input_dir + "/" + directoryName)) {
 
 
@@ -174,16 +173,21 @@ void FeatureScript::handle_all_directories(std::string& start_dir) {
 
 		//	// Load the mesh
 		//	std::string input_name = entry.path().string();
-		//	CGALMesh mesh;
-		//	load_mesh(input_name, mesh);
+		//	//CGALMesh mesh;
+		//	//load_mesh(input_name, mesh);
 
 		//	// Check if the number of faces is larger than 0
-		//	if (mesh.number_of_faces() == 0) {
+		//	/*if (mesh.number_of_faces() == 0) {
 		//		std::cout << "Error: Mesh has 0 faces, skipping..." << std::endl;
 		//		continue;
-		//	}
+		//	}*/
 
-		//	m_featureExtractor.get_N_random_vertices(mesh, 10800);
+		//	std::string hull_file_name = "";
+		//	std::string sample_points_file_name = "";
+
+
+		//	m_featureExtractor.Load(input_name, hull_file_name, sample_points_file_name);
+		//	m_featureExtractor.get_N_random_vertices(100000);
 		//	save_sample_points_to_file(outputFile);
 		//}
 	}

@@ -129,6 +129,9 @@
     <ClCompile Include="src\QueryEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\scripts\QueryBenchmark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer.h">
@@ -209,12 +212,6 @@
     <ClInclude Include="src\Model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\scripts\Script1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scripts\Script2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\tests\TestRefineMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -255,6 +252,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\QueryEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scripts\QueryBenchmark.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

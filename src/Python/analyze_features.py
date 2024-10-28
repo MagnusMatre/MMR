@@ -7,81 +7,71 @@ import sys
 from tqdm import tqdm
 
 # load in a feature file and store in a pandas dataframe
-feature_dir = "../../data/OkayMeshes"
-
-def load_feauture_file(feature_file):
-    # Read the data from the .txt file, note that the file is tab separated
-    features = pd.read_csv(feature_file, sep='\t')
-
-    # shift every column two places to the right starting at index 4
-    for i in range(features.shape[1]-1, 3, -1):
-        features.iloc[:, i] = features.iloc[:, i-2]
-
-    # replace the column at index 2 with the column at index 1
-    features.iloc[:, 2] = features.iloc[:, 1]
-
-    #drop column at index 1 and 3
-    features = features.drop(features.columns[1], axis=1)
-    features = features.drop(features.columns[2], axis=1)
-
-    return features
-
-def stitch_together_feature_files(feature_list):
-    # concatenate all the feature files
-    return pd.concat(feature_list)
-
-
-# feature_list = []
-# for class_name in tqdm(os.listdir(feature_dir)):
-#     feature_path = os.path.join(feature_dir, class_name, "features.txt")
-    
-#     feature_list.append(load_feauture_file(feature_path))
-
-# features = stitch_together_feature_files(feature_list)
-
-features = pd.read_csv("C:/Users/timgr/Documents/computing science/multimedia retrieval/features_clean.txt", sep='\t')
+features = pd.read_csv("../../res/features_final.txt", sep='\t')
 
 print(features.shape)
-print(features.iloc[2284, :])
-print(features)
 
-quit()
+# print a list with the number of instances per class sorted in alphabetical order
+# print(list(x for x in features['ClassName'].value_counts().sort_index()))
+# print(len(list(x for x in features['ClassName'].value_counts().sort_index())))
+# print(sum(list(x for x in features['ClassName'].value_counts().sort_index())))
+#quit()
+#print(features.iloc[2284, :])
+#print(features)
 
-features = features[features['Volume'] < 8]
-features = features[features['BB_Volume'] < 8]
+# remove the outlier features
+#features = features.drop(outlier_indices)
 
-features = features.drop(features.columns[1], axis=1)
+# compute only for columns 2 to 18
+features_to_avg = features.iloc[:, [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]]
 
-# Plot the mean value of the scalar features for each class with each class on the x-axis
-mean_features = features.groupby('ClassName').mean()
-std_features = features.groupby('ClassName').std()
-
-# if the mean corresponding to feature Volume is larger than 8 then discard the class
+mean_features = features_to_avg .groupby('ClassName').mean()
+std_features = features_to_avg .groupby('ClassName').std()
 
 class_names = mean_features.index
 
-plt.figure()
-for i in range(0,13):
-    # copy the list of class name together with the mean value for feature i
-    # get the name of feature i
-    feature_name = mean_features.columns[i]
-    class_mean = mean_features.iloc[:, i]
-    class_mean = class_mean.reset_index()
-    class_mean.columns = ['Class Name', 'Mean Value']
-    class_mean['Class Name'] = class_names
-    class_mean = class_mean.sort_values(by='Mean Value')
-    plt.figure(figsize=(10,6))
-    #plt.errorbar(class_mean['Class Name'], class_mean['Mean Value'], yerr=std_features.iloc[:, i], fmt='o')
-
-    plt.bar(class_mean['Class Name'], class_mean['Mean Value'])
-    plt.xlabel("Class Name")
-    plt.ylabel("Mean value of " + feature_name)
-    plt.xticks(rotation=90)
-    plt.tight_layout()
-    plt.show()
+# check the number of occurernces where a feature attains a value <0
+for i in range(2, 21):
+    print(f"Feature {features.columns[i]}: {np.sum(features.iloc[:, i] < 0)}")
+# what is column 11?
 
 
-# plot the mean values of the scalar features for each class
+quit()
+
+# Set to true to plot scalar features
+if False:
+    for i in range(0,19):
+        # copy the list of class name together with the mean value for feature i
+        # get the name of feature i
+        feature_name = mean_features.columns[i]
+        class_mean = mean_features.iloc[:, i]
+        class_mean = class_mean.reset_index()
+        class_mean.columns = ['Class Name', 'Mean Value']
+        class_mean['Class Name'] = class_names
+        class_mean = class_mean.sort_values(by='Mean Value')
+        plt.figure(figsize=(10,6), dpi=300)
+        plt.errorbar(class_mean['Class Name'], class_mean['Mean Value'], yerr=std_features.iloc[:, i], fmt='o', color='black', ecolor='blue')
+
+        #plt.bar(class_mean['Class Name'], class_mean['Mean Value'])
+        plt.xlabel("Class Name")
+        if feature_name == "Sphericity" or feature_name == "Compactness":
+            plt.ylabel("Mean value of logarithm of " + feature_name)
+        elif feature_name == "Eccentricity02": #  smallest / largest
+            plt.ylabel(r'Mean value of $E_{20}$')
+        elif feature_name == "Eccentricity01": # smallest / middle
+            plt.ylabel(r'Mean value of $E_{21}$')
+        elif feature_name == "Eccentricity12": # middle / largest
+            plt.ylabel(r'Mean value of $E_{10}$')
+        else:
+            plt.ylabel("Mean value of " + feature_name)
+        plt.xticks(rotation=90)
+        plt.tight_layout()
+        plt.savefig(f"../../res/feature_plots_final/OkayMeshes3/mean_{feature_name}.png")
+        #plt.show()
+
+
+
+#plot the mean values of the scalar features for each class
 # plt.figure()
 # for i in range(mean_features.shape[0]):
 #     plt.plot(mean_features.iloc[i, 1:13])
@@ -97,55 +87,204 @@ for i in range(0,13):
 # replace the column at index 3 with the column at index 2
 #features.iloc[:, 3] = features.iloc[:, 2]
 
-# The columns 2-14 correspond to scalar features
-# The columns 15-74 correspond to histogram features of A3
-# The columns 75-178 correspond to histogram features of D1
-# The columns 179-252 correspond to histogram features of D2
-# The columns 253-310 correspond to histogram features of D3
-# The columns 311-361 correspond to histogram features of D4
-
 # Extract the histogram features of A3
-# histogram_A3 = features.iloc[:, 15:75]
-# histogram_D1 = features.iloc[:, 75:179]
-# histogram_D2 = features.iloc[:, 179:253]
-# histogram_D3 = features.iloc[:, 253:312]
-# histogram_D4 = features.iloc[:, 313:365]
+histogram_A3 = features.iloc[:, 21:121]
+histogram_D1 = features.iloc[:, 121:221]
+histogram_D2 = features.iloc[:, 221:321]
+histogram_D3 = features.iloc[:, 321:421]
+histogram_D4 = features.iloc[:, 421:521]
 
-# For each row, plot the histoogram using the column values as the bins
-# plt.figure()
-# for i in range(histogram_A3.shape[0]):
-#     plt.plot(histogram_A3.iloc[i, :])
-#     plt.xlabel("Angle (degrees)")
-#     # set the xticks to go from 0 to pi
-#     plt.xticks(np.arange(0, 61, 10), np.arange(0, 181, 30))
-# plt.show()
+#compute the mean histogram per class
+mean_histogram_A3 = histogram_A3.groupby(features['ClassName']).mean()
+mean_histogram_D1 = histogram_D1.groupby(features['ClassName']).mean()
+mean_histogram_D2 = histogram_D2.groupby(features['ClassName']).mean()
+mean_histogram_D3 = histogram_D3.groupby(features['ClassName']).mean()
+mean_histogram_D4 = histogram_D4.groupby(features['ClassName']).mean()
 
-#print(histogram_D1)
+# Randomly select 16 classes from the features dataframe
+np.random.seed(1)
+selected_classes = np.random.choice(features['ClassName'].unique(), 16, replace=False)
 
-# plt.figure()
+# for each class, randomly select one instance and print the class name and filename
+for class_name in selected_classes:
+    class_features = features[features['ClassName'] == class_name]
+    random_instance = class_features.sample()
+    print(random_instance[['ClassName', 'Filename']])
+
+
+A3 = 0
+D1 = 0
+D2 = 0
+D3 = 0
+D4 = 0
+
+# Check if any histograms of D1 has a non-zero value to the right of the 50th bin
 # for i in range(histogram_D1.shape[0]):
-#     plt.plot(histogram_D1.iloc[i, :])
-#     plt.xlabel("Distance 1")
-#     # set the xticks to go from 0 to 2sqrt(3)
-#     plt.xticks(np.arange(0, 61, 10), np.arange(0, 3.1, 0.5))
-# plt.show()
+#     if np.sum(histogram_D1.iloc[i, 57:]) > 0:
+#         print(f"Non-zero value in D1 at index {i}")
 
-# print(histogram_D2)
+# print the class name and filename of index 1777
+#print(features.iloc[1777, [0, 1]])
 
-# plt.figure()
-# for i in range(histogram_D2.shape[0]):
-#     plt.plot(histogram_D2.iloc[i, :])
-#     plt.xlabel("Distance 2")
-#     # set the xticks to go from 0 to 2sqrt(3)
-#     plt.xticks(np.arange(0, 61, 10), np.arange(0, 3.1, 0.5))
-# plt.show()
 
-# print(histogram_D4)
 
-# plt.figure()
-# for i in range(histogram_D4.shape[0]):
-#     plt.plot(histogram_D4.iloc[i, :])
-#     plt.xlabel("Distance 4")
-#     # set the xticks to go from 0 to 2sqrt(3)
-#     plt.xticks(np.arange(0, 61, 10), np.arange(0, 1.3, 0.2))
-# plt.show()
+
+if A3:
+#For each of the 16 selected classes, plot the histograms A3 in a 4x4 grid
+    fig, axes = plt.subplots(4, 4, sharex='row', figsize=(12,12))
+    fig.suptitle("Histograms of A3", fontsize=16)
+    for i in range(16):
+        axes[i//4, i%4].set_title(selected_classes[i], fontsize=10)
+        axes[i//4, i%4].set_xlim(0, 100)
+        # plot the all the histograms belonging to the class selected_classes[i]
+        for j in range(histogram_A3.shape[0]):
+            if features.iloc[j, 0] == selected_classes[i]:
+                axes[i//4, i%4].plot(histogram_A3.iloc[j, :], color='blue', alpha=0.15)
+        
+        # plot the mean histogram for the specified class name in black
+        axes[i//4, i%4].plot(mean_histogram_A3.loc[selected_classes[i], :], color='black', linewidth=1)
+        
+        # dont plot any text on the x-axis
+        axes[i//4, i%4].set_xticks([])
+
+        # for the bottom row, plot the x-axis
+        if i//4 == 3:
+            # transform the ticks such that there are 5 ticks from 0 to 3.1415
+            axes[i//4, i%4].set_xticks(np.linspace(0, 100, 5))
+            axes[i//4, i%4].set_xticklabels(["0", "π/4", "π/2", "3π/4", "π"])
+            axes[i//4, i%4].set_xlabel("Angle (radians)")
+
+        plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+
+        # add a bit of margin between the rows
+        plt.subplots_adjust(hspace=0.2)
+    plt.savefig("../../res/feature_plots_final/OkayMeshes3/histogram_A3.png")
+    #plt.show()
+
+if D1:
+#For each of the 16 selected classes, plot the histograms A3 in a 4x4 grid
+    fig, axes = plt.subplots(4, 4, sharex='row', figsize=(12,12))
+    fig.suptitle("Histograms of D1", fontsize=16)
+    for i in range(16):
+        axes[i//4, i%4].set_title(selected_classes[i], fontsize=10)
+        axes[i//4, i%4].set_xlim(0, 100)
+        # plot the all the histograms belonging to the class selected_classes[i]
+        for j in range(histogram_D1.shape[0]):
+            if features.iloc[j, 0] == selected_classes[i]:
+                axes[i//4, i%4].plot(histogram_D1.iloc[j, :], color='blue', alpha=0.15)
+        
+        # plot the mean histogram for the specified class name in black
+        axes[i//4, i%4].plot(mean_histogram_D1.loc[selected_classes[i], :], color='black', linewidth=1)
+
+        # dont plot any text on the x-axis
+        axes[i//4, i%4].set_xticks([])
+
+        # for the bottom row, plot the x-axis
+        if i//4 == 3:
+            # transform the ticks such that there are 5 ticks from 0 to 3.1415
+            axes[i//4, i%4].set_xticks(np.linspace(0, 100, 5))
+            axes[i//4, i%4].set_xticklabels(["0", r'$\frac{1}{8}\sqrt{3}$', r'$\frac{1}{4}\sqrt{3}$', r'$\frac{3}{8}\sqrt{3}$', r'$\frac{1}{2}\sqrt{3}$'])
+            axes[i//4, i%4].set_xlabel("Distance")
+
+        plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+
+        # add a bit of margin between the rows
+        plt.subplots_adjust(hspace=0.2)
+    #plt.show()
+    plt.savefig("../../res/feature_plots_final/OkayMeshes3/histogram_D1.png")
+
+if D2:
+#For each of the 16 selected classes, plot the histograms A3 in a 4x4 grid
+    fig, axes = plt.subplots(4, 4, sharex='row', figsize=(12,12))
+    fig.suptitle("Histograms of D2", fontsize=16)
+    for i in range(16):
+        axes[i//4, i%4].set_title(selected_classes[i], fontsize=10)
+        axes[i//4, i%4].set_xlim(0, 100)
+        # plot the all the histograms belonging to the class selected_classes[i]
+        for j in range(histogram_D2.shape[0]):
+            if features.iloc[j, 0] == selected_classes[i]:
+                axes[i//4, i%4].plot(histogram_D2.iloc[j, :], color='blue', alpha=0.15)
+        
+        # plot the mean histogram for the specified class name in black
+        axes[i//4, i%4].plot(mean_histogram_D2.loc[selected_classes[i], :], color='black', linewidth=1)
+
+        # dont plot any text on the x-axis
+        axes[i//4, i%4].set_xticks([])
+
+        # for the bottom row, plot the x-axis
+        if i//4 == 3:
+            # transform the ticks such that there are 5 ticks from 0 to 3.1415
+            axes[i//4, i%4].set_xticks(np.linspace(0, 100, 5))
+            axes[i//4, i%4].set_xticklabels(["0", r'$\frac{1}{4}\sqrt{3}$', r'$\frac{1}{2}\sqrt{3}$', r'$\frac{3}{4}\sqrt{3}$', r'$\sqrt{3}$'])
+            axes[i//4, i%4].set_xlabel("Distance")
+
+        plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+
+        # add a bit of margin between the rows
+        plt.subplots_adjust(hspace=0.2)
+    #plt.show()
+    plt.savefig("../../res/feature_plots_final/OkayMeshes3/histogram_D2.png")
+
+if D3:
+#For each of the 16 selected classes, plot the histograms A3 in a 4x4 grid
+    fig, axes = plt.subplots(4, 4, sharex='row', figsize=(12,12))
+    fig.suptitle("Histograms of D3", fontsize=16)
+    for i in range(16):
+        axes[i//4, i%4].set_title(selected_classes[i], fontsize=10)
+        axes[i//4, i%4].set_xlim(0, 100)
+        # plot the all the histograms belonging to the class selected_classes[i]
+        for j in range(histogram_D3.shape[0]):
+            if features.iloc[j, 0] == selected_classes[i]:
+                axes[i//4, i%4].plot(histogram_D3.iloc[j, :], color='blue', alpha=0.15)
+        
+        # plot the mean histogram for the specified class name in black
+        axes[i//4, i%4].plot(mean_histogram_D3.loc[selected_classes[i], :], color='black', linewidth=1)
+
+        # dont plot any text on the x-axis
+        axes[i//4, i%4].set_xticks([])
+
+        # for the bottom row, plot the x-axis
+        if i//4 == 3:
+            # transform the ticks such that there are 5 ticks from 0 to 3.1415
+            axes[i//4, i%4].set_xticks(np.linspace(0, 100, 5))
+            axes[i//4, i%4].set_xticklabels(["0", r'$\frac{1}{4}\sqrt{\sqrt{3}}$', r'$\frac{1}{2}\sqrt{\sqrt{3}}$', r'$\frac{3}{4}\sqrt{\sqrt{3}}$', r'$\sqrt{\sqrt{3}}$'])
+            axes[i//4, i%4].set_xlabel("Square root area")
+
+        plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+
+        # add a bit of margin between the rows
+        plt.subplots_adjust(hspace=0.2)
+    #plt.show()
+    plt.savefig("../../res/feature_plots_final/OkayMeshes3/histogram_D3.png")
+
+if D4:
+#For each of the 16 selected classes, plot the histograms A3 in a 4x4 grid
+    fig, axes = plt.subplots(4, 4, sharex='row', figsize=(12,12))
+    fig.suptitle("Histograms of D4", fontsize=16)
+    for i in range(16):
+        axes[i//4, i%4].set_title(selected_classes[i], fontsize=10)
+        axes[i//4, i%4].set_xlim(0, 100)
+        # plot the all the histograms belonging to the class selected_classes[i]
+        for j in range(histogram_D4.shape[0]):
+            if features.iloc[j, 0] == selected_classes[i]:
+                axes[i//4, i%4].plot(histogram_D4.iloc[j, :], color='blue', alpha=0.15)
+        
+        # plot the mean histogram for the specified class name in black
+        axes[i//4, i%4].plot(mean_histogram_D4.loc[selected_classes[i], :], color='black', linewidth=1)
+
+        # dont plot any text on the x-axis
+        axes[i//4, i%4].set_xticks([])
+
+        # for the bottom row, plot the x-axis
+        if i//4 == 3:
+            # transform the ticks such that there are 5 ticks from 0 to 3.1415
+            axes[i//4, i%4].set_xticks(np.linspace(0, 100, 5))
+            axes[i//4, i%4].set_xticklabels(["0", r'$\frac{1}{4}\sqrt[3]{\frac{1}{3}}$', r'$\frac{1}{2}\sqrt[3]{\frac{1}{3}}$', r'$\frac{3}{4}\sqrt[3]{\frac{1}{3}}$', r'$\sqrt[3]{\frac{1}{3}}$'])
+            axes[i//4, i%4].set_xlabel("Cube root volume")
+
+        plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+
+        # add a bit of margin between the rows
+        plt.subplots_adjust(hspace=0.2)
+    #plt.show()
+    plt.savefig("../../res/feature_plots_final/OkayMeshes3/histogram_D4.png")

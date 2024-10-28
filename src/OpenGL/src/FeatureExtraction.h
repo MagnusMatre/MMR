@@ -1,19 +1,25 @@
 #pragma once
 
 // Ideally number of bins should be around sqrt(N) where N is the number of samples
-#define NUM_A3_BINS 60 // sqrt(10800/3) = 60
-#define NUM_D1_BINS 104 // sqrt(10800) = 104
-#define NUM_D2_BINS 74 // sqrt(10800/2) = 74
-#define NUM_D3_BINS 60 // sqrt(10800/3) = 60
-#define NUM_D4_BINS 52 // sqrt(10800/4) = 52
+#define NUM_A3_BINS 100
+#define NUM_D1_BINS 100
+#define NUM_D2_BINS 100
+#define NUM_D3_BINS 100
+#define NUM_D4_BINS 100
 
-#define NUM_CURV_BINS 10
+#define NUM_A3_SAMPLES 500000
+#define NUM_D1_SAMPLES 100000
+#define NUM_D2_SAMPLES 200000
+#define NUM_D3_SAMPLES 500000
+#define NUM_D4_SAMPLES 1000000
 
-#define RBOUND_A3 3.14159265360
-#define RBOUND_D1 1.73205080757 // Note: maximal distance to barycenter is sqrt(3) since mesh is inside cube [-1,1]^3
-#define RBOUND_D2 3.46410161514 // Note: maximal distance between two points is 2sqrt(3) since mesh is inside cube [-1,1]^3
-#define RBOUND_D3 1.86120971820 // Note: maximal area of triangle is 2sqrt(3) since mesh is inside cube [-1,1]^3 (and then sqrt)
-#define RBOUND_D4 1.38672254871 // Note: maximal volume of tetrahedron is 8/3 since mesh is inside cube [-1,1]^3 (and then cube root)
+#define NUM_CURV_BINS 10 // not used yet
+
+#define RBOUND_A3 3.14159265360 // Note: maximal angle is pi
+#define RBOUND_D1 1.73205080757 // Note: maximal distance to barycenter is 0.5sqrt(3) since mesh is inside cube 
+#define RBOUND_D2 1.73205080757 // Note: maximal distance between two points is sqrt(3) since mesh is inside cube 
+#define RBOUND_D3 0.93060485911 // Note: maximal area of triangle is 0.5sqrt(3) since mesh is inside cube (and then sqrt)
+#define RBOUND_D4 0.69336127440 // Note: maximal volume of tetrahedron is 1/3 since mesh is inside cube (and then cube root)
 
 #include <iostream>
 
@@ -115,12 +121,12 @@ private:
 	void get_sphericity();
 
 	//histogram features
-	float A3_bins[NUM_A3_BINS] = { 0.0f }; 
-	float D1_bins[NUM_D1_BINS] = { 0.0f }; 
-	float D2_bins[NUM_D2_BINS] = { 0.0f }; 
-	float D3_bins[NUM_D3_BINS] = { 0.0f }; 
-	float D4_bins[NUM_D4_BINS] = { 0.0f };
-	float CURV_bins[NUM_CURV_BINS] = { 0.0f };
+	double A3_bins[NUM_A3_BINS] = { 0.0f };
+	double D1_bins[NUM_D1_BINS] = { 0.0f };
+	double D2_bins[NUM_D2_BINS] = { 0.0f };
+	double D3_bins[NUM_D3_BINS] = { 0.0f };
+	double D4_bins[NUM_D4_BINS] = { 0.0f };
+	//float CURV_bins[NUM_CURV_BINS] = { 0.0f };
 
 	// TODO: efficiently obtain all features by looping over the sample points a minimal number of times
 	void get_A3_histogram(); // Angle between three points
