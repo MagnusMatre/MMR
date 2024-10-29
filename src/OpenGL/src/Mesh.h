@@ -36,4 +36,5 @@ private:
 	std::unique_ptr<VertexArray> m_va;
 
 	void setupMesh();
+	void SaveSnapshot(const std::string& filename, int width, int height);
 };

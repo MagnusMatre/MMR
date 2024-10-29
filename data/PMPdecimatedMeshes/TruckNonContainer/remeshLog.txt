@@ -1,2 +1,0 @@
-Read mesh ../../data/CGALcleanedMeshes/TruckNonContainer\D00143.obj successfully
-Saving mesh to file:  TruckNonContainer/D00143.obj with resulting number of vertices: 2500

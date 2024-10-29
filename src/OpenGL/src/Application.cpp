@@ -126,6 +126,32 @@ void verify(const std::string& basePath) {
         }
     };
 }
+
+
+
+
+
+void save_snapshot(const std::string& basePath, GLFWwindow* window) {
+    for (const auto& entry : fs::directory_iterator(basePath)) {
+        if (fs::is_directory(entry.path())) {
+            std::cout << "Analyzing category: " << entry.path().filename().string() << std::endl;
+
+            // Iterate through each file in the directory
+            for (const auto& file : fs::directory_iterator(entry.path())) {
+                if (file.path().extension() == ".obj") {   
+                    
+
+                }
+            }
+
+
+
+
+        }
+    };
+}
+
+
 int main(void)
 {
     GLFWwindow* window;
@@ -165,10 +191,10 @@ int main(void)
         Renderer renderer;
 
         //std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/MMR/src/OpenGL/test_output";
-        std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/VCGdecimatedCleaned/VCGdecimatedCleaned";
-        
+        //std::string basePath = "C:/Users/Magnus/Documents/Master/MMR/MMR/src/OpenGL/test_output";
+
         //std::string outputPath = "output";
-        normalizeFilesInDirectories(basePath);
+        //normalizeFilesInDirectories(basePath);
         //add_bounding_box(outputPath);
 
         //verify(basePath);
@@ -199,6 +225,7 @@ int main(void)
         float lastFrame = 0.0f;
 
         bool initCallbacks = true;
+        bool snapshotted = false;
 
         /* Loop until the user closes the window */
         while (!glfwWindowShouldClose(window))
@@ -227,7 +254,6 @@ int main(void)
             if (currentTest){
                 currentTest->OnUpdate(window, deltaTime);
                 currentTest->OnRender();
-
                 ImGui::Begin("Test");
                 if (currentTest != testMenu && ImGui::Button("<-")) {
                     initCallbacks = true;

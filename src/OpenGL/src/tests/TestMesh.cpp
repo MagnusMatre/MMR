@@ -8,9 +8,11 @@
 
 #include <iostream>
 #include <filesystem>
-
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "stb_image_write.h"
 
 namespace test {
+
 
 	TestMesh::TestMesh()
 		: m_lightcolor(glm::vec3(1.0f, 1.0f, 1.0f)), m_ambientlightcolor(glm::vec3(0.2f, 0.2f, 0.2f)),
@@ -32,20 +34,28 @@ namespace test {
 		// LOAD MESHES
 
 		//std::string modelDirectory = "output/Cellphone";
-		std::string modelDirectory = "C:/Users/Magnus/Documents/Master/MMR/VCGdecimatedCleaned/VCGdecimatedCleaned/Bed";
+		m_root_directory = "C:/Users/Magnus/Documents/Master/MMR/VCGdecimatedCleaned/VCGdecimatedCleaned";
 
-		for (const auto& entry : std::filesystem::directory_iterator(modelDirectory)) {
-			if (m_curModelName == "") {
-				m_curModelName = entry.path().string();
-				m_models.push_back(Model(m_curModelName));
+
+		for (const auto& entry : std::filesystem::directory_iterator(m_root_directory)) {
+			auto class_name = entry.path().filename().string();
+			for (const auto& file : std::filesystem::directory_iterator(m_root_directory + "/" + class_name)) {
+
+				m_curModelName = file.path().string();
+				m_curModelObjectName = file.path().stem().string();
+				if (m_curModelObjectName == "remeshLog") continue;
+				m_files.push_back(class_name + "/" + file.path().stem().string());
+				std::cout << class_name + "/" + file.path().stem().string() << std::endl;
+				//m_models.push_back(Model(m_curModelName));
+				
 			}
-			m_files.push_back(entry.path().string());
 		}
 
 		m_renderer = std::make_unique<Renderer>();
 
 		m_shaderMeshSolid = std::make_unique<Shader>("resources/shaders/MeshSolid.shader");
 		m_shaderMeshWireframe = std::make_unique<Shader>("resources/shaders/MeshWireframe.shader");
+		m_snapshotted = true;
 	}
 
 	TestMesh::~TestMesh() {
@@ -61,10 +71,18 @@ namespace test {
 	}
 
 	void TestMesh::OnUpdate(GLFWwindow* window, float deltaTime) {
+		if (m_snapshotted) {
+			m_current_directory_filename = m_files.front();
+			std::string path = (m_root_directory + "/" + m_current_directory_filename + ".obj");
+			m_files.pop_front();
+			std::cout << m_current_directory_filename << std::endl;
+			m_models.emplace_back(Model(path));
+			m_snapshotted = false;
+		}
 		if (m_camera == nullptr) {
 			InitializeCamera();
 		}
-
+		std::cout << m_files.size() << std::endl;
 		m_camera->ProcessKeyboard(deltaTime);
 		m_view = m_camera->GetViewMatrix();
 		m_projection = m_camera->GetProjectionMatrix(800.0f / 800.0f);
@@ -86,6 +104,9 @@ namespace test {
 		else if (glfwGetKey(window, GLFW_KEY_M) == GLFW_RELEASE) {
 			m_keyPressed = false;
 		}
+
+
+		
 	}
 
 	void TestMesh::OnRender() {
@@ -143,7 +164,35 @@ namespace test {
 			}
 			m_shaderMeshWireframe->Unbind();
 		}
+		if (not m_snapshotted) {
+			SaveSnapshot("snapshots/" + m_current_directory_filename + ".png", 600, 600);
+		}
 	}
+
+
+	void TestMesh::SaveSnapshot(const std::string& filename, int width, int height) {
+		// Allocate buffer to read pixels
+		unsigned char* pixels = new unsigned char[width * height * 3];  // 3 channels (RGB)
+
+		// Read pixels from the framebuffer
+		glReadPixels(200, 200, width, height, GL_RGB, GL_UNSIGNED_BYTE, pixels);
+
+		// Flip the image vertically (since OpenGL's origin is bottom-left)
+		for (int i = 0; i < height / 2; ++i) {
+			for (int j = 0; j < width * 3; ++j) {
+				std::swap(pixels[i * width * 3 + j], pixels[(height - i - 1) * width * 3 + j]);
+			}
+		}
+
+		// Use stb_image_write to save the image
+		stbi_write_png(filename.c_str(), width, height, 3, pixels, width * 3);
+
+		// Cleanup
+		delete[] pixels;
+		m_snapshotted = true;
+		m_models.clear();
+	}
+
 
 	void TestMesh::OnImGuiRender() {
 		ImGui::SliderFloat3("Translation light source", &m_translationLight.x, -5.0f, 5.0f);
@@ -165,11 +214,18 @@ namespace test {
 		for (auto& file : m_files) {
 			if (ImGui::Button(file.c_str())) {
 				m_curModelName = file;
+				std::filesystem::path pathObj(file);
+				m_curModelObjectName = pathObj.stem().string();
+				std::cout << "current model: " + m_curModelObjectName;
 				m_models.clear();
 				m_models.push_back(Model(m_curModelName));
+				m_snapshotted = false;
 			}
 		}
 
+
 	}
+
+
 
 }

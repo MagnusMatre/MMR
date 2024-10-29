@@ -396,7 +396,33 @@ public:
 
     }
 
+    const std::pair<std::vector<std::array<float, 3>>,std::vector<std::array<int, 3>> > get_vertices_faces(const std::string& inputFile) {
+        std::ifstream inFile(inputFile);
+        std::vector<std::array<float, 3>> vertices;
+        std::vector<std::array<int, 3>> faces;
 
+        std::cout << "reading file: " << inputFile << std::endl;
+
+        std::string line;
+        while (std::getline(inFile, line)) {
+            std::istringstream iss(line);
+            std::string prefix;
+            iss >> prefix;
+
+            if (prefix == "v") {
+                float x, y, z;
+                iss >> x >> y >> z;
+                vertices.push_back({ x, y, z });
+            }
+            else if (prefix == "f") {
+                int x, y, z;
+                iss >> x >> y >> z;
+                faces.push_back({ x, y, z });
+            }
+        }
+        return { vertices, faces };
+
+    }
 
 };
 

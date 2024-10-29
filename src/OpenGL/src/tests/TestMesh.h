@@ -13,6 +13,7 @@
 #include "VertexBuffer.h"
 #include "VertexBufferLayout.h"
 #include "Texture.h"
+#include "deque"
 //#include "Camera.h"
 
 //enum class RenderMode {
@@ -32,6 +33,10 @@ namespace test {
 		void SetWindow(GLFWwindow* window) override;
 		void OnUpdate(GLFWwindow* window, float deltaTime) override;
 		void OnRender() override;
+		void CaptureSnapshots();
+		void RenderModel();
+		void SaveSnapshot(const std::string& filename, int width, int height);
+		void SwitchModel(const std::string& modelPath);
 		void OnImGuiRender() override;
 	private:
 		void InitializeCamera();
@@ -45,11 +50,16 @@ namespace test {
 		std::unique_ptr<Shader> m_shaderMeshWireframe;
 		std::unique_ptr<Shader> m_shaderMeshWireframeSolid;
 
-		std::vector<std::string> m_files;
+		std::deque<std::string> m_files;
+		std::vector<std::string> directory_filename;
 		std::string m_curModelName;
+		std::string m_curModelObjectName;
+		std::string m_root_directory;
+		std::string m_current_directory_filename;
 		Model* m_curModel;
 		RenderMode m_renderMode;
 		bool m_keyPressed = false;
+		bool m_snapshotted;
 
 		std::unique_ptr<Camera> m_camera;
 
