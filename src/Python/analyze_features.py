@@ -31,12 +31,10 @@ std_features = features_to_avg .groupby('ClassName').std()
 class_names = mean_features.index
 
 # check the number of occurernces where a feature attains a value <0
-for i in range(2, 21):
-    print(f"Feature {features.columns[i]}: {np.sum(features.iloc[:, i] < 0)}")
+# for i in range(2, 21):
+#     print(f"Feature {features.columns[i]}: {np.sum(features.iloc[:, i] < 0)}")
 # what is column 11?
 
-
-quit()
 
 # Set to true to plot scalar features
 if False:
@@ -106,12 +104,22 @@ np.random.seed(1)
 selected_classes = np.random.choice(features['ClassName'].unique(), 16, replace=False)
 
 # for each class, randomly select one instance and print the class name and filename
-for class_name in selected_classes:
+# for class_name in selected_classes:
+#     class_features = features[features['ClassName'] == class_name]
+#     random_instance = class_features.sample()
+#     print(random_instance[['ClassName', 'Filename']])
+
+
+# for each class, randomly select one instance and print only its index
+random_instances = []
+for class_name in features['ClassName'].unique():
     class_features = features[features['ClassName'] == class_name]
     random_instance = class_features.sample()
-    print(random_instance[['ClassName', 'Filename']])
+    random_instances.append(random_instance.index.values[0])
 
+print("{", f"{[x for x in random_instances]}", "}")
 
+quit()
 A3 = 0
 D1 = 0
 D2 = 0
