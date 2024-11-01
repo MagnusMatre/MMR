@@ -29,13 +29,13 @@ void QueryEngine::LoadFeatures(std::string& feature_file) {
 	std::ifstream file(feature_file);
 	std::string line = "";
 	std::string cur_class_name = "";
-	for (int i = 0; i < NUM_SHAPES+1; i++) {
+	for (int i = 0; i < NUM_SHAPES + 1; i++) {
 		std::getline(file, line);
 		//std::cout << i << std::endl;
 		if (i == 0) { continue; } // skip header
 		std::istringstream iss(line);
 		std::string token = "";
-		for (int j = 0; j < NUM_FEATURES + 2; j++){
+		for (int j = 0; j < NUM_FEATURES + 2; j++) {
 			std::getline(iss, token, '\t');
 			if (j == 0) {
 				m_class_map.push_back(token);
@@ -48,7 +48,7 @@ void QueryEngine::LoadFeatures(std::string& feature_file) {
 			}
 			else {
 				//std::cout << "Token " << "(i,j): " << i << " " << j << " " << token << std::endl;
-				m_features[i-1][j-2] = std::stof(token);
+				m_features[i - 1][j - 2] = std::stof(token);
 			}
 		}
 		//std::cout << "class map size: " << m_class_map.size() << std::endl;
@@ -110,7 +110,7 @@ void QueryEngine::ComputeHistogramDistanceStatistics() {
 	for (int i = 0; i < NUM_SHAPES; i++) {
 		//if (m_distance_type_histogram == DISTANCE_TYPE::EMD && rand() % 100 < 95) { continue; } // Only use 5% of the data (for now
 		std::cout << i << "/" << NUM_SHAPES << ": " << histogram_means[0] << " " << histogram_stds[1] << std::endl;
-		for (int j = i+1; j < NUM_SHAPES; j++) {
+		for (int j = i + 1; j < NUM_SHAPES; j++) {
 			for (int k = 0; k < NUM_HISTOGRAM_FEATURES; k++) {
 
 				// Update the values
@@ -143,7 +143,7 @@ void QueryEngine::ComputeHistogramDistanceStatistics() {
 
 	// Open file
 	std::ofstream results_file;
-	std::string save_name = "../../res/distance_stats/" +std::to_string(m_distance_type_histogram) + ".txt";
+	std::string save_name = "res/distance_stats/" + std::to_string(m_distance_type_histogram) + ".txt";
 	results_file.open(save_name);
 
 	std::cout << "Histogram statistics: " << std::endl;
@@ -157,7 +157,7 @@ void QueryEngine::ComputeHistogramDistanceStatistics() {
 		results_file << "Histogram feature " << i << ": " << "{" << histogram_mins[i] << ", " << histogram_maxs[i] << ", " << histogram_means[i] << ", " << std::sqrt(histogram_stds[i]) << "}" << std::endl;
 	}
 	results_file.close();
-	
+
 }
 
 double QueryEngine::ComputeDistance(std::string& query_obj, std::string& other_obj) {
@@ -173,7 +173,7 @@ double QueryEngine::ComputeDistance(std::string& query_obj, std::string& other_o
 		hist_distance += m_histogram_weights[i] * computeHistogramDistance(query_index, other_index, (HISTOGRAM_FEATURES)i);
 	}
 
-	double distance = m_gamma * scalar_distance + (1-m_gamma) * hist_distance;
+	double distance = m_gamma * scalar_distance + (1 - m_gamma) * hist_distance;
 
 	//std::cout << "Distance between " << query_obj << " and " << other_obj << " is: " << distance << std::endl;
 	return distance;
@@ -189,7 +189,7 @@ double QueryEngine::ComputeDistance(int query_obj, int other_obj) {
 		hist_distance += m_histogram_weights[i] * computeHistogramDistance(query_obj, other_obj, (HISTOGRAM_FEATURES)i);
 	}
 
-	double distance = m_gamma * scalar_distance + (1-m_gamma) * hist_distance;
+	double distance = m_gamma * scalar_distance + (1 - m_gamma) * hist_distance;
 
 	//std::cout << "Distance between " << query_obj << " and " << other_obj << " is: " << distance << std::endl;
 	return distance;
@@ -352,10 +352,10 @@ int QueryEngine::getIndex(std::string name_obj) {
 	r = NUM_SHAPES - 1;
 	while (l <= r) {
 		int m = l + (r - l) / 2;
-		//std::cout << "m: " << m << std::endl;
+		std::cout << "m: " << m << std::endl;
 		// Check if x is present at mid
-		//std::cout << m_name_map[m] << std::endl;
-		//std::cout << name_obj << std::endl;
+		std::cout << m_name_map[m] << std::endl;
+		std::cout << name_obj << std::endl;
 		int cmp = m_name_map[m].compare(name_obj);
 		if (cmp == 0)
 			return m;
@@ -449,7 +449,7 @@ void QueryEngine::LoadDistanceMatrix(std::string& load_path) {
 std::vector<std::pair<float, std::string>> QueryEngine::DoBenchmark(int query_obj, int K) {
 	std::vector<std::pair<float, std::string>> results;
 	std::vector<std::pair<float, int>> distances;
-	
+
 	for (int i = 0; i < NUM_SHAPES; i++) {
 		if (i == query_obj) {
 			continue;

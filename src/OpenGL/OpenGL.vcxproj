@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src\vendor\imgui;$(SolutionDir)src;src\vendor;$(SolutionDir)Dependencies\GLFW64\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\assimp\include;$(SolutionDir)Dependencies\pmp-lib\src;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\include;$(SolutionDir)Dependencies\QHull\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\vendor\imgui;$(SolutionDir)src;src\vendor;$(SolutionDir)Dependencies\GLFW64\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\assimp\include;$(SolutionDir)Dependencies\pmp-lib\src;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\include;$(SolutionDir)Dependencies\QHull\include;$(SolutionDir)Dependencies\stb-master</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
@@ -159,7 +159,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW64\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib\Release\x64;$(SolutionDir)Dependencies\assimp\lib;$(SolutionDir)Dependencies\pmp-lib\lib;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\lib;$(SolutionDir)Dependencies\QHull\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW64\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib\Release\x64;$(SolutionDir)Dependencies\assimp\lib;$(SolutionDir)Dependencies\pmp-lib\lib;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\lib;$(SolutionDir)Dependencies\QHull\lib;$(SolutionDir)Dependencies\stb-master</AdditionalLibraryDirectories>
       <AdditionalDependencies>assimp-vc143-mtd.lib;glew32s.lib;glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;pmp.lib;mpfr.lib;gmp.lib;qhullcpp_d.lib;qhullstatic_rd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -169,7 +169,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src\vendor\imgui;$(SolutionDir)src;src\vendor;$(SolutionDir)Dependencies\GLFW64\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\assimp\include;$(SolutionDir)Dependencies\pmp-lib\src;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\include;$(SolutionDir)Dependencies\QHull\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\vendor\imgui;$(SolutionDir)src;src\vendor;$(SolutionDir)Dependencies\GLFW64\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\assimp\include;$(SolutionDir)Dependencies\pmp-lib\src;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\include;$(SolutionDir)Dependencies\QHull\include;$(SolutionDir)Dependencies\stb-master</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
@@ -177,7 +177,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW64\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib\Release\x64;$(SolutionDir)Dependencies\assimp\lib;$(SolutionDir)Dependencies\pmp-lib\lib;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\lib;$(SolutionDir)Dependencies\QHull\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW64\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib\Release\x64;$(SolutionDir)Dependencies\assimp\lib;$(SolutionDir)Dependencies\pmp-lib\lib;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\lib;$(SolutionDir)Dependencies\QHull\lib;$(SolutionDir)Dependencies\stb-master</AdditionalLibraryDirectories>
       <AdditionalDependencies>assimp-vc143-mtd.lib;glew32s.lib;glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;pmp.lib;mpfr.lib;gmp.lib;qhullcpp_d.lib;qhullstatic_rd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -189,7 +189,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src\vendor\imgui;$(SolutionDir)src;src\vendor;$(SolutionDir)Dependencies\GLFW64\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\assimp\include;$(SolutionDir)Dependencies\pmp-lib\src;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\include;$(SolutionDir)Dependencies\QHull\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\vendor\imgui;$(SolutionDir)src;src\vendor;$(SolutionDir)Dependencies\GLFW64\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\assimp\include;$(SolutionDir)Dependencies\pmp-lib\src;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\include;$(SolutionDir)Dependencies\QHull\include;$(SolutionDir)Dependencies\stb-master</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
@@ -199,12 +199,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW64\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib\Release\x64;$(SolutionDir)Dependencies\assimp\lib;$(SolutionDir)Dependencies\pmp-lib\lib;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\lib;$(SolutionDir)Dependencies\QHull\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW64\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib\Release\x64;$(SolutionDir)Dependencies\assimp\lib;$(SolutionDir)Dependencies\pmp-lib\lib;$(SolutionDir)Dependencies\pmp-lib\ext\eigen-3.4.0;$(SolutionDir)Dependencies\vcglib;$(SolutionDir)Dependencies\CGAL\lib;$(SolutionDir)Dependencies\QHull\lib;$(SolutionDir)Dependencies\stb-master</AdditionalLibraryDirectories>
       <AdditionalDependencies>assimp-vc143-mtd.lib;glew32s.lib;glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;pmp.lib;mpfr.lib;gmp.lib;qhullcpp_d.lib;qhullstatic_rd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\imgui-1.91.1\imgui-1.91.1\backends\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Dependencies\vcglib\wrap\ply\plylib.cpp" />
     <ClCompile Include="src\Application.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RunScript|x64'">true</ExcludedFromBuild>
@@ -250,7 +249,6 @@
     <ClCompile Include="src\VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\imgui-1.91.1\imgui-1.91.1\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\FeatureExtraction.h" />
     <ClInclude Include="src\GeomMesh.h" />
@@ -295,6 +293,9 @@
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
     <None Include="resources\shaders\Dot.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\features_final.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
