@@ -185,39 +185,45 @@ double QueryEngine::ComputeDistance(int query_obj, int other_obj) {
 	double scalar_distance = computeScalarDistance(query_obj, other_obj);
 
 	double hist_distance = 0.0f;
+	float hist_weight_sum = getHistogramWeightsSum();
 	for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) { // Only histograms
-		hist_distance += m_histogram_weights[i] * computeHistogramDistance(query_obj, other_obj, (HISTOGRAM_FEATURES)i);
+		float cur_weight = (1-m_gamma) * m_histogram_weights[i] / hist_weight_sum;
+		hist_distance += cur_weight * computeHistogramDistance(query_obj, other_obj, (HISTOGRAM_FEATURES)i);
 	}
 
-	double distance = m_gamma * scalar_distance + (1 - m_gamma) * hist_distance;
+	double distance = scalar_distance + hist_distance;
 
 	//std::cout << "Distance between " << query_obj << " and " << other_obj << " is: " << distance << std::endl;
 	return distance;
 }
 
 double QueryEngine::computeScalarDistance(int i, int j) {
+	float weight_sum = getScalarWeightsSum();
 	if (m_distance_type_scalar == DISTANCE_TYPE::ABSOLUTE) {
 		float distance = 0.0f;
-		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar features
-			distance += m_scalar_weights[k] * abs(m_features[i][k] - m_features[j][k]);
+		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar 
+			float cur_weight = m_gamma * m_scalar_weights[k] / weight_sum;
+			distance += cur_weight * abs(m_features[i][k] - m_features[j][k]);
 		}
 		return distance;
 	}
 	else if (m_distance_type_scalar == DISTANCE_TYPE::EUCLIDEAN) {
 		float distance = 0.0f;
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar features
-			distance += m_scalar_weights[k] * (m_features[i][k] - m_features[j][k]) * (m_features[i][k] - m_features[j][k]);
+			float cur_weight = m_gamma * m_scalar_weights[k] / weight_sum;
+			distance += cur_weight * (m_features[i][k] - m_features[j][k]) * (m_features[i][k] - m_features[j][k]);
 		}
 		return sqrt(distance);
 	}
 	else if (m_distance_type_scalar == DISTANCE_TYPE::ONEPOINTFIVE) { // 1.5 norm
 		float distance = 0.0f;
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar features
-			distance += m_scalar_weights[k] * pow(abs(m_features[i][k] - m_features[j][k]), 1.5);
+			float cur_weight = m_gamma * m_scalar_weights[k] / weight_sum;
+			distance += cur_weight * pow(abs(m_features[i][k] - m_features[j][k]), 1.5);
 		}
 		return distance;
 	}
-	else if (m_distance_type_scalar == DISTANCE_TYPE::COSINE) { // scaling does not make sense?
+	else if (m_distance_type_scalar == DISTANCE_TYPE::COSINE) { // scaling does not make sense? Whole distance does not make sense for scalar part
 		double dot_product = 0.0f;
 		double norm_i = 0.0f;
 		double norm_j = 0.0f;
@@ -390,17 +396,28 @@ int QueryEngine::getFrequency(int index) {
 }
 
 void QueryEngine::ComputeFullDistanceMatrix() {
+	// Open file
+	std::ofstream results_file;
+	std::string save_name = "../../res/distance_matrix/" + std::to_string(m_distance_type_scalar) + "_" + std::to_string(m_distance_type_histogram) + "_" + std::to_string(m_gamma) + ".txt";
+
+	results_file.open(save_name);
+
 	for (int i = 0; i < NUM_SHAPES; i++) {
-		for (int j = i; j < NUM_SHAPES; j++) {
-			float distance = 0.0f;
-			for (int k = 0; k < 13; k++) { // Only scalar features
-				distance += (m_features[i][k] - m_features[j][k]) * (m_features[i][k] - m_features[j][k]);
-			}
-			distance = sqrt(distance);
+		std::cout << "i " << i << std::endl;
+		for (int j = 0; j < NUM_SHAPES; j++) {
+			
+			float distance = ComputeDistance(i, j);
+
+			results_file << distance << ",";
 			//m_distances[i][j] = distance;
 			//m_distances[j][i] = distance;
 		}
+		results_file << std::endl;
 	}
+
+	results_file.close();
+
+
 }
 
 void QueryEngine::TuneScalarWeights(SCALAR_FEATURES i, float weight) {
@@ -417,6 +434,22 @@ void QueryEngine::TuneGamma(float gamma) {
 
 float QueryEngine::getGamma() {
 	return m_gamma;
+}
+
+float QueryEngine::getScalarWeightsSum() {
+	float sum = 0.0f;
+	for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
+		sum += m_scalar_weights[i];
+	}
+	return sum;
+}
+
+float QueryEngine::getHistogramWeightsSum() {
+	float sum = 0.0f;
+	for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) {
+		sum += m_histogram_weights[i];
+	}
+	return sum;
 }
 
 void QueryEngine::SaveDistanceMatrix(std::string& save_path) {

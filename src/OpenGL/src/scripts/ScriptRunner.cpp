@@ -101,10 +101,20 @@ void RunScriptFeatureScript() {
 
 void RunScriptQueryBenchmark() {
 	std::string feature_file = "../../res/features_final.txt";
-	std::string save_file = "../../res/query_results_weightoptimizer"; // Change this according to the tests you are performing
+	std::string save_file = "../../res/query_results_allshapes"; // Change this according to the tests you are performing
 
 
 	QueryBenchmark script(feature_file, save_file);
+
+
+	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7); // WINNER
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7); 
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 0.7);*/
+	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 0.7);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE, 0.7);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE, 0.7);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD, 0.7);
+	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD, 0.7);*/
 
 	// Compute statistics required to normalize histogram distances
 	//script.ComputeDistanceStats(DISTANCE_TYPE::ABSOLUTE);
@@ -128,25 +138,116 @@ void RunScriptQueryBenchmark() {
 
 
 	// Run the benchmark tests with different standardization and histogram distance function
-	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
-	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
-	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);
-	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD);
-	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
-	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
-	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);*/
-	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 0.0);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.0); // Winner (because time complexity lowest...)
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE, 0.0);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD, 0.0);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 0.0);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.0);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE, 0.0);
+	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD, 0.0);
 	/*script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EUCLIDEAN);
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE);
 	script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::COSINE);*/
 	//script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::EMD);
 
-	// Run the benchmark tests for optimizing gamma
-	/*for (int i = 0; i < 11; i++) {
-		script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, float(i)/10);
+	// Run the benchmark tests for optimizing gamma. Use the 69 randomly selected shapes from each class.
+	/*for (int i = 0; i < 21; i++) {
+		script.RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, float(i)/20);
 	}*/
 
-	script.WeightOptimizer(1000);
+
+	//std::vector<float> scalar_weights = {
+	//	1.0f // DIAMETER
+	//	,1.0f // BB_DIAMETER
+	//	,0.0f // BB_VOLUME (disabled after test)
+	//	,1.0f // SURFACEAREA
+	//	,1.0f // VOLUME
+	//	,0.0f // VOLUMECOMPS (always disabled)
+	//	,1.0f // CONVEXITY
+	//	,2.0f // ECCENTRICITY02
+	//	,1.0f // ECCENTRICITY01
+	//	,1.0f // ECCENTRICITY12
+	//	,1.0f // COMPACTNESS
+	//	,1.0f // SPHERICITY
+	//	,0.0f // CUBEROOTVOLUME (disabled after test)
+	//	,1.0f // SQUAREROOTAREA
+	//	,0.0f // DIAMETERTOCUBEROOTVOLUME (always disabled)
+	//	,0.0f // DIAMETERTOSQUAREROOTAREA (disabled after test)
+	//	,0.0f // DIAMETERSQUARED (always disabled)
+	//	,1.0f // BBCUBEROOTVOLUME
+	//	,2.0f // RECTANGULARITY
+	//};
+
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+
+	//scalar_weights[0] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[0] /= 2.0f;
+
+	//scalar_weights[3] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[3] /= 2.0f;
+
+	//scalar_weights[4] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[4] /= 2.0f;
+
+	//scalar_weights[6] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[6] /= 2.0f;
+
+	//scalar_weights[7] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[7] /= 2.0f;
+
+	//scalar_weights[8] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[8] /= 2.0f;
+
+	//scalar_weights[9] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[9] /= 2.0f;
+
+	//scalar_weights[10] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[10] /= 2.0f;
+
+	//scalar_weights[11] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[11] /= 2.0f;
+
+	//scalar_weights[13] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[13] /= 2.0f;
+
+	//scalar_weights[18] *= 2.0f;
+	//script.RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, scalar_weights);
+	//scalar_weights[18] /= 2.0f;
+
+	/*std::vector<float> histogram_weights = { 1.0f,1.0f,1.0f,1.0f,1.0f };
+	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);*/
+	/*std::vector<float> histogram_weights;
+
+	histogram_weights = { 2.0f,1.0f,1.0f,1.0f,1.0f };
+	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,2.0f,1.0f,1.0f,1.0f };
+	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,2.0f,1.0f,1.0f };
+	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,1.0f,2.0f,1.0f };
+	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,1.0f,1.0f,2.0f };
+	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);*/
+
+	//script.WeightOptimizer(1000); // illegal...
+
+	// Compute the distance matrix
+	script.ComputeDistanceMatrix();
 	
 }
 
