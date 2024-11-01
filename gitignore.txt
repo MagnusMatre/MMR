@@ -4,4 +4,4 @@
 /src/OpenGL/x64
 /data
 /res
-/snapshots
+/src/OpenGL/snapshots
