@@ -57,7 +57,16 @@ namespace test {
 
 		GLFWwindow* m_window;
 		std::unique_ptr<Renderer> m_renderer;
+		std::vector<GLuint> m_textures;
+		//std::vector<GLuint, double> m_textures_with_distances;
 
+		struct TextureInfo {
+			GLuint texture;
+			double distance;
+			std::string name;
+		};
+
+		std::vector<TextureInfo> m_textures_with_distances;
 		std::unique_ptr<Model> m_model;
 		std::unique_ptr<GeomMesh> m_curGeomMesh;
 

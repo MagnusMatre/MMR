@@ -1,3 +1,4 @@
+
 #include "TestFeatures.h"
 
 #include "imgui/imgui.h"
@@ -11,7 +12,7 @@
 
 #include <iostream>
 #include <filesystem>
-
+#include <stb_image.h>
 
 namespace test {
 
@@ -34,11 +35,13 @@ namespace test {
 
 		m_queryEngine = std::make_unique<QueryEngine>();
 
-		m_featureFile = "../../res/features_clean2.txt";
-		std::string saveDistanceMatrix = "../../res/features_okaymeshes/distance_matrix.txt";
+
+		m_textures = {};
+		m_featureFile = "features_final.txt";
+		std::string saveDistanceMatrix = "res/features_okaymeshes/distance_matrix.txt";
 
 		std::cout << "Loading features..." << std::endl;
-		
+
 		m_queryEngine->LoadFeatures(m_featureFile);
 		m_queryEngine->Initialize(STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EMD, 0.5f);
 		std::cout << "Features loaded" << std::endl;
@@ -46,16 +49,16 @@ namespace test {
 		//std::cout << "Distances computed" << std::endl;
 		//m_queryEngine->SaveDistanceMatrix(saveDistanceMatrix);
 
-		m_dataRoot = "../../data";
+		m_dataRoot = "data";
 		m_curDirectory = m_dataRoot + "/OkayMeshes3";
-		m_samplePointsDirectory = "../../res/sample_points3";
-		loadCurrentDirectory(); 
+		m_samplePointsDirectory = "res/sample_points3";
+		loadCurrentDirectory();
 
 		m_renderer = std::make_unique<Renderer>();
 
 		m_shaderMeshSolid = std::make_unique<Shader>("resources/shaders/MeshSolid.shader");
 		m_shaderMeshWireframe = std::make_unique<Shader>("resources/shaders/MeshWireframe.shader");
-		m_shaderDot = std::make_unique<Shader>("resources/shaders/Dot.shader");	
+		m_shaderDot = std::make_unique<Shader>("resources/shaders/Dot.shader");
 	}
 
 	TestFeatures::~TestFeatures() {
@@ -169,6 +172,18 @@ namespace test {
 			m_curGeomMesh->DrawMesh(*m_shaderMeshWireframe, *m_renderer);
 			m_shaderMeshWireframe->Unbind();
 		}
+
+		if (m_textures.size() != 0) {
+			ImGui::Begin("Closest Objects");
+			for (const auto& [texture , distance, class_name]: m_textures_with_distances) {
+				ImGui::Text("%s", class_name.c_str());
+				ImGui::Image((void*)(intptr_t)texture, ImVec2(100, 100));  // Display each image in a 100x100 thumbnail
+				ImGui::Text("Distance:  %.2f", distance);
+				ImGui::Text("\n");
+
+			}
+			ImGui::End();
+		}
 	}
 
 	void TestFeatures::loadNewMesh(const std::string& path) {
@@ -180,7 +195,7 @@ namespace test {
 		//loadCGALmesh(m_curModelName);
 
 		computeDistances();
-		
+
 
 		//Compute the distance from the current model to all other models in the same directory
 		/*std::string class_name = std::filesystem::path(m_curModelName).parent_path().filename().string();
@@ -243,22 +258,22 @@ namespace test {
 		}
 	}
 
-    void TestFeatures::OnImGuiRender() {
-        //ImGui::SliderFloat3("Translation light source", &m_translationLight.x, -5.0f, 5.0f);
-        //ImGui::SliderFloat3("Translation mesh", &m_translationMesh.x, -5.0f, 5.0f);
-        //ImGui::SliderFloat3("Translation camera", &m_translationCamera.x, -5.0, 5.0f);
-        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+	void TestFeatures::OnImGuiRender() {
+		//ImGui::SliderFloat3("Translation light source", &m_translationLight.x, -5.0f, 5.0f);
+		//ImGui::SliderFloat3("Translation mesh", &m_translationMesh.x, -5.0f, 5.0f);
+		//ImGui::SliderFloat3("Translation camera", &m_translationCamera.x, -5.0, 5.0f);
+		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-        //ImGui::Text("Camera:");
-        //ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
+		//ImGui::Text("Camera:");
+		//ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
 		//ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);
 
-        /*if (ImGui::Button("RESET CAMERA")) {
-            m_camera->Position = glm::vec3(0.0f, 0.0f, 5.0f);
-            m_camera->Up = glm::vec3(0.0f, 1.0f, 0.0f);
-            m_camera->Yaw = -90.0f;
-            m_camera->Pitch = 0.0f;
-        }*/
+		/*if (ImGui::Button("RESET CAMERA")) {
+			m_camera->Position = glm::vec3(0.0f, 0.0f, 5.0f);
+			m_camera->Up = glm::vec3(0.0f, 1.0f, 0.0f);
+			m_camera->Yaw = -90.0f;
+			m_camera->Pitch = 0.0f;
+		}*/
 
 		// Button for recomputing the distances
 		if (ImGui::Button("Recompute distances")) {
@@ -281,38 +296,38 @@ namespace test {
 			ImGui::PopStyleColor(); // Reset button colors
 		}
 
-        // Button for going up one directory
-        std::string textToDisplay;
-        textToDisplay = "Current directory: " + m_curDirectory;
-        ImGui::Text(textToDisplay.c_str());
-        if (m_curDirectory != m_dataRoot && ImGui::Button("<--##label1")) {
-            std::filesystem::path parentDirectory = std::filesystem::path(m_curDirectory).parent_path();
-            m_curDirectory = parentDirectory.string();
-            loadCurrentDirectory();
-        }
+		// Button for going up one directory
+		std::string textToDisplay;
+		textToDisplay = "Current directory: " + m_curDirectory;
+		ImGui::Text(textToDisplay.c_str());
+		if (m_curDirectory != m_dataRoot && ImGui::Button("<--##label1")) {
+			std::filesystem::path parentDirectory = std::filesystem::path(m_curDirectory).parent_path();
+			m_curDirectory = parentDirectory.string();
+			loadCurrentDirectory();
+		}
 
-        textToDisplay = "Choose model: (current: " + m_curModelName + ")";
-        ImGui::Text(textToDisplay.c_str());
-        for (auto& file : m_curFiles) {
+		textToDisplay = "Choose model: (current: " + m_curModelName + ")";
+		ImGui::Text(textToDisplay.c_str());
+		for (auto& file : m_curFiles) {
 			std::string buttonLabel = file + "##label4";
-            if (ImGui::Button(buttonLabel.c_str())) {
+			if (ImGui::Button(buttonLabel.c_str())) {
 				InitializeCamera();
 				loadNewMesh(file);
-            }
-        }
+			}
+		}
 
-        // Buttons for going into a subdirectory if there are any
-        for (auto& directory : m_curDirectories) {
-            std::string buttonLabel = directory + "##label5";
-            ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.4f, 0.6f, 1.0f)); // Set button color
+		// Buttons for going into a subdirectory if there are any
+		for (auto& directory : m_curDirectories) {
+			std::string buttonLabel = directory + "##label5";
+			ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.4f, 0.6f, 1.0f)); // Set button color
 
-            if (ImGui::Button(buttonLabel.c_str())) {
-                m_curDirectory = directory;
-                loadCurrentDirectory();
-            }
+			if (ImGui::Button(buttonLabel.c_str())) {
+				m_curDirectory = directory;
+				loadCurrentDirectory();
+			}
 
-            ImGui::PopStyleColor(); // Reset button colors
-        }
+			ImGui::PopStyleColor(); // Reset button colors
+		}
 
 	}
 
@@ -379,7 +394,7 @@ namespace test {
 		if (!file.is_open()) {
 			std::cerr << "Error: cannot open file " << sample_points_file << std::endl;
 			return;
-		} 
+		}
 
 		std::vector<Point_3> sample_points;
 		std::string line;
@@ -398,12 +413,39 @@ namespace test {
 		updateSampleVerticesBuffer();
 	}
 
+
+	GLuint loadTextureFromFile(const std::string& path) {
+		int width, height, nrChannels;
+		unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
+		if (!data) {
+			std::cerr << "Failed to load image: " << path << std::endl;
+			return 0;
+		}
+
+		GLuint textureID;
+		glGenTextures(1, &textureID);
+		glBindTexture(GL_TEXTURE_2D, textureID);
+
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, nrChannels == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+		stbi_image_free(data);
+		return textureID;
+	}
+
+
 	void TestFeatures::computeDistances() {
 		std::filesystem::path p(m_curModelName);
 		std::string class_name = p.parent_path().filename().string();
 		std::string obj_name = p.filename().string();
 		std::string file_name = class_name + "/" + obj_name;
 
+		m_textures.clear();
 		// Retrieve the distances to all other objects
 		int modelIndex = m_queryEngine->getIndex(file_name);
 		std::vector<std::pair<double, int>> distances;
@@ -422,17 +464,27 @@ namespace test {
 		for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
 			std::cout << m_queryEngine->m_scalar_feature_names[i] << ": " << m_queryEngine->m_features[modelIndex][i] << std::endl;
 		}*/
-
 		// Print the 20 closest
 		for (int i = 0; i < 20; i++) {
-			std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second)<<"/"<<m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
+			//std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second) << "/" << m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
+			std::filesystem::path objPath = m_queryEngine->getObjectName(distances[i].second);
+			std::string imagePath = "snapshots/" + m_queryEngine->getClassName(distances[i].second) + "/" + objPath.stem().string() + ".png";
+			std::cout << imagePath << std::endl;
+			GLuint texture = loadTextureFromFile(imagePath);
+			std::string class_name = m_queryEngine->getClassName(distances[i].second);
+			double distance = distances[i].first;
 
+			TextureInfo texture_info = { texture, distance, class_name };
+			if (texture != 0) {
+				m_textures.push_back(texture);
+				m_textures_with_distances.push_back(texture_info);
+			}
 			// Also print the features values
 			/*std::cout << "Features for " << m_queryEngine->m_name_map[distances[i].second] << std::endl;
 			for (int j = 0; j < NUM_SCALAR_FEATURES; j++) {
 				std::cout << m_queryEngine->m_scalar_feature_names[j] << ": " << m_queryEngine->m_features[distances[i].second][j] << " --- " << m_queryEngine->m_features[modelIndex][j] << std::endl;
 			*/
 		}
+
 	}
 }
-
