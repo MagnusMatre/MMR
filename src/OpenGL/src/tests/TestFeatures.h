@@ -85,6 +85,8 @@ namespace test {
 		std::vector<std::string> m_curDirectories; // List of directories in the current directory
 		std::string m_curModelName; // Name of the current model
 
+		std::string m_snapshotDirectory; // Path to the snapshot directory
+
 		RenderMode m_renderMode;
 		bool m_keyPressed = false;
 

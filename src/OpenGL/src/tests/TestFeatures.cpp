@@ -33,8 +33,9 @@ namespace test {
 		GLCall(glCullFace(GL_BACK));    // Cull back faces
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
-		m_queryEngine = std::make_unique<QueryEngine>();
+		m_snapshotDirectory = "../../res/snapshots";
 
+		m_queryEngine = std::make_unique<QueryEngine>();
 
 		m_textures = {};
 		m_featureFile = "features_final.txt";
@@ -49,8 +50,8 @@ namespace test {
 		//std::cout << "Distances computed" << std::endl;
 		//m_queryEngine->SaveDistanceMatrix(saveDistanceMatrix);
 
-		m_dataRoot = "data";
-		m_curDirectory = m_dataRoot + "/OkayMeshes3";
+		m_dataRoot = "../../data";
+		m_curDirectory = m_dataRoot + "/MeshesFiltered";
 		m_samplePointsDirectory = "res/sample_points3";
 		loadCurrentDirectory();
 
@@ -70,7 +71,7 @@ namespace test {
 	}
 
 	void TestFeatures::InitializeCamera() {
-		m_camera = std::make_unique<Camera>(m_window, glm::vec3(0.0f, 0.0f, 5.0f));
+		m_camera = std::make_unique<Camera>(m_window, glm::vec3(0.0f, 0.0f, 2.5f));
 	}
 
 	void TestFeatures::OnUpdate(GLFWwindow* window, float deltaTime) {
@@ -172,18 +173,6 @@ namespace test {
 			m_curGeomMesh->DrawMesh(*m_shaderMeshWireframe, *m_renderer);
 			m_shaderMeshWireframe->Unbind();
 		}
-
-		if (m_textures.size() != 0) {
-			ImGui::Begin("Closest Objects");
-			for (const auto& [texture , distance, class_name]: m_textures_with_distances) {
-				ImGui::Text("%s", class_name.c_str());
-				ImGui::Image((void*)(intptr_t)texture, ImVec2(100, 100));  // Display each image in a 100x100 thumbnail
-				ImGui::Text("Distance:  %.2f", distance);
-				ImGui::Text("\n");
-
-			}
-			ImGui::End();
-		}
 	}
 
 	void TestFeatures::loadNewMesh(const std::string& path) {
@@ -264,9 +253,9 @@ namespace test {
 		//ImGui::SliderFloat3("Translation camera", &m_translationCamera.x, -5.0, 5.0f);
 		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-		//ImGui::Text("Camera:");
-		//ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
-		//ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);
+		ImGui::Text("Camera:");
+		ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
+		ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);
 
 		/*if (ImGui::Button("RESET CAMERA")) {
 			m_camera->Position = glm::vec3(0.0f, 0.0f, 5.0f);
@@ -276,25 +265,25 @@ namespace test {
 		}*/
 
 		// Button for recomputing the distances
-		if (ImGui::Button("Recompute distances")) {
+		/*if (ImGui::Button("Recompute distances")) {
 			computeDistances();
-		}
+		}*/
 
 		// Create sliders for each of the SCALAR_FEATURES to change the weights
-		for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
+		/*for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
 			std::string label = "Scalar weight " + m_queryEngine->m_scalar_feature_names[i];
 			ImGui::SliderFloat(label.c_str(), &m_queryEngine->m_scalar_weights[i], 0.0f, 5.0f);
-		}
+		}*/
 
-		for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) {
-			// Change color of button to red
-			ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.4f, 0.6f, 1.0f)); // Set button color
+		//for (int i = 0; i < NUM_HISTOGRAM_FEATURES; i++) {
+		//	// Change color of button to red
+		//	ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.4f, 0.6f, 1.0f)); // Set button color
 
-			std::string label = "Histogram weight " + m_queryEngine->m_histogram_feature_names[i];
-			ImGui::SliderFloat(label.c_str(), &m_queryEngine->m_histogram_weights[i], 0.0f, 5.0f);
+		//	std::string label = "Histogram weight " + m_queryEngine->m_histogram_feature_names[i];
+		//	ImGui::SliderFloat(label.c_str(), &m_queryEngine->m_histogram_weights[i], 0.0f, 5.0f);
 
-			ImGui::PopStyleColor(); // Reset button colors
-		}
+		//	ImGui::PopStyleColor(); // Reset button colors
+		//}
 
 		// Button for going up one directory
 		std::string textToDisplay;
@@ -328,6 +317,30 @@ namespace test {
 
 			ImGui::PopStyleColor(); // Reset button colors
 		}
+
+		// Open a separate window to display the closests objects
+
+        if (m_textures.size() != 0) {
+            ImGui::Begin("Closest Objects");
+            ImGui::SetWindowFontScale(1.5f); // Increase the font scale
+            ImGui::Columns(4); // Display images in two columns
+            int rank = 1;
+            for (const auto& [texture, distance, class_name] : m_textures_with_distances) {
+                std::filesystem::path p(m_curModelName); 
+                std::string query_class_name = p.parent_path().filename().string(); 
+                if (class_name == query_class_name) {
+                    ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1.0f), "%s (%d)", class_name.c_str(), rank);
+                } else {
+                    ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "%s (Rank: %d)", class_name.c_str(), rank);
+                }
+				ImGui::Text("Distance:  %.2f", distance);
+                ImGui::Image((void*)(intptr_t)texture, ImVec2(ImGui::GetWindowWidth() * 0.24f, ImGui::GetWindowWidth() * 0.24f));  // Display each image with a percentage of the window size
+                ImGui::NextColumn(); // Move to the next column
+                rank++;
+            }
+            ImGui::Columns(1); // Reset to single column layout
+            ImGui::End();
+        }
 
 	}
 
@@ -446,6 +459,7 @@ namespace test {
 		std::string file_name = class_name + "/" + obj_name;
 
 		m_textures.clear();
+		m_textures_with_distances.clear();
 		// Retrieve the distances to all other objects
 		int modelIndex = m_queryEngine->getIndex(file_name);
 		std::vector<std::pair<double, int>> distances;
@@ -468,7 +482,7 @@ namespace test {
 		for (int i = 0; i < 20; i++) {
 			//std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second) << "/" << m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
 			std::filesystem::path objPath = m_queryEngine->getObjectName(distances[i].second);
-			std::string imagePath = "snapshots/" + m_queryEngine->getClassName(distances[i].second) + "/" + objPath.stem().string() + ".png";
+			std::string imagePath = m_snapshotDirectory + "/" + m_queryEngine->getClassName(distances[i].second) + "/" + objPath.stem().string() + ".png";
 			std::cout << imagePath << std::endl;
 			GLuint texture = loadTextureFromFile(imagePath);
 			std::string class_name = m_queryEngine->getClassName(distances[i].second);
