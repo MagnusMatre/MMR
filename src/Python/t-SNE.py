@@ -35,7 +35,7 @@ pure_features = pure_features.drop(columns=['Filename'])
 pure_features = pure_features.drop(columns=["ClassName"])
 
 
-for iterations in [250, 1000, 10000, 50000]:
+for iterations in [1000]:
     # Create a t-SNE model with 2 components
     model = TSNE(n_components=2, random_state=0, n_iter=iterations, perplexity=20)
 

@@ -114,8 +114,8 @@ selected_classes = np.random.choice(features['ClassName'].unique(), 16, replace=
 random_instances = []
 for class_name in features['ClassName'].unique():
     class_features = features[features['ClassName'] == class_name]
-    random_instance = class_features.sample()
-    random_instances.append(random_instance.index.values[0])
+    random_instance = class_features.sample(5)
+    random_instances.extend(list(random_instance.index.values))
 
 print("{", f"{[x for x in random_instances]}", "}")
 

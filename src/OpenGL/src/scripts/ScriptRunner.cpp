@@ -101,7 +101,7 @@ void RunScriptFeatureScript() {
 
 void RunScriptQueryBenchmark() {
 	std::string feature_file = "../../res/features_final.txt";
-	std::string save_file = "../../res/query_results_allshapes"; // Change this according to the tests you are performing
+	std::string save_file = "../../res/query_results_weightoptimizer"; // Change this according to the tests you are performing
 
 
 	QueryBenchmark script(feature_file, save_file);
@@ -244,12 +244,13 @@ void RunScriptQueryBenchmark() {
 	histogram_weights = { 1.0f,1.0f,1.0f,1.0f,2.0f };
 	script.RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7, histogram_weights);*/
 
-	//script.WeightOptimizer(1000); // illegal...
+	script.WeightOptimizer(1000); // illegal...
 
 	// Compute the distance matrix
-	script.ComputeDistanceMatrix();
+	//script.ComputeDistanceMatrix();
 	
 }
+
 
 int main(int argc, char** argv) {
     if (argc < 2) {

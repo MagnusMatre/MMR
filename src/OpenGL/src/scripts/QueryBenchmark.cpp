@@ -226,7 +226,7 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 	// if this yields an improvement in the score, keep it and move on. Otherwise, pick some different features and try again.
 
 	m_queryEngine->LoadFeatures(m_feature_file);
-	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.5f);
+	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7f);
 
 	// Open a log
 	std::ofstream log_file;
@@ -235,7 +235,6 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 	std::ofstream cur_weights;
 
 	float weights[24] = {0};
-	float gamma = 0.5f;
 
 	// Initialize the weights
 	for (int k = 0; k < NUM_SCALAR_FEATURES; k++) {
@@ -263,7 +262,7 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 
 		double new_score = cur_score;
 		int cnt = 0;
-		double cur_factor = 0.25;
+		double cur_factor = 0.1;
 		while (new_score <= cur_score) {
 			//Reset the weights to the original values
 			for (int k = 0; k < NUM_SCALAR_FEATURES; k++) {
@@ -272,42 +271,33 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 			for (int k = 0; k < NUM_HISTOGRAM_FEATURES; k++) {
 				m_queryEngine->TuneHistogramWeights((HISTOGRAM_FEATURES)k, weights[NUM_SCALAR_FEATURES + k]);
 			}
-			m_queryEngine->TuneGamma(gamma);
 
 			//Adjust scalar weights
 			for (int k = 0; k < NUM_SCALAR_FEATURES; k++) {
 				if (k == 5 || k == 14 || k == 16) { continue; } // Not using these features
 
-				// with probability 25%, increase the weight, with probability 25% decrease the weight and with probability 50%, dont change
-				int u = std::rand() % 4;
+				// with probability 10%, increase the weight, with probability 10% decrease the weight and with probability 80%, dont change
+				int u = std::rand() % 2;
 				if (u == 0) {
 					m_queryEngine->TuneScalarWeights((SCALAR_FEATURES)k, m_queryEngine->m_scalar_weights[k] + cur_factor);
 				}
 				else if (u == 1) {
-					m_queryEngine->TuneScalarWeights((SCALAR_FEATURES)k, std::min(0.0, m_queryEngine->m_scalar_weights[k] - cur_factor));
+					m_queryEngine->TuneScalarWeights((SCALAR_FEATURES)k, std::max(0.0, m_queryEngine->m_scalar_weights[k] - cur_factor));
 				}
 
 			}
 
 			// Compute histogram feature improvements
 			for (int k = 0; k < NUM_HISTOGRAM_FEATURES; k++) {
-				// with probability 25%, increase the weight, with probability 25% decrease the weight and with probability 50%, dont change
-				int u = std::rand() % 4;
+				// with probability 10%, increase the weight, with probability 10% decrease the weight and with probability 80%, dont change
+				int u = std::rand() % 2;
 				if (u == 0) {
 					m_queryEngine->TuneHistogramWeights((HISTOGRAM_FEATURES)k, m_queryEngine->m_scalar_weights[k] + cur_factor);
 				}
 				else if (u == 1) {
-					m_queryEngine->TuneHistogramWeights((HISTOGRAM_FEATURES)k, std::min(0.0, m_queryEngine->m_scalar_weights[k] - cur_factor));
+					m_queryEngine->TuneHistogramWeights((HISTOGRAM_FEATURES)k, std::max(0.0, m_queryEngine->m_scalar_weights[k] - cur_factor));
 				}
 
-			}
-
-			int u = std::rand() % 10; // Increase or decrease gamma with small percentage
-			if (u == 0) {
-				m_queryEngine->TuneGamma(std::max(0.7, gamma + 0.05 ));
-			}
-			else if (u == 1) {
-				m_queryEngine->TuneGamma(std::min(0.3, gamma - 0.05));
 			}
 			
 
@@ -315,9 +305,11 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 			new_score = computeScore();
 			cnt++;
 
+			std::cout << "Iteration " << it << " count " << cnt << " attempts, computed score: " << new_score << std::endl;
+
 			// Each time the counter reaches a multiple of 10, increase the factor by which we scale the weights
 			if (cnt % 10 == 0) {
-				cur_factor = std::min(2.0, cur_factor+0.25);
+				cur_factor = std::max(0.05, cur_factor * 0.9);
 			}
 
 		}
@@ -326,7 +318,7 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 		std::cout << "Iteration " << it << ": Found improvement after " << cnt << " attempts, new score: " << new_score << std::endl;
 
 		log_file << "Iteration " << it << ": Found improvement after " << cnt << " attempts, new score: " << new_score << std::endl;
-		log_file << "Gamma="<< m_queryEngine->getGamma() << " Weights: ";
+		log_file << " Weights: ";
 		//Save the new weights in the weights array and save them to file
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) {
 			weights[k] = m_queryEngine->m_scalar_weights[k];
@@ -337,7 +329,6 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 			weights[k + NUM_SCALAR_FEATURES] = m_queryEngine->m_histogram_weights[k];
 			log_file << m_queryEngine->m_histogram_weights[k] << ", ";
 		}
-		gamma = m_queryEngine->getGamma();
 	
 	}
 
