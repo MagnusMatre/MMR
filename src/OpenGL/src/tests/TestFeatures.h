@@ -18,6 +18,7 @@
 
 #include "FeatureExtraction.h"
 #include "QueryEngine.h"
+#include "Ann.h"
 
 #include <memory> 
 
@@ -44,9 +45,14 @@ namespace test {
 
 		void computeDistances();
 
+		int m_query_type = 0;
+		double m_query_time = -1;
+
+		std::unique_ptr<ANN> m_ann;
+
 		std::string m_featureFile;
 		std::unique_ptr<QueryEngine> m_queryEngine;
-
+		
 		CGALMesh m_CGALmesh;
 		FeatureExtraction m_featureExtractor;
 		std::string m_samplePointsDirectory;

@@ -1,0 +1,10 @@
+../../data/Meshes/DeskPhone\D00576.obj SUCCESS, vertex count: 13078
+../../data/Meshes/DeskPhone\D00680.obj SUCCESS, vertex count: 12389
+../../data/Meshes/DeskPhone\D00706.obj SUCCESS, vertex count: 46405
+../../data/Meshes/DeskPhone\D00773.obj SUCCESS, vertex count: 24933
+../../data/Meshes/DeskPhone\D00829.obj SUCCESS, vertex count: 15408
+../../data/Meshes/DeskPhone\D00894.obj SUCCESS, vertex count: 13480
+../../data/Meshes/DeskPhone\D00897.obj SUCCESS, vertex count: 27052
+../../data/Meshes/DeskPhone\D00899.obj SUCCESS, vertex count: 39871
+../../data/Meshes/DeskPhone\D00957.obj SUCCESS, vertex count: 17400
+../../data/Meshes/DeskPhone\D00958.obj SUCCESS, vertex count: 12684

@@ -1,0 +1,10 @@
+../../data/Meshes/Glasses\D00656.obj SUCCESS, vertex count: 4761
+../../data/Meshes/Glasses\D00660.obj SUCCESS, vertex count: 9463
+../../data/Meshes/Glasses\D00717.obj SUCCESS, vertex count: 7232
+../../data/Meshes/Glasses\D00730.obj SUCCESS, vertex count: 12678
+../../data/Meshes/Glasses\D00813.obj SUCCESS, vertex count: 10986
+../../data/Meshes/Glasses\D00816.obj SUCCESS, vertex count: 15152
+../../data/Meshes/Glasses\D00877.obj SUCCESS, vertex count: 11468
+../../data/Meshes/Glasses\D00883.obj SUCCESS, vertex count: 11334
+../../data/Meshes/Glasses\D00937.obj SUCCESS, vertex count: 9094
+../../data/Meshes/Glasses\D00994.obj SUCCESS, vertex count: 8702

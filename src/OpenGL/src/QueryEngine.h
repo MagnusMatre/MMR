@@ -22,6 +22,15 @@ SO IT CAN COMPUTE DISTANCES BETWEEN THE FEATURE VECTORS OF THE MESHES.
 #define D3_LEN 100 
 #define D4_LEN 100 
 
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <unordered_map>
+#include <fstream>
+#include <chrono>
+
+#include "emd/WassersteinEMD.h"
+
 
 enum SCALAR_FEATURES {
 	DIAMETER,
@@ -61,20 +70,12 @@ enum STANDARDIZATION_TYPE {
 };
 
 enum DISTANCE_TYPE {
-	ABSOLUTE,
+	MYABSOLUTE,
 	ONEPOINTFIVE,
 	EUCLIDEAN,
 	COSINE,
 	EMD
 };
-
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <unordered_map>
-#include <fstream>
-
-#include "emd/WassersteinEMD.h"
 
 class QueryEngine {
 public:
@@ -90,7 +91,8 @@ public:
 	void Initialize(STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_hist, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma);
 
 	std::vector<std::pair<float, std::string>> DoBenchmark(int query_obj, int K); // computes the K most similar shapes to the query_obj
-	
+	std::vector<std::pair<float, std::string>> DoBenchmarkTiming(int query_obj, int K, double& total_time); // computes the K most similar shapes to the query_obj
+
 	void ComputeFullDistanceMatrix();
 	void SaveDistanceMatrix(std::string& save_path);
 	void LoadDistanceMatrix(std::string& load_path);

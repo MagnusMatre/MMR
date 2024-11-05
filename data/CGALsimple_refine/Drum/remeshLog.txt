@@ -1,0 +1,10 @@
+../../data/Meshes/Drum\D00383.obj SUCCESS, vertex count: 4065
+../../data/Meshes/Drum\D00404.obj SUCCESS, vertex count: 6020
+../../data/Meshes/Drum\D00551.obj SUCCESS, vertex count: 4482
+../../data/Meshes/Drum\D00557.obj SUCCESS, vertex count: 8366
+../../data/Meshes/Drum\D00596.obj SUCCESS, vertex count: 4281
+../../data/Meshes/Drum\D00709.obj SUCCESS, vertex count: 5634
+../../data/Meshes/Drum\D00939.obj SUCCESS, vertex count: 5397
+../../data/Meshes/Drum\D00951.obj SUCCESS, vertex count: 12135
+../../data/Meshes/Drum\D00980.obj SUCCESS, vertex count: 5698
+../../data/Meshes/Drum\D00982.obj SUCCESS, vertex count: 9064

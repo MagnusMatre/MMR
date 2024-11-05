@@ -15,8 +15,54 @@ QueryBenchmark::~QueryBenchmark() {
 
 void QueryBenchmark::ComputeDistanceMatrix() {
 	m_queryEngine->LoadFeatures(m_feature_file);
-	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7f);
+	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7f);
 	m_queryEngine->ComputeFullDistanceMatrix();
+}
+
+void QueryBenchmark::RunBenchmarkTiming(std::vector<int> K_values) {
+	m_queryEngine->LoadFeatures(m_feature_file);
+	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7f);
+
+	std::string save_name = m_save_directory + "/querysize_timing.txt";
+
+	// Open results file
+	std::ofstream results_file;
+	results_file.open(save_name);
+
+	results_file << "K,Score,Time" << std::endl;
+
+	for (int i = 0; i < K_values.size(); i++) {
+
+		double total_time = 0.0;
+		double total_score = 0.0;
+
+		for (int ii = 0; ii < NUM_SHAPES; ii++) {
+
+			double cur_time = 0.0;
+			double cur_score = 0.0;
+			std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmarkTiming(ii, K_values[i], cur_time);
+
+			std::string class_name = m_queryEngine->getClassName(ii);
+			std::string file_name = m_queryEngine->getObjectName(ii);
+
+			for (int j = 0; j < K_values[i]; j++) {
+				if (m_queryEngine->getClassName(m_queryEngine->getIndex(results[j].second)) == class_name) {
+					cur_score += 1.0f;
+				}
+			}
+			
+			total_score += cur_score;
+			total_time += cur_time;
+
+		}
+
+		total_score /= (NUM_SHAPES * K_values[i]);
+
+		results_file << K_values[i] << "," << total_score << "," << total_time << std::endl;
+		std::cout << "Tested " << K_values[i] << " query time: " << total_time << " - score: " << total_score << std::endl;
+	}
+	
+	results_file.close();
 }
 
 void QueryBenchmark::RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma) {
@@ -226,7 +272,7 @@ void QueryBenchmark::WeightOptimizer(int max_iterations) {
 	// if this yields an improvement in the score, keep it and move on. Otherwise, pick some different features and try again.
 
 	m_queryEngine->LoadFeatures(m_feature_file);
-	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ABSOLUTE, DISTANCE_TYPE::ABSOLUTE, 0.7f);
+	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7f);
 
 	// Open a log
 	std::ofstream log_file;

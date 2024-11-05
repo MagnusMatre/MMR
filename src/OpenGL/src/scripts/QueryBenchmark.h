@@ -10,6 +10,7 @@
 #include <iostream>
 #include <filesystem>
 #include <memory>
+#include <chrono>
 
 class QueryBenchmark {
 	public:
@@ -19,6 +20,8 @@ class QueryBenchmark {
 		void RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma);
 		void RunBenchmarkScalarWeights(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma, std::vector<float> scalar_weights );
 		void RunBenchmarkHistogramWeights(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma, std::vector<float> histogram_weights);
+
+		void RunBenchmarkTiming(std::vector<int> K_values);
 
 		void ComputeDistanceStats(DISTANCE_TYPE hist_dist_type);
 

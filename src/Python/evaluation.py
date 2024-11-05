@@ -38,7 +38,7 @@ sorted_indices = np.argsort(distance_matrix, axis=1)
 #print(sorted_indices)
 
 # delete the first column, as it is the index of the instance itself
-sorted_indices = np.delete(sorted_indices, 0, axis=1)
+sorted_indices = np.delete(sorted_indices, 0, axis=1) 
 
 # careful when subtracting 1 from class_frequencies[i] when you don't want to count the query instance itself
 
@@ -46,8 +46,8 @@ K_TIERS = False
 PRECISION = False # this probably produces the "best" results in the sense that it looks the best for us
 LAST_RANK = False
 ACCURACY = False # useless
-F1_SCORE = False 
-ROC_CURVE = True # this one is interesting
+F1_SCORE = True 
+ROC_CURVE = False # this one is interesting
 
 selected_classes = ["Bicycle", "Door", "Wheel", "Bus", "BuildingNonResidential"]
 
@@ -60,7 +60,7 @@ if K_TIERS:
         # iterate over all instances of the class
         for inst in class_indices[i]:
             for k in range(10):
-                k_tier[k] += len([x for x in sorted_indices[inst][:(class_frequencies[i]-1)*(k+1)] if labels[x] == class_names[i]]) / ((class_frequencies[i]-1)*(k+1) * class_frequencies[i]) 
+                k_tier[k] += len([x for x in sorted_indices[inst][(class_frequencies[i]-1)*(k):(class_frequencies[i]-1)*(k+1)] if labels[x] == class_names[i]]) / ((class_frequencies[i]-1) * class_frequencies[i]) 
 
         k_tiers[i] = k_tier
 
@@ -85,14 +85,17 @@ if PRECISION:
     # compute average precision per class, i.e., the number of times the first instance of the class is from the same class
     average_precision = np.zeros(len(class_names))
     total_average_precision = 0
+
+    K = 10
     for i in tqdm(range(len(class_names))):
         class_prec = 0
         # iterate over all instances of the class
         for inst in class_indices[i]:
             # find the first instance of the class in the sorted indices
-            if sorted_indices[inst][0] in class_indices[i]:
-                class_prec += 1
-                total_average_precision += 1
+            for k in range(K):
+                if sorted_indices[inst][k] in class_indices[i]:
+                    class_prec += 1/10
+                    total_average_precision += 1/10
 
         average_precision[i] = class_prec / class_frequencies[i]
 
@@ -102,7 +105,7 @@ if PRECISION:
 
     # plot the average precision in a bar chart per class
     plt.figure(dpi=100)
-    plt.title("Average 1-hit precision per class")
+    plt.title(f"Average {K}-hit precision per class")
     plt.bar(class_names, average_precision)
     plt.xlabel("Class")
     plt.xticks(rotation=90)
@@ -192,9 +195,13 @@ if ACCURACY: # feels kind of useless because it focusses on true negatives...
 
 if F1_SCORE:
     # Compute the F1 score with query size Q, so 2 * (precision * recall) / (precision + recall)
-    Q_values = list(range(1, 100))
+    Q_values = list(range(1, 100, 3))
     print(Q_values)
-    total_f1_scores = np.zeros(len(Q_values))
+    total_f1_scores_05 = np.zeros(len(Q_values))
+    total_f1_scores_1 = np.zeros(len(Q_values))
+    total_f1_scores_2 = np.zeros(len(Q_values))
+    total_f1_scores_3 = np.zeros(len(Q_values))
+
     class_f1_scores = np.zeros((len(class_names), len(Q_values)))
 
     for Q, Qval in enumerate(Q_values):
@@ -207,20 +214,34 @@ if F1_SCORE:
             
 
             f1_score = 0
+            f1_score_2 = 0
+            f1_score_3 = 0
+            f1_score_05 = 0
             if precision + recall == 0:
                 class_f1_scores[i][Q] += 0
             else:
                 f1_score = (2 * (precision * recall) / (precision + recall))
 
+                f1_score_05 = (1 + 0.25) * precision * recall / ( (0.25 * precision) + recall)
+                f1_score_2 = (1 + 2**2) * precision * recall / ( (4 * precision) + recall)
+                f1_score_3 = (1 + 3**2) * precision * recall / ( (9 * precision) + recall)
+
             class_f1_scores[i][Q] += f1_score / class_frequencies[i]
-            total_f1_scores[Q] += f1_score / len(features)
+            total_f1_scores_05[Q] += f1_score_05 / len(features)
+            total_f1_scores_1[Q] += f1_score / len(features)
+            total_f1_scores_2[Q] += f1_score_2 / len(features)
+            total_f1_scores_3[Q] += f1_score_3 / len(features)
     
     # plot the total f1 scores
     plt.figure(dpi=100)
     plt.title("F1 score")
-    plt.plot(Q_values, total_f1_scores)
+    plt.plot(Q_values, total_f1_scores_05, label="F1 score beta=0.5")
+    plt.plot(Q_values, total_f1_scores_1, label="F1 score beta=1")
+    plt.plot(Q_values, total_f1_scores_2, label="F1 score beta=2")
+    plt.plot(Q_values, total_f1_scores_3, label="F1 score beta=3")
     plt.xlabel("Q")
     plt.ylabel("F1 score")
+    plt.legend()
     plt.show()
 
 if ROC_CURVE:

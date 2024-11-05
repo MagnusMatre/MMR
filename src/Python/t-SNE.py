@@ -4,6 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import matplotlib.colors as mcolors
+import plotly.express as px
 
 # load in a feature file and store in a pandas dataframe
 features = pd.read_csv("../../res/features_final.txt", sep='\t')
@@ -35,29 +37,79 @@ pure_features = pure_features.drop(columns=['Filename'])
 pure_features = pure_features.drop(columns=["ClassName"])
 
 
-for iterations in [1000]:
-    # Create a t-SNE model with 2 components
-    model = TSNE(n_components=2, random_state=0, n_iter=iterations, perplexity=20)
+# ITERATIONS = 5000
+RANDOM_STATE = 42
+# PERPLEXITY = 30
+N_COMPONENTS = 2
 
-    # Fit the model to the features
-    tsne_features = model.fit_transform(pure_features, y=labels)
+#METHOD = "exact"
+METHOD = "barnes_hut"
 
-    # Create a new dataframe with the t-SNE features
-    tsne_df = pd.DataFrame(data=tsne_features, columns=['x', 'y'])
+#randomly select 10 classes for which we plot all the points
+NUM_RANDOM_CLASSES = 10
 
-    # add the class names back to the dataframe
-    tsne_df['ClassName'] = labels
+np.random.seed(0)
+random_classes = np.random.choice(class_names, NUM_RANDOM_CLASSES)
 
-    #randomly select 10 classes for which we plot all the points
-    np.random.seed(0)
-    random_classes = np.random.choice(class_names, 10)
+for ITERATIONS in [50000]:
+    for PERPLEXITY in [50]:
+# for ITERATIONS in [1000, 5000, 10000, 50000]:
+#     for PERPLEXITY in [10, 20, 30, 40, 50, 60, 80, 100]:
+        # Create a t-SNE model with 2 components
+        model = TSNE(n_components=N_COMPONENTS, random_state=RANDOM_STATE, n_iter=ITERATIONS, perplexity=PERPLEXITY, method=METHOD)
 
-    # fully select all samples for 10 random classes
-    #tsne_df = tsne_df.loc[tsne_df['ClassName'].isin(random_classes)]
+        # Fit the model to the features
+        tsne_features = model.fit_transform(pure_features, y=labels)
 
-    tsne_df = tsne_df.loc[tsne_df['ClassName'].isin(["Bicycle", "Door", "Wheel", "Bus", "BuildingNonResidential"])]
+        df_tsne = pd.DataFrame({
+            't-SNE1': tsne_features[:, 0],
+            't-SNE2': tsne_features[:, 1],
+            'Class': features['ClassName'],
+            'Filename': features['Filename']
+        })
 
-    # Plot 10 random classes from the dataset with seaborn
-    plt.figure(dpi=100, figsize=(9,6))
-    sns.scatterplot(x='x', y='y', hue='ClassName', data=tsne_df)
-    plt.savefig(f"../../res/t-SNE_plots/t-SNE_{iterations}.png")
+        #fully select all samples for 10 random classes
+        tsne_df_truncated = df_tsne.loc[df_tsne['Class'].isin(random_classes)]
+
+        #df_tsne_truncated = df_tsne.loc[df_tsne['Class'].isin(["Bicycle", "Door", "Wheel", "Bus", "BuildingNonResidential"])]
+
+
+        # colors = [mcolors.hsv_to_rgb([x/len(class_names), 0.7, 0.9]) for x in range(len(class_names))]
+        # colors_hex = [mcolors.to_hex(c) for c in colors]
+
+        colors_truncated = [mcolors.hsv_to_rgb([x/NUM_RANDOM_CLASSES, 0.7, 0.9]) for x in range(NUM_RANDOM_CLASSES)]
+
+        colors = [mcolors.hsv_to_rgb([x//10 * 0.1, 0.7, 0.5 + (x%7)/12]) for x in range(len(class_names))]
+        colors_hex_truncated = [mcolors.to_hex(c) for c in colors_truncated]
+        colors_hex = [mcolors.to_hex(c) for c in colors]
+
+        fig = px.scatter(
+        # df_tsne,
+            tsne_df_truncated,
+            x='t-SNE1',
+            y='t-SNE2',
+            color='Class',
+            hover_data=['Filename'],
+            title=f'10 random classes after {ITERATIONS} iterations with perplexity {PERPLEXITY}',
+            width=800,
+            height=600,
+            color_discrete_sequence=colors_hex_truncated
+        )
+        fig.update_layout(legend=dict(itemsizing='constant'))
+        fig.show()
+        fig.write_image(f"../../res/t-SNE_plots/t-SNE_{ITERATIONS}_{PERPLEXITY}_{RANDOM_STATE}_truncated.png")
+
+        fig2 = px.scatter(
+            df_tsne,
+            x='t-SNE1',
+            y='t-SNE2',
+            color='Class',
+            hover_data=['Filename'],
+            title=f'All classes after {ITERATIONS} iterations with perplexity {PERPLEXITY}',
+            width=800,
+            height=600,
+            color_discrete_sequence=colors_hex
+        )
+        fig2.update_layout(legend=dict(itemsizing='constant'))
+        fig2.show()
+        fig2.write_image(f"../../res/t-SNE_plots/t-SNE_{ITERATIONS}_{PERPLEXITY}_{RANDOM_STATE}_{METHOD}_all.png")

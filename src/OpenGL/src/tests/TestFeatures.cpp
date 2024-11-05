@@ -33,18 +33,23 @@ namespace test {
 		GLCall(glCullFace(GL_BACK));    // Cull back faces
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
-		m_snapshotDirectory = "../../res/snapshots";
-
+		m_featureFile = "features_final.txt";
 		m_queryEngine = std::make_unique<QueryEngine>();
 
+		std::string load_tree_file = "";
+		m_ann = std::make_unique<ANN>(m_featureFile, load_tree_file, 0.55, 100);
+
 		m_textures = {};
-		m_featureFile = "features_final.txt";
+		m_textures_with_distances = {};
+		m_snapshotDirectory = "../../res/snapshots_new/snapshots";
+
+
 		std::string saveDistanceMatrix = "res/features_okaymeshes/distance_matrix.txt";
 
 		std::cout << "Loading features..." << std::endl;
 
 		m_queryEngine->LoadFeatures(m_featureFile);
-		m_queryEngine->Initialize(STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EMD, 0.5f);
+		m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7f);
 		std::cout << "Features loaded" << std::endl;
 		//m_queryEngine->ComputeFullDistanceMatrix();
 		//std::cout << "Distances computed" << std::endl;
@@ -253,9 +258,9 @@ namespace test {
 		//ImGui::SliderFloat3("Translation camera", &m_translationCamera.x, -5.0, 5.0f);
 		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-		ImGui::Text("Camera:");
+		/*ImGui::Text("Camera:");
 		ImGui::Text("X.pos: %.3f, Y.pos: %.3f, Z.pos: %.3f ", m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
-		ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);
+		ImGui::Text("Yaw: %.3f, Pitch: %.3f", m_camera->Yaw, m_camera->Pitch);*/
 
 		/*if (ImGui::Button("RESET CAMERA")) {
 			m_camera->Position = glm::vec3(0.0f, 0.0f, 5.0f);
@@ -284,6 +289,28 @@ namespace test {
 
 		//	ImGui::PopStyleColor(); // Reset button colors
 		//}
+
+		// Select button for choosing ANN or exhaustive search, also list previous render time if it is not equal to -1
+
+		// Increase text size
+		ImGui::SetWindowFontScale(1.3f);
+		std::string m_query_type_string = (m_query_type % 2) ? "ANN" : "Exhaustive search";
+		std::string query_text = "Current query mode is: " + m_query_type_string;
+		ImGui::Text(query_text.c_str());
+		ImGui::SetWindowFontScale(1.0f);
+
+		if (m_query_time != -1){
+			ImGui::Text("Previous query time was %.2f ms", m_query_time * 1000);
+		}
+
+
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(1.0f, 0.0f, 0.0f, 1.0f)); // Set button color to red
+        ImGui::PushStyleVar(ImGuiStyleVar_ButtonTextAlign, ImVec2(0.5f, 0.5f)); // Center-align button text
+		if (ImGui::Button("Switch query mode", ImVec2(150, 50))) {
+			m_query_type++;
+		} // Larger button size
+        ImGui::PopStyleVar();
+        ImGui::PopStyleColor();
 
 		// Button for going up one directory
 		std::string textToDisplay;
@@ -322,7 +349,7 @@ namespace test {
 
         if (m_textures.size() != 0) {
             ImGui::Begin("Closest Objects");
-            ImGui::SetWindowFontScale(1.5f); // Increase the font scale
+            ImGui::SetWindowFontScale(1.3f); // Increase the font scale
             ImGui::Columns(4); // Display images in two columns
             int rank = 1;
             for (const auto& [texture, distance, class_name] : m_textures_with_distances) {
@@ -334,7 +361,7 @@ namespace test {
                     ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "%s (Rank: %d)", class_name.c_str(), rank);
                 }
 				ImGui::Text("Distance:  %.2f", distance);
-                ImGui::Image((void*)(intptr_t)texture, ImVec2(ImGui::GetWindowWidth() * 0.24f, ImGui::GetWindowWidth() * 0.24f));  // Display each image with a percentage of the window size
+                ImGui::Image((void*)(intptr_t)texture, ImVec2(ImGui::GetWindowWidth() * 0.24f, ImGui::GetWindowWidth() * 0.2f));  // Display each image with a percentage of the window size
                 ImGui::NextColumn(); // Move to the next column
                 rank++;
             }
@@ -458,28 +485,49 @@ namespace test {
 		std::string obj_name = p.filename().string();
 		std::string file_name = class_name + "/" + obj_name;
 
-		m_textures.clear();
-		m_textures_with_distances.clear();
 		// Retrieve the distances to all other objects
 		int modelIndex = m_queryEngine->getIndex(file_name);
-		std::vector<std::pair<double, int>> distances;
-		for (int i = 0; i < NUM_SHAPES; i++) {
-			if (i != modelIndex) {
 
-				double distance = m_queryEngine->ComputeDistance(modelIndex, i);
-				distances.push_back(std::make_pair(distance, i));
+		int K = 20;
+
+		std::vector<std::pair<double, int>> distances;
+		m_textures.clear();
+		m_textures_with_distances.clear();
+
+		const auto start = std::chrono::high_resolution_clock::now();
+
+		if (m_query_type % 2 == 0) { // Exhaustive search
+			for (int i = 0; i < NUM_SHAPES; i++) {
+				if (i != modelIndex) {
+
+					double distance = m_queryEngine->ComputeDistance(modelIndex, i);
+					distances.push_back(std::make_pair(distance, i));
+				}
+			}
+
+			// Sort the distances
+			std::sort(distances.begin(), distances.end());
+		}
+		else if (m_query_type % 2 == 1) {
+			std::tuple<std::vector<int>, std::vector<double>, double> closest_distances_time = m_ann->GetClosest(K+1, 20, modelIndex);
+
+			for (int i = 0; i < K+1; i++) {
+				if (i == 0) {
+					continue;
+				}
+				distances.push_back(std::make_pair(std::get<1>(closest_distances_time)[i], std::get<0>(closest_distances_time)[i])); // fix format
 			}
 		}
-
-		// Sort the distances
-		std::sort(distances.begin(), distances.end());
+		const auto end = std::chrono::high_resolution_clock::now();
+		const std::chrono::duration<double> elapsed = end - start;
+		m_query_time = elapsed.count();
 
 		/*std::cout << "Features for " << file_name << std::endl;
 		for (int i = 0; i < NUM_SCALAR_FEATURES; i++) {
 			std::cout << m_queryEngine->m_scalar_feature_names[i] << ": " << m_queryEngine->m_features[modelIndex][i] << std::endl;
 		}*/
 		// Print the 20 closest
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < K; i++) {
 			//std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second) << "/" << m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
 			std::filesystem::path objPath = m_queryEngine->getObjectName(distances[i].second);
 			std::string imagePath = m_snapshotDirectory + "/" + m_queryEngine->getClassName(distances[i].second) + "/" + objPath.stem().string() + ".png";

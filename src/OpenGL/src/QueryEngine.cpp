@@ -199,7 +199,7 @@ double QueryEngine::ComputeDistance(int query_obj, int other_obj) {
 
 double QueryEngine::computeScalarDistance(int i, int j) {
 	float weight_sum = getScalarWeightsSum();
-	if (m_distance_type_scalar == DISTANCE_TYPE::ABSOLUTE) {
+	if (m_distance_type_scalar == DISTANCE_TYPE::MYABSOLUTE) {
 		float distance = 0.0f;
 		for (int k = 0; k < NUM_SCALAR_FEATURES; k++) { // Only scalar 
 			float cur_weight = m_gamma * m_scalar_weights[k] / weight_sum;
@@ -291,7 +291,7 @@ double QueryEngine::computeHistogramDistance(int i, int j, HISTOGRAM_FEATURES hi
 		double true_distance = sqrt(distance);
 		return standardizeHistogramDistance(true_distance, hist_type);
 	}
-	else if (m_distance_type_histogram == DISTANCE_TYPE::ABSOLUTE) {
+	else if (m_distance_type_histogram == DISTANCE_TYPE::MYABSOLUTE) {
 		double distance = 0.0f;
 		for (int k = m_histogram_ranges[hist_type].first; k < m_histogram_ranges[hist_type].second; k++) {
 			distance += abs(m_features[i][k] - m_features[j][k]);
@@ -321,7 +321,7 @@ double QueryEngine::standardizeHistogramDistance(double true_distance, HISTOGRAM
 		mean = hist_cosine_min_max_mu_std[k][2];
 		std = hist_cosine_min_max_mu_std[k][3];
 	}
-	else if (m_distance_type_histogram == DISTANCE_TYPE::ABSOLUTE) {
+	else if (m_distance_type_histogram == DISTANCE_TYPE::MYABSOLUTE) {
 		min = hist_absolute_min_max_mu_std[k][0];
 		max = hist_absolute_min_max_mu_std[k][1];
 		mean = hist_absolute_min_max_mu_std[k][2];
@@ -358,10 +358,10 @@ int QueryEngine::getIndex(std::string name_obj) {
 	r = NUM_SHAPES - 1;
 	while (l <= r) {
 		int m = l + (r - l) / 2;
-		std::cout << "m: " << m << std::endl;
+		//std::cout << "m: " << m << std::endl;
 		// Check if x is present at mid
-		std::cout << m_name_map[m] << std::endl;
-		std::cout << name_obj << std::endl;
+		//std::cout << m_name_map[m] << std::endl;
+		//std::cout << name_obj << std::endl;
 		int cmp = m_name_map[m].compare(name_obj);
 		if (cmp == 0)
 			return m;
@@ -483,6 +483,7 @@ std::vector<std::pair<float, std::string>> QueryEngine::DoBenchmark(int query_ob
 	std::vector<std::pair<float, std::string>> results;
 	std::vector<std::pair<float, int>> distances;
 
+
 	for (int i = 0; i < NUM_SHAPES; i++) {
 		if (i == query_obj) {
 			continue;
@@ -493,5 +494,28 @@ std::vector<std::pair<float, std::string>> QueryEngine::DoBenchmark(int query_ob
 	for (int i = 0; i < K; i++) {
 		results.push_back(std::make_pair(distances[i].first, getObjectName(distances[i].second)));
 	}
+	return results;
+}
+
+std::vector<std::pair<float, std::string>> QueryEngine::DoBenchmarkTiming(int query_obj, int K, double& total_time) {
+	auto start = std::chrono::high_resolution_clock::now();
+
+	std::vector<std::pair<float, std::string>> results;
+	std::vector<std::pair<float, int>> distances;
+
+	for (int i = 0; i < NUM_SHAPES; i++) {
+		if (i == query_obj) {
+			continue;
+		}
+		distances.push_back(std::make_pair(ComputeDistance(query_obj, i), i));
+	}
+	std::sort(distances.begin(), distances.end());
+	for (int i = 0; i < K; i++) {
+		results.push_back(std::make_pair(distances[i].first, getObjectName(distances[i].second)));
+	}
+	auto end = std::chrono::high_resolution_clock::now();
+
+	total_time = std::chrono::duration<double>(end - start).count();
+
 	return results;
 }
