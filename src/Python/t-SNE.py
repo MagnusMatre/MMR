@@ -6,7 +6,7 @@ import seaborn as sns
 import numpy as np
 
 # load in a feature file and store in a pandas dataframe
-features = pd.read_csv("../../res/features_final.txt", sep='\t')
+features = pd.read_csv("C:/Users/masou/OneDrive/Desktop/Utrecht University/Multimedia Retrieval/Assignment/MMR/src/Python/features_final.txt", sep='\t')
 
 #extract labels
 labels = features['ClassName']
@@ -60,4 +60,4 @@ for iterations in [1000]:
     # Plot 10 random classes from the dataset with seaborn
     plt.figure(dpi=100, figsize=(9,6))
     sns.scatterplot(x='x', y='y', hue='ClassName', data=tsne_df)
-    plt.savefig(f"../../res/t-SNE_plots/t-SNE_{iterations}.png")
+    plt.savefig(f"./t-SNE_plots/t-SNE_{iterations}.png")

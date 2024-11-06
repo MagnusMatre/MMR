@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 
 # load in a feature file and store in a pandas dataframe
-features = pd.read_csv("../../res/features_final.txt", sep='\t')
+features = pd.read_csv("C:/Users/masou/OneDrive/Desktop/Utrecht University/Multimedia Retrieval/Assignment/MMR/src/Python/features_final.txt", sep='\t')
 
 # exract labels
 labels = features['ClassName']
@@ -27,7 +27,7 @@ for class_name in class_names:
     class_indices.append(indices)
 
 # load in distance matrix
-distance_matrix = pd.read_csv("../../res/distance_matrix/0_0_0.700000.txt", sep=',', header=None)
+distance_matrix = pd.read_csv("C:/Users/masou/OneDrive/Desktop/Utrecht University/Multimedia Retrieval/Assignment/MMR/src/Python/0_0_0.700000.txt", sep=',', header=None)
 
 # drop the last empty column
 distance_matrix = distance_matrix.drop(columns=distance_matrix.columns[-1])
