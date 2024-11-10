@@ -3,6 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
+def compute_AUC(sens_spec):
+    # compute the area under the curve
+    auc = 0
+    for i in range(1, len(sens_spec)):
+        auc += (sens_spec[i][0] - sens_spec[i-1][0]) * (sens_spec[i][1] + sens_spec[i-1][1]) / 2
+    return auc
+
 # load in a feature file and store in a pandas dataframe
 features = pd.read_csv("../../res/features_final.txt", sep='\t')
 
@@ -40,13 +47,32 @@ sorted_indices = np.argsort(distance_matrix, axis=1)
 # delete the first column, as it is the index of the instance itself
 sorted_indices = np.delete(sorted_indices, 0, axis=1) 
 
+TP_matrix = np.zeros((len(features), len(features)))
+
+# iterate over all instances
+# for i in tqdm(range(len(features))):
+#     for q in range(len(features)-1):
+#         if q == 0:
+#             if labels[sorted_indices[i][q]] == labels[i]:
+#                 TP_matrix[i][q] = 1
+#             else:
+#                 TP_matrix[i][q] = 0
+#         else:
+#             if labels[sorted_indices[i][q]] == labels[i]:
+#                 TP_matrix[i][q] = TP_matrix[i][q-1] + 1
+#             else:
+#                 TP_matrix[i][q] = TP_matrix[i][q-1]
+
+#np.savetxt("../../res/TP_matrix/matrix.txt", TP_matrix)
+TP_matrix = np.loadtxt("../../res/TP_matrix/matrix.txt")
+print(TP_matrix)
 # careful when subtracting 1 from class_frequencies[i] when you don't want to count the query instance itself
 
-K_TIERS = False
+K_TIERS = True
 PRECISION = False # this probably produces the "best" results in the sense that it looks the best for us
 LAST_RANK = False
 ACCURACY = False # useless
-F1_SCORE = True 
+F1_SCORE = False 
 ROC_CURVE = False # this one is interesting
 
 selected_classes = ["Bicycle", "Door", "Wheel", "Bus", "BuildingNonResidential"]
@@ -74,10 +100,18 @@ if K_TIERS:
     to_plot = [0, len(sorted_indices)//4, len(sorted_indices)//2, 3*len(sorted_indices)//4, len(sorted_indices)-1]
 
     # # Plot the K-tiers
-    plt.figure(dpi=100)
+    plt.figure(figsize =(8,5))
     plt.title("K-tiers of some classes")
     for i in to_plot:
-        plt.plot(k_tiers[sorted_indices[i]], label=class_names[sorted_indices[i]])
+        plt.plot(k_tiers[sorted_indices[i]][:5], label=class_names[sorted_indices[i]])
+
+
+    # change x-ticks starting from index 1
+    plt.xticks(np.arange(5), np.arange(1, 6))
+    plt.xlim(0,4)
+    plt.ylim(0,1)
+    plt.ylabel("Fraction of instances in tier")
+    plt.xlabel("Kth tier")
     plt.legend()
     plt.show()
 
@@ -102,6 +136,7 @@ if PRECISION:
     print(sum(average_precision) / len(class_names))
     print(total_average_precision / len(features))
 
+    
 
     # plot the average precision in a bar chart per class
     plt.figure(dpi=100)
@@ -246,41 +281,59 @@ if F1_SCORE:
 
 if ROC_CURVE:
     # Compute the ROC curve with query size Q, so true positive rate vs false positive rate
-    Q_values = np.geomspace(1, len(features)-1, num=5, dtype=int)
+    Q_values = list(range(1, len(features)))
 
     sens_spec = []
+    sens_spec_classes= [[] for _ in range(len(class_names))]
 
     for Q, Qval in tqdm(enumerate(Q_values)):
-        specificity = 0
-        sensitivity = 0
-        for i in range(len(features)):
-            # positives = Qval
-            # negatives = len(features) - 1 - Qval
-            # true = class__frequencies[i] - 1 = number of instances of the class - 1
-            # false = len(features) - class_frequencies[i] = number of instances NOT of class i
+        specificity_total = 0
+        sensitivity_total = 0
+        for i in range(len(class_names)):
+            specificity_class = 0
+            sensitivity_class = 0
 
-            # compute specificity and sensitivity for instance i
+            c = class_frequencies_map[class_names[i]] - 1
+            d = len(features) - 1
+            s = Qval
 
-            # compute true positive rate and false positive rate
-            c = class_frequencies_map[labels[i]] - 1
+            for inst in class_indices[i]:
+                #true_positive = len([x for x in sorted_indices[inst][:Qval] if labels[x] == labels[inst]])
+                true_positive = TP_matrix[inst][Qval-1]
+                false_positives = s - true_positive
 
-            true_positive = len([x for x in sorted_indices[i][:Qval] if labels[x] == labels[i]])
-            false_positive = len([x for x in sorted_indices[i][:Qval] if labels[x] != labels[i]])
+                true_negative = (d-c) - false_positives
 
-            true_negative = len([x for x in sorted_indices[i][Qval:] if labels[x] != labels[i]])
-            false_negative = class_frequencies_map[labels[i]] - 1 - true_positive
+                sensitivity_class += true_positive / c / (c+1)
+                specificity_class += true_negative / (d-c) / (c+1)
 
-            sensitivity += true_positive / (c) / len(features)
-            specificity += true_negative / (len(features) - c) / len(features)
+                sensitivity_total += true_positive / c / len(features)
+                specificity_total += true_negative / (d-c) / len(features)
+            
+            sens_spec_classes[i].append((sensitivity_class, specificity_class))
+        
+        sens_spec.append((sensitivity_total, specificity_total))
 
-        sens_spec.append((sensitivity, specificity))
-    
     # find index Q_best where sensitivity * specificity is maximal
     Q_best = np.argmax([x[0]*x[1] for x in sens_spec])
 
+    AUC_ALL = compute_AUC(sens_spec)
+    AUC_classes = []
+    for i in range(len(class_names)):
+        AUC_classes.append(compute_AUC(sens_spec_classes[i]))
+
+    AUC_ind = np.argsort(AUC_classes)
+
+    selected_classes_indices = [AUC_ind[0], AUC_ind[len(class_names)//2], AUC_ind[-1]]
+
+    print(sens_spec_classes[selected_classes_indices[-1]])
+
     # plot the ROC curve
-    plt.figure(dpi=100)
-    plt.plot([x[0] for x in sens_spec], [x[1] for x in sens_spec], marker='o', color="blue")
+    plt.figure(dpi=100, figsize=(8,8))
+    plt.plot([x[0] for x in sens_spec], [x[1] for x in sens_spec], marker='.', color="black", label=f"ALL - AUC={round(AUC_ALL, 2)}")
+
+    for ind in selected_classes_indices:
+        plt.plot([x[0] for x in sens_spec_classes[ind]], [x[1] for x in sens_spec_classes[ind]], marker='.', label=f"{class_names[ind]} - AUC={round(AUC_classes[ind],2)}")
 
     for i in [0, Q_best, len(sens_spec)-1]:
         plt.annotate(f'Q={Q_values[i]}', (sens_spec[i][0] + 0.01, sens_spec[i][1] + 0.01))
@@ -290,9 +343,8 @@ if ROC_CURVE:
 
     plt.xlabel("Sensitivity")
     plt.ylabel("Specificity")
-    plt.xlim(0, 1)
-    plt.ylim(0, 1)
+    plt.xlim(0, 1.01)
+    plt.ylim(0, 1.01)
     plt.title("ROC curve")
- 
-    
+    plt.legend()
     plt.show()

@@ -10,6 +10,9 @@ import plotly.express as px
 # load in a feature file and store in a pandas dataframe
 features = pd.read_csv("../../res/features_final.txt", sep='\t')
 
+#distances = pd.read_csv("../../res/distance_matrix/0_0_0.700000.txt", sep=',', header=None)
+
+#print(distances)
 #extract labels
 labels = features['ClassName']
 
@@ -51,7 +54,7 @@ NUM_RANDOM_CLASSES = 10
 np.random.seed(0)
 random_classes = np.random.choice(class_names, NUM_RANDOM_CLASSES)
 
-for ITERATIONS in [50000]:
+for ITERATIONS in [100]:
     for PERPLEXITY in [50]:
 # for ITERATIONS in [1000, 5000, 10000, 50000]:
 #     for PERPLEXITY in [10, 20, 30, 40, 50, 60, 80, 100]:
@@ -60,6 +63,7 @@ for ITERATIONS in [50000]:
 
         # Fit the model to the features
         tsne_features = model.fit_transform(pure_features, y=labels)
+        #tsne_features = model.fit_transform(distances, y=labels)
 
         df_tsne = pd.DataFrame({
             't-SNE1': tsne_features[:, 0],

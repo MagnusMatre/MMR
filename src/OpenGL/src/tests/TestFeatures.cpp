@@ -346,28 +346,30 @@ namespace test {
 		}
 
 		// Open a separate window to display the closests objects
-
-        if (m_textures.size() != 0) {
-            ImGui::Begin("Closest Objects");
-            ImGui::SetWindowFontScale(1.3f); // Increase the font scale
-            ImGui::Columns(4); // Display images in two columns
-            int rank = 1;
-            for (const auto& [texture, distance, class_name] : m_textures_with_distances) {
-                std::filesystem::path p(m_curModelName); 
-                std::string query_class_name = p.parent_path().filename().string(); 
-                if (class_name == query_class_name) {
-                    ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1.0f), "%s (%d)", class_name.c_str(), rank);
-                } else {
-                    ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "%s (Rank: %d)", class_name.c_str(), rank);
-                }
-				ImGui::Text("Distance:  %.2f", distance);
-                ImGui::Image((void*)(intptr_t)texture, ImVec2(ImGui::GetWindowWidth() * 0.24f, ImGui::GetWindowWidth() * 0.2f));  // Display each image with a percentage of the window size
-                ImGui::NextColumn(); // Move to the next column
-                rank++;
-            }
-            ImGui::Columns(1); // Reset to single column layout
-            ImGui::End();
-        }
+		if (m_curGeomMesh != nullptr) {
+			if (m_textures.size() != 0) {
+				ImGui::Begin("Closest Objects");
+				ImGui::SetWindowFontScale(1.3f); // Increase the font scale
+				ImGui::Columns(4); // Display images in two columns
+				int rank = 1;
+				for (const auto& [texture, distance, class_name] : m_textures_with_distances) {
+					std::filesystem::path p(m_curModelName);
+					std::string query_class_name = p.parent_path().filename().string();
+					if (class_name == query_class_name) {
+						ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s (%d)", class_name.c_str(), rank);
+					}
+					else {
+						ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s (Rank: %d)", class_name.c_str(), rank);
+					}
+					ImGui::Text("Distance:  %.2f", distance);
+					ImGui::Image((void*)(intptr_t)texture, ImVec2(ImGui::GetWindowWidth() * 0.24f, ImGui::GetWindowWidth() * 0.2f));  // Display each image with a percentage of the window size
+					ImGui::NextColumn(); // Move to the next column
+					rank++;
+				}
+				ImGui::Columns(1); // Reset to single column layout
+				ImGui::End();
+			}
+		}
 
 	}
 
