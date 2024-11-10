@@ -68,9 +68,9 @@ TP_matrix = np.loadtxt("../../res/TP_matrix/matrix.txt")
 print(TP_matrix)
 # careful when subtracting 1 from class_frequencies[i] when you don't want to count the query instance itself
 
-K_TIERS = True
+K_TIERS = False
 PRECISION = False # this probably produces the "best" results in the sense that it looks the best for us
-LAST_RANK = False
+LAST_RANK = True
 ACCURACY = False # useless
 F1_SCORE = False 
 ROC_CURVE = False # this one is interesting
@@ -164,19 +164,22 @@ if LAST_RANK:
                     break
 
             class_last_rank += cur_last_rank / class_frequencies[i]
+            total_last_rank += cur_last_rank / len(features) 
 
         last_rank[i] = class_last_rank
-        total_last_rank += class_last_rank / (len(features) - 1)
 
     print(sum(last_rank) / len(class_names))
-    print(total_last_rank / len(features))
+    print(total_last_rank)
     # plot the last rank in a bar chart per class
-    plt.figure(dpi=100)
+    plt.figure(figsize=(10,5))
     plt.title("Last rank")
     plt.bar(class_names, last_rank, alpha=0.5, color="b")
+    plt.hlines(total_last_rank, -1, len(class_names), colors="black", linestyles="dashed", label="Average last rank")
     plt.xlabel("Class")
     plt.xticks(rotation=90)
+    plt.xlim(-1, len(class_names))
     plt.tight_layout()
+    plt.legend()
     plt.show()
 
 if ACCURACY: # feels kind of useless because it focusses on true negatives...
