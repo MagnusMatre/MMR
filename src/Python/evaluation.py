@@ -69,16 +69,18 @@ print(TP_matrix)
 # careful when subtracting 1 from class_frequencies[i] when you don't want to count the query instance itself
 
 K_TIERS = False
-PRECISION = True # this probably produces the "best" results in the sense that it looks the best for us
+PRECISION = False # this probably produces the "best" results in the sense that it looks the best for us
 LAST_RANK = False
 ACCURACY = False # useless
 F1_SCORE = False 
 ROC_CURVE = False # this one is interesting
+MAX_RANK = True
 
 selected_classes = ["Bicycle", "Door", "Wheel", "Bus", "BuildingNonResidential"]
 
 if K_TIERS:
     # Compute K-tiers, so for each class compute the number of instances in each tier
+    average_k_tiers = np.zeros(10)
     k_tiers = [[] for _ in range(len(class_names))] 
     for i in tqdm(range(len(class_names))):
         k_tier = np.zeros(10)
@@ -86,7 +88,9 @@ if K_TIERS:
         # iterate over all instances of the class
         for inst in class_indices[i]:
             for k in range(10):
-                k_tier[k] += len([x for x in sorted_indices[inst][(class_frequencies[i]-1)*(k):(class_frequencies[i]-1)*(k+1)] if labels[x] == class_names[i]]) / ((class_frequencies[i]-1) * class_frequencies[i]) 
+                frac = len([x for x in sorted_indices[inst][(class_frequencies[i]-1)*(k):(class_frequencies[i]-1)*(k+1)] if labels[x] == class_names[i]]) / (class_frequencies[i]-1)
+                k_tier[k] += frac / class_frequencies[i]
+                average_k_tiers[k] += frac / len(features)
 
         k_tiers[i] = k_tier
 
@@ -95,27 +99,28 @@ if K_TIERS:
     # sort the list of k_tiers on the first tier in descending order, also keep the original indices
     sorted_indices = np.argsort(k_tiers[:,0])[::-1]
 
-    print(k_tiers)
-
-    to_plot = [0, len(sorted_indices)//4, len(sorted_indices)//2, 3*len(sorted_indices)//4, len(sorted_indices)-1]
+    #to_plot = [0, len(sorted_indices)//4, len(sorted_indices)//2, 3*len(sorted_indices)//4, len(sorted_indices)-1]
+    to_plot = [0, len(sorted_indices)//2, len(sorted_indices)-1]
+    colors = {0 : "r", 1 : "g", 2 : "b"}
 
     # # Plot the K-tiers
-    plt.figure(figsize =(8,5))
-    plt.title("K-tiers of some classes")
-    for i in to_plot:
-        plt.plot(k_tiers[sorted_indices[i]][:5], label=class_names[sorted_indices[i]])
-
+    plt.figure(figsize =(8,8))
+    #plt.title("K-tiers of some classes")
+    plt.plot(average_k_tiers[:5], color="black", label="Average")
+    for i, ind in enumerate(to_plot):
+        plt.plot(k_tiers[sorted_indices[ind]][:5], color=colors[i], label=class_names[sorted_indices[ind]])
 
     # change x-ticks starting from index 1
     plt.xticks(np.arange(5), np.arange(1, 6))
     plt.xlim(0,4)
     plt.ylim(0,1)
-    plt.ylabel("Fraction of instances in tier")
+    plt.ylabel("Fraction of instances in Kth tier")
     plt.xlabel("Kth tier")
     plt.legend()
+    plt.savefig("../../res/evaluation/K-tiers.png")
     plt.show()
 
-if True:
+if PRECISION:
     # compute average precision per class, i.e., the number of times the first instance of the class is from the same class
 
     K_vals = [1, 5, 20]
@@ -151,50 +156,59 @@ if True:
     colors = {0 : "r", 1 : "g", 2 : "b"}
 
     plt.figure(figsize=(10,6))
-    plt.title(f"Average {K}-hit precision per class")
     for i,K in enumerate(K_vals):
         plt.bar(class_names, average_precisions[:, i], color=colors[i])
-        plt.hlines(total_average_precisions[i] / len(features), -1, len(class_names), colors=colors[i], linestyles="dashed", label=f"Average precision K={K}: {total_average_precisions[i] / len(features)}")
+        plt.hlines(total_average_precisions[i] / len(features), -1, len(class_names), colors=colors[i], linestyles="dashed", label=f"Average precision K={K}: {round(total_average_precisions[i] / len(features),2):.2f}")
     plt.xlabel("Class")
     plt.xlim(-1, len(class_names))
     plt.xticks(rotation=90)
     plt.legend()
     plt.tight_layout()
+    plt.savefig("../../res/evaluation/average_precision_per_class.png")
     plt.show()
 
 if LAST_RANK:
     # Find the number of instances that are of the same rank until we hit a different class
-    last_rank = np.zeros(len(class_names))
-    total_last_rank = 0
-    for i in tqdm(range(len(class_names))):
-        class_last_rank = 0
-        # iterate over all instances of the class
-        for inst in class_indices[i]:
-            cur_last_rank = 0
-            # find the first instance of the class in the sorted indices
-            for j in range(len(sorted_indices[inst])):
-                if labels[sorted_indices[inst][j]] == class_names[i]:
+    last_rank_vals = [3,2,1]
+
+    last_rank = np.zeros((len(class_names), len(last_rank_vals)))
+    total_last_rank = np.zeros(len(last_rank_vals))
+    for k, L in enumerate(last_rank_vals):
+        for i in tqdm(range(len(class_names))):
+            # iterate over all instances of the class
+            for inst in class_indices[i]:
+                cur_last_rank = 0
+                # find the first instance of the class in the sorted indices
+                cur_L = 0
+                for j in range(len(sorted_indices[inst])):
+                    if labels[sorted_indices[inst][j]] != class_names[i]:
+                        cur_L += 1
+
+                        if cur_L >= L:
+                            break
+
                     cur_last_rank += 1
-                else:
-                    break
 
-            class_last_rank += cur_last_rank / class_frequencies[i]
-            total_last_rank += cur_last_rank / len(features) 
 
-        last_rank[i] = class_last_rank
+                last_rank[i,k] += cur_last_rank / class_frequencies[i]
+                total_last_rank[k] += cur_last_rank / len(features) 
+
+    colors = {0 : "r", 1 : "g", 2 : "b"}
 
     print(sum(last_rank) / len(class_names))
     print(total_last_rank)
     # plot the last rank in a bar chart per class
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(10,8))
     plt.title("Last rank")
-    plt.bar(class_names, last_rank, color="b")
-    plt.hlines(total_last_rank, -1, len(class_names), colors="black", linestyles="dashed", label="Average last rank")
+    for i, L in enumerate(last_rank_vals):
+        plt.bar(class_names, last_rank[:,i], color=colors[i])
+        plt.hlines(total_last_rank[i], -1, len(class_names), colors=colors[i], linestyles="dashed", label=f"Average last rank L={L}: {round(total_last_rank[i],2):.2f}")
     plt.xlabel("Class")
     plt.xticks(rotation=90)
     plt.xlim(-1, len(class_names))
     plt.tight_layout()
     plt.legend()
+    plt.savefig("../../res/evaluation/last_rank_per_class.png")
     plt.show()
 
 if ACCURACY: # feels kind of useless because it focusses on true negatives...
@@ -344,17 +358,18 @@ if ROC_CURVE:
 
     selected_classes_indices = [AUC_ind[0], AUC_ind[len(class_names)//2], AUC_ind[-1]]
 
-    print(sens_spec_classes[selected_classes_indices[-1]])
+    colors = {0 : "r", 1 : "g", 2 : "b"}
 
     # plot the ROC curve
-    plt.figure(dpi=100, figsize=(8,8))
-    plt.plot([x[0] for x in sens_spec], [x[1] for x in sens_spec], marker='.', color="black", label=f"ALL - AUC={round(AUC_ALL, 2)}")
-
-    for ind in selected_classes_indices:
-        plt.plot([x[0] for x in sens_spec_classes[ind]], [x[1] for x in sens_spec_classes[ind]], marker='.', label=f"{class_names[ind]} - AUC={round(AUC_classes[ind],2)}")
-
+    plt.figure(figsize=(8,8))
+    plt.plot([x[0] for x in sens_spec], [x[1] for x in sens_spec], marker='.', color="black", label=f"ALL - AUC={round(AUC_ALL, 2):.2f}")
+    for i,ind in enumerate(selected_classes_indices):
+        plt.plot([x[0] for x in sens_spec_classes[ind]], [x[1] for x in sens_spec_classes[ind]],
+                  marker='.',
+                  color=colors[i],
+                  label=f"{class_names[ind]} - AUC={round(AUC_classes[ind],2):.2f}")
     for i in [0, Q_best, len(sens_spec)-1]:
-        plt.annotate(f'Q={Q_values[i]}', (sens_spec[i][0] + 0.01, sens_spec[i][1] + 0.01))
+        plt.annotate(f'Q={Q_values[i]}', (sens_spec[i][0] + 0.01, sens_spec[i][1] + 0.02))
 
     # plot dashed line from (0,1) to (1, 0)
     plt.plot([0, 1], [1, 0], 'k--')
@@ -363,6 +378,34 @@ if ROC_CURVE:
     plt.ylabel("Specificity")
     plt.xlim(0, 1.01)
     plt.ylim(0, 1.01)
-    plt.title("ROC curve")
     plt.legend()
+    plt.savefig("../../res/evaluation/ROC_curve.png")
+    plt.show()
+
+if MAX_RANK:
+    # compute the index at which the last instance of the class is found and divide by the number of instances of that class
+    max_rank = np.zeros(len(class_names))
+    total_max_rank = 0
+
+    for i in tqdm(range(len(class_names))):
+        for inst in class_indices[i]:
+            for j in range(len(features)):
+                if TP_matrix[inst][j] == class_frequencies[i] - 1:
+                    max_rank[i] += j / class_frequencies[i]
+                    total_max_rank += j / len(features)
+    
+    print(max_rank / len(class_names))
+    print(total_max_rank / len(features))
+
+    # plot the max rank in a bar chart per class
+    plt.figure(dpi=100)
+    plt.title("Max rank")
+    plt.bar(class_names, max_rank / len(class_names))
+    plt.hlines(total_max_rank / len(features), -1, len(class_names), linestyles="dashed", label=f"Average max rank: {round(total_max_rank / len(features),2):.2f}")
+    plt.xlabel("Class")
+    plt.xticks(rotation=90)
+    plt.xlim(-1, len(class_names))
+    plt.tight_layout()
+    plt.legend()
+    plt.savefig("../../res/evaluation/max_rank_per_class.png")
     plt.show()
