@@ -69,8 +69,8 @@ print(TP_matrix)
 # careful when subtracting 1 from class_frequencies[i] when you don't want to count the query instance itself
 
 K_TIERS = False
-PRECISION = False # this probably produces the "best" results in the sense that it looks the best for us
-LAST_RANK = True
+PRECISION = True # this probably produces the "best" results in the sense that it looks the best for us
+LAST_RANK = False
 ACCURACY = False # useless
 F1_SCORE = False 
 ROC_CURVE = False # this one is interesting
@@ -115,35 +115,50 @@ if K_TIERS:
     plt.legend()
     plt.show()
 
-if PRECISION:
+if True:
     # compute average precision per class, i.e., the number of times the first instance of the class is from the same class
-    average_precision = np.zeros(len(class_names))
-    total_average_precision = 0
 
-    K = 10
-    for i in tqdm(range(len(class_names))):
-        class_prec = 0
-        # iterate over all instances of the class
-        for inst in class_indices[i]:
-            # find the first instance of the class in the sorted indices
-            for k in range(K):
-                if sorted_indices[inst][k] in class_indices[i]:
-                    class_prec += 1/10
-                    total_average_precision += 1/10
+    K_vals = [1, 5, 20]
 
-        average_precision[i] = class_prec / class_frequencies[i]
+    average_precisions = np.zeros((len(class_names), len(K_vals)))
+    total_average_precisions = np.zeros(len(K_vals))
 
-    print(sum(average_precision) / len(class_names))
-    print(total_average_precision / len(features))
+    for j, K in enumerate(K_vals):
+        average_precision = np.zeros(len(class_names))
+        total_average_precision = 0
+
+        for i in tqdm(range(len(class_names))):
+            class_prec = 0
+            # iterate over all instances of the class
+            for inst in class_indices[i]:
+                # find the first instance of the class in the sorted indices
+                for k in range(K):
+                    if sorted_indices[inst][k] in class_indices[i]:
+                        class_prec += 1/K
+                        total_average_precision += 1/K
+
+            average_precision[i] = class_prec / class_frequencies[i]
+
+        average_precisions[:, j] = average_precision
+        total_average_precisions[j] = total_average_precision
+
+        print(sum(average_precision) / len(class_names))
+        print(total_average_precision / len(features))
 
     
 
     # plot the average precision in a bar chart per class
-    plt.figure(dpi=100)
+    colors = {0 : "r", 1 : "g", 2 : "b"}
+
+    plt.figure(figsize=(10,6))
     plt.title(f"Average {K}-hit precision per class")
-    plt.bar(class_names, average_precision)
+    for i,K in enumerate(K_vals):
+        plt.bar(class_names, average_precisions[:, i], color=colors[i])
+        plt.hlines(total_average_precisions[i] / len(features), -1, len(class_names), colors=colors[i], linestyles="dashed", label=f"Average precision K={K}: {total_average_precisions[i] / len(features)}")
     plt.xlabel("Class")
+    plt.xlim(-1, len(class_names))
     plt.xticks(rotation=90)
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
@@ -173,7 +188,7 @@ if LAST_RANK:
     # plot the last rank in a bar chart per class
     plt.figure(figsize=(10,5))
     plt.title("Last rank")
-    plt.bar(class_names, last_rank, alpha=0.5, color="b")
+    plt.bar(class_names, last_rank, color="b")
     plt.hlines(total_last_rank, -1, len(class_names), colors="black", linestyles="dashed", label="Average last rank")
     plt.xlabel("Class")
     plt.xticks(rotation=90)
