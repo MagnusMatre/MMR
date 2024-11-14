@@ -22,6 +22,7 @@ public:
 	void Execute_n_trees(std::string& feature_file, std::vector<int>& n_trees_values);
 	void Execute_k_search(std::string& feature_file, std::vector<int>& k_search_values);
 	void ExecuteQuerySize(std::string& feature_file, std::vector<int> K_values);
+	void ExecuteDistanceMatrix(std::string& feature_file, int K);
 
 
 	double Initialize(std::string& feature_file, std::string& load_tree_file, double beta, int n_trees);

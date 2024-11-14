@@ -15,6 +15,7 @@ void FeatureExtraction::Load(std::string& mesh_path, std::string& convex_hull_pa
 
 void FeatureExtraction::load_mesh(std::string& filename, CGALMesh& mesh) {
 	mesh.clear();
+	std::cout << "reading: " << filename << std::endl;
 	if (!CGALPMP::IO::read_polygon_mesh(filename, mesh)) {
 		std::cerr << "Error: cannot read file " << filename << std::endl;
 		return;

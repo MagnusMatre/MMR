@@ -16,7 +16,7 @@
 #define NUM_CURV_BINS 10 // not used yet
 
 #define RBOUND_A3 3.14159265360 // Note: maximal angle is pi
-#define RBOUND_D1 1.73205080757 // Note: maximal distance to barycenter is 0.5sqrt(3) since mesh is inside cube 
+#define RBOUND_D1 1.73205080757 // Note: maximal distance to barycenter is 0.5sqrt(3) since mesh is inside cube // WRONG!!!
 #define RBOUND_D2 1.73205080757 // Note: maximal distance between two points is sqrt(3) since mesh is inside cube 
 #define RBOUND_D3 0.93060485911 // Note: maximal area of triangle is 0.5sqrt(3) since mesh is inside cube (and then sqrt)
 #define RBOUND_D4 0.69336127440 // Note: maximal volume of tetrahedron is 1/3 since mesh is inside cube (and then cube root)

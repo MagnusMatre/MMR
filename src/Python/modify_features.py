@@ -14,7 +14,8 @@ from tqdm import tqdm
 '''
 
 # load in a feature file and store in a pandas dataframe
-feature_dir = "../../data/OkayMeshes3"
+#feature_dir = "../../data/OkayMeshes3"
+feature_dir = "../../data/PrimitivesNormalized"
 
 def load_feauture_file(feature_file):
     # Read the data from the .txt file, note that the file is tab separated
@@ -78,4 +79,4 @@ features.insert(19, "BBVolumeCubeRoot", np.cbrt(features['BB_Volume']))
 print(features.columns)
 
 # save the features to a new file
-features.to_csv("../../res/features_final.txt", sep='\t', index=False)
+features.to_csv("../../res/features_primitives.txt", sep='\t', index=False)

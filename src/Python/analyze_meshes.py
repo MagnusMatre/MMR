@@ -14,6 +14,10 @@ file_path_hopeless = '../../data/HopelessMeshes'
 def get_class_counts(file_path):
     class_counts= {}
     for class_name in os.listdir(file_path):
+        # skip .txt files
+        if class_name.endswith('.txt'):
+            continue
+
         class_dir = os.path.join(file_path, class_name)
         class_counts[class_name] = len(os.listdir(class_dir))
 
@@ -37,28 +41,29 @@ class_counts_hopeless = get_class_counts(file_path_hopeless)
 # class_counts_smallchange, and class_counts_hopeless
 
 # Create a DataFrame for plotting
-# plot_data = pd.DataFrame({
-#     'Okay': class_counts_okay['Count'],
-#     'Smallchange': class_counts_smallchange['Count'],
-#     'Hopeless': class_counts_hopeless['Count']
-# }).fillna(0)
+plot_data = pd.DataFrame({
+    'Okay': class_counts_okay['Count'],
+    'Smallchange': class_counts_smallchange['Count'],
+    'Hopeless': class_counts_hopeless['Count']
+}).fillna(0)
 
 # sort the data on the number of okay meshes
-#plot_data = plot_data.sort_values(by='Okay', ascending=True)
+plot_data = plot_data.sort_values(by='Okay', ascending=True)
 
 # Plot the bars
-#ax = plot_data.plot(kind='bar', stacked=True, figsize=(10, 6), color=['green', 'orange', 'red'])
+ax = plot_data.plot(kind='bar', stacked=True, figsize=(10, 6), color=['green', 'orange', 'red'])
 
-# plot horizontal line at the minimum number of total mesh count, also show the number of meshes in the plot
-# min_total_meshes = plot_data.sum(axis=1).min()
-# ax.axhline(y=min_total_meshes, color='black', linestyle='--')
-# ax.set_title('Number of Meshes in Each Class')
-# ax.set_xlabel('Class Name')
-# ax.set_ylabel('Number of Meshes')
-# ax.set_xticklabels(class_counts_okay['Class'], rotation=90)
-# plt.tight_layout()
-# plt.show()
+#plot horizontal line at the minimum number of total mesh count, also show the number of meshes in the plot
+min_total_meshes = plot_data.sum(axis=1).min()
+ax.axhline(y=min_total_meshes, color='black', linestyle='--')
+ax.set_title('Number of Meshes in Each Class')
+ax.set_xlabel('Class Name')
+ax.set_ylabel('Number of Meshes')
+ax.set_xticklabels(class_counts_okay['Class'], rotation=90)
+plt.tight_layout()
+plt.show()
 
+quit()
 
 
 

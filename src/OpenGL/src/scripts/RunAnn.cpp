@@ -138,6 +138,38 @@ void RunAnn::ExecuteQuerySize(std::string& feature_file, std::vector<int> K_valu
 	file.close();
 }
 
+void RunAnn::ExecuteDistanceMatrix(std::string& feature_file, int K) {
+	std::string load_tree_file = "";
+
+	std::ofstream file;
+	file.open("../../res/scalability_closest_indices/closest.txt");
+
+	double build_time = Initialize(feature_file, load_tree_file, 0.55, 100);
+
+	for (int i = 0; i < NUM_SHAPES; ++i) {
+
+		std::cout << "Finding neighbors for " << m_ann->m_query_engine->getObjectName(i) << std::endl;
+
+		std::tuple<std::vector<int>, std::vector<double>, double> closest_distances_time = m_ann->GetClosest(K + 1, 20, i);
+
+
+		for (int k = 1; k < K + 1; ++k) {
+			if (k < K) {
+				file << std::get<0>(closest_distances_time)[k] << ",";
+
+			}
+			else {
+				file << std::get<0>(closest_distances_time)[k];
+			}
+		}
+		file << std::endl;
+
+	}
+
+	file.close();
+
+}
+
 std::pair<double, double> RunAnn::ComputeScores(int K, int search_k) {
 	// Compute the scores
 	int acc_score = 0;

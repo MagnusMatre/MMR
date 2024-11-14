@@ -12,6 +12,7 @@
 #include "PMPremesh.h"
 #include "VCGrepair.h"
 #include "VCGremesh.h"
+#include "NormalizeMeshes.h"
 #include "check_meshes.h"
 #include "FeatureScript.h"
 #include "QueryBenchmark.h"
@@ -73,15 +74,27 @@ void RunScriptCGALtest() {
 
 }
 
+void RunNormalizationScript() {
+	std::string input_directory = "../../data/Primitives";
+	std::string output_directory = "../../data/PrimitivesNormalized";
+
+	NormalizeMeshes script(input_directory, output_directory);
+	script.handle_all_directories();
+}
+
 void RunScriptCGALclean() {
 	// Code to run CGALclean
 	/*std::string input_dir = "../../data/VCGdecimated";
 	std::string output_dir = "../../data/VCGdecimatedCleaned";*/
 
 
-	std::string input_dir = "../../res/convex_hulls_okaymeshes3";
-	std::string output_dir = "../../res/convex_hulls_okaymeshes3";
-	std::string start_dir = "AircraftBuoyant";
+	//std::string input_dir = "../../res/convex_hulls_okaymeshes3";
+	//std::string output_dir = "../../res/convex_hulls_okaymeshes3";
+
+	std::string input_dir = "../../data/Primitives";
+	std::string output_dir = "../../data/Primitives";
+
+	std::string start_dir = "";
 
 
 	CGALclean script(input_dir, output_dir, 4000, 500); 
@@ -89,14 +102,17 @@ void RunScriptCGALclean() {
 }
 
 void RunScriptFeatureScript() {
-	std::string mesh_dir = "../../data/OkayMeshes3/Bed";
+	/*std::string mesh_dir = "../../data/OkayMeshes3/Bed";
 	std::string input_directory = "../../data/OkayMeshes3";
 	std::string output_directory = "../../res/sample_points3"; 
-	std::string start_dir = "AircraftBuoyant";
+	std::string start_dir = "AircraftBuoyant";*/
+
+	std::string input_directory = "../../data/PrimitivesNormalized";
+	std::string output_directory = "../../res/sample_points_primitives";
+	std::string start_dir = "";
+
 
 	FeatureScript script(input_directory, output_directory, true);
-	//script.test_mesh(mesh_dir);
-	//script.test_directory(mesh_dir);
 	script.handle_all_directories(start_dir);
 }
 
@@ -276,9 +292,11 @@ void RunScriptRunAnn() {
 	//std::vector<int> k_search_values = { 1, 5, 10, 20, 50, 100, 200, 500, 1000, 2000 };
 	//script.Execute_k_search(feature_file, k_search_values); // Conclusion -> k_search = 20
 
-	std::vector<int> K_values = { 1, 2, 5, 10, 15, 20, 35, 50, 75, 100, 150, 200, 350 };
+	//std::vector<int> K_values = { 1, 2, 5, 10, 15, 20, 35, 50, 75, 100, 150, 200, 350 };
 	//std::vector<int> K_values = { 500, 1000, 1500, 2000 }; // This crashes since it does not retrieve the correct number of shapes
-	script.ExecuteQuerySize(feature_file, K_values); // 
+	//script.ExecuteQuerySize(feature_file, K_values); // 
+
+	script.ExecuteDistanceMatrix(feature_file, 350);
 }
 
 
@@ -309,6 +327,9 @@ int main(int argc, char** argv) {
 	}
 	else if (scriptName == "CGALclean") {
 		RunScriptCGALclean();
+	}
+	else if (scriptName == "Normalize") {
+		RunNormalizationScript();
 	}
 	else if (scriptName == "FeatureScript") {
 		RunScriptFeatureScript();

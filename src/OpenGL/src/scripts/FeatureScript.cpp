@@ -122,6 +122,8 @@ void FeatureScript::save_sample_points_to_file(std::string& output_name) {
 	std::ofstream sample_points_file;
 	sample_points_file.open(output_name);
 
+	std::cout << output_name << std::endl;
+
 	for (int i = 0; i < m_featureExtractor.m_random_vertices.size(); i++) {
 		Point_3 p = m_featureExtractor.m_random_vertices[i];
 		sample_points_file << p.x() << " " << p.y() << " " << p.z() << std::endl;
@@ -151,7 +153,10 @@ void FeatureScript::handle_all_directories(std::string& start_dir) {
 
 		std::cout << "Handling class folder: " << class_folder << std::endl;
 		std::string class_path = class_folder.path().string();
+
+		// FOR COMPUTING FEATURES
 		test_directory(class_path);
+
 		// FOR COMPUTING SAMPLE POINTS
 		//for (const auto& entry : std::filesystem::directory_iterator(m_input_dir + "/" + directoryName)) {
 

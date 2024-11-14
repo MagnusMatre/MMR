@@ -530,7 +530,7 @@ namespace test {
 		}*/
 		// Print the 20 closest
 		for (int i = 0; i < K; i++) {
-			//std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second) << "/" << m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
+			std::cout << i + 1 << " - Distance to " << m_queryEngine->getClassName(distances[i].second) << "/" << m_queryEngine->getObjectName(distances[i].second) << " is: " << distances[i].first << std::endl;
 			std::filesystem::path objPath = m_queryEngine->getObjectName(distances[i].second);
 			std::string imagePath = m_snapshotDirectory + "/" + m_queryEngine->getClassName(distances[i].second) + "/" + objPath.stem().string() + ".png";
 			std::cout << imagePath << std::endl;
