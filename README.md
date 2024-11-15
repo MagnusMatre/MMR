@@ -58,7 +58,7 @@ Below we list the possible command line arguments and which results they reprodu
 python3 modify_features.py
 ```
 
-                        This script will stitch together all the different feature files and add secondary features. The result is the "features_final.txt" file in the "res/" folder.
+                        This script will stitch together all the different feature files and add secondary features. The result is the 						"features_final.txt" file in the "res/" folder.
 
 5. QueryExperiments -- This script will run (most of) the experiments we did for different normalization
 6. AnnExperiments 	-- This script will run (most of) the experiments we we did for scalability 
