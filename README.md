@@ -53,13 +53,7 @@ Below we list the possible command line arguments and which results they reprodu
 2. Normalize  -- This script will normalize all the meshes in the "MeshesFilteredRemeshed" and save them in "MeshesFilteredNormalized". This step takes around an hour.
 3. HullsAndSamplePoints -- This script will create the convex hulls and sample points for all meshes in "MeshesFilteredNormalized". It is necessary to run BEFORE FeatureExtraction. This step also takes a few hours.
 4. FeatureExtraction -- This script will extract the *RAW* features from "MeshesFilteredNormalized" directory. This step again takes a while.
-                        *IMPORTANT :* After obtaining the feature files from each directory, you need to run the Python script
-
-```bash 
-python3 modify_features.py
-```
-
-                        This script will stitch together all the different feature files and add secondary features. The result is the 						"features_final.txt" file in the "res/" folder.
+                        *IMPORTANT :* After obtaining the feature files from each directory, you need to run the Python script `python3 					modify_features.py` This script will stitch together all the different feature files and add secondary features. The result is the 			"features_final.txt" file in the "res/" folder.
 
 5. QueryExperiments -- This script will run (most of) the experiments we did for different normalization
 6. AnnExperiments 	-- This script will run (most of) the experiments we we did for scalability 
