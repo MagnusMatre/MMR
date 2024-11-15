@@ -22,8 +22,6 @@
 #include "Texture.h"
 #include "Camera.h"
 
-#include "tests/TestClearColor.h"
-#include "tests/TestDice.h"
 #include "tests/TestCubes.h"
 #include "tests/TestMesh.h"
 #include "tests/TestRefineMesh.h"
@@ -83,13 +81,11 @@ int main(void)
         test::TestMenu* testMenu = new test::TestMenu(currentTest);
         currentTest = testMenu;
 
-        testMenu->RegisterTest<test::TestClearColor>("Clear Color");
-        testMenu->RegisterTest<test::TestDice>("Dice texture");
-        testMenu->RegisterTest<test::TestCubes>("Cubes");
+        //testMenu->RegisterTest<test::TestCubes>("Cubes");
         testMenu->RegisterTest<test::TestMesh>("Mesh");
-        testMenu->RegisterTest<test::TestRefineMesh>("RefineMeshes");
-        testMenu->RegisterTest<test::TestClassMeshes>("ClassifyMeshes");
-        testMenu->RegisterTest<test::TestFeatures>("FeatureTesting");
+        //testMenu->RegisterTest<test::TestRefineMesh>("RefineMeshes");
+        //testMenu->RegisterTest<test::TestClassMeshes>("ClassifyMeshes");
+        testMenu->RegisterTest<test::TestFeatures>("QueryApplication");
 
         float deltaTime = 0.0f;	// time between current frame and last frame
         float lastFrame = 0.0f;
