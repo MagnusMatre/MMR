@@ -8,6 +8,13 @@ Libraries that we used are listed below.
 For rendering: OpenGL, GLEW, GLFW
 For mesh processing: VCG, CGAL
 
+## Folder structure
+
+- /data: Contains all the mesh files that we used (original, remeshed, remeshed+normalized, and primitive meshes)
+- /res:  Most importantly, this contains the features_final.txt file, convex hulls and sample points
+- /src/OpenGL/src:  Contains all the C++ code that *we* wrote
+- /src/Python: Contains all our Python scripts
+
 ## Installation
 
 The code should be run as a Visual Studio Code solution. We recommend the newest Visual Studio Code Version (2017), lower versions are not tested.
