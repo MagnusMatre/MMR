@@ -19,7 +19,7 @@ clone the repository with e.g.
     git clone https://github.com/MagnusMatre/MMR.git
 ```
 
-or download the .zip contents of the main branch. *Important:* We did not include the files for the sample points (6 GB) on the GitHub. These need to be either recreated (with script 3. below) or downloaded from ….
+or download the .zip contents of the main branch. *Important:* The sample point files we used are 6GB in total (100.000 points each), which GitHub does not want uploaded to it... therefore, we supplied 10.000 sample point files instead.
 
 ### Step 2
 After cloning the repository, look for the "OpenGl.sln" file and open it in Visual Studio Code (2017).

@@ -175,12 +175,12 @@ void FeatureScript::handle_all_directories(std::string& start_dir) {
 
 				m_featureExtractor.Load(input_name, hull_file_name, sample_points_file_name); // Load the mesh
 
-				m_featureExtractor.compute_convex_hull(hullFile); // Compute the convex hull
+				//m_featureExtractor.compute_convex_hull(hullFile); // Compute the convex hull
 
 				// replace the .obj extension with .txt
 				sampleFile.replace(sampleFile.end() - 4, sampleFile.end(), ".txt");
 
-				m_featureExtractor.get_N_random_vertices(100000);
+				m_featureExtractor.get_N_random_vertices(10000); // 100000 -> for portable files.... 6Gb -> 600Mb, managable
 				save_sample_points_to_file(sampleFile);
 			}
 		}
