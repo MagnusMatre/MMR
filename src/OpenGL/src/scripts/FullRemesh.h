@@ -1,6 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include <filesystem>
+#include <fstream>
+
 #include <CGAL/Simple_cartesian.h>
 #include <CGAL/Surface_mesh.h>
 #include <CGAL/IO/OBJ.h>
@@ -41,12 +44,33 @@
 
 #include <boost/iterator/function_output_iterator.hpp>
 
+#include "VCGclasses.h" 
+
+#include <wrap/io_trimesh/import.h>
+#include <wrap/io_trimesh/export.h>
+
+#include <vcg/complex/algorithms/local_optimization.h>
+#include <vcg/complex/algorithms/edge_collapse.h> // Edge collapse algorithm
+#include "vcg/complex/algorithms/local_optimization/tri_edge_collapse_quadric.h"
+
+
+// VCG type definitions
+typedef BasicVertexPair<MyVertex> VertexPair;
+
+class MyTriEdgeCollapse : public vcg::tri::TriEdgeCollapseQuadric< MyMesh, VertexPair, MyTriEdgeCollapse, QInfoStandard<MyVertex>  > {
+public:
+	typedef  vcg::tri::TriEdgeCollapseQuadric< MyMesh, VertexPair, MyTriEdgeCollapse, QInfoStandard<MyVertex>  > TECQ;
+	typedef  MyMesh::VertexType::EdgeType EdgeType;
+	inline MyTriEdgeCollapse(const VertexPair& p, int i, BaseParameterClass* pp) :TECQ(p, i, pp) {}
+};
+
+
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <vector>
 
-
+// CGAL type definitions
 typedef CGAL::Simple_cartesian<double> K;
 typedef CGAL::Surface_mesh<K::Point_3> Mesh;
 typedef CGAL::Simple_cartesian<double> Kernel;
@@ -79,57 +103,44 @@ typedef boost::graph_traits<Mesh>::vertex_descriptor  vertex_descriptor;
 namespace CGALPMP = CGAL::Polygon_mesh_processing;
 namespace NP = CGAL::parameters;
 
-struct halfedge2edge
-{
-	halfedge2edge(const Mesh& m, std::vector<edge_descriptor>& edges): m_mesh(m), m_edges(edges) {}
+/*
+	Performs all remeshing steps:
 
-	void operator()(const halfedge_descriptor& h) const
-	{
-		m_edges.push_back(CGAL::edge(h, m_mesh));
-	}
-	const Mesh& m_mesh;
-	std::vector<edge_descriptor>& m_edges;
-};
+	1. Loading the mesh with CGAL
+	2. Try to fill holes in the mesh
+	3. Doing subdivision if the mesh contains too few faces
+	4. Doing decimation on all meshes until they have 4000 vertices
+	5. Loading the mesh again with CGAL
+	6. Saving the mesh to a new file
 
-class CGALclean {
+*/
+
+class FullRemesh {
+
 public:
-	CGALclean(std::string& input_dir, std::string& ouput_dir, int target, int threshold);
+	FullRemesh(std::string& mesh_directory, std::string& output_directory, int target);
+	~FullRemesh();
 
-	void Execute();
+	
 
-	void handle_all_directories(std::string& directory);
+	void handle_all_directories();
 
 private:
-	std::string m_input_dir;
+
+	std::string m_mesh_directory;
 	std::string m_output_dir;
+	int m_target = 4000;
 
-	int m_target;
-	int m_threshold;
-
-	int m_max_remesh_iterations = 10; // Sometimes used to just populate 10 meshes for each class
-
-	//void polygon_soup_repair(std::vector<Point_3>& points, std::vector<Polygon_3>& faces);
-	//void fix_manifoldedness(Mesh& mesh);
-	//void repair_and_remesh(std::vector<Point_3>& points, std::vector<Polygon_3>& faces, Mesh& mesh, bool& is_success);
-
-	void smooth(ExactMesh& mesh);
-	void refine(ExactPolyhedron& mesh);
-	void remesh(Mesh& mesh);
-	void simple_subdivide(ExactMesh& mesh);
+	void handle_mesh(std::string& file_name, ExactMesh& CGALmesh);
+	
+	bool load_CGAL_mesh(std::string& file_name, ExactMesh& mesh);
+	bool save_CGAL_mesh(std::string& output_name, ExactMesh& mesh);
 
 	void fill_holes(ExactMesh& mesh, double diag);
+	void do_subdivision(ExactMesh& mesh);
+	void do_decimation(MyMesh& mesh);
+
 
 	bool is_small_hole(exact_halfedge_descriptor h, ExactMesh& mesh, double max_hole_diam, int max_num_hole_edges);
-	void orient_mesh(ExactMesh& mesh);
 
-	//double getAABoundingBoxDiag(std::vector<Point_3> points);
-	double getAABoundingBoxDiag(Mesh& mesh);
-
-	void save_mesh(std::string& output_filename, Mesh& mesh);
-	void load_mesh(std::string& filename, Mesh& mesh); 
-	void save_mesh(std::string& output_filename, ExactMesh& mesh);
-	void load_mesh(std::string& filename, ExactMesh& mesh);
-	void save_mesh(std::string& output_filename, ExactPolyhedron& mesh);
-	void load_mesh(std::string& filename, ExactPolyhedron& mesh);
-	//void load_soup(std::string& filename, std::vector<Point_3>& points, std::vector<Polygon_3>& faces);
 };

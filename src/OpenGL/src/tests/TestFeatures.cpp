@@ -33,7 +33,7 @@ namespace test {
 		GLCall(glCullFace(GL_BACK));    // Cull back faces
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
-		m_featureFile = "features_final.txt";
+		m_featureFile = "../../res/features_final.txt";
 		m_queryEngine = std::make_unique<QueryEngine>();
 
 		std::string load_tree_file = "";
@@ -43,8 +43,6 @@ namespace test {
 		m_textures_with_distances = {};
 		m_snapshotDirectory = "../../res/snapshots_new/snapshots";
 
-
-		std::string saveDistanceMatrix = "res/features_okaymeshes/distance_matrix.txt";
 
 		std::cout << "Loading features..." << std::endl;
 
@@ -57,7 +55,7 @@ namespace test {
 
 		m_dataRoot = "../../data";
 		m_curDirectory = m_dataRoot + "/MeshesFiltered";
-		m_samplePointsDirectory = "res/sample_points3";
+		m_samplePointsDirectory = "res/sample_points_normalized_meshes";
 		loadCurrentDirectory();
 
 		m_renderer = std::make_unique<Renderer>();

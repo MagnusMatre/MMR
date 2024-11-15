@@ -5,8 +5,7 @@ import sys
 
 from tqdm import tqdm
 
-#to_flip_directory = "../../data/NormalflipMeshes"
-to_flip_directory = "../../data/OkayMeshes3"
+to_flip_directory = "../../data/NormalflipMeshes"
 to_flip_list = []
 
 for classname in os.listdir(to_flip_directory):
@@ -19,8 +18,8 @@ for classname in os.listdir(to_flip_directory):
         to_flip_list.append(f"/{classname}/{meshname}")
 
 
-meshes_to_use_directory = "../../data/Meshes"
-output_directory = "../../data/MeshesFiltered"
+meshes_to_use_directory = "../../data/MeshesFilteredNormalized"
+output_directory = "../../data/MeshesFilteredNormalizedTrue"
 
 for classname in tqdm(os.listdir(meshes_to_use_directory)):
     print(classname)
@@ -45,8 +44,7 @@ for classname in tqdm(os.listdir(meshes_to_use_directory)):
                             if "//" in indcs[i]:
                                 indcs[i] = indcs[i].split("//")[1]
 
-                        #new_indcs = [indcs[0], indcs[2][:-1], indcs[1]] # flip the mesh
-                        new_indcs = [indcs[0], indcs[1], indcs[2][:-1]] # do not flip the mesh
+                        new_indcs = [indcs[0], indcs[2][:-1], indcs[1]] # flip the mesh
                         new_file_lines.append(f"f {new_indcs[0]} {new_indcs[1]} {new_indcs[2]}\n")
             
             # Open a .obj file to write the flipped mesh

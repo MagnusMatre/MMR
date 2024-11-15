@@ -14,8 +14,8 @@ from tqdm import tqdm
 '''
 
 # load in a feature file and store in a pandas dataframe
-#feature_dir = "../../data/OkayMeshes3"
-feature_dir = "../../data/PrimitivesNormalized"
+feature_dir = "../../data/MeshesFilteredNormalized"
+#feature_dir = "../../data/PrimitivesNormalized"
 
 def load_feauture_file(feature_file):
     # Read the data from the .txt file, note that the file is tab separated
@@ -41,9 +41,9 @@ def stitch_together_feature_files(feature_list):
 
 feature_list = []
 for class_name in tqdm(os.listdir(feature_dir)):
-    if class_name == "features_large.txt":
+    if class_name == "features.txt":
         continue
-    feature_path = os.path.join(feature_dir, class_name, "features_large.txt")
+    feature_path = os.path.join(feature_dir, class_name, "features.txt")
     
     feature_list.append(load_feauture_file(feature_path))
 
@@ -79,4 +79,5 @@ features.insert(19, "BBVolumeCubeRoot", np.cbrt(features['BB_Volume']))
 print(features.columns)
 
 # save the features to a new file
-features.to_csv("../../res/features_primitives.txt", sep='\t', index=False)
+features.to_csv("../../res/features_final.txt", sep='\t', index=False)
+#features.to_csv("../../res/features_primitives.txt", sep='\t', index=False)

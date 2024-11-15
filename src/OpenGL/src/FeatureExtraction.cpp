@@ -28,7 +28,7 @@ void FeatureExtraction::load_mesh(std::string& filename, CGALMesh& mesh) {
 	}
 }
 
-void FeatureExtraction::compute_convex_hull() {
+void FeatureExtraction::compute_convex_hull(std::string& output_file) {
 	// Compute the convex hull using QHull (see https://stackoverflow.com/questions/19530731/qhull-library-c-interface)
 
 	std::vector<double> points_3D = {};
@@ -44,7 +44,7 @@ void FeatureExtraction::compute_convex_hull() {
 	int num_points = points_3D.size() / ndim;
 
 	std::string comment = ""; // rbox commands, see http://www.qhull.org/html/rbox.htm
-	std::string qhull_command = ""; // For qhull commands, see http://www.qhull.org/html/qhull.htm
+	std::string qhull_command = "Qt"; // For qhull commands, see http://www.qhull.org/html/qhull.htm
 
 	orgQhull::Qhull qhull = orgQhull::Qhull(comment.c_str(), ndim, num_points, points_3D.data(), qhull_command.c_str());
 	//std::cout << "qhull.hullDimension(): " << qhull.hullDimension() << "\n";
@@ -53,10 +53,66 @@ void FeatureExtraction::compute_convex_hull() {
 
 	m_hull_volume = qhull.volume();
 	m_hull_surface_area = qhull.area();
+
+	std::unordered_map<int, int> index_map; // Maps the index of the original vertex to the index of the vertex in the convex hull
+	int L = 1; //cur length of map
+
+	for (auto vertex = qhull.vertexList().begin(); vertex != qhull.vertexList().end(); ++vertex) {
+		index_map[vertex->point().id()] = L;
+		L++;
+	}
+
+	// Save the hull to file by iterating over all its vertices and faces
+	std::ofstream file(output_file);
+	if (!file) {
+		std::cerr << "Error: cannot open file " << output_file << std::endl;
+		return;
+	}
+
+	// Access the point coordinates of the computed qhull
+	for (auto vertex = qhull.vertexList().begin(); vertex != qhull.vertexList().end(); ++vertex) {
+		file << "v";
+		for (int i = 0; i < vertex->point().dimension(); ++i) {
+			file << " " << vertex->point()[i];
+		}
+		file << std::endl;
+	}
+
+	for (auto facet = qhull.facetList().begin(); facet != qhull.facetList().end(); ++facet) {
+		file << "f";
+		
+		for (auto myvertex : facet->vertices()) {
+			file << " " << index_map[myvertex.point().id()];
+		}
+		file << std::endl;
+	}
+
+	file.close();
+
+	// Load the hull file in a CGAL mesh and call orient_to_bound_a_volume() to make sure the hull is oriented correctly
+	load_mesh(output_file, m_convexhull);
+	CGALPMP::orient_to_bound_a_volume(m_convexhull);
+	save_mesh(output_file, m_convexhull);
+
+}
+
+void FeatureExtraction::save_mesh(std::string& output_filename, CGALMesh& mesh) {
+	std::ofstream output(output_filename);
+	if (!output) {
+		std::cerr << "Error: cannot open file " << output_filename << std::endl;
+		exit(EXIT_FAILURE);
+	}
+
+	if (CGAL::IO::write_polygon_mesh(output_filename, mesh, CGAL::parameters::stream_precision(17))) {
+		std::cout << "Successfully saved mesh to " << output_filename << std::endl;
+	}
+	else {
+		std::cerr << "Error: cannot write file " << output_filename << std::endl;
+		exit(EXIT_FAILURE);
+	}
 }
 
 void FeatureExtraction::compute_all_features() {
-	compute_convex_hull();
 	get_diameter();
 	get_bounding_box_statistics();
 	get_volume();

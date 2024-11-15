@@ -2,7 +2,7 @@
 
 QueryBenchmark::QueryBenchmark(std::string& feature_file, std::string& save_directory) {
 	m_feature_file = feature_file;
-	m_save_directory = save_directory;
+	m_save_root = save_directory;
 
 	m_queryEngine = std::make_unique<QueryEngine>();
 
@@ -19,11 +19,225 @@ void QueryBenchmark::ComputeDistanceMatrix() {
 	m_queryEngine->ComputeFullDistanceMatrix();
 }
 
+void QueryBenchmark::RunBenchmarkScalarDistances() {
+	m_save_directory = m_save_root + "/query_results_scalarfeatures";
+	RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 1); // WINNER
+	RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ONEPOINTFIVE, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ONEPOINTFIVE, DISTANCE_TYPE::EUCLIDEAN, 1); 
+	RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::ONEPOINTFIVE, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::COSINE, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::COSINE, DISTANCE_TYPE::EUCLIDEAN, 1);
+	RunBenchmark(10, STANDARDIZATION_TYPE::STANDARD, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::COSINE, DISTANCE_TYPE::EUCLIDEAN, 1);
+}
+
+void QueryBenchmark::RunBenchmarkHistogramDistances() {
+	m_save_directory = m_save_root + "/query_results_histogramfeatures";
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0); // WINNER
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EUCLIDEAN, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::COSINE, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::COSINE, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EMD, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::RANGE, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::EMD, 0);
+	RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::STANDARD, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0);
+}
+
+void QueryBenchmark::RunBenchmarkGamma() {
+	m_save_directory = m_save_root + "/query_results_gamma";
+	for (int i = 0; i < 21; i++) {
+		RunBenchmark(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, float(i)/20);
+	}
+}
+
+void QueryBenchmark::RunBenchmarkScalarWeights_() {
+	m_save_directory = m_save_root + "/query_results_scalarweights";
+	std::vector<float> scalar_weights = {
+		1.0f // DIAMETER
+		,1.0f // BB_DIAMETER
+		,1.0f // BB_VOLUME 
+		,1.0f // SURFACEAREA
+		,1.0f // VOLUME
+		,0.0f // VOLUMECOMPS (always disabled)
+		,1.0f // CONVEXITY
+		,1.0f // ECCENTRICITY02
+		,1.0f // ECCENTRICITY01
+		,1.0f // ECCENTRICITY12
+		,1.0f // COMPACTNESS
+		,1.0f // SPHERICITY
+		,1.0f // CUBEROOTVOLUME
+		,1.0f // SQUAREROOTAREA
+		,0.0f // DIAMETERTOCUBEROOTVOLUME (always disabled)
+		,1.0f // DIAMETERTOSQUAREROOTAREA
+		,0.0f // DIAMETERSQUARED (always disabled)
+		,1.0f // BBCUBEROOTVOLUME
+		,1.0f // RECTANGULARITY
+	};
+
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+
+	scalar_weights[0] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[0] += 1.0f;
+
+	scalar_weights[3] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[3] += 1.0f;
+
+	scalar_weights[4] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[4] += 1.0f;
+
+	scalar_weights[6] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[6] += 1.0f;
+
+	scalar_weights[7] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[7] += 1.0f;
+
+	scalar_weights[8] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[8] += 1.0f;
+
+	scalar_weights[9] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[9] += 1.0f;
+
+	scalar_weights[10] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[10] += 1.0f;
+
+	scalar_weights[11] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[11] += 1.0f;
+
+	scalar_weights[13] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[13] += 1.0f;
+
+	scalar_weights[18] -= 1.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[18] += 1.0f;
+
+	scalar_weights = {
+		1.0f // DIAMETER
+		,1.0f // BB_DIAMETER
+		,0.0f // BB_VOLUME (disabled after test)
+		,1.0f // SURFACEAREA
+		,1.0f // VOLUME
+		,0.0f // VOLUMECOMPS (always disabled)
+		,1.0f // CONVEXITY
+		,1.0f // ECCENTRICITY02
+		,1.0f // ECCENTRICITY01
+		,1.0f // ECCENTRICITY12
+		,1.0f // COMPACTNESS
+		,1.0f // SPHERICITY
+		,0.0f // CUBEROOTVOLUME (disabled after test)
+		,1.0f // SQUAREROOTAREA
+		,0.0f // DIAMETERTOCUBEROOTVOLUME (always disabled)
+		,0.0f // DIAMETERTOSQUAREROOTAREA (disabled after test)
+		,0.0f // DIAMETERSQUARED (always disabled)
+		,1.0f // BBCUBEROOTVOLUME
+		,1.0f // RECTANGULARITY
+	};
+
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+
+	scalar_weights[0] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[0] /= 2.0f;
+
+	scalar_weights[3] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[3] /= 2.0f;
+
+	scalar_weights[4] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[4] /= 2.0f;
+
+	scalar_weights[6] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[6] /= 2.0f;
+
+	scalar_weights[7] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[7] /= 2.0f;
+
+	scalar_weights[8] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[8] /= 2.0f;
+
+	scalar_weights[9] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[9] /= 2.0f;
+
+	scalar_weights[10] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[10] /= 2.0f;
+
+	scalar_weights[11] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[11] /= 2.0f;
+
+	scalar_weights[13] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[13] /= 2.0f;
+
+	scalar_weights[18] *= 2.0f;
+	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
+	scalar_weights[18] /= 2.0f;
+}
+
+void QueryBenchmark::RunBenchmarkHistogramWeights_() {
+	m_save_directory = m_save_root + "/query_results_histogramfeatures";
+	std::vector<float> histogram_weights = { 1.0f,1.0f,1.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 0.0f,1.0f,1.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,0.0f,1.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,0.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,1.0f,0.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,1.0f,1.0f,0.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 2.0f,1.0f,1.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,2.0f,1.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,2.0f,1.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,1.0f,2.0f,1.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+
+	histogram_weights = { 1.0f,1.0f,1.0f,1.0f,2.0f };
+	RunBenchmarkHistogramWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, histogram_weights);
+}
+
 void QueryBenchmark::RunBenchmarkTiming(std::vector<int> K_values) {
 	m_queryEngine->LoadFeatures(m_feature_file);
 	m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7f);
 
-	std::string save_name = m_save_directory + "/querysize_timing.txt";
+	std::string save_name = m_save_directory + "/scalability_normal_query/querysize_timing.txt";
 
 	// Open results file
 	std::ofstream results_file;
@@ -82,14 +296,14 @@ void QueryBenchmark::RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZ
 	float cur_total_corrected_score = 0;
 
 	for (int i = 0; i < NUM_QUERY_SHAPES; i++) {
-		//std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(m_queryIndices[i], K);
-		std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(i, K);
+		std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(m_queryIndices[i], K);
+		//std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(i, K);
 		float cur_score = 0;
 
-		//std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
-		//std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
-		std::string class_name = m_queryEngine->getClassName(i);
-		std::string file_name = m_queryEngine->getObjectName(i);
+		std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
+		std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
+		/*std::string class_name = m_queryEngine->getClassName(i);
+		std::string file_name = m_queryEngine->getObjectName(i);*/
 
 		// If the current class name is the same as the query object, then inrcease the scores
 		for (int j = 0; j < K; j++) {
@@ -420,6 +634,8 @@ double QueryBenchmark::computeScore() {
 }
 
 void QueryBenchmark::ComputeDistanceStats(DISTANCE_TYPE hist_dist_type) {
+	// Used to obtain min, max, mean and std of histogram distances for normalization...
+
 	m_queryEngine->LoadFeatures(m_feature_file);
 	m_queryEngine->Initialize(STANDARDIZATION_TYPE::NO, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::EUCLIDEAN, hist_dist_type, 0);
 	m_queryEngine->ComputeHistogramDistanceStatistics();

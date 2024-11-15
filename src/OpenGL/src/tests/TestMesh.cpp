@@ -31,7 +31,7 @@ namespace test {
 
 		// LOAD MESHES
 
-		std::string modelDirectory = "../../data/Meshes/Bird";
+		std::string modelDirectory = "../../data/MeshesFiltered/Bird";
 
 		for (const auto& entry : std::filesystem::directory_iterator(modelDirectory)) {
 			if (m_curModelName == "") {

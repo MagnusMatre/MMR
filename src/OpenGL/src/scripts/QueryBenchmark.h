@@ -18,10 +18,16 @@ class QueryBenchmark {
 		~QueryBenchmark();
 
 		void RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma);
+		
+		void RunBenchmarkScalarDistances();
+		void RunBenchmarkHistogramDistances();
+		void RunBenchmarkGamma();
+		void RunBenchmarkScalarWeights_();
+		void RunBenchmarkHistogramWeights_();
+		void RunBenchmarkTiming(std::vector<int> K_values);
+
 		void RunBenchmarkScalarWeights(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma, std::vector<float> scalar_weights );
 		void RunBenchmarkHistogramWeights(int K, STANDARDIZATION_TYPE s_type, STANDARDIZATION_TYPE s_type_histogram, DISTANCE_TYPE d_type_scalar, DISTANCE_TYPE d_type_histogram, float gamma, std::vector<float> histogram_weights);
-
-		void RunBenchmarkTiming(std::vector<int> K_values);
 
 		void ComputeDistanceStats(DISTANCE_TYPE hist_dist_type);
 
@@ -33,6 +39,8 @@ class QueryBenchmark {
 		std::unique_ptr<QueryEngine> m_queryEngine;
 
 		std::string m_feature_file;
+		std::string m_save_root;
+
 		std::string m_save_directory;
 
 		// one random per 16 classes

@@ -9,7 +9,7 @@
 
 class FeatureScript {
 public:
-	FeatureScript(std::string& input_dir, std::string& output_dir, bool save_to_file);
+	FeatureScript(std::string& input_dir, std::string& output_dir, bool save_to_file, bool hull_and_samplepoints);
 	~FeatureScript();
 
 	void Execute();
@@ -24,15 +24,13 @@ private:
 	FeatureExtraction m_featureExtractor;
 
 	bool m_save_to_file;
+	bool m_hull_and_samplepoints = false;
 
 	std::string m_input_dir;
 	std::string m_output_dir;
 
-	/*std::string m_samplepoints_root = "../../res/sample_points3";
-	std::string m_convexhull_root = "../../res/convex_hulls_okaymeshes3";*/
-
-	std::string m_samplepoints_root = "../../res/sample_points_primitives";
-	std::string m_convexhull_root = "../../res/convex_hulls_primitives";
+	std::string m_samplepoints_root = "../../res/sample_points_normalized_meshes";
+	std::string m_convexhull_root = "../../res/convex_hulls_normalized_meshes";
 	
 	//utility functions
 	void load_mesh(std::string& filename, CGALMesh& mesh);

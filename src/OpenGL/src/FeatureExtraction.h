@@ -37,8 +37,10 @@
 #include <CGAL/Polyhedron_3.h>
 #include <CGAL/convex_hull_3.h>
 
-// For computing conve hull (QHull)
+// For computing convex hull (QHull)
 #include <libqhullcpp/Qhull.h>
+#include <libqhullcpp/QhullFacetList.h>
+#include <libqhullcpp/QhullVertexSet.h>
 
 // For computing bounding box
 #include <CGAL/AABB_tree.h>
@@ -49,6 +51,7 @@
 #include <Eigen/Dense>
 
 #include <random>
+#include <map>
 
 // This class is responsible for extracting features from a given mesh. The mesh is assumed to be a CGAL Surface_mesh.
 
@@ -83,7 +86,8 @@ public:
 	std::vector<Point_3> m_random_vertices;
 
 	// convex hulls
-	void compute_convex_hull();
+	void compute_convex_hull(std::string& output_file);
+	void save_mesh(std::string& output_filename, CGALMesh& mesh);
 private:
 
 	CGALMesh m_mesh;

@@ -1,10 +1,11 @@
 #include "FeatureScript.h"
 
-FeatureScript::FeatureScript(std::string& input_dir, std::string& output_dir, bool save_to_file) {
+FeatureScript::FeatureScript(std::string& input_dir, std::string& output_dir, bool save_to_file, bool hull_and_samplepoints) {
 	m_input_dir = input_dir;
 	m_output_dir = output_dir;
 
 	m_save_to_file = save_to_file;
+	m_hull_and_samplepoints = hull_and_samplepoints;
 }
 
 FeatureScript::~FeatureScript() {
@@ -40,7 +41,7 @@ void FeatureScript::test_directory(std::string& directory_name, std::string star
 	std::string class_name = directory_path.filename().string();
 
 	// Check if the output file already exists, if so skip
-	std::string outputFile = directory_path.string() + "/features_large.txt";
+	std::string outputFile = directory_path.string() + "/features.txt";
 	/*if (std::filesystem::exists(outputFile)) {
 		std::cout << "File: " << outputFile << " already exists, skipping..." << std::endl;
 		return;
@@ -49,7 +50,7 @@ void FeatureScript::test_directory(std::string& directory_name, std::string star
 	// Open a file to save the features to
 	std::ofstream feature_file;
 	if (m_save_to_file) {
-		feature_file.open(directory_name + "/features_large.txt");
+		feature_file.open(directory_name + "/features.txt");
 		feature_file << "ClassName\t\tFilename\t\tDiameter\tBB_Diameter\tBB_Volume\tSurfaceArea\tVolume\tVolumeComps\tConvexity\tEccentricity02\tEccentricity01\tEccentricity12\tCompactness\tSphericity\tRectangularity";
 		feature_file << "\tA3_histogram(100)";
 		for (int i = 0; i < 100 - 1; i++) {
@@ -155,45 +156,34 @@ void FeatureScript::handle_all_directories(std::string& start_dir) {
 		std::string class_path = class_folder.path().string();
 
 		// FOR COMPUTING FEATURES
-		test_directory(class_path);
+		if (!m_hull_and_samplepoints) {
+			test_directory(class_path);
+		}
+		else {
+			// FOR COMPUTING SAMPLE POINTS AND CONVEX HULLS
+			for (const auto& entry : std::filesystem::directory_iterator(m_input_dir + "/" + directoryName)) {
 
-		// FOR COMPUTING SAMPLE POINTS
-		//for (const auto& entry : std::filesystem::directory_iterator(m_input_dir + "/" + directoryName)) {
+				std::filesystem::path filePath(entry);
+				std::string fileName = filePath.filename().string();
+				std::string sampleFile = m_output_dir + "/sample_points_normalized_meshes/" + directoryName + "/" + fileName;
+				std::string hullFile = m_output_dir + "/convex_hulls_normalized_meshes/" + directoryName + "/" + fileName;
 
+				std::string input_name = entry.path().string();
 
-		//	std::filesystem::path filePath(entry);
-		//	std::string fileName = filePath.filename().string();
-		//	std::string outputFile = m_output_dir + "/" + directoryName + "/" + fileName;
+				std::string hull_file_name = "";
+				std::string sample_points_file_name = "";
 
-		//	// replace the .obj extension with .txt
-		//	outputFile.replace(outputFile.end() - 4, outputFile.end(), ".txt");
+				m_featureExtractor.Load(input_name, hull_file_name, sample_points_file_name); // Load the mesh
 
-		//	// Check if the outputFile exists or if the file is in "skip_meshes", if it does, skip the current mesh
-		//	if (std::filesystem::exists(outputFile)) {
-		//		std::cout << "File: " << outputFile << " already exists, skipping..." << std::endl;
-		//		continue;
-		//	}
+				//m_featureExtractor.compute_convex_hull(hullFile); // Compute the convex hull
 
-		//	bool is_success = true;
+				// replace the .obj extension with .txt
+				sampleFile.replace(sampleFile.end() - 4, sampleFile.end(), ".txt");
 
-		//	// Load the mesh
-		//	std::string input_name = entry.path().string();
-		//	//CGALMesh mesh;
-		//	//load_mesh(input_name, mesh);
+				m_featureExtractor.get_N_random_vertices(10000); // 100000 -> for portable files.... 6Gb -> 600Mb, managable
+				save_sample_points_to_file(sampleFile);
+			}
+		}
 
-		//	// Check if the number of faces is larger than 0
-		//	/*if (mesh.number_of_faces() == 0) {
-		//		std::cout << "Error: Mesh has 0 faces, skipping..." << std::endl;
-		//		continue;
-		//	}*/
-
-		//	std::string hull_file_name = "";
-		//	std::string sample_points_file_name = "";
-
-
-		//	m_featureExtractor.Load(input_name, hull_file_name, sample_points_file_name);
-		//	m_featureExtractor.get_N_random_vertices(100000);
-		//	save_sample_points_to_file(outputFile);
-		//}
 	}
 }
