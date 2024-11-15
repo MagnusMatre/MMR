@@ -54,6 +54,7 @@ Below we list the possible command line arguments and which results they reprodu
 3. HullsAndSamplePoints -- This script will create the convex hulls and sample points for all meshes in "MeshesFilteredNormalized". It is necessary to run BEFORE FeatureExtraction. This step also takes a few hours.
 4. FeatureExtraction -- This script will extract the *RAW* features from "MeshesFilteredNormalized" directory. This step again takes a while.
                         *IMPORTANT :* After obtaining the feature files from each directory, you need to run the Python script
+
 ```bash 
 python3 modify_features.py
 ```
