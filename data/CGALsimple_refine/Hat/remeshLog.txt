@@ -1,5 +1,0 @@
-../../data/Meshes/Hat\m1637.obj SUCCESS, vertex count: 4002
-../../data/Meshes/Hat\m1638.obj SUCCESS, vertex count: 8828
-../../data/Meshes/Hat\m1639.obj SUCCESS, vertex count: 8089
-../../data/Meshes/Hat\m1640.obj SUCCESS, vertex count: 4002
-../../data/Meshes/Hat\m1641.obj SUCCESS, vertex count: 5006
