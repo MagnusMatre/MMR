@@ -1,0 +1,829 @@
+Query Object: 0: AircraftBuoyant/m1342.obj : s 1
+AircraftBuoyant/m1344.obj 0.0586907
+HumanHead/m366.obj 0.127002
+Vase/m537.obj 0.138958
+HumanHead/m344.obj 0.140534
+Hand/m333.obj 0.140757
+Chess/D01017.obj 0.144088
+PianoBoard/D00075.obj 0.146006
+HumanHead/m354.obj 0.151709
+Vase/m535.obj 0.152541
+HumanHead/m343.obj 0.1548
+---------------------------------------------------------------
+Query Object: 26: Apartment/D00921.obj : s 0
+HumanHead/m370.obj 0.0777392
+Drum/D00298.obj 0.0937496
+Bookset/D01030.obj 0.111522
+Bookset/D01050.obj 0.11236
+Computer/D01082.obj 0.119294
+HumanHead/D00984.obj 0.125417
+HumanHead/m347.obj 0.125868
+Computer/D01085.obj 0.127232
+Computer/m1769.obj 0.128383
+MilitaryVehicle/D00100.obj 0.12842
+---------------------------------------------------------------
+Query Object: 40: AquaticAnimal/m63.obj : s 0
+BuildingNonResidential/m391.obj 0.0877562
+Bird/m52.obj 0.088682
+Computer/D01072.obj 0.0992325
+Computer/m1777.obj 0.0993742
+Computer/m1775.obj 0.100592
+Computer/D01026.obj 0.101809
+Quadruped/m112.obj 0.102959
+Ship/m1454.obj 0.108514
+Helicopter/m1329.obj 0.109359
+Bookset/D01042.obj 0.109547
+---------------------------------------------------------------
+Query Object: 63: Bed/D00210.obj : s 4
+Bed/D00969.obj 0.0876928
+Monitor/D00863.obj 0.0951129
+Computer/m1772.obj 0.111537
+Computer/D01128.obj 0.111648
+Bed/D00031.obj 0.113364
+MilitaryVehicle/D00952.obj 0.114993
+Bed/D00121.obj 0.117173
+Bed/D00839.obj 0.119545
+PianoBoard/D00885.obj 0.120945
+Shelf/D00198.obj 0.123381
+---------------------------------------------------------------
+Query Object: 92: Bicycle/D00514.obj : s 10
+Bicycle/m1476.obj 0.038525
+Bicycle/D00567.obj 0.0389599
+Bicycle/D00931.obj 0.0395933
+Bicycle/D00558.obj 0.050013
+Bicycle/D00077.obj 0.0525389
+Bicycle/D00708.obj 0.0557896
+Bicycle/D00033.obj 0.0570598
+Bicycle/m1473.obj 0.0577059
+Bicycle/D00838.obj 0.0595823
+Bicycle/D00016.obj 0.0610935
+---------------------------------------------------------------
+Query Object: 124: Biplane/D00601.obj : s 5
+Biplane/D00276.obj 0.0697757
+PlantWildNonTree/m966.obj 0.0794047
+Bird/D00113.obj 0.0804074
+Insect/m21.obj 0.0836309
+Biplane/D00515.obj 0.0887758
+Biplane/m1126.obj 0.0926674
+Biplane/m1138.obj 0.094465
+Biplane/m1125.obj 0.096171
+NonWheelChair/m798.obj 0.0961831
+NonWheelChair/m796.obj 0.0969478
+---------------------------------------------------------------
+Query Object: 178: Bird/m30.obj : s 0
+AquaticAnimal/m60.obj 0.0570372
+Humanoid/m160.obj 0.0607228
+Humanoid/m146.obj 0.0610306
+Humanoid/m264.obj 0.0615257
+Tool/m590.obj 0.0719417
+Quadruped/D00583.obj 0.0748755
+Fish/D00633.obj 0.0752217
+Fish/D00022.obj 0.0758585
+Ship/m1441.obj 0.0779881
+Fish/D00165.obj 0.0782282
+---------------------------------------------------------------
+Query Object: 210: Bookset/D01135.obj : s 0
+Bus/D00114.obj 0.0816695
+Apartment/D00310.obj 0.0833345
+Shelf/m859.obj 0.0942061
+Shelf/m857.obj 0.103148
+BuildingNonResidential/m416.obj 0.108058
+Car/D00724.obj 0.115636
+House/m441.obj 0.116967
+Bus/D00677.obj 0.119489
+Car/D00452.obj 0.12203
+MultiSeat/D00648.obj 0.123858
+---------------------------------------------------------------
+Query Object: 232: Bottle/D00892.obj : s 8
+Bottle/D00696.obj 0.0534355
+Bottle/D00123.obj 0.120223
+Bottle/m492.obj 0.121572
+Bottle/m483.obj 0.126691
+Bottle/m487.obj 0.131312
+Bottle/D00020.obj 0.13292
+Bottle/D00350.obj 0.134401
+Bus/D00446.obj 0.146759
+Cellphone/D00997.obj 0.148565
+Bottle/m484.obj 0.148725
+---------------------------------------------------------------
+Query Object: 258: BuildingNonResidential/m397.obj : s 1
+Cup/D00035.obj 0.120714
+BuildingNonResidential/m395.obj 0.123053
+Drum/D00557.obj 0.127872
+Cup/m498.obj 0.131503
+Vase/m547.obj 0.136154
+House/m461.obj 0.137983
+RoundTable/m937.obj 0.138457
+Cup/D00214.obj 0.141426
+Drum/D00939.obj 0.144608
+Vase/m543.obj 0.145035
+---------------------------------------------------------------
+Query Object: 290: Bus/D00677.obj : s 1
+Apartment/D00310.obj 0.0599129
+Car/D00724.obj 0.0639967
+TruckNonContainer/D00055.obj 0.0840556
+Car/D00260.obj 0.0875052
+Car/m1559.obj 0.0875595
+Bus/D00114.obj 0.0876903
+Car/D00236.obj 0.0926294
+House/m441.obj 0.0928004
+TruckNonContainer/D00737.obj 0.0988693
+Train/m1587.obj 0.106031
+---------------------------------------------------------------
+Query Object: 356: Car/m1532.obj : s 5
+Car/m1485.obj 0.0783814
+Car/D00405.obj 0.086376
+Car/m1489.obj 0.0880854
+House/D00454.obj 0.0883773
+House/D00941.obj 0.0913228
+Car/m1486.obj 0.0917811
+House/m449.obj 0.0971666
+Car/m1524.obj 0.0980539
+MultiSeat/m836.obj 0.0999589
+MilitaryVehicle/D00723.obj 0.102667
+---------------------------------------------------------------
+Query Object: 392: Cellphone/D00817.obj : s 9
+Cellphone/D00032.obj 0.0585027
+Cellphone/D00362.obj 0.0612989
+Cellphone/D00527.obj 0.0626957
+Cellphone/D00079.obj 0.0667708
+Cellphone/D00554.obj 0.0694852
+Cellphone/D00192.obj 0.0705779
+Cellphone/D00327.obj 0.0733682
+Car/m1521.obj 0.081438
+Cellphone/D00152.obj 0.0841102
+Cellphone/D00902.obj 0.0842284
+---------------------------------------------------------------
+Query Object: 397: Chess/D01019.obj : s 10
+Chess/m1600.obj 0.00421735
+Chess/D01138.obj 0.00702138
+Chess/D01145.obj 0.0586661
+Chess/m1614.obj 0.0607368
+Chess/D01123.obj 0.0609814
+Chess/D01130.obj 0.0612879
+Chess/m1612.obj 0.0616814
+Chess/D01080.obj 0.0623929
+Chess/m1599.obj 0.0632596
+Chess/D01112.obj 0.0738072
+---------------------------------------------------------------
+Query Object: 443: City/D01066.obj : s 4
+BuildingNonResidential/m478.obj 0.0581652
+Monitor/D00391.obj 0.101143
+City/D01090.obj 0.103217
+City/m1661.obj 0.104163
+Door/D01129.obj 0.110566
+Door/m1718.obj 0.112757
+City/D01039.obj 0.11298
+Door/D01177.obj 0.117302
+City/D01079.obj 0.132298
+Bicycle/D00904.obj 0.133912
+---------------------------------------------------------------
+Query Object: 461: ClassicPiano/D00034.obj : s 0
+Starship/m1380.obj 0.0844389
+DeskPhone/D00894.obj 0.0950228
+Hat/m1631.obj 0.0967875
+Computer/D01072.obj 0.103869
+Hand/m329.obj 0.104031
+Ship/m1458.obj 0.104109
+Computer/m1777.obj 0.104132
+Hand/D01097.obj 0.104219
+Quadruped/D00757.obj 0.105019
+Monitor/D00141.obj 0.106313
+---------------------------------------------------------------
+Query Object: 502: Computer/m1777.obj : s 3
+Computer/D01072.obj 0.0037996
+Hat/m1631.obj 0.072169
+Ship/m1458.obj 0.0752401
+ClassicPiano/D00190.obj 0.0798065
+Insect/D00082.obj 0.0804929
+Computer/m1773.obj 0.082829
+Computer/D01028.obj 0.0833846
+Bird/m52.obj 0.0852897
+BuildingNonResidential/m391.obj 0.0858632
+ClassicPiano/D00967.obj 0.0882162
+---------------------------------------------------------------
+Query Object: 519: ComputerKeyboard/D00805.obj : s 8
+ComputerKeyboard/D00627.obj 0.0519011
+ComputerKeyboard/D00420.obj 0.0633382
+ComputerKeyboard/D00692.obj 0.079072
+ComputerKeyboard/D00600.obj 0.0809544
+ComputerKeyboard/D00990.obj 0.0825011
+ComputerKeyboard/D00493.obj 0.0827136
+ComputerKeyboard/D00382.obj 0.083457
+Gun/m663.obj 0.0860795
+Gun/D00425.obj 0.0878846
+ComputerKeyboard/D00654.obj 0.0906092
+---------------------------------------------------------------
+Query Object: 527: Cup/D00270.obj : s 6
+NonWheelChair/m789.obj 0.0865751
+Cup/D00587.obj 0.0943637
+Cup/D00638.obj 0.0957043
+Cup/D00550.obj 0.096868
+Cup/D00328.obj 0.0979791
+Drum/D00189.obj 0.100993
+Train/m1587.obj 0.105655
+Cup/D00882.obj 0.110578
+Cup/D00843.obj 0.111082
+NonWheelChair/m817.obj 0.111981
+---------------------------------------------------------------
+Query Object: 555: DeskLamp/D00257.obj : s 1
+Cup/m494.obj 0.121556
+NonWheelChair/m822.obj 0.146295
+Spoon/D00669.obj 0.146768
+DeskLamp/D00547.obj 0.148191
+Starship/m1359.obj 0.148532
+NonWheelChair/D00928.obj 0.152874
+WheelChair/D00604.obj 0.153429
+NonWheelChair/m827.obj 0.153615
+WheelChair/D00365.obj 0.153832
+WheelChair/D00290.obj 0.154409
+---------------------------------------------------------------
+Query Object: 587: DeskPhone/D00318.obj : s 0
+Hand/D01197.obj 0.0615557
+WheelChair/D00720.obj 0.0859536
+Hand/m326.obj 0.0884544
+Hand/D01060.obj 0.0886775
+Hand/m336.obj 0.0893084
+Hand/D01118.obj 0.0900524
+Quadruped/D00867.obj 0.0906247
+Humanoid/m210.obj 0.090728
+Humanoid/m252.obj 0.0942409
+Biplane/D00515.obj 0.0942716
+---------------------------------------------------------------
+Query Object: 628: Door/m1718.obj : s 5
+Door/D01129.obj 0.00584934
+City/m1661.obj 0.0913222
+City/D01039.obj 0.098347
+ComputerKeyboard/D00673.obj 0.109335
+ComputerKeyboard/D00278.obj 0.109783
+City/D01066.obj 0.112757
+Door/D01104.obj 0.118071
+Door/m1714.obj 0.118641
+Door/D01177.obj 0.122435
+Door/D01143.obj 0.123853
+---------------------------------------------------------------
+Query Object: 648: Drum/D00551.obj : s 3
+Wheel/m745.obj 0.129271
+House/m434.obj 0.139556
+Wheel/m744.obj 0.153208
+Drum/D00308.obj 0.1577
+Wheel/m737.obj 0.15819
+Bookset/D01122.obj 0.159186
+Drum/D00193.obj 0.160173
+Drum/D00115.obj 0.163268
+Monitor/D00978.obj 0.166464
+Apartment/D00792.obj 0.171007
+---------------------------------------------------------------
+Query Object: 667: Fish/D00535.obj : s 6
+Jet/m1260.obj 0.0462881
+Jet/m1248.obj 0.0522763
+Jet/m1247.obj 0.0545126
+Fish/D00643.obj 0.0567752
+Fish/D00850.obj 0.0582858
+Fish/D00450.obj 0.0645385
+Fish/D00398.obj 0.0647447
+Fish/D00636.obj 0.0653912
+Fish/D00022.obj 0.068615
+Humanoid/m263.obj 0.0695901
+---------------------------------------------------------------
+Query Object: 694: FloorLamp/D00955.obj : s 6
+FloorLamp/D00400.obj 0.120438
+FloorLamp/D00856.obj 0.126484
+Cup/D00270.obj 0.130667
+FloorLamp/D00981.obj 0.131268
+FloorLamp/D00228.obj 0.132708
+Cup/D00550.obj 0.134385
+ClassicPiano/D00009.obj 0.134992
+FloorLamp/D00580.obj 0.13981
+NonWheelChair/m817.obj 0.140798
+FloorLamp/D00028.obj 0.143089
+---------------------------------------------------------------
+Query Object: 705: Glasses/D00201.obj : s 10
+Glasses/D00877.obj 0.152503
+Glasses/D00475.obj 0.182134
+Glasses/D00717.obj 0.190082
+Glasses/D00656.obj 0.191048
+Glasses/D00660.obj 0.192042
+Glasses/D00630.obj 0.1922
+Glasses/D00560.obj 0.196538
+Glasses/D00575.obj 0.208094
+Glasses/D00816.obj 0.213722
+Glasses/D00883.obj 0.21646
+---------------------------------------------------------------
+Query Object: 728: Guitar/D00124.obj : s 3
+Musical_Instrument/m634.obj 0.0487703
+Guitar/D00494.obj 0.0605503
+Guitar/D00023.obj 0.0633136
+Musical_Instrument/m625.obj 0.0645923
+Violin/D00376.obj 0.0694963
+Guitar/D00076.obj 0.0730035
+Violin/D00620.obj 0.0772118
+Musical_Instrument/m631.obj 0.0786517
+SubmachineGun/D00068.obj 0.0788115
+SubmachineGun/D00613.obj 0.0788812
+---------------------------------------------------------------
+Query Object: 772: Gun/m658.obj : s 7
+Gun/D00244.obj 0.00483735
+Gun/m652.obj 0.0456862
+Gun/D00204.obj 0.0497036
+MultiSeat/m784.obj 0.0612237
+MultiSeat/m829.obj 0.0682717
+MultiSeat/m830.obj 0.068487
+Gun/D00368.obj 0.0716842
+Gun/m664.obj 0.0718764
+Gun/D00103.obj 0.0720641
+Gun/D00606.obj 0.0728204
+---------------------------------------------------------------
+Query Object: 825: Hand/m329.obj : s 7
+Hand/D01097.obj 0.00415518
+Hand/D01024.obj 0.0506939
+Hand/m334.obj 0.0521504
+Hand/D01117.obj 0.0598011
+Hand/m328.obj 0.0603615
+Hat/m1627.obj 0.0643428
+Hand/D01193.obj 0.0677574
+Hand/m327.obj 0.0680625
+DeskPhone/D00894.obj 0.0714814
+Quadruped/D00757.obj 0.0721215
+---------------------------------------------------------------
+Query Object: 840: Hat/m1631.obj : s 0
+ClassicPiano/D00967.obj 0.0566674
+Ship/m1458.obj 0.0604138
+Computer/m1777.obj 0.072169
+Computer/D01072.obj 0.0723934
+DeskPhone/D00894.obj 0.0743263
+Quadruped/m282.obj 0.0755995
+Helicopter/m1329.obj 0.0775639
+NonWheelChair/m793.obj 0.0798347
+ClassicPiano/D00190.obj 0.0801817
+Computer/D01028.obj 0.0808755
+---------------------------------------------------------------
+Query Object: 895: Helicopter/m1329.obj : s 0
+Ship/m1458.obj 0.0774562
+Hat/m1631.obj 0.0775639
+Musical_Instrument/m644.obj 0.0814933
+Bird/m52.obj 0.0825769
+Ship/m1454.obj 0.0850343
+NonWheelChair/D00306.obj 0.0894749
+Computer/D01072.obj 0.0916526
+NonWheelChair/m819.obj 0.0918858
+Computer/m1777.obj 0.0923622
+ClassicPiano/D00009.obj 0.0932062
+---------------------------------------------------------------
+Query Object: 925: House/m448.obj : s 1
+House/m453.obj 0.0912604
+Apartment/D00860.obj 0.0915721
+Apartment/D00478.obj 0.0951425
+BuildingNonResidential/m389.obj 0.103636
+Apartment/D00639.obj 0.107622
+Bookset/D01050.obj 0.111822
+MilitaryVehicle/D00100.obj 0.112735
+TruckNonContainer/D00143.obj 0.114332
+HumanHead/D00106.obj 0.118656
+Mug/D00913.obj 0.118964
+---------------------------------------------------------------
+Query Object: 935: HumanHead/D00061.obj : s 7
+Hand/m332.obj 0.1111
+Hand/D01162.obj 0.111376
+Monitor/D00336.obj 0.112028
+HumanHead/m348.obj 0.115315
+HumanHead/m362.obj 0.115799
+HumanHead/m355.obj 0.120351
+HumanHead/D00205.obj 0.122379
+HumanHead/D00910.obj 0.12815
+HumanHead/m346.obj 0.12878
+HumanHead/m363.obj 0.129198
+---------------------------------------------------------------
+Query Object: 1086: Humanoid/m234.obj : s 10
+Humanoid/m244.obj 0.0466231
+Humanoid/m240.obj 0.0505374
+Humanoid/m229.obj 0.0587125
+Humanoid/m238.obj 0.0594295
+Humanoid/m251.obj 0.060031
+Humanoid/m255.obj 0.0601505
+Humanoid/m223.obj 0.0627902
+Humanoid/m245.obj 0.0635921
+Humanoid/m230.obj 0.0646585
+Humanoid/m137.obj 0.0650635
+---------------------------------------------------------------
+Query Object: 1172: Insect/m23.obj : s 1
+Quadruped/m274.obj 0.0581945
+Insect/D00855.obj 0.0648482
+Helicopter/m1304.obj 0.0686229
+Bird/m32.obj 0.0778598
+Humanoid/m265.obj 0.0815767
+Fish/D00643.obj 0.081826
+Quadruped/m95.obj 0.0824914
+Fish/D00142.obj 0.0825908
+Fish/D00293.obj 0.0826949
+Quadruped/m106.obj 0.0833
+---------------------------------------------------------------
+Query Object: 1245: Jet/m1232.obj : s 4
+Helicopter/m1311.obj 0.0650921
+Monoplane/D00262.obj 0.0655434
+AquaticAnimal/m77.obj 0.067774
+Helicopter/m1310.obj 0.0685124
+Helicopter/D00423.obj 0.0697342
+Helicopter/D00500.obj 0.0712599
+Jet/m1150.obj 0.0738485
+Jet/m1217.obj 0.0754113
+Jet/m1216.obj 0.0754126
+Jet/m1230.obj 0.0790876
+---------------------------------------------------------------
+Query Object: 1306: Knife/D01057.obj : s 4
+Sword/D00195.obj 0.0701951
+Knife/D01032.obj 0.0731118
+Sword/m711.obj 0.0738315
+Spoon/D00196.obj 0.074166
+Gun/m686.obj 0.0744251
+Knife/D01075.obj 0.0768178
+Knife/D01189.obj 0.0768287
+Knife/D01063.obj 0.0772747
+Spoon/D00562.obj 0.0793183
+Spoon/D00593.obj 0.0842908
+---------------------------------------------------------------
+Query Object: 1334: MilitaryVehicle/D00611.obj : s 2
+Train/D01008.obj 0.0492457
+Ship/m1457.obj 0.0609242
+MilitaryVehicle/D00971.obj 0.0618012
+Hand/D01093.obj 0.0666779
+MilitaryVehicle/D00529.obj 0.0691014
+Car/m1495.obj 0.0711198
+Hand/D01041.obj 0.075499
+Hand/m325.obj 0.0755616
+MultiSeat/m834.obj 0.075689
+Humanoid/m190.obj 0.0761603
+---------------------------------------------------------------
+Query Object: 1355: Monitor/D00469.obj : s 2
+Monitor/D00659.obj 0.0632875
+HumanHead/m369.obj 0.0776664
+HumanHead/D00758.obj 0.0823406
+HumanHead/D00690.obj 0.0826129
+HumanHead/D00629.obj 0.0846189
+HumanHead/D00313.obj 0.0972865
+Monitor/D00978.obj 0.0975802
+HumanHead/m352.obj 0.102119
+Mug/D00833.obj 0.105792
+RoundTable/m937.obj 0.109438
+---------------------------------------------------------------
+Query Object: 1380: Monoplane/D00840.obj : s 3
+Humanoid/m236.obj 0.0460427
+Biplane/m1146.obj 0.0471958
+Jet/m1191.obj 0.0479695
+Jet/m1154.obj 0.05246
+Monoplane/D00098.obj 0.0528023
+Jet/m1162.obj 0.0529145
+Monoplane/D00019.obj 0.0534073
+Jet/m1147.obj 0.0543322
+Jet/m1177.obj 0.0551402
+Monoplane/D00169.obj 0.0555917
+---------------------------------------------------------------
+Query Object: 1391: Motorcycle/D00342.obj : s 5
+Motorcycle/D00395.obj 0.0460223
+Motorcycle/D00594.obj 0.0558096
+Motorcycle/m1479.obj 0.0563453
+Motorcycle/D00544.obj 0.0575455
+Motorcycle/D00054.obj 0.0597457
+Jet/m1201.obj 0.0642476
+Jet/m1259.obj 0.0649646
+Jet/m1258.obj 0.0682316
+Humanoid/m253.obj 0.0700013
+Jet/m1247.obj 0.07117
+---------------------------------------------------------------
+Query Object: 1433: Mug/m506.obj : s 1
+Mug/D00427.obj 0.108628
+Hat/m1641.obj 0.110417
+FloorLamp/D00186.obj 0.111429
+Shelf/D00468.obj 0.116803
+Car/m1488.obj 0.129088
+Cup/D00550.obj 0.129092
+RectangleTable/m904.obj 0.129549
+TruckNonContainer/D00143.obj 0.130203
+Hat/m1629.obj 0.133049
+Cup/D00638.obj 0.134583
+---------------------------------------------------------------
+Query Object: 1465: MultiSeat/m783.obj : s 2
+Starship/m1366.obj 0.0776046
+MultiSeat/m779.obj 0.0805907
+RectangleTable/m914.obj 0.0903405
+Starship/m1364.obj 0.0915667
+PlantIndoors/m1036.obj 0.0928359
+Starship/m1353.obj 0.0971196
+Starship/m1355.obj 0.0975167
+MultiSeat/m777.obj 0.098593
+Tool/m591.obj 0.099084
+Jet/m1298.obj 0.101411
+---------------------------------------------------------------
+Query Object: 1498: Musical_Instrument/m645.obj : s 1
+NonWheelChair/m798.obj 0.0676873
+NonWheelChair/m826.obj 0.0772468
+Biplane/D00276.obj 0.0824047
+Biplane/m1138.obj 0.0829317
+NonWheelChair/D00936.obj 0.0858803
+NonWheelChair/D00480.obj 0.087618
+WheelChair/D00846.obj 0.091192
+Biplane/m1122.obj 0.0936897
+NonWheelChair/D00419.obj 0.0938688
+Musical_Instrument/m646.obj 0.0939248
+---------------------------------------------------------------
+Query Object: 1534: NonWheelChair/m799.obj : s 6
+WheelChair/D00846.obj 0.0362586
+NonWheelChair/m797.obj 0.051122
+WheelChair/D00203.obj 0.0516551
+NonWheelChair/D00512.obj 0.0555502
+WheelChair/D00782.obj 0.0560001
+NonWheelChair/m811.obj 0.0562122
+NonWheelChair/D00185.obj 0.0570414
+NonWheelChair/m814.obj 0.0588949
+NonWheelChair/m812.obj 0.0591616
+WheelChair/D00274.obj 0.0599311
+---------------------------------------------------------------
+Query Object: 1573: PianoBoard/D00721.obj : s 4
+PianoBoard/D00075.obj 0.0757585
+PianoBoard/D00122.obj 0.0962109
+House/D00091.obj 0.103259
+House/D00889.obj 0.118606
+PianoBoard/D00181.obj 0.135692
+House/m462.obj 0.13612
+Drum/D00596.obj 0.136617
+MultiSeat/D00263.obj 0.136662
+PianoBoard/D00253.obj 0.136735
+House/D00095.obj 0.137482
+---------------------------------------------------------------
+Query Object: 1590: PlantIndoors/D00657.obj : s 0
+Helicopter/m1308.obj 0.0757888
+Helicopter/D00644.obj 0.0779509
+Helicopter/m1328.obj 0.0845634
+Biplane/D00320.obj 0.08566
+Motorcycle/D00476.obj 0.0870974
+Jet/m1195.obj 0.0882191
+Helicopter/m1317.obj 0.0898319
+Helicopter/D00986.obj 0.0907796
+Jet/m1261.obj 0.0922292
+Gun/D00972.obj 0.0926692
+---------------------------------------------------------------
+Query Object: 1658: PlantWildNonTree/m985.obj : s 0
+Jet/m1292.obj 0.0964865
+Jet/m1196.obj 0.10709
+Jet/m1256.obj 0.110462
+Jet/m1257.obj 0.110669
+Jet/m1195.obj 0.117763
+Jet/m1228.obj 0.118179
+Jet/m1253.obj 0.119665
+Monoplane/D00864.obj 0.120204
+Biplane/D00900.obj 0.122363
+Jet/m1172.obj 0.123185
+---------------------------------------------------------------
+Query Object: 1707: Quadruped/m88.obj : s 10
+Quadruped/D00794.obj 0.0406084
+Quadruped/D00700.obj 0.0446071
+Quadruped/D00380.obj 0.0449769
+Quadruped/D00326.obj 0.0458855
+Quadruped/D00409.obj 0.0471496
+Quadruped/m107.obj 0.0483179
+Quadruped/m104.obj 0.0503312
+Quadruped/m108.obj 0.0514576
+Quadruped/D00841.obj 0.0548665
+Quadruped/D00934.obj 0.0551858
+---------------------------------------------------------------
+Query Object: 1756: RectangleTable/m889.obj : s 3
+Car/m1560.obj 0.130338
+PianoBoard/D00623.obj 0.131625
+RectangleTable/m890.obj 0.140805
+RoundTable/D00492.obj 0.14092
+Shelf/D00725.obj 0.148913
+TruckNonContainer/D00055.obj 0.150769
+Monitor/D00915.obj 0.153147
+RectangleTable/m886.obj 0.154067
+Truck/D00287.obj 0.155528
+RectangleTable/m764.obj 0.157518
+---------------------------------------------------------------
+Query Object: 1779: Rocket/D00015.obj : s 4
+Rocket/D00719.obj 0.0821796
+Rocket/D00697.obj 0.0845951
+AquaticAnimal/m59.obj 0.0851154
+Jet/m1190.obj 0.0881498
+Rocket/D00346.obj 0.0916057
+Humanoid/m123.obj 0.0919173
+AquaticAnimal/m74.obj 0.0923316
+Ship/m1438.obj 0.0927427
+Humanoid/m262.obj 0.0932226
+Rocket/D00426.obj 0.0945899
+---------------------------------------------------------------
+Query Object: 1809: RoundTable/D00649.obj : s 3
+RoundTable/D00344.obj 0.127443
+RoundTable/m923.obj 0.132193
+RoundTable/D00646.obj 0.16392
+RectangleTable/m877.obj 0.166202
+RectangleTable/m882.obj 0.167228
+RectangleTable/D00134.obj 0.172962
+RectangleTable/m920.obj 0.173781
+Monitor/D01000.obj 0.174598
+Insect/D00109.obj 0.179588
+Glasses/D00717.obj 0.180405
+---------------------------------------------------------------
+Query Object: 1856: Shelf/m853.obj : s 8
+Shelf/D00881.obj 0.0659341
+Shelf/m852.obj 0.0661479
+Shelf/m851.obj 0.0766217
+Shelf/m863.obj 0.0768134
+Shelf/m850.obj 0.0812813
+Shelf/m865.obj 0.0832943
+Bed/m951.obj 0.0878746
+Shelf/D00592.obj 0.0920182
+Shelf/D00057.obj 0.0963937
+MilitaryVehicle/D00799.obj 0.0971669
+---------------------------------------------------------------
+Query Object: 1918: Ship/m1460.obj : s 2
+Ship/m1461.obj 0.048292
+PlantWildNonTree/m968.obj 0.0699572
+Bird/D00442.obj 0.0934194
+Ship/m1462.obj 0.0964026
+Tree/m1067.obj 0.099219
+NonWheelChair/D00101.obj 0.10025
+Biplane/m1118.obj 0.102354
+Biplane/m1141.obj 0.103589
+Tree/m1071.obj 0.106491
+Biplane/D00069.obj 0.106767
+---------------------------------------------------------------
+Query Object: 1934: Sign/m1676.obj : s 2
+Sign/m1675.obj 0.0903732
+Sign/m1678.obj 0.111562
+Bird/D00323.obj 0.112395
+Sword/m709.obj 0.122988
+Sword/D00484.obj 0.123334
+Sword/D00066.obj 0.12355
+Sword/m710.obj 0.123784
+Sword/D00992.obj 0.124651
+Sword/m692.obj 0.13789
+Sword/D00812.obj 0.138086
+---------------------------------------------------------------
+Query Object: 1945: Skyscraper/D00125.obj : s 1
+Skyscraper/D00105.obj 0.00455967
+Humanoid/m175.obj 0.047582
+Humanoid/m125.obj 0.0608704
+Humanoid/m165.obj 0.0617354
+Humanoid/m264.obj 0.0635688
+Humanoid/m162.obj 0.0663902
+Humanoid/m141.obj 0.0670208
+Humanoid/m185.obj 0.0675593
+Motorcycle/D00521.obj 0.0679114
+Fish/D00748.obj 0.0679214
+---------------------------------------------------------------
+Query Object: 1970: Spoon/D00927.obj : s 5
+Spoon/D00497.obj 0.0465324
+Spoon/D00085.obj 0.0666585
+Tool/m1108.obj 0.0670322
+Spoon/D00014.obj 0.0683723
+Spoon/D00144.obj 0.0701523
+Spoon/D00661.obj 0.0714487
+Sign/m1671.obj 0.0733556
+Sword/D00635.obj 0.0776283
+Guitar/D00461.obj 0.0841894
+Musical_Instrument/m637.obj 0.0846692
+---------------------------------------------------------------
+Query Object: 1983: Starship/m1365.obj : s 2
+Bicycle/m1477.obj 0.0643312
+Bicycle/D00078.obj 0.0648209
+Bicycle/D00847.obj 0.0651198
+Starship/m1356.obj 0.0714551
+Door/m1730.obj 0.0719996
+Door/m1729.obj 0.072243
+Bicycle/D00930.obj 0.0724528
+Starship/m1372.obj 0.0732215
+City/D01068.obj 0.0744517
+Door/D01058.obj 0.0788069
+---------------------------------------------------------------
+Query Object: 2008: SubmachineGun/D00371.obj : s 0
+Ship/D00771.obj 0.0501357
+Ship/m1440.obj 0.0620544
+Skyscraper/D00130.obj 0.0656944
+Guitar/D00849.obj 0.0687429
+Monoplane/D00304.obj 0.068815
+Musical_Instrument/m631.obj 0.0693805
+Humanoid/m129.obj 0.070015
+Gun/m653.obj 0.0718627
+Ship/D00258.obj 0.0719547
+Gun/m676.obj 0.0737348
+---------------------------------------------------------------
+Query Object: 2049: Sword/m697.obj : s 9
+Sword/m714.obj 0.0039146
+Sword/m704.obj 0.0637555
+Sword/m712.obj 0.0713762
+Sword/D00916.obj 0.0775678
+Sword/m691.obj 0.086741
+Sword/m701.obj 0.092054
+Sword/D00807.obj 0.100304
+Gun/m680.obj 0.103698
+Sword/m713.obj 0.10591
+Sword/m707.obj 0.108535
+---------------------------------------------------------------
+Query Object: 2098: Tool/m1105.obj : s 2
+Tool/m1108.obj 0.0451843
+SubmachineGun/D00878.obj 0.0540421
+Musical_Instrument/m637.obj 0.0576413
+Guitar/D00461.obj 0.0577075
+Guitar/D00374.obj 0.060044
+Gun/m674.obj 0.061845
+Tool/m1117.obj 0.0636424
+SubmachineGun/D00068.obj 0.0637664
+Musical_Instrument/m628.obj 0.0764538
+Spoon/D00144.obj 0.0765319
+---------------------------------------------------------------
+Query Object: 2128: Train/D01137.obj : s 0
+Knife/D01051.obj 0.071808
+Knife/D01075.obj 0.110703
+Tool/m1116.obj 0.114595
+Knife/D01132.obj 0.117925
+Gun/m678.obj 0.122339
+Knife/D01057.obj 0.122846
+SubmachineGun/D00384.obj 0.123487
+Knife/D01119.obj 0.123873
+Knife/D01160.obj 0.1248
+Knife/m724.obj 0.127296
+---------------------------------------------------------------
+Query Object: 2166: Tree/m1096.obj : s 1
+Insect/m9.obj 0.13479
+Humanoid/m259.obj 0.139255
+Tree/m1089.obj 0.143006
+Insect/D00732.obj 0.144606
+FloorLamp/m617.obj 0.144736
+NonWheelChair/m788.obj 0.144908
+NonWheelChair/D00101.obj 0.151917
+PlantWildNonTree/m971.obj 0.152069
+PlantIndoors/m1016.obj 0.153191
+Humanoid/m218.obj 0.153979
+---------------------------------------------------------------
+Query Object: 2177: Truck/D00287.obj : s 0
+TruckNonContainer/D00267.obj 0.0559761
+Car/m1490.obj 0.0644222
+TruckNonContainer/D00608.obj 0.0729611
+Car/D00260.obj 0.0821768
+Car/m1499.obj 0.083253
+MultiSeat/m833.obj 0.0859417
+TruckNonContainer/D00252.obj 0.0869891
+MultiSeat/D00588.obj 0.0872188
+Car/D00724.obj 0.0875688
+Car/D00452.obj 0.0877937
+---------------------------------------------------------------
+Query Object: 2194: TruckNonContainer/D00252.obj : s 1
+Computer/D01164.obj 0.0731979
+Truck/D00002.obj 0.0743777
+TruckNonContainer/D00608.obj 0.0745265
+MultiSeat/D00588.obj 0.0763417
+Car/m1561.obj 0.0765455
+Truck/m1574.obj 0.076979
+MultiSeat/m833.obj 0.0795854
+MultiSeat/m837.obj 0.0813206
+MultiSeat/m835.obj 0.0819292
+MultiSeat/m834.obj 0.0830401
+---------------------------------------------------------------
+Query Object: 2214: Vase/m534.obj : s 2
+Vase/m544.obj 0.0980695
+Cup/m502.obj 0.101566
+Vase/m546.obj 0.103169
+BuildingNonResidential/m400.obj 0.108399
+Drum/D00980.obj 0.110624
+NonWheelChair/m791.obj 0.120202
+Mug/m508.obj 0.124234
+Mug/D00913.obj 0.129011
+Mug/D00341.obj 0.129052
+House/m460.obj 0.129232
+---------------------------------------------------------------
+Query Object: 2239: Violin/D00602.obj : s 1
+Violin/D00506.obj 0.0467327
+Humanoid/m197.obj 0.0560518
+Humanoid/m172.obj 0.0570578
+Humanoid/m213.obj 0.0589742
+Humanoid/m130.obj 0.0605015
+Jet/m1202.obj 0.0608447
+Humanoid/m170.obj 0.06142
+Humanoid/m189.obj 0.0618265
+SubmachineGun/D00062.obj 0.0623328
+Humanoid/m203.obj 0.0632731
+---------------------------------------------------------------
+Query Object: 2248: Wheel/m735.obj : s 1
+Door/m1726.obj 0.154503
+Door/D01155.obj 0.15461
+Shelf/m861.obj 0.156051
+RoundTable/m927.obj 0.156589
+Wheel/m736.obj 0.169296
+Shelf/m854.obj 0.170758
+Door/m1728.obj 0.181685
+Door/D01158.obj 0.182138
+Door/m1721.obj 0.182253
+Door/m1732.obj 0.184594
+---------------------------------------------------------------
+Query Object: 2272: WheelChair/D00449.obj : s 5
+Tree/m1071.obj 0.0847154
+Ship/m1459.obj 0.0853704
+PlantIndoors/m1015.obj 0.0856673
+Musical_Instrument/m646.obj 0.086602
+NonWheelChair/m801.obj 0.0868764
+WheelChair/D00687.obj 0.0874874
+WheelChair/D00183.obj 0.0893218
+WheelChair/D00821.obj 0.089632
+WheelChair/D00394.obj 0.0908041
+WheelChair/D00628.obj 0.0924396
+---------------------------------------------------------------
+Total Score: 3.44928
