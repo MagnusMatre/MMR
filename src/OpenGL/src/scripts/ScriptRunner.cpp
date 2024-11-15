@@ -87,10 +87,11 @@ void RunScriptQueryBenchmark() {
 void RunScriptRunAnn() {
 	// Code to run Ann
 	std::string feature_file = "../../res/features_final.txt";
+	std::string save_root = "../../scalability_results";
 	std::string load_tree_file = "";
 
 
-	RunAnn script;
+	RunAnn script(save_root);
 
 	// Note, the distance function can only be set in the Ann.h file MANUALLY! Hence, this is not run here.
 	//script.Initialize(feature_file, load_tree_file, 0.5);
@@ -123,25 +124,7 @@ int main(int argc, char** argv) {
 
 
 
-	if (scriptName == "PMPremesh") {
-		RunScriptPMPremesh();
-	}
-	else if (scriptName == "VCGrepair") {
-		RunScriptVCGrepair();
-	}
-	else if (scriptName == "VCGremesh") {
-		RunScriptVCGremesh();
-	}
-	else if (scriptName == "CheckMeshes") {
-		RunScriptCheckMeshes();
-	}
-	else if (scriptName == "CGALtest") {
-		RunScriptCGALtest();
-	}
-	else if (scriptName == "CGALclean") {
-		RunScriptCGALclean();
-	}
-	else if (scriptName == "FullRemesh") {
+	if (scriptName == "FullRemesh") {
 		RunScriptFullRemesh();
 	}
 	else if (scriptName == "Normalize") {
@@ -153,10 +136,10 @@ int main(int argc, char** argv) {
 	else if (scriptName == "FeatureExtraction") {
 		RunScriptFeatureScript();
 	}
-	else if (scriptName == "QueryBenchmark") {
+	else if (scriptName == "QueryExperiments") {
 		RunScriptQueryBenchmark();
 	}
-	else if (scriptName == "RunAnn") {
+	else if (scriptName == "AnnExperiments") {
 		RunScriptRunAnn();
 	}
     else {

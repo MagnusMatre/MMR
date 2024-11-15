@@ -19,7 +19,7 @@ clone the repository with e.g.
     git clone https://github.com/MagnusMatre/MMR.git
 ```
 
-or download the .zip contents of the main branch. Since we include the files of the meshes, convex hulls and sample points (~6 GB), this will take a while.
+or download the .zip contents of the main branch. *Important:* We did not include the files for the sample points (6 GB) on the GitHub. These need to be either recreated (with script 3. below) or downloaded from ….
 
 ### Step 2
 After cloning the repository, look for the "OpenGl.sln" file and open it in Visual Studio Code (2017).
@@ -51,11 +51,11 @@ Below we list the possible command line arguments and which results they reprodu
 2. Normalize  -- This script will normalize all the meshes in the "MeshesFilteredRemeshed" and save them in "MeshesFilteredNormalized". This step takes around an hour.
 3. HullsAndSamplePoints -- This script will create the convex hulls and sample points for all meshes in "MeshesFilteredNormalized". It is necessary to run BEFORE FeatureExtraction. This step also takes a few hours.
 4. FeatureExtraction -- This script will extract the *RAW* features from "MeshesFilteredNormalized" directory. This step again takes a while.
-                        * IMPORTANT : * After obtaining the feature files from each directory, you need to run the Python script
+                        *IMPORTANT :* After obtaining the feature files from each directory, you need to run the Python script
                         ```bash 
                             python3 modify_features.py
                         ```
                         This script will stitch together all the different feature files and add secondary features. The result is the "features_final.txt" file in the "res/" folder.
 
-5. QueryExperiments -- This script will run all the experiments we did for different normalization
-6. ScalabilityExperiments -- 
+5. QueryExperiments -- This script will run (most of) the experiments we did for different normalization
+6. AnnExperiments 	-- This script will run (most of) the experiments we we did for scalability 

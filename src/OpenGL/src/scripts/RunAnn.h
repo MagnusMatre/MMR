@@ -14,7 +14,7 @@
 
 class RunAnn {
 public:
-	RunAnn();
+	RunAnn(std::string& save_root);
 	~RunAnn();
 
 	void ExecuteDistances(std::string distance_name);
@@ -32,6 +32,8 @@ public:
 private:
 	
 	std::unique_ptr<ANN> m_ann;
+
+	std::string m_save_root;
 
 	std::string m_feature_file;
 };

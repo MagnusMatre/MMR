@@ -1,8 +1,8 @@
 #include "RunAnn.h"
 
 
-RunAnn::RunAnn() {
-
+RunAnn::RunAnn(std::string& save_root) {
+	m_save_root = save_root;
 }
 
 RunAnn::~RunAnn() {
@@ -18,7 +18,7 @@ double RunAnn::Initialize(std::string& feature_file, std::string& load_tree_file
 void RunAnn::ExecuteDistances(std::string distance_name) {
 	// Open a file in append mode to write the results
 	std::ofstream file;
-	file.open("../../res/scalability_distance_results/scores.txt", std::ios_base::app);
+	file.open(m_save_root + "/scalability_results/scalability_distance_results/scores.txt", std::ios_base::app);
 
 	// Compute the scores
 	std::pair<double, double> score_time = ComputeScores(10, 10);
@@ -33,7 +33,7 @@ void RunAnn::ExecuteBeta(std::string& feature_file, int steps) {
 	std::string load_tree_file = "";
 
 	std::ofstream file;
-	file.open("../../res/scalability_beta_results/scores.txt", std::ios_base::app);
+	file.open(m_save_root + "/scalability_beta_results/scores.txt", std::ios_base::app);
 
 	for (int i = 0; i <= steps; ++i) {
 		double beta = (double)i / steps;
@@ -58,7 +58,7 @@ void RunAnn::Execute_n_trees(std::string& feature_file, std::vector<int>& n_tree
 	std::string load_tree_file = "";
 
 	std::ofstream file;
-	file.open("../../res/scalability_n_trees_results/scores.txt", std::ios_base::app);
+	file.open(m_save_root + "/scalability_n_trees_results/scores.txt", std::ios_base::app);
 
 	file << "NumberOfTrees,AverageScore,BuildTimeIndex,QueryTime" << std::endl;
 
@@ -87,7 +87,7 @@ void RunAnn::Execute_k_search(std::string& feature_file, std::vector<int>& h_sea
 	std::string load_tree_file = "";
 
 	std::ofstream file;
-	file.open("../../res/scalability_k_search_results/scores.txt", std::ios_base::app);
+	file.open(m_save_root + "/scalability_k_search_results/scores.txt", std::ios_base::app);
 
 	double build_time = Initialize(feature_file, load_tree_file, 0.55, 100);
 
@@ -117,7 +117,7 @@ void RunAnn::ExecuteQuerySize(std::string& feature_file, std::vector<int> K_valu
 	std::string load_tree_file = "";
 
 	std::ofstream file;
-	file.open("../../res/scalability_querysize_results/scores.txt", std::ios_base::app);
+	file.open(m_save_root + "/scalability_querysize_results/scores.txt", std::ios_base::app);
 
 	double build_time = Initialize(feature_file, load_tree_file, 0.55, 100);
 
@@ -142,7 +142,7 @@ void RunAnn::ExecuteDistanceMatrix(std::string& feature_file, int K) {
 	std::string load_tree_file = "";
 
 	std::ofstream file;
-	file.open("../../res/scalability_closest_indices/closest.txt");
+	file.open(m_save_root + "/scalability_closest_indices/closest.txt");
 
 	double build_time = Initialize(feature_file, load_tree_file, 0.55, 100);
 
