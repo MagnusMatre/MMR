@@ -16,7 +16,7 @@ The code should be run as a Visual Studio Code solution. We recommend the newest
 clone the repository with e.g.
 
 ```bash
-    git clone https://github.com/MagnusMatre/MMR.git
+git clone https://github.com/MagnusMatre/MMR.git
 ```
 
 or download the .zip contents of the main branch. *Important:* The sample point files we used are 6GB in total (100.000 points each), which GitHub does not want uploaded to it... therefore, we supplied 10.000 sample point files instead.
@@ -35,8 +35,10 @@ Building the solution may take 5-10 minutes.
 ### Step 4 (optional)
 
 Python scripts can be run by going inside the "src/Python" folder in a terminal. We mostly used these files to create plots/analyze results.
-Scripts can be run with ```bash
-    python3 .\<script_file_name>.py
+Scripts can be run with 
+
+```bash
+python3 .\<script_file_name>.py
 ```
 
 ## Scripts
