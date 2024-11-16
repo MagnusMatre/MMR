@@ -1,0 +1,7 @@
+Histogram statistics
+{ MIN, MAX, MEAN, STD}
+Histogram feature 0: {0.01176, 1.62198, 0.35835, 0.0127493}
+Histogram feature 1: {0.01258, 1.99862, 0.712815, 0.0140199}
+Histogram feature 2: {0.01264, 1.66654, 0.4587, 0.0121265}
+Histogram feature 3: {0.005884, 1.95369, 0.693672, 0.0160605}
+Histogram feature 4: {0.00143402, 1.98573, 0.814319, 0.017334}

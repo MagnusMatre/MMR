@@ -1,0 +1,194 @@
+Query Object: 2182: Truck/D00518.obj : s 6
+Truck/D00112.obj 0.00559597
+Truck/m1576.obj 0.00831997
+Train/D01047.obj 0.00840785
+Truck/D00029.obj 0.0109306
+Truck/m1571.obj 0.0118204
+TruckNonContainer/D00572.obj 0.0136049
+Bottle/D00281.obj 0.0139809
+Truck/D00331.obj 0.0144355
+Truck/D00987.obj 0.0160549
+Humanoid/m216.obj 0.0163813
+---------------------------------------------------------------
+Query Object: 911: House/D00965.obj : s 4
+House/m460.obj 0.00928611
+Shelf/D00781.obj 0.0132885
+Mug/D00321.obj 0.0188411
+House/m452.obj 0.0206672
+House/m441.obj 0.0264465
+House/m430.obj 0.0287181
+BuildingNonResidential/m405.obj 0.0290968
+PianoBoard/D00623.obj 0.0303442
+RectangleTable/m886.obj 0.0320444
+Shelf/D00129.obj 0.0331558
+---------------------------------------------------------------
+Query Object: 730: Guitar/D00232.obj : s 3
+Violin/D00358.obj 0.00174139
+Violin/D00340.obj 0.00322735
+Guitar/D00416.obj 0.00433183
+Violin/D00570.obj 0.00502004
+Violin/D00250.obj 0.005538
+ComputerKeyboard/D00654.obj 0.0059996
+Musical_Instrument/m625.obj 0.00635653
+Guitar/D00023.obj 0.00636768
+Guitar/D00645.obj 0.00723229
+ComputerKeyboard/D00569.obj 0.00726564
+---------------------------------------------------------------
+Query Object: 1317: Knife/D01189.obj : s 2
+Knife/D01063.obj 0.00195813
+Sign/m1678.obj 0.00559809
+Sword/D00066.obj 0.0111447
+Sword/m710.obj 0.0118379
+Jet/m1297.obj 0.012644
+Spoon/D00157.obj 0.0137753
+Knife/D01057.obj 0.0169393
+Sword/D00992.obj 0.0174962
+Spoon/D00562.obj 0.0189006
+Sword/D00712.obj 0.0193595
+---------------------------------------------------------------
+Query Object: 2221: Vase/m541.obj : s 1
+Vase/m527.obj 0.00147889
+HumanHead/D00690.obj 0.00670523
+HumanHead/m352.obj 0.00723629
+Wheel/m741.obj 0.00801252
+HumanHead/D00629.obj 0.00824973
+Monitor/D00469.obj 0.00826797
+Drum/D00404.obj 0.00980391
+HumanHead/D00758.obj 0.0102021
+HumanHead/D00313.obj 0.0102719
+HumanHead/m357.obj 0.0105114
+---------------------------------------------------------------
+Query Object: 1660: PlantWildNonTree/m987.obj : s 3
+PlantWildNonTree/m984.obj 0.00144649
+AircraftBuoyant/m1345.obj 0.0358327
+PlantWildNonTree/m977.obj 0.0434454
+Bottle/D00176.obj 0.0445601
+PlantIndoors/m1009.obj 0.0485075
+Drum/D00026.obj 0.0506442
+Ship/m1460.obj 0.0513619
+Biplane/m1118.obj 0.0517429
+Ship/m1459.obj 0.0520884
+PlantWildNonTree/m964.obj 0.0530778
+---------------------------------------------------------------
+Query Object: 1284: Jet/m1283.obj : s 7
+Jet/m1284.obj 0.0296713
+Jet/m1278.obj 0.036003
+Jet/m1277.obj 0.0392438
+Jet/m1270.obj 0.0395552
+Jet/m1268.obj 0.0405017
+Jet/m1290.obj 0.040969
+Insect/m11.obj 0.0450876
+Insect/m15.obj 0.0454788
+Biplane/D00246.obj 0.0457505
+Jet/m1292.obj 0.0508281
+---------------------------------------------------------------
+Query Object: 1963: Spoon/D00517.obj : s 1
+Musical_Instrument/m638.obj 0.026679
+MultiSeat/m777.obj 0.0278461
+Spoon/D00157.obj 0.0280726
+Musical_Instrument/m641.obj 0.0298438
+Sword/D00133.obj 0.0304056
+Gun/m660.obj 0.0320728
+Sword/m695.obj 0.0324253
+Tool/m1100.obj 0.0325988
+Tool/m1112.obj 0.033514
+Car/m1503.obj 0.0356254
+---------------------------------------------------------------
+Query Object: 1758: RectangleTable/m891.obj : s 2
+RectangleTable/m870.obj 0.00476866
+PianoBoard/D00718.obj 0.00700052
+Bed/D00650.obj 0.00943119
+Bed/D00538.obj 0.0132677
+MultiSeat/m835.obj 0.0138084
+Car/m1561.obj 0.0149236
+Bed/D00217.obj 0.0157565
+Bed/D00322.obj 0.0165939
+RectangleTable/m902.obj 0.0167669
+Car/m1490.obj 0.0172087
+---------------------------------------------------------------
+Query Object: 55: AquaticAnimal/m78.obj : s 5
+AquaticAnimal/m76.obj 0.00107821
+AquaticAnimal/m81.obj 0.00159713
+AquaticAnimal/m75.obj 0.00256278
+AquaticAnimal/m80.obj 0.0044289
+Jet/m1190.obj 0.00591389
+Humanoid/m261.obj 0.00814125
+NonWheelChair/m788.obj 0.00851153
+AquaticAnimal/m74.obj 0.00925451
+Humanoid/m262.obj 0.00968744
+Humanoid/m263.obj 0.00984901
+---------------------------------------------------------------
+Query Object: 1360: Monitor/D00915.obj : s 0
+Computer/m1774.obj 0.0259234
+Musical_Instrument/m646.obj 0.0261637
+ClassicPiano/D00789.obj 0.0273927
+ClassicPiano/D00561.obj 0.0284184
+Mug/D00427.obj 0.0298141
+DeskPhone/D00403.obj 0.0356626
+ClassicPiano/D00233.obj 0.0395192
+House/m448.obj 0.040312
+Motorcycle/D00054.obj 0.0403938
+Motorcycle/D00594.obj 0.0404435
+---------------------------------------------------------------
+Query Object: 1707: Quadruped/m88.obj : s 10
+Quadruped/D00326.obj 0.00197467
+Quadruped/m107.obj 0.00225646
+Quadruped/m104.obj 0.00529799
+Quadruped/m280.obj 0.0053004
+Quadruped/D00663.obj 0.0058133
+Quadruped/m105.obj 0.005849
+Quadruped/D00841.obj 0.00594774
+Quadruped/D00700.obj 0.00647409
+Quadruped/m108.obj 0.00747679
+Quadruped/D00380.obj 0.00780154
+---------------------------------------------------------------
+Query Object: 1119: Insect/D00102.obj : s 2
+Insect/D00180.obj 1.12055e-05
+Tree/m1092.obj 0.00332859
+Insect/D00615.obj 0.00440686
+Tree/m1077.obj 0.00580083
+RoundTable/m934.obj 0.0092822
+WheelChair/D00846.obj 0.0116434
+Tree/D00367.obj 0.0124024
+PlantIndoors/m997.obj 0.0125122
+PlantWildNonTree/m962.obj 0.0128666
+PlantIndoors/D00466.obj 0.0128992
+---------------------------------------------------------------
+Query Object: 1918: Ship/m1460.obj : s 2
+Ship/m1461.obj 0.00224848
+PlantWildNonTree/m968.obj 0.005721
+FloorLamp/D00563.obj 0.0106593
+PlantWildNonTree/m986.obj 0.0118876
+Hat/m1641.obj 0.0119979
+Ship/m1459.obj 0.0120505
+FloorLamp/D00580.obj 0.012144
+WheelChair/D00449.obj 0.0124716
+FloorLamp/D00186.obj 0.0145663
+PlantIndoors/m989.obj 0.0154193
+---------------------------------------------------------------
+Query Object: 786: Gun/m672.obj : s 5
+Knife/D01132.obj 0.00312054
+Gun/m679.obj 0.00366392
+Gun/D00477.obj 0.00374851
+Gun/m678.obj 0.00424282
+SubmachineGun/D00537.obj 0.00482622
+SubmachineGun/D00384.obj 0.00493161
+SubmachineGun/D00893.obj 0.00514308
+Knife/D01119.obj 0.00641654
+Gun/m683.obj 0.00687869
+Gun/m681.obj 0.0075913
+---------------------------------------------------------------
+Query Object: 2118: Train/D01016.obj : s 0
+Ship/m1428.obj 0.0146097
+Rocket/D00764.obj 0.015965
+Rocket/D00343.obj 0.0161882
+Rocket/D00614.obj 0.017571
+Ship/m1427.obj 0.0180013
+Tool/m1116.obj 0.0188067
+Sword/D00356.obj 0.0218613
+Rocket/D00719.obj 0.0222029
+Ship/m1433.obj 0.0229214
+FloorLamp/m618.obj 0.0235128
+---------------------------------------------------------------
+Total Score: 3.3125
+Total Corrected Score: 0.257561
