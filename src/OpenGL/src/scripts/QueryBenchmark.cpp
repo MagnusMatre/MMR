@@ -128,7 +128,7 @@ void QueryBenchmark::RunBenchmarkScalarWeights_() {
 	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
 	scalar_weights[18] += 1.0f;
 
-	std::vector<float> scalar_weights = {
+	scalar_weights = {
 		1.0f // DIAMETER
 		,1.0f // BB_DIAMETER
 		,0.0f // BB_VOLUME (disabled after test)
@@ -136,7 +136,7 @@ void QueryBenchmark::RunBenchmarkScalarWeights_() {
 		,1.0f // VOLUME
 		,0.0f // VOLUMECOMPS (always disabled)
 		,1.0f // CONVEXITY
-		,2.0f // ECCENTRICITY02
+		,1.0f // ECCENTRICITY02
 		,1.0f // ECCENTRICITY01
 		,1.0f // ECCENTRICITY12
 		,1.0f // COMPACTNESS
@@ -147,7 +147,7 @@ void QueryBenchmark::RunBenchmarkScalarWeights_() {
 		,0.0f // DIAMETERTOSQUAREROOTAREA (disabled after test)
 		,0.0f // DIAMETERSQUARED (always disabled)
 		,1.0f // BBCUBEROOTVOLUME
-		,2.0f // RECTANGULARITY
+		,1.0f // RECTANGULARITY
 	};
 
 	RunBenchmarkScalarWeights(10, STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7, scalar_weights);
@@ -442,10 +442,10 @@ void QueryBenchmark::RunBenchmarkHistogramWeights(int K, STANDARDIZATION_TYPE s_
 		//std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(i, K);
 		float cur_score = 0;
 
-		std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
-		std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
-		//std::string class_name = m_queryEngine->getClassName(i);
-		//std::string file_name = m_queryEngine->getObjectName(i);
+		//std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
+		//std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
+		std::string class_name = m_queryEngine->getClassName(i);
+		std::string file_name = m_queryEngine->getObjectName(i);
 
 		// If the current class name is the same as the query object, then inrcease the scores
 		for (int j = 0; j < K; j++) {
