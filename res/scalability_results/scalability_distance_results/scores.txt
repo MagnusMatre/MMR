@@ -1,4 +1,0 @@
-Euclidean 3.52781
-Manhattan 4.06833
-Angular 3.60096
-DotProduct 1.76128
