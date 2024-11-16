@@ -33,7 +33,7 @@ namespace test {
 		GLCall(glCullFace(GL_BACK));    // Cull back faces
 		GLCall(glFrontFace(GL_CCW));    // Define front faces as counter-clockwise
 
-		m_featureFile = "features_final.txt";
+		m_featureFile = "../../res/features_final.txt";
 		m_queryEngine = std::make_unique<QueryEngine>();
 
 		std::string load_tree_file = "";
@@ -44,20 +44,15 @@ namespace test {
 		m_snapshotDirectory = "../../res/snapshots_new/snapshots";
 
 
-		std::string saveDistanceMatrix = "res/features_okaymeshes/distance_matrix.txt";
-
 		std::cout << "Loading features..." << std::endl;
 
 		m_queryEngine->LoadFeatures(m_featureFile);
 		m_queryEngine->Initialize(STANDARDIZATION_TYPE::RANGE, STANDARDIZATION_TYPE::NO, DISTANCE_TYPE::MYABSOLUTE, DISTANCE_TYPE::MYABSOLUTE, 0.7f);
 		std::cout << "Features loaded" << std::endl;
-		//m_queryEngine->ComputeFullDistanceMatrix();
-		//std::cout << "Distances computed" << std::endl;
-		//m_queryEngine->SaveDistanceMatrix(saveDistanceMatrix);
 
 		m_dataRoot = "../../data";
 		m_curDirectory = m_dataRoot + "/MeshesFiltered";
-		m_samplePointsDirectory = "res/sample_points3";
+		m_samplePointsDirectory = "../../res/sample_points_normalized_meshes";
 		loadCurrentDirectory();
 
 		m_renderer = std::make_unique<Renderer>();
@@ -116,17 +111,6 @@ namespace test {
 
 		glm::mat4 modelMesh = glm::translate(glm::mat4(1.0f), m_translationMesh);
 		m_mvp = m_projection * m_view * modelMesh;
-
-		// If the random points vector is not empty from FeatureExtraction, draw the points
-		/*if (!m_featureExtractor.m_random_vertices.empty()) {
-			glEnable(GL_POLYGON_OFFSET_POINT);
-			glPolygonOffset(-1.0f, -1.0f);
-			m_shaderDot->Bind();
-			m_shaderDot->SetUniformMat4f("u_MVP", m_mvp);
-			m_shaderDot->SetUniform4f("u_color", 1.0f, 0.0f, 0.0f, 1.0f);
-			m_renderer->Draw(*m_sampledVerticesVAO, *m_sampledVerticesIBO, *m_shaderDot, GL_POINTS);
-			m_shaderDot->Unbind();
-		}*/
 
 		if (m_renderMode == RenderMode::OnlySolid) {
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -190,38 +174,6 @@ namespace test {
 
 		computeDistances();
 
-
-		//Compute the distance from the current model to all other models in the same directory
-		/*std::string class_name = std::filesystem::path(m_curModelName).parent_path().filename().string();
-		std::string feature_file = m_dataRoot + "/features_okaymeshes/features_clean.txt";
-		m_queryEngine->LoadFeatures(feature_file);*/
-		//for (auto& file : m_curFiles) {
-		//	if (file != m_curModelName) {
-		//		// Extract directory and filename from the path
-		//		std::filesystem::path p(file);
-		//		std::string class_name_other = p.parent_path().filename().string();
-		//		std::string file_name_other = p.filename().string();
-		//		std::string other_obj = class_name_other + "/" + file_name_other;
-
-		//		std::filesystem::path p2(m_curModelName);
-		//		std::string class_name_query = p2.parent_path().filename().string();
-		//		std::string file_name_query = p2.filename().string();
-		//		std::string query_obj = class_name_query + "/" + file_name_query;
-
-		//		std::cout << query_obj << " " << other_obj << std::endl;
-
-		//		m_queryEngine->ComputeDistance(query_obj, other_obj);
-
-
-		//	}
-		//}
-
-		/*try {
-			loadSampleVertices();
-		}
-		catch (const std::exception& e) {
-			std::cerr << "Error: " << e.what() << std::endl;
-		}*/
 	}
 
 	void TestFeatures::loadCurrentDirectory() {

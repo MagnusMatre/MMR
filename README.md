@@ -39,8 +39,8 @@ You can now build the solution in x64 configuration. All external dependencies s
 Building the solution may take 5-10 minutes.
 _Important: _ There are two possible build configurations (selected in the toolbar in the Visual Studio Code editor):
 
-1. Debug. In this build configuration, you can test the actual CBSR application by selecting shapes. Moving around is done with WASD LSHIFT (down) SPACE (up), looking side-to side and up-down is done with the arrow keys, zooming is done with ZX. Toggling wireframe is done with M.
-2. RunScript. In this configuration, you can run scripts to reproduce our results (see below).
+1. Debug. In this build configuration, you can test the actual CBSR application by selecting shapes. In the menu click the "QueryApplication" (only available option). Moving around is done with WASD LSHIFT (down) SPACE (up), looking side-to side and up-down is done with the arrow keys, zooming is done with ZX. Toggling wireframe is done with M.
+2. RunScript. In this configuration, you can run scripts to reproduce our results (see below). Note, running scripts will overwrite the current data.
 
 ### Step 4 (optional)
 

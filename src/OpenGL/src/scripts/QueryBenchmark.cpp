@@ -296,14 +296,14 @@ void QueryBenchmark::RunBenchmark(int K, STANDARDIZATION_TYPE s_type, STANDARDIZ
 	float cur_total_corrected_score = 0;
 
 	for (int i = 0; i < NUM_QUERY_SHAPES; i++) {
-		//std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(m_queryIndices[i], K);
-		std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(i, K);
+		std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(m_queryIndices[i], K);
+		//std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(i, K);
 		float cur_score = 0;
 
-		//std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
-		//std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
-		std::string class_name = m_queryEngine->getClassName(i);
-		std::string file_name = m_queryEngine->getObjectName(i);
+		std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
+		std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
+		//std::string class_name = m_queryEngine->getClassName(i);
+		//std::string file_name = m_queryEngine->getObjectName(i);
 
 		// If the current class name is the same as the query object, then inrcease the scores
 		for (int j = 0; j < K; j++) {
@@ -442,10 +442,10 @@ void QueryBenchmark::RunBenchmarkHistogramWeights(int K, STANDARDIZATION_TYPE s_
 		//std::vector<std::pair<float, std::string>> results = m_queryEngine->DoBenchmark(i, K);
 		float cur_score = 0;
 
-		//std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
-		//std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
-		std::string class_name = m_queryEngine->getClassName(i);
-		std::string file_name = m_queryEngine->getObjectName(i);
+		std::string class_name = m_queryEngine->getClassName(m_queryIndices[i]);
+		std::string file_name = m_queryEngine->getObjectName(m_queryIndices[i]);
+		//std::string class_name = m_queryEngine->getClassName(i);
+		//std::string file_name = m_queryEngine->getObjectName(i);
 
 		// If the current class name is the same as the query object, then inrcease the scores
 		for (int j = 0; j < K; j++) {

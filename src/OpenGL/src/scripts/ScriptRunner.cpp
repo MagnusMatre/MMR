@@ -134,10 +134,10 @@ int main(int argc, char** argv) {
 	else if (scriptName == "FeatureExtraction") {
 		RunScriptFeatureScript();
 	}
-	else if (scriptName == "QueryBenchmark") {
+	else if (scriptName == "QueryExperiments") {
 		RunScriptQueryBenchmark();
 	}
-	else if (scriptName == "RunAnn") {
+	else if (scriptName == "ScalabilityExperiments") {
 		RunScriptRunAnn();
 	}
     else {
